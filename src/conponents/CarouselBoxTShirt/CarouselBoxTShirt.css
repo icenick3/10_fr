@@ -1,0 +1,56 @@
+.carouselTS {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+.carouselTS #currentImgTS {
+  display: block;
+  margin: 0 auto;
+}
+.carouselTS #leftArrowTSContainer {
+  width: 10%;
+  position: absolute;
+  z-index: 111;
+}
+.carouselTS #leftArrowTSContainer:hover {
+  cursor: pointer;
+  background: lightgray;
+  opacity: 0.3;
+}
+.carouselTS #leftArrowTS {
+  position: absolute;
+  top: calc(50% - 25px);
+  left: 0;
+  z-index: 222;
+  width: 50px;
+  height: 50px;
+}
+.carouselTS #leftArrowTS:hover {
+  cursor: pointer;
+}
+.carouselTS #rightArrowTS {
+  transform: rotate(180deg);
+  position: absolute;
+  top: calc(50% - 25px);
+  z-index: 222;
+  width: 50px;
+  height: 50px;
+  right: 0;
+}
+.carouselTS #rightArrowTS:hover {
+  cursor: pointer;
+}
+.carouselTS #rightArrowTSContainer {
+  width: 10%;
+  position: absolute;
+  z-index: 111;
+  right: 0;
+  top: 0;
+}
+.carouselTS #rightArrowTSContainer:hover {
+  cursor: pointer;
+  background: lightgray;
+  opacity: 0.3;
+}
+
+/*# sourceMappingURL=CarouselBoxTShirt.css.map */

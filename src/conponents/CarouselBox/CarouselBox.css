@@ -1,0 +1,62 @@
+.carousel {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+.carousel #currentImg {
+  width: 200px;
+  height: 300px;
+  display: block;
+  margin: 20px auto;
+}
+.carousel #leftArrowContainer {
+  width: 10%;
+  position: absolute;
+  z-index: 111;
+  top: 0;
+  left: 0;
+}
+.carousel #leftArrowContainer:hover {
+  cursor: pointer;
+  background: #d6dadf;
+  opacity: 0.3;
+}
+.carousel #leftArrowContainer:hover #leftArrow {
+  cursor: pointer;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+.carousel #leftArrowContainer #leftArrow {
+  position: absolute;
+  top: calc(50% - 25px);
+  z-index: 222;
+  width: 50px;
+  height: 50px;
+  filter: invert(4%) sepia(11%) saturate(9%) hue-rotate(314deg) brightness(103%) contrast(80%);
+}
+.carousel #rightArrowContainer {
+  width: 10%;
+  position: absolute;
+  z-index: 111;
+  right: 0;
+  top: 0;
+}
+.carousel #rightArrowContainer:hover {
+  cursor: pointer;
+  background: #d6dadf;
+  opacity: 0.3;
+}
+.carousel #rightArrowContainer:hover #rightArrow {
+  cursor: pointer;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+.carousel #rightArrowContainer #rightArrow {
+  transform: rotate(180deg);
+  position: absolute;
+  top: calc(50% - 25px);
+  filter: invert(4%) sepia(11%) saturate(9%) hue-rotate(314deg) brightness(103%) contrast(80%);
+  z-index: 222;
+  width: 50px;
+  height: 50px;
+}
+
+/*# sourceMappingURL=CarouselBox.css.map */

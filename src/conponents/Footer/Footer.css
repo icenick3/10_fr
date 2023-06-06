@@ -1,0 +1,93 @@
+#blackFooter {
+  color: white;
+  background: #583fdb;
+  padding: 50px 0;
+}
+#blackFooter #mainBlackFooter {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+}
+@media screen and (max-device-width: 500px) {
+  #blackFooter #mainBlackFooter {
+    width: 100%;
+    display: block;
+  }
+}
+#blackFooter #mainBlackFooter #FEFooter {
+  width: 40%;
+}
+@media screen and (max-device-width: 500px) {
+  #blackFooter #mainBlackFooter #FEFooter {
+    padding: 20px;
+    width: 100%;
+    border-bottom: 1px solid grey;
+  }
+}
+#blackFooter #mainBlackFooter #SEFooter {
+  width: 20%;
+  margin: 0 30px;
+  line-height: 2;
+}
+@media screen and (max-device-width: 500px) {
+  #blackFooter #mainBlackFooter #SEFooter {
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+  }
+}
+#blackFooter #mainBlackFooter #SEFooter li {
+  list-style: none;
+}
+#blackFooter #mainBlackFooter #SEFooter li:hover {
+  cursor: pointer;
+  color: lightgray;
+}
+#blackFooter #mainBlackFooter #TEFooter {
+  width: 40%;
+}
+@media screen and (max-device-width: 500px) {
+  #blackFooter #mainBlackFooter #TEFooter {
+    display: none;
+  }
+}
+#blackFooter #mainBlackFooter #TEFooter h2 {
+  margin: 0 0 10px 0;
+}
+#blackFooter #mainBlackFooter #TEFooter p {
+  margin: 0 0 10px 0;
+}
+#blackFooter #mainBlackFooter #TEFooter form p {
+  padding: 20px 0 0 0;
+}
+#blackFooter #mainBlackFooter #TEFooter form input {
+  display: block;
+  width: 80%;
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 17px;
+  border-radius: 10px;
+  background-color: #1e1e1e;
+  outline: none;
+  border: 1px solid #1e1e1e;
+}
+#blackFooter #mainBlackFooter #TEFooter form input:hover {
+  cursor: pointer;
+}
+#blackFooter #mainBlackFooter #TEFooter form button {
+  width: 80%;
+  background-color: #d22e2e;
+  padding: 10px;
+  font-size: 23px;
+  font-weight: 400;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+#blackFooter #mainBlackFooter #TEFooter form button:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=Footer.css.map */

@@ -1,0 +1,10 @@
+.stars1 {
+  display: flex;
+  margin: 30px 0 10px 0;
+}
+.stars1 img {
+  width: 25px;
+  height: 25px;
+}
+
+/*# sourceMappingURL=Stars.css.map */

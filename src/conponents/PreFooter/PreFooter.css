@@ -1,0 +1,30 @@
+.PreFooter {
+  display: flex;
+  width: 60%;
+  margin: 20px auto;
+  background: white;
+  border-radius: 5px;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+.PreFooter .block {
+  width: 25%;
+  padding: 10px;
+}
+.PreFooter .block h2 {
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 0;
+}
+.PreFooter .block p {
+  font-weight: 400;
+  font-size: 14px;
+}
+.PreFooter .block img {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=PreFooter.css.map */

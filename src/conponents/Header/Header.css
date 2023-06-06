@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+header {
+  text-align: center;
+  padding: 5px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+header h1 {
+  font-family: "Gruppo", sans-serif;
+}
+header img {
+  width: 90px;
+}
+
+/*# sourceMappingURL=Header.css.map */

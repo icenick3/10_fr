@@ -1,0 +1,64 @@
+
+.carouselTS{
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  #currentImgTS{
+    display: block;
+    margin: 0 auto;
+  }
+#leftArrowTSContainer{
+  width: 10%;
+  position: absolute;
+  z-index: 111;
+
+  &:hover {
+    cursor: pointer;
+    background: lightgray;
+    opacity: 0.3;
+  }
+}
+  #leftArrowTS{
+    position: absolute;
+    top: calc(50% - 25px);
+    left: 0;
+    z-index: 222;
+    width: 50px;
+    height: 50px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  #rightArrowTS{
+    transform: rotate(180deg);
+    position: absolute;
+    top: calc(50% - 25px);
+    z-index: 222;
+    width: 50px;
+    height: 50px;
+    right: 0;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+#rightArrowTSContainer{
+  width: 10%;
+  position: absolute;
+  z-index: 111;
+  right: 0;
+  top: 0;
+
+  &:hover {
+    cursor: pointer;
+    background: lightgray;
+    opacity: 0.3;
+  }
+
+}
+
+
+
+
+}
+

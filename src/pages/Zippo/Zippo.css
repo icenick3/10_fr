@@ -1,0 +1,145 @@
+.photos1 {
+  width: 100%;
+  display: flex;
+  max-width: 100%;
+  justify-content: center;
+}
+.photos1 img {
+  display: block;
+  width: 25%;
+  margin: 10px 2px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  transition: transform 0.3s ease;
+}
+.photos1 img:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.colors22 {
+  display: flex;
+  margin: 0 0 10px 0;
+}
+.colors22 .grey {
+  width: 30px;
+  height: 30px;
+  background: #adb5be;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.colors22 .grey img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.colors22 .grey:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.colors22 .black {
+  width: 30px;
+  height: 30px;
+  background: black;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.colors22 .black img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.colors22 .black:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.colors22 .blue {
+  width: 30px;
+  height: 30px;
+  background: #eac987;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.colors22 .blue img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.colors22 .blue:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.colors22 .creme {
+  width: 30px;
+  height: 30px;
+  background: #195fa7;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.colors22 .creme img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.colors22 .creme:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.colors22 .red {
+  width: 30px;
+  height: 30px;
+  background: #e7d8c2;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.colors22 .red img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.colors22 .red:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+
+.features22 {
+  padding: 20px;
+  font-size: 16px;
+}
+.features22 .firstUl {
+  padding: 20px 40px;
+}
+.features22 .firstUl li {
+  padding: 10px 0;
+}
+.features22 .secondUl {
+  padding: 0 20px;
+}
+.features22 .secondUl li {
+  padding: 5px 0;
+}
+
+.imgCarouselZippo {
+  width: 100%;
+}
+.imgCarouselZippo .imgCarContainerZippo {
+  width: 80%;
+  margin: 30px auto;
+}
+
+/*# sourceMappingURL=Zippo.css.map */

@@ -46,7 +46,7 @@ const Microphone = ({date2, date, small, setSmall}) => {
     return small ? (
         <div className="smallPageZippo" onClick={()=> setSmall(false)}>
             <div className="imgBlock">
-                <img className="imgTs" src="https://i.pinimg.com/originals/50/63/2c/50632cf3b63c0eaceab2b09df710ff38.jpg" alt=""/>
+                <img className="imgTs3" src="https://i.pinimg.com/originals/50/63/2c/50632cf3b63c0eaceab2b09df710ff38.jpg" alt=""/>
             </div>
             <div className="informationBlock">
                 <h2 className="h2ts">Ankuka Karaoke Wireless Microphone</h2>

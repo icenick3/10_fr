@@ -621,10 +621,6 @@
   cursor: pointer;
 }
 
-.TShirtContainer {
-  margin: 0 0 30px 0;
-}
-
 .features221 {
   padding: 20px;
   background: white;
@@ -870,7 +866,7 @@
 @media screen and (max-device-width: 500px) {
   .zippoContainer {
     transform-origin: top;
-    animation: scaleAnimation228 ease-in-out 1.5s forwards;
+    animation: none;
     overflow: hidden;
   }
 }

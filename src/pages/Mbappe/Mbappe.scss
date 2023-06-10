@@ -700,7 +700,7 @@
   position: relative;
   @media screen and (max-device-width: 500px) {
     transform-origin: top;
-    animation: scaleAnimation228 ease-in-out 1.5s forwards;
+    animation: none;
     overflow: hidden;
   }
 }

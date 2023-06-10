@@ -32,6 +32,12 @@ const Microphone = ({date2, date, small, setSmall}) => {
                 mainRef.current.id = "";
                 setSmall(true)
             }, 450)
+            if (mainRef.current){
+                setTimeout(()=>{
+                    mainRef.current.scrollIntoView({ behavior: 'auto', block: 'start' });
+                },450)
+
+            }
 
         }
     }
@@ -40,7 +46,7 @@ const Microphone = ({date2, date, small, setSmall}) => {
     return small ? (
         <div className="smallPageZippo" onClick={()=> setSmall(false)}>
             <div className="imgBlock">
-                <img src="https://i.pinimg.com/originals/50/63/2c/50632cf3b63c0eaceab2b09df710ff38.jpg" alt=""/>
+                <img className="imgTs" src="https://i.pinimg.com/originals/50/63/2c/50632cf3b63c0eaceab2b09df710ff38.jpg" alt=""/>
             </div>
             <div className="informationBlock">
                 <h2 className="h2ts">Ankuka Karaoke Wireless Microphone</h2>
@@ -60,7 +66,7 @@ const Microphone = ({date2, date, small, setSmall}) => {
         </div>
     ) : (
         <div ref={mainRef} className="zippoContainer">
-            <img className="backToSmall"
+            <img id="backToSmall"
                  src="https://i.pinimg.com/originals/2f/fd/9f/2ffd9f807df3dfa6efd0f722be6e7fca.png" alt=""
                  onClick={() => takeID()}/>
             <div className="Micro">
@@ -343,6 +349,11 @@ const Microphone = ({date2, date, small, setSmall}) => {
                             </div>
                             <p id="readReviews" onClick={() => setShowReviews(true)}>+ Read all 52 reviews</p>
                         </div>
+                    </div>
+                    <div className="backContainer">
+                        <img className="backToSmall22"
+                             src="https://i.pinimg.com/originals/2f/fd/9f/2ffd9f807df3dfa6efd0f722be6e7fca.png" alt=""
+                             onClick={() => takeID()}/>
                     </div>
                 </div>
             </div>

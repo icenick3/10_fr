@@ -619,7 +619,9 @@
 }
 @media screen and (max-device-width: 500px) {
   .mbappe {
-    padding: 0;
+    transform-origin: top;
+    animation: scaleAnimation228 ease-in-out 1.5s forwards;
+    overflow: hidden;
   }
 }
 

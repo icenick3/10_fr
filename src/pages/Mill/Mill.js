@@ -18,6 +18,12 @@ const Mill = ({date, date2, small, setSmall}) => {
                 mainRef.current.id = "";
                 setSmall(true)
             }, 450)
+            if (mainRef.current){
+                setTimeout(()=>{
+                    mainRef.current.scrollIntoView({ behavior: 'auto', block: 'start' });
+                },450)
+
+            }
 
         }
     }
@@ -46,7 +52,7 @@ const Mill = ({date, date2, small, setSmall}) => {
         </div>
     ) : (
         <div ref={mainRef} className="zippoContainer">
-            <img className="backToSmall"
+            <img id="backToSmall"
                  src="https://i.pinimg.com/originals/2f/fd/9f/2ffd9f807df3dfa6efd0f722be6e7fca.png" alt=""
                  onClick={() => takeID()}/>
             <div className="TShirt">
@@ -260,6 +266,11 @@ const Mill = ({date, date2, small, setSmall}) => {
                             </div>
                             <p id="readReviews" onClick={() => setShowReviews(true)}>+ Read all 66 reviews</p>
                         </div>
+                    </div>
+                    <div className="backContainer">
+                        <img className="backToSmall22"
+                             src="https://i.pinimg.com/originals/2f/fd/9f/2ffd9f807df3dfa6efd0f722be6e7fca.png" alt=""
+                             onClick={() => takeID()}/>
                     </div>
                 </div>
             </div>

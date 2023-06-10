@@ -45,7 +45,11 @@ body {
   height: 300px;
 
 }
-
+.App{
+  @media screen and (max-device-width: 500px){
+    overflow-x: hidden;
+  }
+}
 .video-background {
   position: fixed;
   top: 0;
@@ -66,4 +70,32 @@ body {
 
 .flexxx{
   display: flex;
+  @media screen and (max-device-width: 500px) {
+    display: block;
+  }
+}
+
+.slick-list{
+
+}
+
+.slick-dots .slick-active{
+  width: 18px;
+  height: 18px;
+  background: #5c43dd;
+  position: relative;
+  z-index: 333;
+  border-radius: 100%;
+
+}
+
+.slick-dots  {
+  color: #5c43dd;
+  list-style-type: none;
+}
+.slick-dots li button:focus:before {
+  opacity: 0.15;
+}
+.slick-dots li.slick-active button:before {
+  opacity: 0;
 }

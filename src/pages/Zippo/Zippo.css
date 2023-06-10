@@ -867,9 +867,22 @@
   transform-origin: top right;
   position: relative;
 }
+@media screen and (max-device-width: 500px) {
+  .zippoContainer {
+    transform-origin: top;
+    animation: scaleAnimation228 ease-in-out 1.5s forwards;
+    overflow: hidden;
+  }
+}
 
 #zippoContainer {
   animation: revertStart1 cubic-bezier(0.1, 0, 0.2, 1) 1s forwards;
+  transform-origin: top right;
+}
+@media screen and (max-device-width: 500px) {
+  #zippoContainer {
+    animation: revertStart228 ease-in-out 1s forwards;
+  }
 }
 
 @keyframes scaleAnimation1 {

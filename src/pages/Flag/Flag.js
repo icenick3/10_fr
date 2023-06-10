@@ -16,6 +16,12 @@ const Flag = ({date, date2, small, setSmall}) => {
                 mainRef.current.id = "";
                 setSmall(true)
             }, 450)
+            if (mainRef.current){
+                setTimeout(()=>{
+                    mainRef.current.scrollIntoView({ behavior: 'auto', block: 'start' });
+                },450)
+
+            }
 
         }
     }
@@ -23,7 +29,7 @@ const Flag = ({date, date2, small, setSmall}) => {
     return small ? (
         <div className="smallPage" onClick={()=> setSmall(false)}>
             <div className="imgBlock">
-                <img src="https://i.pinimg.com/originals/44/5e/00/445e0069b5185b3fdf05e33f1339a3d3.gif" alt=""/>
+                <img className="imgTs" src="https://i.pinimg.com/originals/44/5e/00/445e0069b5185b3fdf05e33f1339a3d3.gif" alt=""/>
             </div>
             <div className="informationBlock">
                 <h2 className="h2ts">France Flag Fancy Dress Decoration</h2>
@@ -43,7 +49,7 @@ const Flag = ({date, date2, small, setSmall}) => {
         </div>
     ) : (
         <div ref={mainRef} className="mbappe">
-            <img className="backToSmall"
+            <img id="backToSmall"
                  src="https://i.pinimg.com/originals/2f/fd/9f/2ffd9f807df3dfa6efd0f722be6e7fca.png" alt=""
                  onClick={() => takeID()}/>
             <div className="TShirt">
@@ -201,6 +207,11 @@ const Flag = ({date, date2, small, setSmall}) => {
                             </div>
                             <p id="readReviews" onClick={() => setShowReviews(true)}>+ Read all 98 reviews</p>
                         </div>
+                    </div>
+                    <div className="backContainer">
+                        <img className="backToSmall22"
+                             src="https://i.pinimg.com/originals/2f/fd/9f/2ffd9f807df3dfa6efd0f722be6e7fca.png" alt=""
+                             onClick={() => takeID()}/>
                     </div>
                 </div>
             </div>

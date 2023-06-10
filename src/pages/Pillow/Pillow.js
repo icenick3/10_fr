@@ -18,6 +18,12 @@ const Pillow = ({date, date2, small, setSmall}) => {
                 mainRef.current.id = "";
                 setSmall(true)
             }, 450)
+            if (mainRef.current){
+                setTimeout(()=>{
+                    mainRef.current.scrollIntoView({ behavior: 'auto', block: 'start' });
+                },450)
+
+            }
 
         }
     }
@@ -25,7 +31,7 @@ const Pillow = ({date, date2, small, setSmall}) => {
     return small ? (
         <div className="smallPageZippo" onClick={()=> setSmall(false)}>
             <div className="imgBlock">
-                <img src="https://i.pinimg.com/originals/61/f6/d9/61f6d9e58b5817d3072c364bf7cd8305.jpg" alt=""/>
+                <img className="imgTs2" src="https://i.pinimg.com/originals/61/f6/d9/61f6d9e58b5817d3072c364bf7cd8305.jpg" alt=""/>
             </div>
             <div className="informationBlock">
                 <h2 className="h2ts">Froster Heated Croissant – Giant Pillow</h2>
@@ -45,7 +51,7 @@ const Pillow = ({date, date2, small, setSmall}) => {
         </div>
     ) : (
         <div ref={mainRef} className="zippoContainer">
-            <img className="backToSmall"
+            <img id="backToSmall"
                  src="https://i.pinimg.com/originals/2f/fd/9f/2ffd9f807df3dfa6efd0f722be6e7fca.png" alt=""
                  onClick={() => takeID()}/>
             <div className="TShirt">
@@ -224,6 +230,11 @@ const Pillow = ({date, date2, small, setSmall}) => {
                             </div>
                             <p id="readReviews" onClick={() => setShowReviews(true)}>+ Read all 69 reviews</p>
                         </div>
+                    </div>
+                    <div className="backContainer">
+                        <img className="backToSmall22"
+                             src="https://i.pinimg.com/originals/2f/fd/9f/2ffd9f807df3dfa6efd0f722be6e7fca.png" alt=""
+                             onClick={() => takeID()}/>
                     </div>
                 </div>
             </div>

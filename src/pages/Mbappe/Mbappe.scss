@@ -699,7 +699,9 @@
   transform-origin: top left;
   position: relative;
   @media screen and (max-device-width: 500px) {
-    padding: 0;
+    transform-origin: top;
+    animation: scaleAnimation228 ease-in-out 1.5s forwards;
+    overflow: hidden;
   }
 }
 

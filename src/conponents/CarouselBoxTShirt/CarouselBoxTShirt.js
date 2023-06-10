@@ -45,11 +45,11 @@ const CarouselBoxTShirt = ({ element }) => {
     }, [currentIndex, element]);
 
     return (
-        <div className="carouselTS11" ref={carouselRef} tabIndex="0">
+        <div className="carouselTS11" ref={carouselRef} tabIndex="0" >
             <div ref={arrowRef} id="leftArrowTSContainer" onClick={handlePrev}></div>
             <img
                 id="leftArrowTS"
-                src="https://i.pinimg.com/originals/4c/03/b3/4c03b3f0f339580c27e9efab2dc2a744.png"
+                src="https://i.pinimg.com/originals/85/09/c2/8509c26caa1a2b97ce02ab3be3a55826.png"
                 alt=""
                 onClick={handlePrev}
             />
@@ -70,7 +70,7 @@ const CarouselBoxTShirt = ({ element }) => {
             ></div>
             <img
                 id="rightArrowTS"
-                src="https://i.pinimg.com/originals/4c/03/b3/4c03b3f0f339580c27e9efab2dc2a744.png"
+                src="https://i.pinimg.com/originals/85/09/c2/8509c26caa1a2b97ce02ab3be3a55826.png"
                 alt=""
                 onClick={handleNext}
             />

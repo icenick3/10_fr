@@ -26,17 +26,23 @@ const Zippo = ({date, date2, small, setSmall}) => {
     const takeID = () => {
         if (mainRef.current) {
             mainRef.current.id = "zippoContainer";
-            setTimeout(()=>{
+            setTimeout(() => {
                 mainRef.current.id = "";
                 setSmall(true)
             }, 450)
+            if (mainRef.current){
+                setTimeout(()=>{
+                    mainRef.current.scrollIntoView({ behavior: 'auto', block: 'start' });
+                },450)
+
+            }
 
         }
     }
     return small ? (
         <div className="smallPageZippo" onClick={()=> setSmall(false)}>
             <div className="imgBlock">
-                <img src="https://i.pinimg.com/originals/41/d2/91/41d291aeb221e70c7188511bd522c90b.png" alt=""/>
+                <img className="imgTs" src="https://i.pinimg.com/originals/41/d2/91/41d291aeb221e70c7188511bd522c90b.png" alt=""/>
             </div>
             <div className="informationBlock">
                 <h2 className="h2ts">Vintage Street Chrome™</h2>
@@ -56,7 +62,7 @@ const Zippo = ({date, date2, small, setSmall}) => {
         </div>
     ) : (
         <div ref={mainRef} className="zippoContainer">
-            <img className="backToSmall"
+            <img id="backToSmall"
                  src="https://i.pinimg.com/originals/2f/fd/9f/2ffd9f807df3dfa6efd0f722be6e7fca.png" alt=""
                  onClick={() => takeID()}/>
             <div className="Zippo">
@@ -474,6 +480,11 @@ const Zippo = ({date, date2, small, setSmall}) => {
                             </div>
                             <p id="readReviews" onClick={() => setShowReviews(true)}>+ Read all 212 reviews</p>
                         </div>
+                    </div>
+                    <div className="backContainer">
+                        <img className="backToSmall22"
+                             src="https://i.pinimg.com/originals/2f/fd/9f/2ffd9f807df3dfa6efd0f722be6e7fca.png" alt=""
+                             onClick={() => takeID()}/>
                     </div>
                 </div>
             </div>

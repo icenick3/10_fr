@@ -26,15 +26,17 @@ import {
     HeatherGreyBack,
     HeatherGreyFront
 } from "../../conponents/ImageMbappe/ImageMbappe";
+import ProductCarousel from "../../conponents/ProductCarousel/ProductCarousel";
 
 const TShirt = ({date, date2, setSmall, small}) => {
 
 
-    const [color, setColor] = useState('Heather Grey')
+    const [color, setColor] = useState('Purple')
     const [side, setSide] = useState('Front')
     const [size, setSize] = useState('S')
     const [showGuide, setShowGuide] = useState(false)
     const [showReviews, setShowReviews] = useState(false)
+
 
     const frontRef = useRef()
     const backRef = useRef()
@@ -88,10 +90,17 @@ const TShirt = ({date, date2, setSmall, small}) => {
     const takeID = () => {
         if (mainRef.current) {
             mainRef.current.id = "TShirtContainer";
-            setTimeout(()=>{
+            setTimeout(() => {
                 mainRef.current.id = "";
                 setSmall(true)
             }, 450)
+            if (mainRef.current){
+                setTimeout(()=>{
+                    mainRef.current.scrollIntoView({ behavior: 'auto', block: 'start' });
+                },450)
+
+            }
+
 
         }
     }
@@ -99,9 +108,9 @@ const TShirt = ({date, date2, setSmall, small}) => {
 
 
     return small ? (
-        <div className="smallPage" onClick={() => setSmall(false)}>
+        <div  className="smallPage" onClick={() => setSmall(false)}>
             <div className="imgBlock">
-                <img src="https://i.pinimg.com/originals/b7/c8/91/b7c891e8720c224203a94c84a4448513.jpg" alt=""/>
+                <img className="imgTs" src="https://i.pinimg.com/originals/b7/c8/91/b7c891e8720c224203a94c84a4448513.jpg" alt=""/>
             </div>
             <div className="informationBlock">
                 <h2 className="h2ts">Russian War Ship Classic T-Shirt</h2>
@@ -121,9 +130,9 @@ const TShirt = ({date, date2, setSmall, small}) => {
         </div>
     ) : (
         <div ref={mainRef} className="TShirtContainer">
-            <img className="backToSmall"
-                 src="https://i.pinimg.com/originals/2f/fd/9f/2ffd9f807df3dfa6efd0f722be6e7fca.png" alt=""
-                 onClick={() => takeID()}/>
+             <img id="backToSmall"
+                  src="https://i.pinimg.com/originals/2f/fd/9f/2ffd9f807df3dfa6efd0f722be6e7fca.png" alt=""
+                  onClick={() => takeID()}/>
             <div className="TShirt">
                 <div className="mobileHeader">
                     <h2 className="h2ts">Russian War Ship Classic T-Shirt</h2>
@@ -131,7 +140,8 @@ const TShirt = ({date, date2, setSmall, small}) => {
                     <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>
                 </div>
                 <div className="imgContainer">
-                    <div className="imageCont">
+                    <div className="imageContTS">
+
                         {color === 'Heather Grey' && side === 'Front' &&
                             <CarouselBoxTShirt element={HeatherGreyFront}/>}
                         {color === 'Heather Grey' && side === 'Back' && <CarouselBoxTShirt element={HeatherGreyBack}/>}
@@ -378,8 +388,15 @@ const TShirt = ({date, date2, setSmall, small}) => {
                             <p id="readReviews" onClick={() => setShowReviews(true)}>+ Read all 122 reviews</p>
                         </div>
                     </div>
+                    <div className="backContainer">
+                        <img className="backToSmall22"
+                             src="https://i.pinimg.com/originals/2f/fd/9f/2ffd9f807df3dfa6efd0f722be6e7fca.png" alt=""
+                             onClick={() => takeID()}/>
+                    </div>
                 </div>
+
             </div>
+
             <Reviews showReviews={showReviews} setShowReviews={setShowReviews}/>
         </div>
     );

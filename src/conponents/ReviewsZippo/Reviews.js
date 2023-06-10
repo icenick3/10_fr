@@ -4,9 +4,9 @@ import {Stars5, Stars2, Stars4, Stars1, Stars3} from "../Stars/Stars";
 
 const ReviewsZippo = ({setShowReviews, showReviews}) => {
     return (
-        <div className={showReviews ? "reviews show" : "reviews"} onClick={()=> setShowReviews(false)}>
-            <img className="closeGuide" src="https://i.pinimg.com/originals/52/e3/86/52e38681b082f94f2917624bb56edf42.png" alt="" onClick={()=> setShowReviews(false)}/>
-            <div className={showReviews ? "reviewsContainer show" : "reviewsContainer"} onClick={(e)=> e.stopPropagation()}>
+        <div className={showReviews ? "reviewsTS show" : "reviewsTS"} onClick={()=> setShowReviews(false)}>
+            <div className={showReviews ? "reviewsContainerTS show" : "reviewsContainerTS"} onClick={(e)=> e.stopPropagation()}>
+                <img className="closeGuide" src="https://i.pinimg.com/originals/52/e3/86/52e38681b082f94f2917624bb56edf42.png" alt="" onClick={()=> setShowReviews(false)}/>
                 <h2>Reviews</h2>
                 <div className="comentar">
                     <Stars5/>

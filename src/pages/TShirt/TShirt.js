@@ -2,6 +2,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import './TShirt.css'
 import PreFooter from "../../conponents/PreFooter/PreFooter";
 import SizeGuide from "../../conponents/SizeGuide/SizeGuide";
+
 import Reviews from "../../conponents/Reviews/Reviews";
 import CarouselBoxTShirt from "../../conponents/CarouselBoxTShirt/CarouselBoxTShirt";
 import {
@@ -26,7 +27,7 @@ import {
     HeatherGreyFront
 } from "../../conponents/ImageMbappe/ImageMbappe";
 
-const TShirt = () => {
+const TShirt = ({date, date2, setSmall, small}) => {
 
 
     const [color, setColor] = useState('Heather Grey')
@@ -37,6 +38,8 @@ const TShirt = () => {
 
     const frontRef = useRef()
     const backRef = useRef()
+
+    const mainRef = useRef()
 
     const sizeRefs = [
         useRef(),
@@ -49,11 +52,14 @@ const TShirt = () => {
 
     useEffect(() => {
         sizeRefs.map(element => {
-            if (element.current.innerText === size) {
-                element.current.id = 'selected'
-            } else {
-                element.current.id = ''
+            if (element.current) {
+                if (element.current.innerText === size) {
+                    element.current.id = 'selected'
+                } else {
+                    element.current.id = ''
+                }
             }
+
         })
     }, [size])
 
@@ -79,33 +85,79 @@ const TShirt = () => {
         setSize(size)
     }
 
+    const takeID = () => {
+        if (mainRef.current) {
+            mainRef.current.id = "TShirtContainer";
+            setTimeout(()=>{
+                mainRef.current.id = "";
+                setSmall(true)
+            }, 450)
 
-    return (
-        <div className="TShirtContainer">
+        }
+    }
+
+
+
+    return small ? (
+        <div className="smallPage" onClick={() => setSmall(false)}>
+            <div className="imgBlock">
+                <img src="https://i.pinimg.com/originals/b7/c8/91/b7c891e8720c224203a94c84a4448513.jpg" alt=""/>
+            </div>
+            <div className="informationBlock">
+                <h2 className="h2ts">Russian War Ship Classic T-Shirt</h2>
+                <p className="design">Designed and sold by <span>GoyetteKaylee</span></p>
+                <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>
+                <div className="buttons22">
+                    <a className="btnts1" onClick={() => setSmall(false)}>
+                        <img src="https://i.pinimg.com/originals/9e/63/21/9e6321883f018a4613fa5d8960a161d2.png"
+                             alt=""/>
+                        <p>More Details</p></a>
+                    <a className="btnts2" href="" onClick={(e) => e.stopPropagation()}>
+                        <img src="https://i.pinimg.com/originals/57/80/8c/57808c79cf14cd363f7ec7a83e5d9018.png"
+                             alt=""/>
+                        <p>Add to cart</p></a>
+                </div>
+            </div>
+        </div>
+    ) : (
+        <div ref={mainRef} className="TShirtContainer">
+            <img className="backToSmall"
+                 src="https://i.pinimg.com/originals/2f/fd/9f/2ffd9f807df3dfa6efd0f722be6e7fca.png" alt=""
+                 onClick={() => takeID()}/>
             <div className="TShirt">
+                <div className="mobileHeader">
+                    <h2 className="h2ts">Russian War Ship Classic T-Shirt</h2>
+                    <p className="design">Designed and sold by <span>GoyetteKaylee</span></p>
+                    <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>
+                </div>
                 <div className="imgContainer">
-                    {color === 'Heather Grey' && side === 'Front' && <CarouselBoxTShirt element={HeatherGreyFront}/>}
-                    {color === 'Heather Grey' && side === 'Back' && <CarouselBoxTShirt element={HeatherGreyBack}/>}
-                    {color === 'Black' && side === 'Front' && <CarouselBoxTShirt element={blackFront}/>}
-                    {color === 'Black' && side === 'Back' && <CarouselBoxTShirt element={blackBack}/>}
-                    {color === 'Blue' && side === 'Front' && <CarouselBoxTShirt element={blueFrontLinks}/>}
-                    {color === 'Blue' && side === 'Back' && <CarouselBoxTShirt element={blueBackLinks}/>}
-                    {color === 'Creme' && side === 'Front' && <CarouselBoxTShirt element={cremeFront}/>}
-                    {color === 'Creme' && side === 'Back' && <CarouselBoxTShirt element={cremeBack}/>}
-                    {color === 'Red' && side === 'Front' && <CarouselBoxTShirt element={frontRed}/>}
-                    {color === 'Red' && side === 'Back' && <CarouselBoxTShirt element={backRed}/>}
-                    {color === 'Kiwi' && side === 'Front' && <CarouselBoxTShirt element={frontKiwiImages}/> }
-                    {color === 'Kiwi' && side === 'Back' && <CarouselBoxTShirt element={backKiwiImages}/>}
-                    {color === 'Green' && side === 'Front' && <CarouselBoxTShirt element={frontGreenImages}/>}
-                    {color === 'Green' && side === 'Back' && <CarouselBoxTShirt element={backGreenImages}/>}
-                    {color === 'Light Pink' && side === 'Front' && <CarouselBoxTShirt element={frontLightPinkImages}/>}
-                    {color === 'Light Pink' && side === 'Back' && <CarouselBoxTShirt element={backLightPinkImages}/>}
-                    {color === 'Purple' && side === 'Front' && <CarouselBoxTShirt element={frontPurpleImages}/>}
-                    {color === 'Purple' && side === 'Back' && <CarouselBoxTShirt element={backPurpleImages}/>}
-                    {color === 'Gold' && side === 'Front' && <CarouselBoxTShirt element={frontGoldImages}/>}
-                    {color === 'Gold' && side === 'Back' && <CarouselBoxTShirt element={backGoldImages}/>}
-                    {color === 'Dark Red' && side === 'Front' && <CarouselBoxTShirt element={frontDarkRedImages}/>}
-                    {color === 'Dark Red' && side === 'Back' && <CarouselBoxTShirt element={backDarkRedImages}/>}
+                    <div className="imageCont">
+                        {color === 'Heather Grey' && side === 'Front' &&
+                            <CarouselBoxTShirt element={HeatherGreyFront}/>}
+                        {color === 'Heather Grey' && side === 'Back' && <CarouselBoxTShirt element={HeatherGreyBack}/>}
+                        {color === 'Black' && side === 'Front' && <CarouselBoxTShirt element={blackFront}/>}
+                        {color === 'Black' && side === 'Back' && <CarouselBoxTShirt element={blackBack}/>}
+                        {color === 'Blue' && side === 'Front' && <CarouselBoxTShirt element={blueFrontLinks}/>}
+                        {color === 'Blue' && side === 'Back' && <CarouselBoxTShirt element={blueBackLinks}/>}
+                        {color === 'Creme' && side === 'Front' && <CarouselBoxTShirt element={cremeFront}/>}
+                        {color === 'Creme' && side === 'Back' && <CarouselBoxTShirt element={cremeBack}/>}
+                        {color === 'Red' && side === 'Front' && <CarouselBoxTShirt element={frontRed}/>}
+                        {color === 'Red' && side === 'Back' && <CarouselBoxTShirt element={backRed}/>}
+                        {color === 'Kiwi' && side === 'Front' && <CarouselBoxTShirt element={frontKiwiImages}/>}
+                        {color === 'Kiwi' && side === 'Back' && <CarouselBoxTShirt element={backKiwiImages}/>}
+                        {color === 'Green' && side === 'Front' && <CarouselBoxTShirt element={frontGreenImages}/>}
+                        {color === 'Green' && side === 'Back' && <CarouselBoxTShirt element={backGreenImages}/>}
+                        {color === 'Light Pink' && side === 'Front' &&
+                            <CarouselBoxTShirt element={frontLightPinkImages}/>}
+                        {color === 'Light Pink' && side === 'Back' &&
+                            <CarouselBoxTShirt element={backLightPinkImages}/>}
+                        {color === 'Purple' && side === 'Front' && <CarouselBoxTShirt element={frontPurpleImages}/>}
+                        {color === 'Purple' && side === 'Back' && <CarouselBoxTShirt element={backPurpleImages}/>}
+                        {color === 'Gold' && side === 'Front' && <CarouselBoxTShirt element={frontGoldImages}/>}
+                        {color === 'Gold' && side === 'Back' && <CarouselBoxTShirt element={backGoldImages}/>}
+                        {color === 'Dark Red' && side === 'Front' && <CarouselBoxTShirt element={frontDarkRedImages}/>}
+                        {color === 'Dark Red' && side === 'Back' && <CarouselBoxTShirt element={backDarkRedImages}/>}
+                    </div>
                     <div className="features">
                         <h2>Features</h2>
                         <ul>
@@ -195,7 +247,7 @@ const TShirt = () => {
                             <div ref={sizeRefs[5]} className="XXXL" onClick={() => sizeOnclick("3XL")}>3XL</div>
                         </div>
 
-                        <div className="guide" onClick={()=>setShowGuide(true)}>
+                        <div className="guide" onClick={() => setShowGuide(true)}>
                             <img src="https://i.pinimg.com/originals/1a/d2/ab/1ad2ab029e9f76112f2dbb683e5c35eb.png"
                                  alt=""/>
                             <p>View size guide</p>
@@ -210,13 +262,27 @@ const TShirt = () => {
                             <img src="https://i.pinimg.com/originals/57/80/8c/57808c79cf14cd363f7ec7a83e5d9018.png"
                                  alt=""/>
                             <p>Add to cart</p></a>
+                        <div className="features221">
+                            <h2>Features</h2>
+                            <ul>
+                                <li>The standard, traditional t-shirt for everyday wear</li>
+                                <li>Classic, generous, boxy fit</li>
+                                <li>Male model shown is 6'0" / 183 cm tall and wearing size Medium</li>
+                                <li>Female model shown is 5'8" / 173 cm tall and wearing size Small</li>
+                                <li>Heavyweight 5.3 oz / 180 gsm fabric, solid colors are 100% preshrunk cotton, heather
+                                    grey is
+                                    90% cotton/10% polyester, denim heather is 50% cotton/ 50% polyester
+                                </li>
+                                <li>Double-needle hems and neck band for durability</li>
+                            </ul>
+                        </div>
                         <div className="delivery">
                             <img src="https://i.pinimg.com/originals/72/13/a1/7213a16165e9ba30d33be8c953faae28.png"
                                  alt="FranceFlag"/>
                             <div>
                                 <p className="devTitle">Delivery</p>
-                                <p className="devP">Express by 7 June <br/>
-                                    Standard between 7 - 8 June</p>
+                                <p className="devP">Express by {date} <br/>
+                                    Standard {date2}</p>
                             </div>
                         </div>
                         <div className="delivery">
@@ -309,7 +375,7 @@ const TShirt = () => {
                                     </div>
                                 </div>
                             </div>
-                            <p id="readReviews" onClick={()=>setShowReviews(true)}>+ Read all 122 reviews</p>
+                            <p id="readReviews" onClick={() => setShowReviews(true)}>+ Read all 122 reviews</p>
                         </div>
                     </div>
                 </div>

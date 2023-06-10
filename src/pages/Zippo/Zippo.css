@@ -1,3 +1,704 @@
+.Zippo {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-device-width: 500px) {
+  .Zippo {
+    display: block;
+    width: 100%;
+  }
+}
+.Zippo .imgContainer {
+  width: 49%;
+  background: white;
+  border-radius: 5px;
+}
+@media screen and (max-device-width: 500px) {
+  .Zippo .imgContainer {
+    width: 100%;
+  }
+}
+.Zippo .imgContainer .imageCont {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 400px;
+}
+@media screen and (max-device-width: 500px) {
+  .Zippo .imgContainer .imageCont {
+    height: 300px;
+  }
+}
+.Zippo .imgContainer .imageCont img {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+}
+.Zippo .imgContainer .features {
+  padding: 20px;
+  background: white;
+}
+@media screen and (max-device-width: 500px) {
+  .Zippo .imgContainer .features {
+    display: none;
+  }
+}
+.Zippo .imgContainer .features h2 {
+  color: #19124f;
+  font-weight: 600;
+  font-size: 20px;
+}
+.Zippo .imgContainer .features ul {
+  padding: 20px 0 0 40px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.Zippo .imgContainer .features ul li {
+  padding: 5px 0;
+}
+.Zippo .descriptionTShirt {
+  width: 50%;
+  background: white;
+  border-radius: 5px;
+}
+@media screen and (max-device-width: 500px) {
+  .Zippo .descriptionTShirt {
+    display: block;
+    width: 100%;
+  }
+}
+.Zippo .descriptionTShirt .informContainer {
+  width: 98%;
+  margin: 5% 0% 5% auto;
+  background: white;
+  border-radius: 5px;
+  padding: 20px;
+}
+@media screen and (max-device-width: 500px) {
+  .Zippo .descriptionTShirt .informContainer {
+    margin: 0;
+  }
+}
+.Zippo .descriptionTShirt .informContainer .h2ts {
+  font-size: 24px;
+  font-weight: 600;
+}
+@media screen and (max-device-width: 500px) {
+  .Zippo .descriptionTShirt .informContainer .h2ts {
+    display: none;
+  }
+}
+.Zippo .descriptionTShirt .informContainer .design {
+  font-size: 14px;
+  padding: 5px 0;
+  color: #757195;
+}
+@media screen and (max-device-width: 500px) {
+  .Zippo .descriptionTShirt .informContainer .design {
+    display: none;
+  }
+}
+.Zippo .descriptionTShirt .informContainer .design span {
+  font-weight: 600;
+}
+.Zippo .descriptionTShirt .informContainer .price {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1240AB;
+  padding: 5px 0;
+}
+@media screen and (max-device-width: 500px) {
+  .Zippo .descriptionTShirt .informContainer .price {
+    display: none;
+  }
+}
+.Zippo .descriptionTShirt .informContainer .price span {
+  color: #757195;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+.Zippo .descriptionTShirt .informContainer .vat {
+  font-size: 14px;
+  color: #757195;
+}
+@media screen and (max-device-width: 500px) {
+  .Zippo .descriptionTShirt .informContainer .vat {
+    display: none;
+  }
+}
+.Zippo .descriptionTShirt .informContainer .color {
+  font-size: 16px;
+  color: black;
+  padding: 10px 0;
+}
+.Zippo .descriptionTShirt .informContainer .color span {
+  padding: 0 10px 0 0;
+  color: #19124f;
+  font-weight: 600;
+}
+.Zippo .descriptionTShirt .informContainer .colors {
+  display: flex;
+  margin: 0 0 10px 0;
+  flex-wrap: wrap;
+}
+.Zippo .descriptionTShirt .informContainer .colors .black {
+  width: 30px;
+  height: 30px;
+  background: black;
+  border-radius: 100%;
+  margin: 0 0 10px 10px;
+  position: relative;
+}
+.Zippo .descriptionTShirt .informContainer .colors .black img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Zippo .descriptionTShirt .informContainer .colors .black:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Zippo .descriptionTShirt .informContainer .colors .grey {
+  width: 30px;
+  height: 30px;
+  background: #acadb0;
+  border-radius: 100%;
+  margin: 0 0 10px 10px;
+  position: relative;
+}
+.Zippo .descriptionTShirt .informContainer .colors .grey img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Zippo .descriptionTShirt .informContainer .colors .grey:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Zippo .descriptionTShirt .informContainer .colors .blue {
+  width: 30px;
+  height: 30px;
+  background: #8186aa;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Zippo .descriptionTShirt .informContainer .colors .blue img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Zippo .descriptionTShirt .informContainer .colors .blue:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Zippo .descriptionTShirt .informContainer .colors .creme {
+  width: 30px;
+  height: 30px;
+  background: #e5d6c5;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Zippo .descriptionTShirt .informContainer .colors .creme img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Zippo .descriptionTShirt .informContainer .colors .creme:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Zippo .descriptionTShirt .informContainer .colors .red {
+  width: 30px;
+  height: 30px;
+  background: #dd2121;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Zippo .descriptionTShirt .informContainer .colors .red img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Zippo .descriptionTShirt .informContainer .colors .red:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Zippo .descriptionTShirt .informContainer .colors .kiwi {
+  width: 30px;
+  height: 30px;
+  background: #a1c740;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Zippo .descriptionTShirt .informContainer .colors .kiwi img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Zippo .descriptionTShirt .informContainer .colors .kiwi:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Zippo .descriptionTShirt .informContainer .colors .green {
+  width: 30px;
+  height: 30px;
+  background: #026541;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Zippo .descriptionTShirt .informContainer .colors .green img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Zippo .descriptionTShirt .informContainer .colors .green:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Zippo .descriptionTShirt .informContainer .colors .pink {
+  width: 30px;
+  height: 30px;
+  background: #ffc7ca;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Zippo .descriptionTShirt .informContainer .colors .pink img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Zippo .descriptionTShirt .informContainer .colors .pink:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Zippo .descriptionTShirt .informContainer .colors .purple {
+  width: 30px;
+  height: 30px;
+  background: #541e68;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Zippo .descriptionTShirt .informContainer .colors .purple img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Zippo .descriptionTShirt .informContainer .colors .purple:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Zippo .descriptionTShirt .informContainer .colors .gold {
+  width: 30px;
+  height: 30px;
+  background: #f89f2b;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Zippo .descriptionTShirt .informContainer .colors .gold img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Zippo .descriptionTShirt .informContainer .colors .gold:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Zippo .descriptionTShirt .informContainer .colors .darkRed {
+  width: 30px;
+  height: 30px;
+  background: #5a1f32;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Zippo .descriptionTShirt .informContainer .colors .darkRed img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Zippo .descriptionTShirt .informContainer .colors .darkRed:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Zippo .descriptionTShirt .informContainer .size {
+  font-size: 16px;
+  color: #19124f;
+  font-weight: 600;
+}
+.Zippo .descriptionTShirt .informContainer .sizes {
+  display: flex;
+  font-size: 16px;
+  color: #19124f;
+  font-weight: 600;
+  border-radius: 20px;
+  margin: 10px auto;
+  justify-content: center;
+}
+@media screen and (max-device-width: 500px) {
+  .Zippo .descriptionTShirt .informContainer .sizes {
+    width: 100%;
+  }
+}
+.Zippo .descriptionTShirt .informContainer .sizes:hover {
+  cursor: pointer;
+}
+.Zippo .descriptionTShirt .informContainer .sizes div {
+  padding: 10px 25px;
+  text-align: center;
+}
+@media screen and (max-device-width: 500px) {
+  .Zippo .descriptionTShirt .informContainer .sizes div {
+    width: 18%;
+    padding: 10px 15px;
+  }
+}
+.Zippo .descriptionTShirt .informContainer .sizes .S {
+  border-radius: 10px 0 0 10px;
+  border: solid 2px #D6DADF;
+}
+.Zippo .descriptionTShirt .informContainer .sizes .S:hover {
+  background: #f2f2f6;
+}
+.Zippo .descriptionTShirt .informContainer .sizes .M {
+  border: solid 2px #D6DADF;
+  border-left: none;
+}
+.Zippo .descriptionTShirt .informContainer .sizes .M:hover {
+  background: #f2f2f6;
+}
+.Zippo .descriptionTShirt .informContainer .sizes .XXXL {
+  border-radius: 0 10px 10px 0;
+  border: solid 2px #D6DADF;
+  border-left: none;
+}
+.Zippo .descriptionTShirt .informContainer .sizes .XXXL:hover {
+  background: #f2f2f6;
+}
+.Zippo .descriptionTShirt .informContainer .guide {
+  display: flex;
+  color: #ff596f;
+  font-weight: 600;
+  font-size: 14px;
+  align-items: center;
+  margin: 0 0 10px 5%;
+  border-radius: 100px;
+  width: fit-content;
+  padding: 5px 10px;
+}
+.Zippo .descriptionTShirt .informContainer .guide:hover {
+  cursor: pointer;
+  background: #f2f2f6;
+}
+.Zippo .descriptionTShirt .informContainer .guide img {
+  height: 20px;
+  width: 20px;
+  margin: 0 10px 0 0;
+}
+.Zippo .descriptionTShirt .informContainer .printLoc {
+  font-size: 16px;
+  color: #19124f;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+.Zippo .descriptionTShirt .informContainer .location {
+  display: flex;
+  font-size: 18px;
+  color: #19124f;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+}
+.Zippo .descriptionTShirt .informContainer .location div {
+  padding: 10px 20px;
+}
+.Zippo .descriptionTShirt .informContainer .location .front {
+  border-radius: 5px 0 0 5px;
+  border: solid 2px #D6DADF;
+}
+.Zippo .descriptionTShirt .informContainer .location .front:hover {
+  cursor: pointer;
+  background: #f2f2f6;
+}
+.Zippo .descriptionTShirt .informContainer .location .back {
+  border-radius: 0 5px 5px 0;
+  border: solid 2px #D6DADF;
+  border-left: none;
+}
+.Zippo .descriptionTShirt .informContainer .location .back:hover {
+  cursor: pointer;
+  background: #f2f2f6;
+}
+.Zippo .descriptionTShirt .informContainer .btnts {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  background: #ff596f;
+  width: 100%;
+  margin: 15px auto;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+}
+.Zippo .descriptionTShirt .informContainer .btnts img {
+  width: 25px;
+  height: 25px;
+  margin: 0 10px 0 0;
+}
+.Zippo .descriptionTShirt .informContainer .btnts p {
+  font-size: 16px;
+  font-weight: 600;
+}
+.Zippo .descriptionTShirt .delivery {
+  display: flex;
+  margin: 30px auto;
+}
+.Zippo .descriptionTShirt .delivery img {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px 0 0;
+}
+.Zippo .descriptionTShirt .delivery .devTitle {
+  font-size: 16px;
+  color: #19124f;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+.Zippo .descriptionTShirt .delivery .devP {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.Zippo .descriptionTShirt .starContainer p {
+  font-size: 16px;
+  color: #19124f;
+  font-weight: 600;
+  padding: 0 0 10px 0;
+}
+.Zippo .descriptionTShirt .starContainer .stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Zippo .descriptionTShirt .starContainer .stars img {
+  width: 25px;
+  height: 25px;
+}
+.Zippo .descriptionTShirt .starContainer .stars .bar {
+  width: 60%;
+  background: #f2f2f6;
+  border-radius: 20px;
+  height: 7px;
+  margin: 5px 20px;
+}
+.Zippo .descriptionTShirt .starContainer .stars .bar .progressBar1 {
+  background: #1240ab;
+  width: 66%;
+  height: 7px;
+  border-radius: 20px;
+}
+.Zippo .descriptionTShirt .starContainer .stars .bar .progressBar2 {
+  background: #1240ab;
+  width: 11%;
+  height: 7px;
+  border-radius: 20px;
+}
+.Zippo .descriptionTShirt .starContainer .stars .bar .progressBar3 {
+  background: #1240ab;
+  width: 9%;
+  height: 7px;
+  border-radius: 20px;
+}
+.Zippo .descriptionTShirt .starContainer .stars .bar .progressBar4 {
+  background: #1240ab;
+  width: 5%;
+  height: 7px;
+  border-radius: 20px;
+}
+.Zippo .descriptionTShirt .starContainer .stars .bar .progressBar5 {
+  background: #1240ab;
+  width: 8%;
+  height: 7px;
+  border-radius: 20px;
+}
+
+.photosContainer {
+  width: 60%;
+  margin: 0 auto;
+}
+.photosContainer .photos {
+  width: 100%;
+  display: flex;
+  max-width: 100%;
+  justify-content: center;
+}
+.photosContainer .photos img {
+  display: block;
+  width: 20%;
+  margin: 10px 2px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  transition: transform 0.3s ease;
+}
+.photosContainer .photos img:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.selected {
+  color: white;
+  background: #07002f;
+  border: solid 2px #07002f;
+  border-radius: 5px 0 0 5px;
+}
+.selected:hover {
+  color: white;
+  background: #07002f;
+}
+
+.selected2 {
+  color: white;
+  background: #07002f;
+  border: solid 2px #07002f;
+  border-radius: 0 5px 5px 0;
+}
+.selected2:hover {
+  color: white;
+  background: #07002f;
+}
+
+#selected {
+  color: white;
+  background: #07002f;
+  border-color: #07002f;
+}
+#selected:hover {
+  color: white;
+  background: #07002f;
+}
+
+#readReviews {
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  padding: 15px 0;
+  width: fit-content;
+}
+#readReviews:hover {
+  cursor: pointer;
+}
+
+.TShirtContainer {
+  margin: 0 0 30px 0;
+}
+
+.features221 {
+  padding: 20px;
+  background: white;
+  display: none;
+}
+@media screen and (max-device-width: 500px) {
+  .features221 {
+    display: block;
+    padding: 20px 0 0 0;
+  }
+}
+.features221 p {
+  font-size: 16px;
+}
+.features221 h2 {
+  color: #19124f;
+  font-weight: 600;
+  font-size: 20px;
+}
+.features221 ul {
+  padding: 20px 0 0 40px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.features221 ul li {
+  padding: 5px 0;
+}
+.features221 .secondUl {
+  padding: 10px 20px;
+}
+.features221 .secondUl li {
+  padding: 5px 0;
+}
+
+.mobileHeader {
+  padding: 10px 20px;
+  display: none;
+}
+@media screen and (max-device-width: 500px) {
+  .mobileHeader {
+    display: block;
+  }
+}
+.mobileHeader .h2ts {
+  font-size: 20px;
+  font-weight: 600;
+}
+.mobileHeader .design {
+  font-size: 14px;
+  padding: 5px 0;
+  color: #757195;
+}
+.mobileHeader .design span {
+  font-weight: 600;
+}
+.mobileHeader .price {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1240AB;
+  padding: 5px 0;
+}
+.mobileHeader .price span {
+  color: #757195;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+.mobileHeader #vat {
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  padding: 0 0 0 10px;
+}
+
 .photos1 {
   width: 100%;
   display: flex;
@@ -15,6 +716,11 @@
 .photos1 img:hover {
   transform: scale(1.5);
   cursor: pointer;
+}
+
+.imgContainer #currentImgLight {
+  width: 60%;
+  padding: 20px;
 }
 
 .colors22 {
@@ -121,6 +827,16 @@
   padding: 20px;
   font-size: 16px;
 }
+@media screen and (max-device-width: 500px) {
+  .features22 {
+    display: none;
+  }
+}
+.features22 h2 {
+  color: #19124f;
+  font-weight: 600;
+  font-size: 20px;
+}
 .features22 .firstUl {
   padding: 20px 40px;
 }
@@ -140,6 +856,89 @@
 .imgCarouselZippo .imgCarContainerZippo {
   width: 80%;
   margin: 30px auto;
+}
+
+.zippoContainer {
+  margin: 0 0 30px 0;
+  animation-name: scaleAnimation1;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.1, 0, 0.2, 1);
+  animation-fill-mode: forwards;
+  transform-origin: top right;
+  position: relative;
+}
+
+#zippoContainer {
+  animation: revertStart1 cubic-bezier(0.1, 0, 0.2, 1) 1s forwards;
+}
+
+@keyframes scaleAnimation1 {
+  0% {
+    transform: scale(0);
+    right: 20%;
+    top: 0;
+    height: 0;
+  }
+  99% {
+    transform: scale(1);
+    right: 0;
+    top: 0;
+    height: 100vh;
+  }
+  100% {
+    transform: scale(1);
+    right: 0;
+    top: 0;
+    height: fit-content;
+  }
+}
+@keyframes revertStart1 {
+  0% {
+    transform: scale(1);
+    right: 0;
+    top: 0;
+    height: fit-content;
+  }
+  100% {
+    transform: scale(0);
+    right: 20%;
+    top: 0;
+    height: 0;
+  }
+}
+.progressBar1Zippo {
+  width: 79%;
+  height: 7px;
+  background: #1240ab;
+  border-radius: 20px;
+}
+
+.progressBar2Zippo {
+  width: 5%;
+  height: 7px;
+  background: #1240ab;
+  border-radius: 20px;
+}
+
+.progressBar3Zippo {
+  width: 3%;
+  height: 7px;
+  background: #1240ab;
+  border-radius: 20px;
+}
+
+.progressBar4Zippo {
+  width: 7%;
+  height: 7px;
+  background: #1240ab;
+  border-radius: 20px;
+}
+
+.progressBar5Zippo {
+  width: 6%;
+  height: 7px;
+  background: #1240ab;
+  border-radius: 20px;
 }
 
 /*# sourceMappingURL=Zippo.css.map */

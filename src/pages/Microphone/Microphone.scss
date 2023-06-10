@@ -1,0 +1,879 @@
+.Micro {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-device-width: 500px) {
+    width: 100%;
+    display: block;
+  }
+
+  .imgContainer {
+    width: 49%;
+    background: white;
+    border-radius: 5px;
+    @media screen and (max-device-width: 500px) {
+      width: 100%;
+    }
+    #currentImgLight{
+      width: 90%;
+      padding: 20px;
+      @media screen and (max-device-width: 500px) {
+        width: 100%;
+      }
+    }
+    img {
+      width: 100%;
+    }
+
+    .features {
+      padding: 20px;
+      background: white;
+      @media screen and (max-device-width: 500px) {
+        display: none;
+      }
+
+      h2 {
+        color: #19124f;
+        font-weight: 600;
+        font-size: 20px;
+      }
+
+      ul {
+        padding: 20px 0 0 40px;
+        font-size: 16px;
+        font-weight: 400;
+
+        li {
+          padding: 5px 0;
+        }
+      }
+    }
+  }
+
+  .descriptionTShirt {
+    width: 50%;
+    background: white;
+    border-radius: 5px;
+    @media screen and (max-device-width: 500px) {
+      width: 100%;
+    }
+    .informContainer {
+      width: 98%;
+      margin: 5% 0% 5% auto;
+      background: white;
+      border-radius: 5px;
+      padding: 20px;
+      @media screen and (max-device-width: 500px) {
+        margin: 0;
+      }
+
+      .h2ts {
+        font-size: 24px;
+        font-weight: 600;
+        @media screen and (max-device-width: 500px) {
+          display: none;
+        }
+      }
+
+      .design {
+        font-size: 14px;
+        padding: 5px 0;
+        color: #757195;
+        @media screen and (max-device-width: 500px) {
+          display: none;
+        }
+
+        span {
+          font-weight: 600;
+        }
+      }
+
+      .price {
+        font-size: 24px;
+        font-weight: 600;
+        color: #1240AB;
+        padding: 5px 0;
+        @media screen and (max-device-width: 500px) {
+          display: none;
+        }
+
+        span {
+          color: #757195;
+          font-size: 14px;
+          font-weight: 400;
+          text-decoration: line-through;
+          @media screen and (max-device-width: 500px) {
+            display: none;
+          }
+        }
+
+      }
+
+      .vat {
+        font-size: 14px;
+        color: #757195;
+        @media screen and (max-device-width: 500px) {
+          display: none;
+        }
+      }
+
+      .color {
+        font-size: 16px;
+        color: black;
+        padding: 10px 0;
+        span {
+          padding: 0 10px 0 0;
+          color: #19124f;
+          font-weight: 600;
+        }
+      }
+
+      .color11 {
+        font-size: 16px;
+        color: black;
+        padding: 10px 0;
+        display: none;
+        @media screen and (max-device-width: 500px) {
+          display: block;
+        }
+
+        span {
+          padding: 0 10px 0 0;
+          color: #19124f;
+          font-weight: 600;
+        }
+      }
+
+      .color22 {
+        font-size: 16px;
+        color: black;
+        padding: 10px 0;
+        @media screen and (max-device-width: 500px) {
+          display: none;
+        }
+
+        span {
+          padding: 0 10px 0 0;
+          color: #19124f;
+          font-weight: 600;
+        }
+      }
+
+      .colors {
+        display: flex;
+        margin: 0 0 10px 0;
+        @media screen and (max-device-width: 500px) {
+          display: none;
+        }
+
+
+        .roseGold {
+          width: 30px;
+          height: 30px;
+          background: #d9a99d;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .grey {
+          width: 30px;
+          height: 30px;
+          background: #acadb0;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .blue {
+          width: 30px;
+          height: 30px;
+          background: #39a3c9;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .silver {
+          width: 30px;
+          height: 30px;
+          background: #a5a6aa;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .red {
+          width: 30px;
+          height: 30px;
+          background: #e90004;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .brown {
+          width: 30px;
+          height: 30px;
+          background: #786458;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+        .orange {
+          width: 30px;
+          height: 30px;
+          background: #d35824;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .golde {
+          width: 30px;
+          height: 30px;
+          background: gold;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .greene {
+          width: 30px;
+          height: 30px;
+          background: #8ed3c0;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .purple1 {
+          width: 30px;
+          height: 30px;
+          background:#9f418b;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .purple {
+          width: 30px;
+          height: 30px;
+          background: #541e68;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .gold {
+          width: 30px;
+          height: 30px;
+          background: #f89f2b;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .darkRed {
+          width: 30px;
+          height: 30px;
+          background: #5a1f32;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+      }
+
+      .colors122 {
+        margin: 0 0 10px 0;
+        display: none;
+        @media screen and (max-device-width: 500px) {
+          display: flex;
+        }
+
+
+        .roseGold {
+          width: 30px;
+          height: 30px;
+          background: #d9a99d;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .grey {
+          width: 30px;
+          height: 30px;
+          background: #acadb0;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .blue {
+          width: 30px;
+          height: 30px;
+          background: #39a3c9;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .silver {
+          width: 30px;
+          height: 30px;
+          background: #a5a6aa;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .red {
+          width: 30px;
+          height: 30px;
+          background: #e90004;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .brown {
+          width: 30px;
+          height: 30px;
+          background: #786458;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+        .orange {
+          width: 30px;
+          height: 30px;
+          background: #d35824;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .golde {
+          width: 30px;
+          height: 30px;
+          background: gold;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .greene {
+          width: 30px;
+          height: 30px;
+          background: #8ed3c0;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .purple1 {
+          width: 30px;
+          height: 30px;
+          background:#9f418b;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .purple {
+          width: 30px;
+          height: 30px;
+          background: #541e68;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .gold {
+          width: 30px;
+          height: 30px;
+          background: #f89f2b;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .darkRed {
+          width: 30px;
+          height: 30px;
+          background: #5a1f32;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+      }
+      .guide {
+        display: flex;
+        color: #ff596f;
+        font-weight: 600;
+        font-size: 14px;
+        align-items: center;
+        margin: 0 0 10px 5%;
+        border-radius: 100px;
+        width: fit-content;
+        padding: 5px 10px;
+
+        &:hover {
+          cursor: pointer;
+          background: #f2f2f6;
+        }
+
+        img {
+          height: 20px;
+          width: 20px;
+          margin: 0 10px 0 0;
+        }
+      }
+
+      .printLoc {
+        font-size: 16px;
+        color: #19124f;
+        font-weight: 600;
+        margin: 0 0 10px 0;
+      }
+
+
+      .btnts {
+        display: flex;
+        text-decoration: none;
+        color: white;
+        background: #ff596f;
+        width: 100%;
+        margin: 15px auto;
+        padding: 10px 20px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+
+        img {
+          width: 25px;
+          height: 25px;
+          margin: 0 10px 0 0;
+        }
+
+        p {
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .delivery {
+      display: flex;
+      margin: 30px auto;
+
+      img {
+        width: 20px;
+        height: 20px;
+        margin: 0 10px 0 0;
+      }
+
+      .devTitle {
+        font-size: 16px;
+        color: #19124f;
+        font-weight: 600;
+        margin: 0 0 10px 0;
+      }
+
+      .devP {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+      }
+    }
+
+    .starContainer {
+      p {
+        font-size: 16px;
+        color: #19124f;
+        font-weight: 600;
+        padding: 0 0 10px 0;
+      }
+
+      .stars {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 25px;
+          height: 25px;
+        }
+
+        .bar {
+          width: 60%;
+          background: #f2f2f6;
+          border-radius: 20px;
+          height: 7px;
+          margin: 5px 20px;
+
+          .progressBar1 {
+            background: #1240ab;
+            width: 77%;
+            height: 7px;
+            border-radius: 20px;
+          }
+
+          .progressBar2 {
+            background: #1240ab;
+            width: 11%;
+            height: 7px;
+            border-radius: 20px;
+          }
+
+          .progressBar3 {
+            background: #1240ab;
+            width: 8%;
+            height: 7px;
+            border-radius: 20px;
+          }
+
+          .progressBar4 {
+            background: #1240ab;
+            width: 9%;
+            height: 7px;
+            border-radius: 20px;
+          }
+
+          .progressBar5 {
+            background: #1240ab;
+            width: 5%;
+            height: 7px;
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+#readReviews{
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  padding: 15px 0;
+  width: fit-content;
+  &:hover {
+    cursor: pointer;
+  }
+}

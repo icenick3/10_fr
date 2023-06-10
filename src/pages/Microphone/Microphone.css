@@ -1,3 +1,816 @@
+.Micro {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-device-width: 500px) {
+  .Micro {
+    width: 100%;
+    display: block;
+  }
+}
+.Micro .imgContainer {
+  width: 49%;
+  background: white;
+  border-radius: 5px;
+}
+@media screen and (max-device-width: 500px) {
+  .Micro .imgContainer {
+    width: 100%;
+  }
+}
+.Micro .imgContainer #currentImgLight {
+  width: 90%;
+  padding: 20px;
+}
+@media screen and (max-device-width: 500px) {
+  .Micro .imgContainer #currentImgLight {
+    width: 100%;
+  }
+}
+.Micro .imgContainer img {
+  width: 100%;
+}
+.Micro .imgContainer .features {
+  padding: 20px;
+  background: white;
+}
+@media screen and (max-device-width: 500px) {
+  .Micro .imgContainer .features {
+    display: none;
+  }
+}
+.Micro .imgContainer .features h2 {
+  color: #19124f;
+  font-weight: 600;
+  font-size: 20px;
+}
+.Micro .imgContainer .features ul {
+  padding: 20px 0 0 40px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.Micro .imgContainer .features ul li {
+  padding: 5px 0;
+}
+.Micro .descriptionTShirt {
+  width: 50%;
+  background: white;
+  border-radius: 5px;
+}
+@media screen and (max-device-width: 500px) {
+  .Micro .descriptionTShirt {
+    width: 100%;
+  }
+}
+.Micro .descriptionTShirt .informContainer {
+  width: 98%;
+  margin: 5% 0% 5% auto;
+  background: white;
+  border-radius: 5px;
+  padding: 20px;
+}
+@media screen and (max-device-width: 500px) {
+  .Micro .descriptionTShirt .informContainer {
+    margin: 0;
+  }
+}
+.Micro .descriptionTShirt .informContainer .h2ts {
+  font-size: 24px;
+  font-weight: 600;
+}
+@media screen and (max-device-width: 500px) {
+  .Micro .descriptionTShirt .informContainer .h2ts {
+    display: none;
+  }
+}
+.Micro .descriptionTShirt .informContainer .design {
+  font-size: 14px;
+  padding: 5px 0;
+  color: #757195;
+}
+@media screen and (max-device-width: 500px) {
+  .Micro .descriptionTShirt .informContainer .design {
+    display: none;
+  }
+}
+.Micro .descriptionTShirt .informContainer .design span {
+  font-weight: 600;
+}
+.Micro .descriptionTShirt .informContainer .price {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1240AB;
+  padding: 5px 0;
+}
+@media screen and (max-device-width: 500px) {
+  .Micro .descriptionTShirt .informContainer .price {
+    display: none;
+  }
+}
+.Micro .descriptionTShirt .informContainer .price span {
+  color: #757195;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+@media screen and (max-device-width: 500px) {
+  .Micro .descriptionTShirt .informContainer .price span {
+    display: none;
+  }
+}
+.Micro .descriptionTShirt .informContainer .vat {
+  font-size: 14px;
+  color: #757195;
+}
+@media screen and (max-device-width: 500px) {
+  .Micro .descriptionTShirt .informContainer .vat {
+    display: none;
+  }
+}
+.Micro .descriptionTShirt .informContainer .color {
+  font-size: 16px;
+  color: black;
+  padding: 10px 0;
+}
+.Micro .descriptionTShirt .informContainer .color span {
+  padding: 0 10px 0 0;
+  color: #19124f;
+  font-weight: 600;
+}
+.Micro .descriptionTShirt .informContainer .color11 {
+  font-size: 16px;
+  color: black;
+  padding: 10px 0;
+  display: none;
+}
+@media screen and (max-device-width: 500px) {
+  .Micro .descriptionTShirt .informContainer .color11 {
+    display: block;
+  }
+}
+.Micro .descriptionTShirt .informContainer .color11 span {
+  padding: 0 10px 0 0;
+  color: #19124f;
+  font-weight: 600;
+}
+.Micro .descriptionTShirt .informContainer .color22 {
+  font-size: 16px;
+  color: black;
+  padding: 10px 0;
+}
+@media screen and (max-device-width: 500px) {
+  .Micro .descriptionTShirt .informContainer .color22 {
+    display: none;
+  }
+}
+.Micro .descriptionTShirt .informContainer .color22 span {
+  padding: 0 10px 0 0;
+  color: #19124f;
+  font-weight: 600;
+}
+.Micro .descriptionTShirt .informContainer .colors {
+  display: flex;
+  margin: 0 0 10px 0;
+}
+@media screen and (max-device-width: 500px) {
+  .Micro .descriptionTShirt .informContainer .colors {
+    display: none;
+  }
+}
+.Micro .descriptionTShirt .informContainer .colors .roseGold {
+  width: 30px;
+  height: 30px;
+  background: #d9a99d;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Micro .descriptionTShirt .informContainer .colors .roseGold img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Micro .descriptionTShirt .informContainer .colors .roseGold:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Micro .descriptionTShirt .informContainer .colors .grey {
+  width: 30px;
+  height: 30px;
+  background: #acadb0;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Micro .descriptionTShirt .informContainer .colors .grey img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Micro .descriptionTShirt .informContainer .colors .grey:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Micro .descriptionTShirt .informContainer .colors .blue {
+  width: 30px;
+  height: 30px;
+  background: #39a3c9;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Micro .descriptionTShirt .informContainer .colors .blue img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Micro .descriptionTShirt .informContainer .colors .blue:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Micro .descriptionTShirt .informContainer .colors .silver {
+  width: 30px;
+  height: 30px;
+  background: #a5a6aa;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Micro .descriptionTShirt .informContainer .colors .silver img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Micro .descriptionTShirt .informContainer .colors .silver:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Micro .descriptionTShirt .informContainer .colors .red {
+  width: 30px;
+  height: 30px;
+  background: #e90004;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Micro .descriptionTShirt .informContainer .colors .red img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Micro .descriptionTShirt .informContainer .colors .red:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Micro .descriptionTShirt .informContainer .colors .brown {
+  width: 30px;
+  height: 30px;
+  background: #786458;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Micro .descriptionTShirt .informContainer .colors .brown img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Micro .descriptionTShirt .informContainer .colors .brown:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Micro .descriptionTShirt .informContainer .colors .orange {
+  width: 30px;
+  height: 30px;
+  background: #d35824;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Micro .descriptionTShirt .informContainer .colors .orange img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Micro .descriptionTShirt .informContainer .colors .orange:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Micro .descriptionTShirt .informContainer .colors .golde {
+  width: 30px;
+  height: 30px;
+  background: gold;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Micro .descriptionTShirt .informContainer .colors .golde img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Micro .descriptionTShirt .informContainer .colors .golde:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Micro .descriptionTShirt .informContainer .colors .greene {
+  width: 30px;
+  height: 30px;
+  background: #8ed3c0;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Micro .descriptionTShirt .informContainer .colors .greene img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Micro .descriptionTShirt .informContainer .colors .greene:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Micro .descriptionTShirt .informContainer .colors .purple1 {
+  width: 30px;
+  height: 30px;
+  background: #9f418b;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Micro .descriptionTShirt .informContainer .colors .purple1 img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Micro .descriptionTShirt .informContainer .colors .purple1:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Micro .descriptionTShirt .informContainer .colors .purple {
+  width: 30px;
+  height: 30px;
+  background: #541e68;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Micro .descriptionTShirt .informContainer .colors .purple img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Micro .descriptionTShirt .informContainer .colors .purple:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Micro .descriptionTShirt .informContainer .colors .gold {
+  width: 30px;
+  height: 30px;
+  background: #f89f2b;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Micro .descriptionTShirt .informContainer .colors .gold img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Micro .descriptionTShirt .informContainer .colors .gold:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Micro .descriptionTShirt .informContainer .colors .darkRed {
+  width: 30px;
+  height: 30px;
+  background: #5a1f32;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Micro .descriptionTShirt .informContainer .colors .darkRed img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Micro .descriptionTShirt .informContainer .colors .darkRed:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Micro .descriptionTShirt .informContainer .colors122 {
+  margin: 0 0 10px 0;
+  display: none;
+}
+@media screen and (max-device-width: 500px) {
+  .Micro .descriptionTShirt .informContainer .colors122 {
+    display: flex;
+  }
+}
+.Micro .descriptionTShirt .informContainer .colors122 .roseGold {
+  width: 30px;
+  height: 30px;
+  background: #d9a99d;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .roseGold img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .roseGold:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .grey {
+  width: 30px;
+  height: 30px;
+  background: #acadb0;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .grey img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .grey:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .blue {
+  width: 30px;
+  height: 30px;
+  background: #39a3c9;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .blue img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .blue:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .silver {
+  width: 30px;
+  height: 30px;
+  background: #a5a6aa;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .silver img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .silver:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .red {
+  width: 30px;
+  height: 30px;
+  background: #e90004;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .red img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .red:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .brown {
+  width: 30px;
+  height: 30px;
+  background: #786458;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .brown img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .brown:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .orange {
+  width: 30px;
+  height: 30px;
+  background: #d35824;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .orange img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .orange:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .golde {
+  width: 30px;
+  height: 30px;
+  background: gold;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .golde img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .golde:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .greene {
+  width: 30px;
+  height: 30px;
+  background: #8ed3c0;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .greene img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .greene:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .purple1 {
+  width: 30px;
+  height: 30px;
+  background: #9f418b;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .purple1 img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .purple1:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .purple {
+  width: 30px;
+  height: 30px;
+  background: #541e68;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .purple img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .purple:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .gold {
+  width: 30px;
+  height: 30px;
+  background: #f89f2b;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .gold img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .gold:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .darkRed {
+  width: 30px;
+  height: 30px;
+  background: #5a1f32;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .darkRed img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Micro .descriptionTShirt .informContainer .colors122 .darkRed:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Micro .descriptionTShirt .informContainer .guide {
+  display: flex;
+  color: #ff596f;
+  font-weight: 600;
+  font-size: 14px;
+  align-items: center;
+  margin: 0 0 10px 5%;
+  border-radius: 100px;
+  width: fit-content;
+  padding: 5px 10px;
+}
+.Micro .descriptionTShirt .informContainer .guide:hover {
+  cursor: pointer;
+  background: #f2f2f6;
+}
+.Micro .descriptionTShirt .informContainer .guide img {
+  height: 20px;
+  width: 20px;
+  margin: 0 10px 0 0;
+}
+.Micro .descriptionTShirt .informContainer .printLoc {
+  font-size: 16px;
+  color: #19124f;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+.Micro .descriptionTShirt .informContainer .btnts {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  background: #ff596f;
+  width: 100%;
+  margin: 15px auto;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+}
+.Micro .descriptionTShirt .informContainer .btnts img {
+  width: 25px;
+  height: 25px;
+  margin: 0 10px 0 0;
+}
+.Micro .descriptionTShirt .informContainer .btnts p {
+  font-size: 16px;
+  font-weight: 600;
+}
+.Micro .descriptionTShirt .delivery {
+  display: flex;
+  margin: 30px auto;
+}
+.Micro .descriptionTShirt .delivery img {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px 0 0;
+}
+.Micro .descriptionTShirt .delivery .devTitle {
+  font-size: 16px;
+  color: #19124f;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+.Micro .descriptionTShirt .delivery .devP {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.Micro .descriptionTShirt .starContainer p {
+  font-size: 16px;
+  color: #19124f;
+  font-weight: 600;
+  padding: 0 0 10px 0;
+}
+.Micro .descriptionTShirt .starContainer .stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Micro .descriptionTShirt .starContainer .stars img {
+  width: 25px;
+  height: 25px;
+}
+.Micro .descriptionTShirt .starContainer .stars .bar {
+  width: 60%;
+  background: #f2f2f6;
+  border-radius: 20px;
+  height: 7px;
+  margin: 5px 20px;
+}
+.Micro .descriptionTShirt .starContainer .stars .bar .progressBar1 {
+  background: #1240ab;
+  width: 77%;
+  height: 7px;
+  border-radius: 20px;
+}
+.Micro .descriptionTShirt .starContainer .stars .bar .progressBar2 {
+  background: #1240ab;
+  width: 11%;
+  height: 7px;
+  border-radius: 20px;
+}
+.Micro .descriptionTShirt .starContainer .stars .bar .progressBar3 {
+  background: #1240ab;
+  width: 8%;
+  height: 7px;
+  border-radius: 20px;
+}
+.Micro .descriptionTShirt .starContainer .stars .bar .progressBar4 {
+  background: #1240ab;
+  width: 9%;
+  height: 7px;
+  border-radius: 20px;
+}
+.Micro .descriptionTShirt .starContainer .stars .bar .progressBar5 {
+  background: #1240ab;
+  width: 5%;
+  height: 7px;
+  border-radius: 20px;
+}
 
+#readReviews {
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  padding: 15px 0;
+  width: fit-content;
+}
+#readReviews:hover {
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=Microphone.css.map */

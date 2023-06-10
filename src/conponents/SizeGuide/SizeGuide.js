@@ -20,8 +20,9 @@ const SizeGuide = ({setShowGuide, showGuide}) => {
 
     return (
         <div className={showGuide ? "sizeGuide show" : "sizeGuide"} onClick={()=> setShowGuide(false)}>
-            <img className="closeGuide" src="https://i.pinimg.com/originals/52/e3/86/52e38681b082f94f2917624bb56edf42.png" alt="" onClick={()=> setShowGuide(false)}/>
+
             <div className={showGuide ? "sizeGuideContainer show" : "sizeGuideContainer"} onClick={(e)=> e.stopPropagation()}>
+                <img className="closeGuide" src="https://i.pinimg.com/originals/52/e3/86/52e38681b082f94f2917624bb56edf42.png" alt="" onClick={()=> setShowGuide(false)}/>
                 <div className="imgSvg">
                     <svg xmlns="http://www.w3.org/2000/svg" width="140" height="83" viewBox="0 0 140 83" fill="none">
                         <g clip-path="url(#clip0_204_2478)">

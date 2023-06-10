@@ -1,16 +1,18 @@
 
-.carouselTS{
+.carouselTS11{
   position: relative;
   width: 100%;
   margin: 0 auto;
+  overflow: hidden;
   #currentImgTS{
     display: block;
     margin: 0 auto;
   }
 #leftArrowTSContainer{
-  width: 10%;
+  width: 25%;
   position: absolute;
   z-index: 111;
+  height: 1000px;
 
   &:hover {
     cursor: pointer;
@@ -43,11 +45,12 @@
   }
 
 #rightArrowTSContainer{
-  width: 10%;
+  width: 25%;
   position: absolute;
   z-index: 111;
   right: 0;
   top: 0;
+  height: 1000px;
 
   &:hover {
     cursor: pointer;
@@ -56,9 +59,6 @@
   }
 
 }
-
-
-
 
 }
 

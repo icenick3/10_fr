@@ -15,11 +15,21 @@
   border-radius: 4px;
   font-size: 20px;
 }
+@media screen and (max-device-width: 500px) {
+  .purpleHeader h2 {
+    font-size: 12px;
+  }
+}
 .purpleHeader p {
   font-size: 20px;
   font-weight: 600;
   color: white;
   padding: 4px 8px;
+}
+@media screen and (max-device-width: 500px) {
+  .purpleHeader p {
+    font-size: 14px;
+  }
 }
 
 /*# sourceMappingURL=PurpleHeader.css.map */

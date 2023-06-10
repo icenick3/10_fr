@@ -1,23 +1,25 @@
-.carouselTS {
+.carouselTS11 {
   position: relative;
   width: 100%;
   margin: 0 auto;
+  overflow: hidden;
 }
-.carouselTS #currentImgTS {
+.carouselTS11 #currentImgTS {
   display: block;
   margin: 0 auto;
 }
-.carouselTS #leftArrowTSContainer {
-  width: 10%;
+.carouselTS11 #leftArrowTSContainer {
+  width: 25%;
   position: absolute;
   z-index: 111;
+  height: 1000px;
 }
-.carouselTS #leftArrowTSContainer:hover {
+.carouselTS11 #leftArrowTSContainer:hover {
   cursor: pointer;
   background: lightgray;
   opacity: 0.3;
 }
-.carouselTS #leftArrowTS {
+.carouselTS11 #leftArrowTS {
   position: absolute;
   top: calc(50% - 25px);
   left: 0;
@@ -25,10 +27,10 @@
   width: 50px;
   height: 50px;
 }
-.carouselTS #leftArrowTS:hover {
+.carouselTS11 #leftArrowTS:hover {
   cursor: pointer;
 }
-.carouselTS #rightArrowTS {
+.carouselTS11 #rightArrowTS {
   transform: rotate(180deg);
   position: absolute;
   top: calc(50% - 25px);
@@ -37,17 +39,18 @@
   height: 50px;
   right: 0;
 }
-.carouselTS #rightArrowTS:hover {
+.carouselTS11 #rightArrowTS:hover {
   cursor: pointer;
 }
-.carouselTS #rightArrowTSContainer {
-  width: 10%;
+.carouselTS11 #rightArrowTSContainer {
+  width: 25%;
   position: absolute;
   z-index: 111;
   right: 0;
   top: 0;
+  height: 1000px;
 }
-.carouselTS #rightArrowTSContainer:hover {
+.carouselTS11 #rightArrowTSContainer:hover {
   cursor: pointer;
   background: lightgray;
   opacity: 0.3;

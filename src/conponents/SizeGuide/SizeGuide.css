@@ -10,7 +10,7 @@
   opacity: 0;
   pointer-events: none;
   transition: 0.5s;
-  z-index: 33;
+  z-index: 333333;
   overflow: scroll;
   scrollbar-width: none; /* Для Firefox */
   -ms-overflow-style: none; /* Для IE та Edge */
@@ -26,7 +26,15 @@
   padding: 40px 20px;
   border-radius: 10px;
   transform: scale(0.5);
+  position: relative;
   transition: 0.4s all;
+}
+@media screen and (max-device-width: 500px) {
+  .sizeGuideContainer {
+    width: 100%;
+    border-radius: 0px;
+    margin: 0;
+  }
 }
 .sizeGuideContainer .imgSvg {
   display: flex;
@@ -79,22 +87,48 @@
   display: flex;
   font-size: 16px;
   justify-content: center;
+  overflow: auto;
+  text-align: center;
+}
+@media screen and (max-device-width: 500px) {
+  .menTable {
+    overflow: auto;
+    font-size: 10px;
+  }
 }
 .menTable .firstColum {
   font-weight: 600;
   border: 1px solid black;
   width: 10%;
 }
+@media screen and (max-device-width: 500px) {
+  .menTable .firstColum {
+    width: 20%;
+    border: none;
+  }
+}
 .menTable .firstColum div {
   padding: 20px 30px;
   border: 1px solid black;
 }
+@media screen and (max-device-width: 500px) {
+  .menTable .firstColum div {
+    padding: 10px 20px;
+    width: 20%;
+    border: none;
+  }
+}
 .menTable .secondColum {
-  width: 90%;
+  width: 80%;
   text-align: center;
   border: 1px solid black;
   border-left: none;
   border-right: none;
+}
+@media screen and (max-device-width: 500px) {
+  .menTable .secondColum {
+    border: none;
+  }
 }
 .menTable .secondColum .Size {
   display: flex;
@@ -103,12 +137,27 @@
   border: 1px solid black;
   border-left: none;
 }
+@media screen and (max-device-width: 500px) {
+  .menTable .secondColum .Size {
+    border: none;
+    width: 100%;
+    margin-left: 70px;
+  }
+}
 .menTable .secondColum .Size p {
   padding: 20px 30px;
   width: 12.5%;
   display: block;
   border-right: 1px solid black;
   justify-content: center;
+}
+@media screen and (max-device-width: 500px) {
+  .menTable .secondColum .Size p {
+    padding: 10px 25px;
+    text-align: center;
+    width: 20%;
+    border: none;
+  }
 }
 .menTable .secondColum .chest {
   display: flex;
@@ -117,11 +166,25 @@
   border: 1px solid black;
   border-left: none;
 }
+@media screen and (max-device-width: 500px) {
+  .menTable .secondColum .chest {
+    border: none;
+    width: 100%;
+    margin-left: 70px;
+  }
+}
 .menTable .secondColum .chest p {
   padding: 20px 30px;
   width: 12.5%;
   display: block;
   border-right: 1px solid black;
+}
+@media screen and (max-device-width: 500px) {
+  .menTable .secondColum .chest p {
+    padding: 10px 20px;
+    width: 20%;
+    border: none;
+  }
 }
 .menTable .secondColum .length {
   display: flex;
@@ -130,11 +193,25 @@
   border: 1px solid black;
   border-left: none;
 }
+@media screen and (max-device-width: 500px) {
+  .menTable .secondColum .length {
+    border: none;
+    width: 100%;
+    margin-left: 70px;
+  }
+}
 .menTable .secondColum .length p {
   padding: 20px 30px;
   width: 12.5%;
   display: block;
   border-right: 1px solid black;
+}
+@media screen and (max-device-width: 500px) {
+  .menTable .secondColum .length p {
+    padding: 10px 20px;
+    width: 20%;
+    border: none;
+  }
 }
 
 .find {
@@ -174,6 +251,11 @@
   justify-content: space-between;
   margin: 30px 0;
 }
+@media screen and (max-device-width: 500px) {
+  .guideInfo {
+    display: block;
+  }
+}
 .guideInfo .guideInfoContainer h2 {
   font-weight: 600;
   font-size: 16px;
@@ -187,6 +269,8 @@
 }
 .guideInfo .imgTShirt {
   padding-top: 60px;
+  display: flex;
+  justify-content: center;
 }
 
 .productM {
@@ -212,6 +296,13 @@
   position: fixed;
   top: 30px;
   right: 30px;
+  z-index: 7777;
+}
+@media screen and (max-device-width: 500px) {
+  .closeGuide {
+    position: sticky;
+    margin-left: 85%;
+  }
 }
 .closeGuide:hover {
   cursor: pointer;

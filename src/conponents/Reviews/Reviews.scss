@@ -1,4 +1,4 @@
-.reviews {
+.reviewsTS {
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.4);
@@ -9,7 +9,7 @@
   opacity: 0;
   pointer-events: none;
   transition: 0.5s;
-  z-index: 33;
+  z-index: 313;
   overflow: scroll;
   scrollbar-width: none; /* Для Firefox */
   -ms-overflow-style: none; /* Для IE та Edge */
@@ -18,7 +18,7 @@
   }
 }
 
-.reviewsContainer {
+.reviewsContainerTS {
   background: white;
   width: 25%;
   margin: 5vh auto;
@@ -26,6 +26,12 @@
   border-radius: 10px;
   transform: scale(0.5);
   transition: 0.4s all;
+  @media screen and (max-device-width: 500px) {
+    width: 100%;
+    border-radius: 0;
+    padding: 0 20px;
+    margin: 0;
+  }
   h2{
     text-align: center;
   }

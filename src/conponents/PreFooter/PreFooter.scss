@@ -7,6 +7,10 @@
   justify-content: center;
   text-align: center;
   padding: 20px;
+  @media screen and (max-device-width: 500px) {
+    display: none;
+
+  }
   .block{
     width: 25%;
     padding: 10px;

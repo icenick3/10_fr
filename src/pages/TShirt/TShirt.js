@@ -28,7 +28,7 @@ import {
 } from "../../conponents/ImageMbappe/ImageMbappe";
 import ProductCarousel from "../../conponents/ProductCarousel/ProductCarousel";
 
-const TShirt = ({date, date2, setSmall, small, setShowReviews, setShowGuide}) => {
+const TShirt = ({date, date2, setSmall, small, setShowReviews, setShowGuide, phone}) => {
 
 
     const [color, setColor] = useState('Purple')
@@ -92,7 +92,11 @@ const TShirt = ({date, date2, setSmall, small, setShowReviews, setShowGuide}) =>
             setTimeout(() => {
                 mainRef.current.id = "";
                 setSmall(true)
-                window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
+                if (!phone){
+                    window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
+                } else {
+
+                }
             }, 450)
 
 

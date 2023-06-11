@@ -557,4 +557,42 @@
   padding: 0 0 30px 0;
 }
 
+.barMill {
+  width: 60%;
+  background: #f2f2f6;
+  border-radius: 20px;
+  height: 7px;
+  margin: 5px 20px;
+}
+.barMill .progressBar1 {
+  background: #1240ab;
+  width: 83%;
+  height: 7px;
+  border-radius: 20px;
+}
+.barMill .progressBar2 {
+  background: #1240ab;
+  width: 7%;
+  height: 7px;
+  border-radius: 20px;
+}
+.barMill .progressBar3 {
+  background: #1240ab;
+  width: 6%;
+  height: 7px;
+  border-radius: 20px;
+}
+.barMill .progressBar4 {
+  background: #1240ab;
+  width: 3%;
+  height: 7px;
+  border-radius: 20px;
+}
+.barMill .progressBar5 {
+  background: #1240ab;
+  width: 6%;
+  height: 7px;
+  border-radius: 20px;
+}
+
 /*# sourceMappingURL=Mill.css.map */

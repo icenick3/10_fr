@@ -6,7 +6,7 @@ import CarouselBoxTShirt from "../../conponents/CarouselBoxTShirt/CarouselBoxTSh
 import CarouselBoxCork from "../../conponents/CarouselBoxCork/CarouselBoxTShirt";
 
 
-const Cork = ({date, date2, small, setSmall, setShowReviews}) => {
+const Cork = ({date, date2, small, setSmall, setShowReviews, phone}) => {
 
     const mainRef = useRef()
 
@@ -16,7 +16,11 @@ const Cork = ({date, date2, small, setSmall, setShowReviews}) => {
             setTimeout(() => {
                 mainRef.current.id = "";
                 setSmall(true)
-                window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
+                if (!phone){
+                    window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
+                } else {
+
+                }
             }, 450)
 
 
@@ -161,7 +165,7 @@ const Cork = ({date, date2, small, setSmall, setShowReviews}) => {
                                      alt=""/>
                                 <img src="https://i.pinimg.com/originals/7d/d0/45/7dd045a8dc0e884b0a49f53abf22d2d0.png"
                                      alt=""/>
-                                <div className="bar">
+                                <div className="barCork">
                                     <div className="progressBar1">
                                     </div>
                                 </div>
@@ -177,7 +181,7 @@ const Cork = ({date, date2, small, setSmall, setShowReviews}) => {
                                      alt=""/>
                                 <img src="https://i.pinimg.com/originals/3b/70/0e/3b700e77b647c29b9bfa6adfd36969ad.png"
                                      alt=""/>
-                                <div className="bar">
+                                <div className="barCork">
                                     <div className="progressBar2">
                                     </div>
                                 </div>
@@ -193,7 +197,7 @@ const Cork = ({date, date2, small, setSmall, setShowReviews}) => {
                                      alt=""/>
                                 <img src="https://i.pinimg.com/originals/3b/70/0e/3b700e77b647c29b9bfa6adfd36969ad.png"
                                      alt=""/>
-                                <div className="bar">
+                                <div className="barCork">
                                     <div className="progressBar3">
                                     </div>
                                 </div>
@@ -209,7 +213,7 @@ const Cork = ({date, date2, small, setSmall, setShowReviews}) => {
                                      alt=""/>
                                 <img src="https://i.pinimg.com/originals/3b/70/0e/3b700e77b647c29b9bfa6adfd36969ad.png"
                                      alt=""/>
-                                <div className="bar">
+                                <div className="barCork">
                                     <div className="progressBar4">
                                     </div>
                                 </div>
@@ -225,7 +229,7 @@ const Cork = ({date, date2, small, setSmall, setShowReviews}) => {
                                      alt=""/>
                                 <img src="https://i.pinimg.com/originals/3b/70/0e/3b700e77b647c29b9bfa6adfd36969ad.png"
                                      alt=""/>
-                                <div className="bar">
+                                <div className="barCork">
                                     <div className="progressBar5">
                                     </div>
                                 </div>

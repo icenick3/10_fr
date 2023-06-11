@@ -26,11 +26,11 @@ const Footer = ({setReturn, setShiping, setAbout, setContactUs, setFaq}) => {
                         essentials, we bring you the future of living, today.
                     </p>
                     <br/>
-                    <p>support@samsety.shop</p>
+                    <p>support@art.emporium</p>
                     <br/>
-                    <p>206 Duvernoy St, Constantia Park, Pretoria, 0010, South Africa</p>
+                    <p>7 Rue du Passeur d'Étoiles, 95800 Cergy, France</p>
                     <br/>
-                    <p>Cell: +27 (0) 87 012 5788</p>
+                    <p>Cell: +33757901675</p>
                 </div>
                 <div id="SEFooter">
                     <h2>Quick Links</h2>

@@ -82,7 +82,7 @@ body {
 .slick-dots .slick-active{
   width: 18px;
   height: 18px;
-  background: #5c43dd;
+  background: #7422b1;
   position: relative;
   z-index: 33;
   border-radius: 100%;
@@ -90,7 +90,7 @@ body {
 }
 
 .slick-dots  {
-  color: #5c43dd;
+  color: #7422b1;
   list-style-type: none;
 }
 .slick-dots li button:focus:before {
@@ -98,4 +98,11 @@ body {
 }
 .slick-dots li.slick-active button:before {
   opacity: 0;
+}
+
+
+.show {
+  opacity: 1;
+  pointer-events: all;
+  transform: scale(1);
 }

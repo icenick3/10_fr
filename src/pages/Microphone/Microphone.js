@@ -13,7 +13,7 @@ import {
 import ReviewsMicro from "../../conponents/ReviewsMicro/Reviews";
 import CarouselBoxTShirt from "../../conponents/CarouselBoxTShirt/CarouselBoxTShirt";
 
-const Microphone = ({date2, date, small, setSmall ,setShowReviews}) => {
+const Microphone = ({date2, date, small, setSmall ,setShowReviews, phone}) => {
     const [color, setColor] = useState('Rose gold')
 
 
@@ -31,7 +31,11 @@ const Microphone = ({date2, date, small, setSmall ,setShowReviews}) => {
             setTimeout(() => {
                 mainRef.current.id = "";
                 setSmall(true)
-                window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
+                if (!phone){
+                    window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
+                } else {
+
+                }
             }, 450)
 
 

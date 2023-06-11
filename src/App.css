@@ -80,14 +80,14 @@ body::-webkit-scrollbar {
 .slick-dots .slick-active {
   width: 18px;
   height: 18px;
-  background: #5c43dd;
+  background: #7422b1;
   position: relative;
   z-index: 33;
   border-radius: 100%;
 }
 
 .slick-dots {
-  color: #5c43dd;
+  color: #7422b1;
   list-style-type: none;
 }
 
@@ -97,6 +97,12 @@ body::-webkit-scrollbar {
 
 .slick-dots li.slick-active button:before {
   opacity: 0;
+}
+
+.show {
+  opacity: 1;
+  pointer-events: all;
+  transform: scale(1);
 }
 
 /*# sourceMappingURL=App.css.map */

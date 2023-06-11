@@ -10,7 +10,7 @@ import {
 
 import CarouselBoxZippo from "../../conponents/CarouselBoxZippo/CarouselBoxTShirt";
 
-const Zippo = ({date, date2, small, setSmall, setShowReviews}) => {
+const Zippo = ({date, date2, small, setSmall, setShowReviews, phone}) => {
 
     const [color, setColor] = useState('Street Chrome')
 
@@ -22,17 +22,26 @@ const Zippo = ({date, date2, small, setSmall, setShowReviews}) => {
         setColor(color)
     }
 
+
+
     const takeID = () => {
         if (mainRef.current) {
             mainRef.current.id = "zippoContainer";
             setTimeout(() => {
                 mainRef.current.id = "";
                 setSmall(true)
-                window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
+                if (!phone){
+                    window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
+                } else {
+
+                }
             }, 450)
+
+
 
         }
     }
+
 
     return small ? (
         <div className="smallPageZippo" onClick={()=> setSmall(false)}>

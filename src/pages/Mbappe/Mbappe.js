@@ -6,7 +6,7 @@ import ReviewsMbappe from "../../conponents/ReviewsMbappe/Reviews";
 
 import CarouselBoxTShirt from "../../conponents/CarouselBoxTShirt/CarouselBoxTShirt";
 
-const Mbappe = ({date, date2, small, setSmall, setShowReviews}) => {
+const Mbappe = ({date, date2, small, setSmall, setShowReviews,  phone}) => {
 
 
     const mainRef = useRef()
@@ -17,13 +17,18 @@ const Mbappe = ({date, date2, small, setSmall, setShowReviews}) => {
             setTimeout(() => {
                 mainRef.current.id = "";
                 setSmall(true)
-                window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
+                if (!phone){
+                    window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
+                } else {
+
+                }
             }, 450)
 
 
 
         }
     }
+
 
 
     return small ? (

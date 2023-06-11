@@ -6,7 +6,7 @@ import { pillow} from "../../conponents/ImageMbappe/ImageMbappe";
 import ReviewsPillow from "../../conponents/ReviewsPillow/Reviews";
 import CarouselBoxTShirt from "../../conponents/CarouselBoxTShirt/CarouselBoxTShirt";
 
-const Pillow = ({date, date2, small, setSmall, setShowReviews}) => {
+const Pillow = ({date, date2, small, setSmall, setShowReviews, phone}) => {
 
     const mainRef = useRef()
 
@@ -16,7 +16,11 @@ const Pillow = ({date, date2, small, setSmall, setShowReviews}) => {
             setTimeout(() => {
                 mainRef.current.id = "";
                 setSmall(true)
-                window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
+                if (!phone){
+                    window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
+                } else {
+
+                }
             }, 450)
 
 
@@ -155,7 +159,7 @@ const Pillow = ({date, date2, small, setSmall, setShowReviews}) => {
                                      alt=""/>
                                 <img src="https://i.pinimg.com/originals/7d/d0/45/7dd045a8dc0e884b0a49f53abf22d2d0.png"
                                      alt=""/>
-                                <div className="bar">
+                                <div className="barPillow">
                                     <div className="progressBar1">
                                     </div>
                                 </div>
@@ -171,7 +175,7 @@ const Pillow = ({date, date2, small, setSmall, setShowReviews}) => {
                                      alt=""/>
                                 <img src="https://i.pinimg.com/originals/3b/70/0e/3b700e77b647c29b9bfa6adfd36969ad.png"
                                      alt=""/>
-                                <div className="bar">
+                                <div className="barPillow">
                                     <div className="progressBar2">
                                     </div>
                                 </div>
@@ -187,7 +191,7 @@ const Pillow = ({date, date2, small, setSmall, setShowReviews}) => {
                                      alt=""/>
                                 <img src="https://i.pinimg.com/originals/3b/70/0e/3b700e77b647c29b9bfa6adfd36969ad.png"
                                      alt=""/>
-                                <div className="bar">
+                                <div className="barPillow">
                                     <div className="progressBar3">
                                     </div>
                                 </div>
@@ -203,7 +207,7 @@ const Pillow = ({date, date2, small, setSmall, setShowReviews}) => {
                                      alt=""/>
                                 <img src="https://i.pinimg.com/originals/3b/70/0e/3b700e77b647c29b9bfa6adfd36969ad.png"
                                      alt=""/>
-                                <div className="bar">
+                                <div className="barPillow">
                                     <div className="progressBar4">
                                     </div>
                                 </div>
@@ -219,7 +223,7 @@ const Pillow = ({date, date2, small, setSmall, setShowReviews}) => {
                                      alt=""/>
                                 <img src="https://i.pinimg.com/originals/3b/70/0e/3b700e77b647c29b9bfa6adfd36969ad.png"
                                      alt=""/>
-                                <div className="bar">
+                                <div className="barPillow">
                                     <div className="progressBar5">
                                     </div>
                                 </div>

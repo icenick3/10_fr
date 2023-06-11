@@ -7,7 +7,7 @@ import {
 import ReviewsLight from "../../conponents/ReviewsLight/Reviews";
 import CarouselBoxTShirt from "../../conponents/CarouselBoxTShirt/CarouselBoxTShirt";
 
-const Light = ({date, date2, setSmall, small, setShowReviews}) => {
+const Light = ({date, date2, setSmall, small, setShowReviews, phone}) => {
 
     const [color, setColor] = useState('Black')
 
@@ -25,7 +25,11 @@ const Light = ({date, date2, setSmall, small, setShowReviews}) => {
             setTimeout(() => {
                 mainRef.current.id = "";
                 setSmall(true)
-                window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
+                if (!phone){
+                    window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
+                } else {
+
+                }
             }, 450)
 
 

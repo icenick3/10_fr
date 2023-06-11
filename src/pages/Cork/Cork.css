@@ -448,38 +448,38 @@
   width: 25px;
   height: 25px;
 }
-.Cork .descriptionTShirt .starContainer .stars .bar {
+.Cork .descriptionTShirt .starContainer .stars .barCork {
   width: 60%;
   background: #f2f2f6;
   border-radius: 20px;
   height: 7px;
   margin: 5px 20px;
 }
-.Cork .descriptionTShirt .starContainer .stars .bar .progressBar1 {
+.Cork .descriptionTShirt .starContainer .stars .barCork .progressBar1 {
   background: #1240ab;
   width: 87%;
   height: 7px;
   border-radius: 20px;
 }
-.Cork .descriptionTShirt .starContainer .stars .bar .progressBar2 {
+.Cork .descriptionTShirt .starContainer .stars .barCork .progressBar2 {
   background: #1240ab;
   width: 7%;
   height: 7px;
   border-radius: 20px;
 }
-.Cork .descriptionTShirt .starContainer .stars .bar .progressBar3 {
+.Cork .descriptionTShirt .starContainer .stars .barCork .progressBar3 {
   background: #1240ab;
   width: 2%;
   height: 7px;
   border-radius: 20px;
 }
-.Cork .descriptionTShirt .starContainer .stars .bar .progressBar4 {
+.Cork .descriptionTShirt .starContainer .stars .barCork .progressBar4 {
   background: #1240ab;
   width: 1%;
   height: 7px;
   border-radius: 20px;
 }
-.Cork .descriptionTShirt .starContainer .stars .bar .progressBar5 {
+.Cork .descriptionTShirt .starContainer .stars .barCork .progressBar5 {
   background: #1240ab;
   width: 3%;
   height: 7px;
@@ -554,6 +554,44 @@
 
 .mbappe {
   padding: 0 0 30px 0;
+}
+
+.barCork {
+  width: 60%;
+  background: #f2f2f6;
+  border-radius: 20px;
+  height: 7px;
+  margin: 5px 20px;
+}
+.barCork .progressBar1 {
+  background: #1240ab;
+  width: 87%;
+  height: 7px;
+  border-radius: 20px;
+}
+.barCork .progressBar2 {
+  background: #1240ab;
+  width: 7%;
+  height: 7px;
+  border-radius: 20px;
+}
+.barCork .progressBar3 {
+  background: #1240ab;
+  width: 2%;
+  height: 7px;
+  border-radius: 20px;
+}
+.barCork .progressBar4 {
+  background: #1240ab;
+  width: 1%;
+  height: 7px;
+  border-radius: 20px;
+}
+.barCork .progressBar5 {
+  background: #1240ab;
+  width: 3%;
+  height: 7px;
+  border-radius: 20px;
 }
 
 /*# sourceMappingURL=Cork.css.map */

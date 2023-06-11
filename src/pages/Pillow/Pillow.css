@@ -561,4 +561,42 @@
   padding: 0 0 30px 0;
 }
 
+.barPillow {
+  width: 60%;
+  background: #f2f2f6;
+  border-radius: 20px;
+  height: 7px;
+  margin: 5px 20px;
+}
+.barPillow .progressBar1 {
+  background: #1240ab;
+  width: 78%;
+  height: 7px;
+  border-radius: 20px;
+}
+.barPillow .progressBar2 {
+  background: #1240ab;
+  width: 9%;
+  height: 7px;
+  border-radius: 20px;
+}
+.barPillow .progressBar3 {
+  background: #1240ab;
+  width: 7%;
+  height: 7px;
+  border-radius: 20px;
+}
+.barPillow .progressBar4 {
+  background: #1240ab;
+  width: 9%;
+  height: 7px;
+  border-radius: 20px;
+}
+.barPillow .progressBar5 {
+  background: #1240ab;
+  width: 6%;
+  height: 7px;
+  border-radius: 20px;
+}
+
 /*# sourceMappingURL=Pillow.css.map */

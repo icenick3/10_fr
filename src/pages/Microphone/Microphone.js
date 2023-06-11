@@ -13,9 +13,9 @@ import {
 import ReviewsMicro from "../../conponents/ReviewsMicro/Reviews";
 import CarouselBoxTShirt from "../../conponents/CarouselBoxTShirt/CarouselBoxTShirt";
 
-const Microphone = ({date2, date, small, setSmall}) => {
+const Microphone = ({date2, date, small, setSmall ,setShowReviews}) => {
     const [color, setColor] = useState('Rose gold')
-    const [showReviews, setShowReviews] = useState(false)
+
 
 
     const colorOnclick = (color) => {
@@ -28,16 +28,13 @@ const Microphone = ({date2, date, small, setSmall}) => {
     const takeID = () => {
         if (mainRef.current) {
             mainRef.current.id = "zippoContainer";
-            setTimeout(()=>{
+            setTimeout(() => {
                 mainRef.current.id = "";
                 setSmall(true)
+                window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
             }, 450)
-            if (mainRef.current){
-                setTimeout(()=>{
-                    mainRef.current.scrollIntoView({ behavior: 'auto', block: 'start' });
-                },450)
 
-            }
+
 
         }
     }
@@ -357,7 +354,6 @@ const Microphone = ({date2, date, small, setSmall}) => {
                     </div>
                 </div>
             </div>
-            <ReviewsMicro showReviews={showReviews} setShowReviews={setShowReviews}/>
         </div>
     );
 };

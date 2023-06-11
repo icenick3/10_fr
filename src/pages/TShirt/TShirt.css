@@ -698,7 +698,7 @@
 }
 @media screen and (max-device-width: 500px) {
   #TShirtContainer {
-    animation: revertStart228 ease-in-out 1s forwards;
+    animation: none;
   }
 }
 
@@ -911,6 +911,52 @@
 }
 @media screen and (max-device-width: 500px) {
   .smallPage .imgBlock .imgTs2 {
+    width: 70%;
+    padding: 20px;
+    display: block;
+  }
+}
+.smallPage .imgBlockFlag {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPage .imgBlockFlag {
+    width: 100%;
+    align-items: center;
+    height: 50vh;
+  }
+}
+.smallPage .imgBlockFlag img {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPage .imgBlockFlag img {
+    width: 70%;
+    padding: 20px;
+    display: block;
+  }
+}
+.smallPage .imgBlockFlag .imgTs {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPage .imgBlockFlag .imgTs {
+    width: 100%;
+    padding: 20px;
+    display: block;
+  }
+}
+.smallPage .imgBlockFlag .imgTs2 {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPage .imgBlockFlag .imgTs2 {
     width: 70%;
     padding: 20px;
     display: block;
@@ -1166,6 +1212,65 @@
 }
 @media screen and (max-device-width: 500px) {
   .smallPageZippo .imgBlock .imgTs2 {
+    width: 70%;
+    padding: 20px;
+    display: block;
+  }
+}
+.smallPageZippo .imgBlockPillow {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageZippo .imgBlockPillow {
+    width: 100%;
+    align-items: center;
+    height: 50vh;
+  }
+}
+.smallPageZippo .imgBlockPillow img {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageZippo .imgBlockPillow img {
+    width: 80%;
+    padding: 20px;
+    display: block;
+  }
+}
+.smallPageZippo .imgBlockPillow .imgTs {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageZippo .imgBlockPillow .imgTs {
+    width: 100%;
+    padding: 20px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+.smallPageZippo .imgBlockPillow .imgTs3 {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageZippo .imgBlockPillow .imgTs3 {
+    width: 90%;
+    padding: 20px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+.smallPageZippo .imgBlockPillow .imgTs2 {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageZippo .imgBlockPillow .imgTs2 {
     width: 70%;
     padding: 20px;
     display: block;

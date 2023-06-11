@@ -877,7 +877,7 @@
 }
 @media screen and (max-device-width: 500px) {
   #zippoContainer {
-    animation: revertStart228 ease-in-out 1s forwards;
+    animation: none;
   }
 }
 

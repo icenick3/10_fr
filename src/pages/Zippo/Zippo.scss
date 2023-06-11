@@ -978,7 +978,7 @@
   animation: revertStart1 cubic-bezier(0.1, 0, 0.2, 1) 1s forwards;
   transform-origin: top right;
   @media screen and (max-device-width: 500px) {
-    animation: revertStart228 ease-in-out 1s forwards;
+    animation: none
   }
 }
 

@@ -6,24 +6,20 @@ import CarouselBoxTShirt from "../../conponents/CarouselBoxTShirt/CarouselBoxTSh
 import CarouselBoxCork from "../../conponents/CarouselBoxCork/CarouselBoxTShirt";
 
 
-const Cork = ({date, date2, small, setSmall}) => {
-    const [showReviews, setShowReviews] = useState(false)
+const Cork = ({date, date2, small, setSmall, setShowReviews}) => {
 
     const mainRef = useRef()
 
     const takeID = () => {
         if (mainRef.current) {
             mainRef.current.id = "TShirtContainer";
-            setTimeout(()=>{
+            setTimeout(() => {
                 mainRef.current.id = "";
                 setSmall(true)
+                window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
             }, 450)
-            if (mainRef.current){
-                setTimeout(()=>{
-                    mainRef.current.scrollIntoView({ behavior: 'auto', block: 'start' });
-                },450)
 
-            }
+
 
         }
     }
@@ -244,7 +240,6 @@ const Cork = ({date, date2, small, setSmall}) => {
                     </div>
                 </div>
             </div>
-            <ReviewsCork showReviews={showReviews} setShowReviews={setShowReviews}/>
         </div>
     );
 };

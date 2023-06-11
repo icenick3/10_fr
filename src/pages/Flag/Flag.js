@@ -4,31 +4,27 @@ import { flag} from "../../conponents/ImageMbappe/ImageMbappe";
 import ReviewsFlag from "../../conponents/ReviewsFlag/Reviews";
 import CarouselBoxTShirt from "../../conponents/CarouselBoxTShirt/CarouselBoxTShirt";
 
-const Flag = ({date, date2, small, setSmall}) => {
-    const [showReviews, setShowReviews] = useState(false)
+const Flag = ({date, date2, small, setSmall, setShowReviews}) => {
 
     const mainRef = useRef()
 
     const takeID = () => {
         if (mainRef.current) {
             mainRef.current.id = "TShirtContainer";
-            setTimeout(()=>{
+            setTimeout(() => {
                 mainRef.current.id = "";
                 setSmall(true)
+                window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
             }, 450)
-            if (mainRef.current){
-                setTimeout(()=>{
-                    mainRef.current.scrollIntoView({ behavior: 'auto', block: 'start' });
-                },450)
 
-            }
+
 
         }
     }
 
     return small ? (
         <div className="smallPage" onClick={()=> setSmall(false)}>
-            <div className="imgBlock">
+            <div className="imgBlockFlag">
                 <img className="imgTs" src="https://i.pinimg.com/originals/44/5e/00/445e0069b5185b3fdf05e33f1339a3d3.gif" alt=""/>
             </div>
             <div className="informationBlock">
@@ -215,7 +211,6 @@ const Flag = ({date, date2, small, setSmall}) => {
                     </div>
                 </div>
             </div>
-            <ReviewsFlag showReviews={showReviews} setShowReviews={setShowReviews}/>
         </div>
     );
 };

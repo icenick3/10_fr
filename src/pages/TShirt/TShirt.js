@@ -28,14 +28,13 @@ import {
 } from "../../conponents/ImageMbappe/ImageMbappe";
 import ProductCarousel from "../../conponents/ProductCarousel/ProductCarousel";
 
-const TShirt = ({date, date2, setSmall, small}) => {
+const TShirt = ({date, date2, setSmall, small, setShowReviews, setShowGuide}) => {
 
 
     const [color, setColor] = useState('Purple')
     const [side, setSide] = useState('Front')
     const [size, setSize] = useState('S')
-    const [showGuide, setShowGuide] = useState(false)
-    const [showReviews, setShowReviews] = useState(false)
+
 
 
     const frontRef = useRef()
@@ -93,13 +92,9 @@ const TShirt = ({date, date2, setSmall, small}) => {
             setTimeout(() => {
                 mainRef.current.id = "";
                 setSmall(true)
+                window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
             }, 450)
-            if (mainRef.current){
-                setTimeout(()=>{
-                    mainRef.current.scrollIntoView({ behavior: 'auto', block: 'start' });
-                },450)
 
-            }
 
 
         }
@@ -110,7 +105,7 @@ const TShirt = ({date, date2, setSmall, small}) => {
     return small ? (
         <div  className="smallPage" onClick={() => setSmall(false)}>
             <div className="imgBlock">
-                <img className="imgTs" src="https://i.pinimg.com/originals/b7/c8/91/b7c891e8720c224203a94c84a4448513.jpg" alt=""/>
+                <img className="imgTs" src="https://i.pinimg.com/originals/3b/95/d1/3b95d115ce669fb16ea0815816356d5a.jpg" alt=""/>
             </div>
             <div className="informationBlock">
                 <h2 className="h2ts">Russian War Ship Classic T-Shirt</h2>
@@ -262,7 +257,7 @@ const TShirt = ({date, date2, setSmall, small}) => {
                                  alt=""/>
                             <p>View size guide</p>
                         </div>
-                        <SizeGuide showGuide={showGuide} setShowGuide={setShowGuide}/>
+
                         <p className="printLoc">Print Location</p>
                         <div className="location">
                             <div ref={frontRef} className="selected" onClick={() => sideOnclick("Front")}>Front</div>
@@ -394,10 +389,7 @@ const TShirt = ({date, date2, setSmall, small}) => {
                              onClick={() => takeID()}/>
                     </div>
                 </div>
-
             </div>
-
-            <Reviews showReviews={showReviews} setShowReviews={setShowReviews}/>
         </div>
     );
 };

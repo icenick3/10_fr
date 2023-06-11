@@ -18,6 +18,17 @@ import Microphone from "./pages/Microphone/Microphone";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Reviews from "./conponents/Reviews/Reviews";
+import ReviewsZippo from "./conponents/ReviewsZippo/Reviews";
+import SizeGuide from "./conponents/SizeGuide/SizeGuide";
+import ReviewsMbappe from "./conponents/ReviewsMbappe/Reviews";
+import ReviewsLight from "./conponents/ReviewsLight/Reviews";
+import ReviewsDecanter from "./conponents/ReviewsDecanter/Reviews";
+import ReviewsPillow from "./conponents/ReviewsPillow/Reviews";
+import ReviewsCork from "./conponents/ReviewsCork/Reviews";
+import ReviewsMill from "./conponents/ReviewsMill/Reviews";
+import ReviewsFlag from "./conponents/ReviewsFlag/Reviews";
+import ReviewsMicro from "./conponents/ReviewsMicro/Reviews";
 
 
 const App = () => {
@@ -32,6 +43,22 @@ const App = () => {
     const [smallMill, setSmallMill] = useState(true)
     const [smallFlag, setSmallFlag] = useState(true)
     const [smallMicro, setSmallMicro] = useState(true)
+
+    const [showGuide, setShowGuide] = useState(false)
+    const [showReviewsTs, setShowReviewsTs] = useState(false)
+    const [showReviewsZippo, setShowReviewsZippo] = useState(false)
+    const [showReviewsMbappe, setShowReviewsMbappe] = useState(false)
+    const [showReviewsLight, setShowReviewsLight] = useState(false)
+    const [showReviewsDecanter, setShowReviewsDecanter] = useState(false)
+    const [showReviewsPillow, setShowReviewsPillow] = useState(false)
+    const [showReviewsCork, setShowReviewsCork] = useState(false)
+    const [showReviewsMill, setShowReviewsMill] = useState(false)
+    const [showReviewsFlag, setShowReviewsFlag] = useState(false)
+    const [showReviewsMicro, setShowReviewsMicro] = useState(false)
+
+
+
+
 
     const [isScreenWidthAbove500, setIsScreenWidthAbove500] = useState(false);
 
@@ -53,9 +80,9 @@ const App = () => {
     const curRef = useRef()
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    useEffect(()=>{
+    useEffect(() => {
         if (curRef.current) {
-            curRef.current.scrollIntoView({ behavior: 'auto', block: 'end' });
+            curRef.current.scrollIntoView({behavior: 'auto', block: 'end'});
         }
         setSmallCork(true)
         setSmallTS(true)
@@ -68,7 +95,7 @@ const App = () => {
         setSmallMicro(true)
         setSmallPillow(true)
 
-    },[currentSlide])
+    }, [currentSlide])
 
     const settings = {
         dots: true,
@@ -96,99 +123,121 @@ const App = () => {
 
 
         <div className="App">
-            <PurpleHeader />
+            <PurpleHeader/>
             <div ref={curRef}></div>
             {/*<Header/>*/}
             {isScreenWidthAbove500 && <div className={smallTS && smallZippo ? "flexxx" : ""}>
                 {(smallZippo || !isScreenWidthAbove500) &&
-                    <TShirt date={formattedDate} date2={formattedDate2} small={smallTS} setSmall={setSmallTS}/>}
-                <Zippo date={formattedDate} date2={formattedDate2} small={smallZippo} setSmall={setSmallZippo}/>
+                    <TShirt date={formattedDate} date2={formattedDate2} small={smallTS} setSmall={setSmallTS}
+                            showReviews={showReviewsTs} setShowReviews={setShowReviewsTs}
+                            setShowGuide={setShowGuide}/>}
+                <Zippo date={formattedDate} date2={formattedDate2} small={smallZippo} setSmall={setSmallZippo}
+                       showReviews={showReviewsZippo} setShowReviews={setShowReviewsZippo}/>
                 {(!smallZippo && isScreenWidthAbove500) &&
-                    <TShirt date={formattedDate} date2={formattedDate2} small={smallTS} setSmall={setSmallTS}/>}
+                    <TShirt date={formattedDate} date2={formattedDate2} small={smallTS} setSmall={setSmallTS}
+                            showReviews={showReviewsTs} setShowReviews={setShowReviewsTs}
+                            setShowGuide={setShowGuide}/>}
             </div>}
             {isScreenWidthAbove500 && <div className={smallMbappe && smallLight ? "flexxx" : ""}>
                 {smallLight &&
-                    <Mbappe date={formattedDate} date2={formattedDate2} small={smallMbappe} setSmall={setSmallMbappe}/>}
-                <Light date={formattedDate} date2={formattedDate2} small={smallLight} setSmall={setSmallLight}/>
+                    <Mbappe date={formattedDate} date2={formattedDate2} small={smallMbappe} setSmall={setSmallMbappe} setShowReviews={setShowReviewsMbappe}/>}
+                <Light date={formattedDate} date2={formattedDate2} small={smallLight} setSmall={setSmallLight} setShowReviews={setShowReviewsLight}/>
                 {!smallLight &&
-                    <Mbappe date={formattedDate} date2={formattedDate2} small={smallMbappe} setSmall={setSmallMbappe}/>}
+                    <Mbappe date={formattedDate} date2={formattedDate2} small={smallMbappe} setSmall={setSmallMbappe} setShowReviews={setShowReviewsMbappe}/>}
             </div>}
             {isScreenWidthAbove500 && <div className={smallDecanter && smallPillow ? "flexxx" : ""}>
                 {smallPillow && <Decanter date={formattedDate} date2={formattedDate2} small={smallDecanter}
-                                          setSmall={setSmallDecanter}/>}
-                <Pillow date={formattedDate} date2={formattedDate2} small={smallPillow} setSmall={setSmallPillow}/>
+                                          setSmall={setSmallDecanter} setShowReviews={setShowReviewsDecanter}/>}
+                <Pillow date={formattedDate} date2={formattedDate2} small={smallPillow} setSmall={setSmallPillow} setShowReviews={setShowReviewsPillow}/>
                 {!smallPillow && <Decanter date={formattedDate} date2={formattedDate2} small={smallDecanter}
-                                           setSmall={setSmallDecanter}/>}
+                                           setSmall={setSmallDecanter} setShowReviews={setShowReviewsDecanter}/>}
 
             </div>}
-            {isScreenWidthAbove500 &&<div className={smallCork && smallMill ? "flexxx" : ""}>
+            {isScreenWidthAbove500 && <div className={smallCork && smallMill ? "flexxx" : ""}>
                 {smallMill &&
-                    <Cork date={formattedDate} date2={formattedDate2} small={smallCork} setSmall={setSmallCork}/>}
-                <Mill date={formattedDate} date2={formattedDate2} small={smallMill} setSmall={setSmallMill}/>
+                    <Cork date={formattedDate} date2={formattedDate2} small={smallCork} setSmall={setSmallCork} setShowReviews={setShowReviewsCork}/>}
+                <Mill date={formattedDate} date2={formattedDate2} small={smallMill} setSmall={setSmallMill} setShowReviews={setShowReviewsMill}/>
                 {!smallMill &&
-                    <Cork date={formattedDate} date2={formattedDate2} small={smallCork} setSmall={setSmallCork}/>}
+                    <Cork date={formattedDate} date2={formattedDate2} small={smallCork} setSmall={setSmallCork} setShowReviews={setShowReviewsCork}/>}
             </div>}
-            {isScreenWidthAbove500 &&<div className={smallFlag && smallMicro ? "flexxx" : ""}>
+            {isScreenWidthAbove500 && <div className={smallFlag && smallMicro ? "flexxx" : ""}>
                 {smallMicro &&
-                    <Flag date={formattedDate} date2={formattedDate2} small={smallFlag} setSmall={setSmallFlag}/>}
-                <Microphone date={formattedDate} date2={formattedDate2} small={smallMicro} setSmall={setSmallMicro}/>
+                    <Flag date={formattedDate} date2={formattedDate2} small={smallFlag} setSmall={setSmallFlag} setShowReviews={setShowReviewsFlag}/>}
+                <Microphone date={formattedDate} date2={formattedDate2} small={smallMicro} setSmall={setSmallMicro} setShowReviews={setShowReviewsMicro}/>
                 {!smallMicro &&
-                    <Flag date={formattedDate} date2={formattedDate2} small={smallFlag} setSmall={setSmallFlag}/>}
+                    <Flag date={formattedDate} date2={formattedDate2} small={smallFlag} setSmall={setSmallFlag} setShowReviews={setShowReviewsFlag}/>}
             </div>}
-            {!isScreenWidthAbove500 &&  <Slider {...settings}>
+            {!isScreenWidthAbove500 && <Slider {...settings}>
                 <div>
                     <div className="my-div">
-                        <TShirt date={formattedDate} date2={formattedDate2} small={smallTS} setSmall={setSmallTS}/>
+                        <TShirt date={formattedDate} date2={formattedDate2} small={smallTS} setSmall={setSmallTS}
+                                showReviews={showReviewsTs} setShowReviews={setShowReviewsTs}
+                                setShowGuide={setShowGuide}/>
                     </div>
                 </div>
                 <div>
                     <div className="my-div">
-                        <Zippo date={formattedDate} date2={formattedDate2} small={smallZippo} setSmall={setSmallZippo}/>
+                        <Zippo date={formattedDate} date2={formattedDate2} small={smallZippo} setSmall={setSmallZippo}
+                               showReviews={showReviewsZippo} setShowReviews={setShowReviewsZippo}/>
                     </div>
                 </div>
                 <div>
                     <div className="my-div">
-                        <Mbappe date={formattedDate} date2={formattedDate2} small={smallMbappe} setSmall={setSmallMbappe}/>
+                        <Mbappe date={formattedDate} date2={formattedDate2} small={smallMbappe}
+                                setSmall={setSmallMbappe} setShowReviews={setShowReviewsMbappe}/>
                     </div>
                 </div>
                 <div>
                     <div className="my-div">
-                        <Light date={formattedDate} date2={formattedDate2} small={smallLight} setSmall={setSmallLight}/>
+                        <Light date={formattedDate} date2={formattedDate2} small={smallLight} setSmall={setSmallLight} setShowReviews={setShowReviewsLight}/>
                     </div>
                 </div>
                 <div>
                     <div className="my-div">
                         <Decanter date={formattedDate} date2={formattedDate2} small={smallDecanter}
-                                  setSmall={setSmallDecanter}/>
+                                  setSmall={setSmallDecanter} setShowReviews={setShowReviewsDecanter}/>
                     </div>
                 </div>
                 <div>
                     <div className="my-div">
-                        <Pillow date={formattedDate} date2={formattedDate2} small={smallPillow} setSmall={setSmallPillow}/>
+                        <Pillow date={formattedDate} date2={formattedDate2} small={smallPillow}
+                                setSmall={setSmallPillow} setShowReviews={setShowReviewsPillow}/>
                     </div>
                 </div>
                 <div>
                     <div className="my-div">
-                        <Cork date={formattedDate} date2={formattedDate2} small={smallCork} setSmall={setSmallCork}/>
+                        <Cork date={formattedDate} date2={formattedDate2} small={smallCork} setSmall={setSmallCork} setShowReviews={setShowReviewsCork}/>
                     </div>
                 </div>
                 <div>
                     <div className="my-div">
-                        <Mill date={formattedDate} date2={formattedDate2} small={smallMill} setSmall={setSmallMill}/>
+                        <Mill date={formattedDate} date2={formattedDate2} small={smallMill} setSmall={setSmallMill} setShowReviews={setShowReviewsMill}/>
                     </div>
                 </div>
                 <div>
                     <div className="my-div">
-                        <Flag date={formattedDate} date2={formattedDate2} small={smallFlag} setSmall={setSmallFlag}/>
+                        <Flag date={formattedDate} date2={formattedDate2} small={smallFlag} setSmall={setSmallFlag} setShowReviews={setShowReviewsFlag}/>
                     </div>
                 </div>
                 <div>
-                    <div className="my-div"><Microphone date={formattedDate} date2={formattedDate2} small={smallMicro} setSmall={setSmallMicro}/></div>
+                    <div className="my-div"><Microphone date={formattedDate} date2={formattedDate2} small={smallMicro}
+                                                        setSmall={setSmallMicro} setShowReviews={setShowReviewsMicro}/></div>
                 </div>
             </Slider>}
             <br/>
             <br/>
             <br/>
+            <SizeGuide showGuide={showGuide} setShowGuide={setShowGuide}/>
+            <ReviewsZippo showReviews={showReviewsZippo} setShowReviews={setShowReviewsZippo}/>
+            <Reviews showReviews={showReviewsTs} setShowReviews={setShowReviewsTs}/>
+            <ReviewsMbappe showReviews={showReviewsMbappe} setShowReviews={setShowReviewsMbappe}/>
+            <ReviewsLight showReviews={showReviewsLight} setShowReviews={setShowReviewsLight}/>
+            <ReviewsDecanter showReviews={showReviewsDecanter} setShowReviews={setShowReviewsDecanter}/>
+            <ReviewsPillow showReviews={showReviewsPillow} setShowReviews={setShowReviewsPillow}/>
+            <ReviewsCork showReviews={showReviewsCork} setShowReviews={setShowReviewsCork}/>
+            <ReviewsMill showReviews={showReviewsMill} setShowReviews={setShowReviewsMill}/>
+            <ReviewsFlag showReviews={showReviewsFlag} setShowReviews={setShowReviewsFlag}/>
+            <ReviewsMicro showReviews={showReviewsMicro} setShowReviews={setShowReviewsMicro}/>
             <PreFooter/>
             <Footer/>
         </div>

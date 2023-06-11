@@ -10,10 +10,9 @@ import {
 
 import CarouselBoxZippo from "../../conponents/CarouselBoxZippo/CarouselBoxTShirt";
 
-const Zippo = ({date, date2, small, setSmall}) => {
+const Zippo = ({date, date2, small, setSmall, setShowReviews}) => {
 
-    const [color, setColor] = useState('Brushed Brass')
-    const [showReviews, setShowReviews] = useState(false)
+    const [color, setColor] = useState('Street Chrome')
 
 
     const mainRef = useRef()
@@ -29,16 +28,12 @@ const Zippo = ({date, date2, small, setSmall}) => {
             setTimeout(() => {
                 mainRef.current.id = "";
                 setSmall(true)
+                window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
             }, 450)
-            if (mainRef.current){
-                setTimeout(()=>{
-                    mainRef.current.scrollIntoView({ behavior: 'auto', block: 'start' });
-                },450)
-
-            }
 
         }
     }
+
     return small ? (
         <div className="smallPageZippo" onClick={()=> setSmall(false)}>
             <div className="imgBlock">
@@ -488,7 +483,6 @@ const Zippo = ({date, date2, small, setSmall}) => {
                     </div>
                 </div>
             </div>
-            <ReviewsZippo showReviews={showReviews} setShowReviews={setShowReviews}/>
         </div>
     );
 };

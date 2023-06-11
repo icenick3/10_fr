@@ -7,10 +7,9 @@ import {
 import ReviewsLight from "../../conponents/ReviewsLight/Reviews";
 import CarouselBoxTShirt from "../../conponents/CarouselBoxTShirt/CarouselBoxTShirt";
 
-const Light = ({date, date2, setSmall, small}) => {
+const Light = ({date, date2, setSmall, small, setShowReviews}) => {
 
     const [color, setColor] = useState('Black')
-    const [showReviews, setShowReviews] = useState(false)
 
 
     const colorOnclick = (color) => {
@@ -23,16 +22,13 @@ const Light = ({date, date2, setSmall, small}) => {
     const takeID = () => {
         if (mainRef.current) {
             mainRef.current.id = "zippoContainer";
-            setTimeout(()=>{
+            setTimeout(() => {
                 mainRef.current.id = "";
                 setSmall(true)
+                window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
             }, 450)
-            if (mainRef.current){
-                setTimeout(()=>{
-                    mainRef.current.scrollIntoView({ behavior: 'auto', block: 'start' });
-                },450)
 
-            }
+
 
         }
     }
@@ -294,7 +290,6 @@ const Light = ({date, date2, setSmall, small}) => {
                     </div>
                 </div>
             </div>
-            <ReviewsLight showReviews={showReviews} setShowReviews={setShowReviews}/>
         </div>
     );
 };

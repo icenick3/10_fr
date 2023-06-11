@@ -6,31 +6,27 @@ import { pillow} from "../../conponents/ImageMbappe/ImageMbappe";
 import ReviewsPillow from "../../conponents/ReviewsPillow/Reviews";
 import CarouselBoxTShirt from "../../conponents/CarouselBoxTShirt/CarouselBoxTShirt";
 
-const Pillow = ({date, date2, small, setSmall}) => {
-    const [showReviews, setShowReviews] = useState(false)
+const Pillow = ({date, date2, small, setSmall, setShowReviews}) => {
 
     const mainRef = useRef()
 
     const takeID = () => {
         if (mainRef.current) {
             mainRef.current.id = "zippoContainer";
-            setTimeout(()=>{
+            setTimeout(() => {
                 mainRef.current.id = "";
                 setSmall(true)
+                window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
             }, 450)
-            if (mainRef.current){
-                setTimeout(()=>{
-                    mainRef.current.scrollIntoView({ behavior: 'auto', block: 'start' });
-                },450)
 
-            }
+
 
         }
     }
 
     return small ? (
         <div className="smallPageZippo" onClick={()=> setSmall(false)}>
-            <div className="imgBlock">
+            <div className="imgBlockPillow">
                 <img className="imgTs2" src="https://i.pinimg.com/originals/61/f6/d9/61f6d9e58b5817d3072c364bf7cd8305.jpg" alt=""/>
             </div>
             <div className="informationBlock">
@@ -238,7 +234,6 @@ const Pillow = ({date, date2, small, setSmall}) => {
                     </div>
                 </div>
             </div>
-            <ReviewsPillow showReviews={showReviews} setShowReviews={setShowReviews}/>
         </div>
     );
 };

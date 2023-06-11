@@ -6,25 +6,21 @@ import ReviewsMbappe from "../../conponents/ReviewsMbappe/Reviews";
 
 import CarouselBoxTShirt from "../../conponents/CarouselBoxTShirt/CarouselBoxTShirt";
 
-const Mbappe = ({date, date2, small, setSmall}) => {
+const Mbappe = ({date, date2, small, setSmall, setShowReviews}) => {
 
-    const [showReviews, setShowReviews] = useState(false)
 
     const mainRef = useRef()
 
     const takeID = () => {
         if (mainRef.current) {
             mainRef.current.id = "TShirtContainer";
-            setTimeout(()=>{
+            setTimeout(() => {
                 mainRef.current.id = "";
                 setSmall(true)
+                window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
             }, 450)
-            if (mainRef.current){
-                setTimeout(()=>{
-                    mainRef.current.scrollIntoView({ behavior: 'auto', block: 'start' });
-                },450)
 
-            }
+
 
         }
     }
@@ -248,7 +244,7 @@ const Mbappe = ({date, date2, small, setSmall}) => {
                     </div>
                 </div>
             </div>
-            <ReviewsMbappe showReviews={showReviews} setShowReviews={setShowReviews}/>
+
         </div>
     );
 };

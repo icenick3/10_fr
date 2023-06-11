@@ -4,24 +4,20 @@ import {decanter} from "../../conponents/ImageMbappe/ImageMbappe";
 import ReviewsDecanter from "../../conponents/ReviewsDecanter/Reviews";
 import CarouselBoxTShirt from "../../conponents/CarouselBoxTShirt/CarouselBoxTShirt";
 
-const Decanter = ({date, date2, small, setSmall}) => {
-    const [showReviews, setShowReviews] = useState(false)
+const Decanter = ({date, date2, small, setSmall, setShowReviews}) => {
 
     const mainRef = useRef()
 
     const takeID = () => {
         if (mainRef.current) {
             mainRef.current.id = "TShirtContainer";
-            setTimeout(()=>{
+            setTimeout(() => {
                 mainRef.current.id = "";
                 setSmall(true)
+                window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
             }, 450)
-            if (mainRef.current){
-                setTimeout(()=>{
-                    mainRef.current.scrollIntoView({ behavior: 'auto', block: 'start' });
-                },450)
 
-            }
+
 
         }
     }
@@ -239,7 +235,6 @@ const Decanter = ({date, date2, small, setSmall}) => {
                     </div>
                 </div>
             </div>
-            <ReviewsDecanter showReviews={showReviews} setShowReviews={setShowReviews}/>
         </div>
     );
 };

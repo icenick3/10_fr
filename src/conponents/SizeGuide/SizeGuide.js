@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import './SizeGuide.css'
 
-const SizeGuide = ({setShowGuide, showGuide}) => {
+const SizeGuide = ({setShowGuide, showGuide, lang}) => {
 
     const [gender, setGender] = useState('Men')
 
@@ -16,7 +16,7 @@ const SizeGuide = ({setShowGuide, showGuide}) => {
             womenRef.current.id = 'selected'
             menRef.current.id = ''
         }
-    },[gender])
+    },[gender, lang])
 
     return (
         <div className={showGuide ? "sizeGuide show" : "sizeGuide"} onClick={()=> setShowGuide(false)}>
@@ -109,28 +109,45 @@ const SizeGuide = ({setShowGuide, showGuide}) => {
                         </defs>
                     </svg>
                 </div>
-                <p className="pSize">Size Guide</p>
+                {lang === 'EN' && <p className="pSize">Size Guide</p>}
+                {lang === 'FR' && <p className="pSize">Guide des tailles</p>}
                 <hr/>
-                <div className="gender">
+                {lang === 'EN' && <div className="gender">
                     <div ref={menRef} className="men" onClick={() => setGender('Men')}>Men</div>
                     <div ref={womenRef} className="women" onClick={() => setGender('Women')}>Women</div>
-                </div>
-                <p className="find">Find your fit</p>
-                <p className="standart">Standard fit, order a size up if you prefer a looser fit.</p>
+                </div>}
+                {lang === 'FR' && <div className="gender">
+                    <div ref={menRef} className="men" onClick={() => setGender('Men')}>Hommes</div>
+                    <div ref={womenRef} className="women" onClick={() => setGender('Women')}>Femmes</div>
+                </div>}
+                {lang === 'EN' && <p className="find">Find your fit</p>}
+                {lang === 'FR' && <p className="find">Trouvez votre taille</p>}
+                {lang === 'EN' && <p className="standart">Standard fit, order a size up if you prefer a looser fit.</p>}
+                {lang === 'FR' && <p className="standart">Coupe standard, commandez une taille supérieure si vous préférez une coupe plus ample.</p>}
                 <div className="borderTop">
                     <div></div>
                 </div>
-                <div className="slim">
+                {lang === 'EN' && <div className="slim">
                     <p>Slim</p>
                     <p>Standard</p>
                     <p>Oversize</p>
-                </div>
+                </div>}
+                {lang === 'FR' && <div className="slim">
+                    <p>Ajusté</p>
+                    <p>Standard</p>
+                    <p>Oversize</p>
+                </div>}
                 <div className="menTable">
-                    <div className="firstColum">
+                    {lang === 'EN' && <div className="firstColum">
                         <div>Size</div>
                         <div>Chest</div>
                         <div>Length</div>
-                    </div>
+                    </div>}
+                    {lang === 'FR' && <div className="firstColum">
+                        <div>Taille</div>
+                        <div>Poitrine</div>
+                        <div>Longueur</div>
+                    </div>}
                     <div className="secondColum">
                         <div className="cmContainer">
                             <div className="Size">
@@ -167,47 +184,75 @@ const SizeGuide = ({setShowGuide, showGuide}) => {
                     </div>
                 </div>
                 <div className="guideInfo">
-                    <div className="guideInfoContainer">
+                    {lang === 'EN' && <div className="guideInfoContainer">
                         <h2>How to choose the perfect size</h2>
                         <p>1. Grab your favorite t-shirt and lay it flat.</p>
-                        <p>2. For the chest, measure 2.5cm under the left armpit, to 2.5cm under the right armpit. Multiply this measurement by 2. </p>
-                        <p>3. For the length, measure from the top of the shoulder next to the collar straight to the bottom of the shirt.</p>
+                        <p>2. For the chest, measure 2.5cm under the left armpit, to 2.5cm under the right armpit.
+                            Multiply this measurement by 2. </p>
+                        <p>3. For the length, measure from the top of the shoulder next to the collar straight to the
+                            bottom of the shirt.</p>
                         <p>4. Match this chest and length information to the size guide to find your ideal size.</p>
-                    </div>
+                    </div>}
+                    {lang === 'FR' && <div className="guideInfoContainer">
+                        <h2>Comment choisir la taille parfaite</h2>
+                        <p>1. Prenez votre t-shirt préféré et posez-le à plat.</p>
+                        <p>2. Pour la poitrine, mesurez à 2,5 cm sous l'aisselle gauche, jusqu'à 2,5 cm sous l'aisselle droite. Multipliez cette mesure par 2.</p>
+                        <p>3. Pour la longueur, mesurez depuis le haut de l'épaule près du col jusqu'au bas du t-shirt.</p>
+                        <p>4. Faites correspondre ces informations de poitrine et de longueur au guide des tailles pour trouver votre taille idéale.</p>
+                    </div>}
                     <div className="imgTShirt">
                         <img src="https://i.pinimg.com/originals/06/76/f3/0676f3f134c29814d5209f0b3bdc9fb8.jpg" alt=""/>
                     </div>
                 </div>
-                {gender === "Men" &&<div className="guideInfo">
-                    <div className="guideInfoContainer">
+                {gender === "Men" && <div className="guideInfo">
+                    {lang === 'EN' && <div className="guideInfoContainer">
                         <h2>Model size</h2>
                         <p>Model is wearing size Medium. He usually wears a size Medium.</p>
                         <h2>Model measurements</h2>
                         <p>Height: 183 cm / 6’0”</p>
                         <p>Chest: 96 cm / 38”</p>
                         <p>Waist: 76 cm / 30”</p>
-                    </div>
+                    </div>}
+                    {lang === 'FR' && <div className="guideInfoContainer">
+                        <h2>Taille du modèle</h2>
+                        <p>Le modèle porte la taille Medium. Il porte généralement une taille Medium.</p>
+                        <h2>Mesures du modèle</h2>
+                        <p>Hauteur : 183 cm / 6’0”</p>
+                        <p>Poitrine : 96 cm / 38”</p>
+                        <p>Taille : 76 cm / 30”</p>
+                    </div>}
                     <div className="imgTShirt">
                         <img src="https://i.pinimg.com/originals/70/19/15/701915cffce8366e6a717bc0763d0da3.png" alt=""/>
                     </div>
                 </div>}
                 {gender === "Women" &&<div className="guideInfo">
-                    <div className="guideInfoContainer">
+                    {lang === 'EN' && <div className="guideInfoContainer">
                         <h2>Model size</h2>
                         <p>Model is wearing size Small. She usually wears a size Small.</p>
                         <h2>Model measurements</h2>
                         <p>Height: 173 cm / 5’8”</p>
                         <p>Waist: 64 cm / 25”</p>
                         <p>Hips: 88 cm / 34.5”</p>
-                    </div>
+                    </div>}
+                    {lang === 'FR' && <div className="guideInfoContainer">
+                        <h2>Taille du modèle</h2>
+                        <p>Le modèle porte la taille Small. Elle porte généralement une taille Small.</p>
+                        <h2>Mesures du modèle</h2>
+                        <p>Hauteur : 173 cm / 5’8”</p>
+                        <p>Taille : 64 cm / 25”</p>
+                        <p>Hanches : 88 cm / 34.5”</p>
+                    </div>}
                     <div className="imgTShirt">
                         <img src="https://i.pinimg.com/originals/70/db/f2/70dbf28acb402c52fd1a0d4a108617a3.png" alt=""/>
                     </div>
                 </div>}
-                <p className="productM">*Product measurements refer to garment dimensions, not body size</p>
+                {lang === 'EN' && <p className="productM">*Product measurements refer to garment dimensions, not body size</p>}
+                {lang === 'FR' && <p className="productM">*Les mesures du produit font référence aux dimensions du vêtement, pas à la taille du corps</p>}
                 <hr/>
-                <h2 className="returnsH2">Returns are free and easy.</h2>
-                <p className="willHappy">Because you need to be happy. We all do.</p>
+                {lang === 'EN' && <h2 className="returnsH2">Returns are free and easy.</h2>}
+                {lang === 'EN' && <p className="willHappy">Because you need to be happy. We all do.</p>}
+                {lang === 'FR' && <h2 className="returnsH2">Les retours sont gratuits et faciles.</h2>}
+                {lang === 'FR' && <p className="willHappy">Parce que vous devez être heureux. Nous le devons tous.</p>}
             </div>
         </div>
     );

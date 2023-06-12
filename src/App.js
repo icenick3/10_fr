@@ -35,9 +35,13 @@ import ContactUs from "./conponents/ContactUs/ContactUs";
 import FAQ from "./conponents/FAQ/FAQ";
 import ReturnPolicy from "./conponents/ReturnPolicy/ReturnPolicy";
 import Shiping from "./conponents/Shiping/Shiping";
+import RunningText from "./conponents/RunningText/RunningText";
 
 
 const App = () => {
+
+
+    const [language, setLanguage] = useState('EN')
 
     const [smallTS, setSmallTS] = useState(true)
     const [smallTS2, setSmallTS2] = useState(true)
@@ -64,8 +68,6 @@ const App = () => {
     const [contactUS, setContactUS] = useState(false)
     const [shiping, setShiping] = useState(false)
 
-
-    console.log(about)
 
     const [showGuide, setShowGuide] = useState(false)
     const [showReviewsTs, setShowReviewsTs] = useState(false)
@@ -147,128 +149,129 @@ const App = () => {
         <div className="App">
             {/*<PurpleHeader/>*/}
             <div ref={curRef}></div>
-            <Header setActive={setActiveSideMenu}/>
+            <Header setActive={setActiveSideMenu} setLang={setLanguage}/>
+            <RunningText lang={language} phone={isScreenWidthAbove500}/>
             {isScreenWidthAbove500 && <div className={smallTS && smallZippo ? "flexxx" : ""}>
                 {((smallZippo) || (!smallZippo && smallTS2)) &&
-                    <TShirt date={formattedDate} date2={formattedDate2} small={smallTS} setSmall={setSmallTS}
+                    <TShirt lang={language} date={formattedDate} date2={formattedDate2} small={smallTS} setSmall={setSmallTS}
                             showReviews={showReviewsTs} setShowReviews={setShowReviewsTs}
                             setShowGuide={setShowGuide} phone={isScreenWidthAbove500}/>}
-                <Zippo date={formattedDate} date2={formattedDate2} small={smallZippo} setSmall={setSmallZippo}
+                <Zippo lang={language} date={formattedDate} date2={formattedDate2} small={smallZippo} setSmall={setSmallZippo}
                        showReviews={showReviewsZippo} setShowReviews={setShowReviewsZippo} phone={isScreenWidthAbove500}/>
                 {((!smallZippo && smallTS2) && (smallZippo && smallTS)) &&
-                    <TShirt date={formattedDate} date2={formattedDate2} small={smallTS2} setSmall={setSmallTS2}
+                    <TShirt lang={language} date={formattedDate} date2={formattedDate2} small={smallTS2} setSmall={setSmallTS2}
                             showReviews={showReviewsTs} setShowReviews={setShowReviewsTs}
                             setShowGuide={setShowGuide} phone={isScreenWidthAbove500}/>}
             </div>}
             {isScreenWidthAbove500 && <div className={smallMbappe && smallLight ? "flexxx" : ""}>
                 {((smallLight) || (!smallLight && smallMbappe2)) &&
-                    <Mbappe date={formattedDate} date2={formattedDate2} small={smallMbappe} setSmall={setSmallMbappe} setShowReviews={setShowReviewsMbappe} phone={isScreenWidthAbove500}/>}
-                <Light date={formattedDate} date2={formattedDate2} small={smallLight} setSmall={setSmallLight} setShowReviews={setShowReviewsLight} phone={isScreenWidthAbove500}/>
+                    <Mbappe lang={language} date={formattedDate} date2={formattedDate2} small={smallMbappe} setSmall={setSmallMbappe} setShowReviews={setShowReviewsMbappe} phone={isScreenWidthAbove500}/>}
+                <Light lang={language} date={formattedDate} date2={formattedDate2} small={smallLight} setSmall={setSmallLight} setShowReviews={setShowReviewsLight} phone={isScreenWidthAbove500}/>
                 {((!smallLight && smallMbappe2) && (smallLight && smallMbappe)) &&
-                    <Mbappe date={formattedDate} date2={formattedDate2} small={smallMbappe2} setSmall={setSmallMbappe2} setShowReviews={setShowReviewsMbappe} phone={isScreenWidthAbove500}/>}
+                    <Mbappe lang={language} date={formattedDate} date2={formattedDate2} small={smallMbappe2} setSmall={setSmallMbappe2} setShowReviews={setShowReviewsMbappe} phone={isScreenWidthAbove500}/>}
             </div>}
             {isScreenWidthAbove500 && <div className={smallDecanter && smallPillow ? "flexxx" : ""}>
-                {((smallPillow) || (!smallPillow && smallDecanter2)) && <Decanter date={formattedDate} date2={formattedDate2} small={smallDecanter}
+                {((smallPillow) || (!smallPillow && smallDecanter2)) && <Decanter lang={language} date={formattedDate} date2={formattedDate2} small={smallDecanter}
                                           setSmall={setSmallDecanter} setShowReviews={setShowReviewsDecanter} phone={isScreenWidthAbove500}/>}
-                <Pillow date={formattedDate} date2={formattedDate2} small={smallPillow} setSmall={setSmallPillow} setShowReviews={setShowReviewsPillow} phone={isScreenWidthAbove500}/>
-                {((!smallPillow && smallDecanter2) && (smallPillow && smallDecanter)) && <Decanter date={formattedDate} date2={formattedDate2} small={smallDecanter}
+                <Pillow lang={language} date={formattedDate} date2={formattedDate2} small={smallPillow} setSmall={setSmallPillow} setShowReviews={setShowReviewsPillow} phone={isScreenWidthAbove500}/>
+                {((!smallPillow && smallDecanter2) && (smallPillow && smallDecanter)) && <Decanter lang={language} date={formattedDate} date2={formattedDate2} small={smallDecanter}
                                            setSmall={setSmallDecanter} setShowReviews={setShowReviewsDecanter} phone={isScreenWidthAbove500}/>}
 
             </div>}
             {isScreenWidthAbove500 && <div className={smallCork && smallMill ? "flexxx" : ""}>
                 {((smallMill) || (!smallMill && smallCork2)) &&
-                    <Cork date={formattedDate} date2={formattedDate2} small={smallCork} setSmall={setSmallCork} setShowReviews={setShowReviewsCork} phone={isScreenWidthAbove500}/>}
-                <Mill date={formattedDate} date2={formattedDate2} small={smallMill} setSmall={setSmallMill} setShowReviews={setShowReviewsMill} phone={isScreenWidthAbove500}/>
+                    <Cork lang={language} date={formattedDate} date2={formattedDate2} small={smallCork} setSmall={setSmallCork} setShowReviews={setShowReviewsCork} phone={isScreenWidthAbove500}/>}
+                <Mill lang={language} date={formattedDate} date2={formattedDate2} small={smallMill} setSmall={setSmallMill} setShowReviews={setShowReviewsMill} phone={isScreenWidthAbove500}/>
                 {((!smallMill && smallCork2) && (smallMill && smallCork)) &&
-                    <Cork date={formattedDate} date2={formattedDate2} small={smallCork} setSmall={setSmallCork} setShowReviews={setShowReviewsCork} phone={isScreenWidthAbove500}/>}
+                    <Cork lang={language} date={formattedDate} date2={formattedDate2} small={smallCork} setSmall={setSmallCork} setShowReviews={setShowReviewsCork} phone={isScreenWidthAbove500}/>}
             </div>}
             {isScreenWidthAbove500 && <div className={smallFlag && smallMicro ? "flexxx" : ""}>
                 {((smallMicro) || (!smallMicro && smallFlag2)) &&
-                    <Flag date={formattedDate} date2={formattedDate2} small={smallFlag} setSmall={setSmallFlag} setShowReviews={setShowReviewsFlag} phone={isScreenWidthAbove500}/>}
-                <Microphone date={formattedDate} date2={formattedDate2} small={smallMicro} setSmall={setSmallMicro} setShowReviews={setShowReviewsMicro} phone={isScreenWidthAbove500}/>
+                    <Flag lang={language} date={formattedDate} date2={formattedDate2} small={smallFlag} setSmall={setSmallFlag} setShowReviews={setShowReviewsFlag} phone={isScreenWidthAbove500}/>}
+                <Microphone lang={language} date={formattedDate} date2={formattedDate2} small={smallMicro} setSmall={setSmallMicro} setShowReviews={setShowReviewsMicro} phone={isScreenWidthAbove500}/>
                 {((!smallMicro && smallFlag2) && (smallMicro && smallFlag)) &&
-                    <Flag date={formattedDate} date2={formattedDate2} small={smallFlag} setSmall={setSmallFlag} setShowReviews={setShowReviewsFlag} phone={isScreenWidthAbove500}/>}
+                    <Flag lang={language} date={formattedDate} date2={formattedDate2} small={smallFlag} setSmall={setSmallFlag} setShowReviews={setShowReviewsFlag} phone={isScreenWidthAbove500}/>}
             </div>}
             {!isScreenWidthAbove500 && <Slider {...settings}>
                 <div>
                     <div className="my-div">
-                        <TShirt date={formattedDate} date2={formattedDate2} small={smallTS} setSmall={setSmallTS}
+                        <TShirt lang={language} date={formattedDate} date2={formattedDate2} small={smallTS} setSmall={setSmallTS}
                                 showReviews={showReviewsTs} setShowReviews={setShowReviewsTs}
                                 setShowGuide={setShowGuide}/>
                     </div>
                 </div>
                 <div>
                     <div className="my-div">
-                        <Zippo date={formattedDate} date2={formattedDate2} small={smallZippo} setSmall={setSmallZippo}
+                        <Zippo lang={language} date={formattedDate} date2={formattedDate2} small={smallZippo} setSmall={setSmallZippo}
                                showReviews={showReviewsZippo} setShowReviews={setShowReviewsZippo}/>
                     </div>
                 </div>
                 <div>
                     <div className="my-div">
-                        <Mbappe date={formattedDate} date2={formattedDate2} small={smallMbappe}
+                        <Mbappe lang={language} date={formattedDate} date2={formattedDate2} small={smallMbappe}
                                 setSmall={setSmallMbappe} setShowReviews={setShowReviewsMbappe}/>
                     </div>
                 </div>
                 <div>
                     <div className="my-div">
-                        <Light date={formattedDate} date2={formattedDate2} small={smallLight} setSmall={setSmallLight} setShowReviews={setShowReviewsLight}/>
+                        <Light lang={language} date={formattedDate} date2={formattedDate2} small={smallLight} setSmall={setSmallLight} setShowReviews={setShowReviewsLight}/>
                     </div>
                 </div>
                 <div>
                     <div className="my-div">
-                        <Decanter date={formattedDate} date2={formattedDate2} small={smallDecanter}
+                        <Decanter lang={language} date={formattedDate} date2={formattedDate2} small={smallDecanter}
                                   setSmall={setSmallDecanter} setShowReviews={setShowReviewsDecanter}/>
                     </div>
                 </div>
                 <div>
                     <div className="my-div">
-                        <Pillow date={formattedDate} date2={formattedDate2} small={smallPillow}
+                        <Pillow lang={language} date={formattedDate} date2={formattedDate2} small={smallPillow}
                                 setSmall={setSmallPillow} setShowReviews={setShowReviewsPillow}/>
                     </div>
                 </div>
                 <div>
                     <div className="my-div">
-                        <Cork date={formattedDate} date2={formattedDate2} small={smallCork} setSmall={setSmallCork} setShowReviews={setShowReviewsCork}/>
+                        <Cork lang={language} date={formattedDate} date2={formattedDate2} small={smallCork} setSmall={setSmallCork} setShowReviews={setShowReviewsCork}/>
                     </div>
                 </div>
                 <div>
                     <div className="my-div">
-                        <Mill date={formattedDate} date2={formattedDate2} small={smallMill} setSmall={setSmallMill} setShowReviews={setShowReviewsMill}/>
+                        <Mill lang={language} date={formattedDate} date2={formattedDate2} small={smallMill} setSmall={setSmallMill} setShowReviews={setShowReviewsMill}/>
                     </div>
                 </div>
                 <div>
                     <div className="my-div">
-                        <Flag date={formattedDate} date2={formattedDate2} small={smallFlag} setSmall={setSmallFlag} setShowReviews={setShowReviewsFlag}/>
+                        <Flag lang={language} date={formattedDate} date2={formattedDate2} small={smallFlag} setSmall={setSmallFlag} setShowReviews={setShowReviewsFlag}/>
                     </div>
                 </div>
                 <div>
-                    <div className="my-div"><Microphone date={formattedDate} date2={formattedDate2} small={smallMicro}
+                    <div className="my-div"><Microphone lang={language} date={formattedDate} date2={formattedDate2} small={smallMicro}
                                                         setSmall={setSmallMicro} setShowReviews={setShowReviewsMicro}/></div>
                 </div>
             </Slider>}
             <br/>
             <br/>
             <br/>
-            <SizeGuide showGuide={showGuide} setShowGuide={setShowGuide}/>
-            <ReviewsZippo showReviews={showReviewsZippo} setShowReviews={setShowReviewsZippo}/>
-            <Reviews showReviews={showReviewsTs} setShowReviews={setShowReviewsTs}/>
-            <ReviewsMbappe showReviews={showReviewsMbappe} setShowReviews={setShowReviewsMbappe}/>
-            <ReviewsLight showReviews={showReviewsLight} setShowReviews={setShowReviewsLight}/>
-            <ReviewsDecanter showReviews={showReviewsDecanter} setShowReviews={setShowReviewsDecanter}/>
-            <ReviewsPillow showReviews={showReviewsPillow} setShowReviews={setShowReviewsPillow}/>
-            <ReviewsCork showReviews={showReviewsCork} setShowReviews={setShowReviewsCork}/>
-            <ReviewsMill showReviews={showReviewsMill} setShowReviews={setShowReviewsMill}/>
-            <ReviewsFlag showReviews={showReviewsFlag} setShowReviews={setShowReviewsFlag}/>
-            <ReviewsMicro showReviews={showReviewsMicro} setShowReviews={setShowReviewsMicro}/>
-            <SideMenu activeSideMenu={activeSideMenu} setActiveSideMenu={setActiveSideMenu} setReturn={setReturn}
+            <SizeGuide showGuide={showGuide} setShowGuide={setShowGuide} lang={language}/>
+            <ReviewsZippo lang={language} showReviews={showReviewsZippo} setShowReviews={setShowReviewsZippo}/>
+            <Reviews showReviews={showReviewsTs} setShowReviews={setShowReviewsTs} lang={language}/>
+            <ReviewsMbappe lang={language} showReviews={showReviewsMbappe} setShowReviews={setShowReviewsMbappe}/>
+            <ReviewsLight lang={language} showReviews={showReviewsLight} setShowReviews={setShowReviewsLight}/>
+            <ReviewsDecanter lang={language} showReviews={showReviewsDecanter} setShowReviews={setShowReviewsDecanter}/>
+            <ReviewsPillow lang={language} showReviews={showReviewsPillow} setShowReviews={setShowReviewsPillow}/>
+            <ReviewsCork lang={language} showReviews={showReviewsCork} setShowReviews={setShowReviewsCork}/>
+            <ReviewsMill lang={language} showReviews={showReviewsMill} setShowReviews={setShowReviewsMill}/>
+            <ReviewsFlag lang={language} showReviews={showReviewsFlag} setShowReviews={setShowReviewsFlag}/>
+            <ReviewsMicro lang={language} showReviews={showReviewsMicro} setShowReviews={setShowReviewsMicro}/>
+            <SideMenu lang={language} activeSideMenu={activeSideMenu} setActiveSideMenu={setActiveSideMenu} setReturn={setReturn}
                       setShiping={setShiping} setAbout={setAbout} setContactUs={setContactUS} setFAQ={setFaq}/>
-            <AboutUsPopup setAbout={setAbout} about={about}/>
-            <ContactUs setContactUs={setContactUS} contact={contactUS}/>
-            <FAQ setFAQ={setFaq} FAQ={faq}/>
-            <ReturnPolicy setReturn={setReturn} returnPol={returnPolicy}/>
-            <Shiping setShiping={setShiping} shiping={shiping}/>
-            <PreFooter/>
-            <Footer setReturn={setReturn} setShiping={setShiping} setAbout={setAbout} setContactUs={setContactUS} setFaq={setFaq}/>
+            <AboutUsPopup lang={language} setAbout={setAbout} about={about}/>
+            <ContactUs lang={language} setContactUs={setContactUS} contact={contactUS}/>
+            <FAQ lang={language} setFAQ={setFaq} FAQ={faq}/>
+            <ReturnPolicy lang={language} setReturn={setReturn} returnPol={returnPolicy}/>
+            <Shiping lang={language} setShiping={setShiping} shiping={shiping}/>
+            <PreFooter lang={language}/>
+            <Footer lang={language} setReturn={setReturn} setShiping={setShiping} setAbout={setAbout} setContactUs={setContactUS} setFaq={setFaq}/>
         </div>
     );
 };

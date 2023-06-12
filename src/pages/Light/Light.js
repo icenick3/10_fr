@@ -7,7 +7,7 @@ import {
 import ReviewsLight from "../../conponents/ReviewsLight/Reviews";
 import CarouselBoxTShirt from "../../conponents/CarouselBoxTShirt/CarouselBoxTShirt";
 
-const Light = ({date, date2, setSmall, small, setShowReviews, phone}) => {
+const Light = ({date, date2, setSmall, small, setShowReviews, phone, lang}) => {
 
     const [color, setColor] = useState('Black')
 
@@ -25,40 +25,46 @@ const Light = ({date, date2, setSmall, small, setShowReviews, phone}) => {
             setTimeout(() => {
                 mainRef.current.id = "";
                 setSmall(true)
-                if (!phone){
-                    window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
+                if (!phone) {
+                    window.document.body.scrollIntoView({behavior: 'auto', block: 'start'});
                 } else {
 
                 }
             }, 450)
 
 
-
         }
     }
 
     return small ? (
-        <div className="smallPageZippo" onClick={()=> setSmall(false)}>
+        <div className="smallPageZippo" onClick={() => setSmall(false)}>
             <div className="imgBlock">
                 <img src="https://i.pinimg.com/originals/00/a8/91/00a891197914de1a68522fcd991c2c02.jpg" alt=""/>
             </div>
             <div className="informationBlock">
-                <h2 className="h2ts">Blukar Flashlight Rechargeable</h2>
-                <p className="design">Designed and sold by <span>Yanko Design</span></p>
-                <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>
+                {lang === "EN" && <h2 className="h2ts">Blukar Flashlight Rechargeable</h2>}
+                {lang === "EN" && <p className="design">Designed and sold by <span>Yanko Design</span></p>}
+                {lang === "EN" && <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>}
+                {lang === "FR" && <h2 className="h2ts">Lampe de poche rechargeable Blukar</h2>}
+                {lang === "FR" && <p className="design">Conçu et vendu par <span>Yanko Design</span></p>}
+                {lang === "FR" && <p className="price">€ 2,00 <span>€18,01</span> <span id="vat">Incl. la TVA</span></p>}
                 <div className="buttons22">
-                    <a className="btnts1" onClick={()=> setSmall(false)}>
+                    <a className="btnts1" onClick={() => setSmall(false)}>
                         <img src="https://i.pinimg.com/originals/9e/63/21/9e6321883f018a4613fa5d8960a161d2.png"
                              alt=""/>
-                        <p>More Details</p></a>
-                    <a className="btnts2" href="" onClick={(e)=> e.stopPropagation()}>
+                        {lang === "EN" && <p>More Details</p>}
+                        {lang === "FR" && <p>Plus de détails</p>}
+                    </a>
+                    <a className="btnts2" href="" onClick={(e) => e.stopPropagation()}>
                         <img src="https://i.pinimg.com/originals/57/80/8c/57808c79cf14cd363f7ec7a83e5d9018.png"
                              alt=""/>
-                        <p>Add to cart</p></a>
+                        {lang === "EN" && <p>Buy this Item</p>}
+                        {lang === "FR" && <p>Acheter</p>}
+                    </a>
                 </div>
             </div>
         </div>
-    ) :(
+    ) : (
         <div ref={mainRef} className="zippoContainer">
             <img id="backToSmall"
                  src="https://i.pinimg.com/originals/2f/fd/9f/2ffd9f807df3dfa6efd0f722be6e7fca.png" alt=""
@@ -66,9 +72,14 @@ const Light = ({date, date2, setSmall, small, setShowReviews, phone}) => {
             <div className="Light">
                 <div className="imgContainer">
                     <div className="mobileHeader">
-                        <h2 className="h2ts">Blukar Flashlight Rechargeable</h2>
-                        <p className="design">Designed and sold by <span>Yanko Design</span></p>
-                        <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>
+                        {lang === "EN" && <h2 className="h2ts">Blukar Flashlight Rechargeable</h2>}
+                        {lang === "EN" && <p className="design">Designed and sold by <span>Yanko Design</span></p>}
+                        {lang === "EN" &&
+                            <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>}
+                        {lang === "FR" && <h2 className="h2ts">Lampe de poche rechargeable Blukar</h2>}
+                        {lang === "FR" && <p className="design">Conçu et vendu par <span>Yanko Design</span></p>}
+                        {lang === "FR" &&
+                            <p className="price">€ 2,00 <span>€18,01</span> <span id="vat">Incl. la TVA</span></p>}
                     </div>
                     <div className="imgCarousel">
                         {color === 'Black' && <CarouselBoxTShirt element={blackLight}/>}
@@ -79,42 +90,89 @@ const Light = ({date, date2, setSmall, small, setShowReviews, phone}) => {
                         {color === 'Orange' && <CarouselBoxTShirt element={orangeLight}/>}
                         {color === 'Gray' && <CarouselBoxTShirt element={grayLight}/>}
                     </div>
-                    <div className="features">
+                    {lang === "EN" && <div className="features">
                         <h2>
                             About this item
                         </h2>
                         <ul className="firstUl">
-                            <li>【Super Bright flashlight】With stable performance and low power consumption, it can
+                            <li>Super Bright flashlight - With stable performance and low power consumption, it can
                                 provide a uniform high-brightness beam and a wider range of illumination to meet your
                                 daily needs.
                             </li>
-                            <li>【4 Lighting Modes & Zoomable】One button control of 4 lighting modes:
+                            <li>4 Lighting Modes & Zoomable - One button control of 4 lighting modes:
                                 High/Low/Strobe/SOS. The zoomable design of the flashlight adjusts the focus as needed,
                                 giving you the freedom to choose a spotlight or floodlight for long distances or larger
                                 illuminated areas.
                             </li>
-                            <li>【USB Rechargeable】Built-in 1800mAh can work up to 16 hours in normal use. You can charge
+                            <li>USB Rechargeable - Built-in 1800mAh can work up to 16 hours in normal use. You can
+                                charge
                                 this flashlight directly via the included USB cable.
                             </li>
-                            <li>【Durable and Portable】The flashlight shell is made of high quality aluminum alloy with
+                            <li>Durable and Portable - The flashlight shell is made of high quality aluminum alloy with
                                 excellent hardness, wear resistance and drop resistance. The pocket is designed for easy
                                 portability and can fit in your handbag, backpack or survival kit.
                             </li>
-                            <li>【Multiple Uses】The kit includes: 1*Rechargeable Flashlight, 1*USB Cable. The lightweight
+                            <li>Multiple Uses - The kit includes: 1*Rechargeable Flashlight, 1*USB Cable. The
+                                lightweight
                                 and practical LED flashlight can be widely used for daily lighting, power outages,
                                 emergencies, etc. It can also be used for outdoor sports such as dog walking, camping,
                                 hiking, fishing, running.
                             </li>
                         </ul>
-                    </div>
+                    </div>}
+                    {lang === "FR" && <div className="features">
+                        <h2>
+                            À propos de cet article
+                        </h2>
+                        <ul className="firstUl">
+                            <li>Lampe de poche super brillante - Avec des performances stables et une faible
+                                consommation d'énergie, elle peut fournir un faisceau uniforme à haute luminosité et une
+                                plus large gamme d'éclairage pour répondre à vos besoins quotidiens.
+                            </li>
+                            <li>4 modes d'éclairage et zoom - Contrôle à un bouton de 4 modes d'éclairage :
+                                Haut/Bas/Stroboscope/SOS. La conception zoomable de la lampe de poche ajuste la mise au
+                                point selon les besoins, vous donnant la liberté de choisir un projecteur ou un
+                                éclairage de zone pour les longues distances ou les zones plus grandes éclairées.
+                            </li>
+                            <li>Rechargeable via USB - Batterie intégrée de 1800mAh pouvant fonctionner jusqu'à 16
+                                heures en utilisation normale. Vous pouvez charger cette lampe de poche directement via
+                                le câble USB inclus.
+                            </li>
+                            <li>Durable et portable - Le boîtier de la lampe de poche est en alliage d'aluminium de
+                                haute qualité avec une excellente dureté, une résistance à l'usure et aux chocs. La
+                                poche est conçue pour une portabilité facile et peut être rangée dans votre sac à main,
+                                votre sac à dos ou votre trousse de survie.
+                            </li>
+                            <li>Utilisations multiples - Le kit comprend : 1*lampe de poche rechargeable, 1*câble USB.
+                                La lampe de poche LED légère et pratique peut être largement utilisée pour l'éclairage
+                                quotidien, les pannes de courant, les urgences, etc. Elle peut également être utilisée
+                                pour les activités de plein air telles que la promenade des chiens, le camping, la
+                                randonnée, la pêche, la course à pied.
+                            </li>
+                        </ul>
+                    </div>}
                 </div>
                 <div className="descriptionTShirt">
                     <div className="informContainer">
-                        <h2 className="h2ts">Blukar Flashlight Rechargeable</h2>
-                        <p className="design">Designed and sold by <span>Yanko Design</span></p>
-                        <p className="price">€ 2.00 <span>€32,90</span></p>
-                        <p className="vat">incl. VAT</p>
-                        <p className="color"><span>Color</span>{color}</p>
+
+                        {lang === "EN" && <h2 className="h2ts">Blukar Flashlight Rechargeable</h2>}
+                        {lang === "EN" && <p className="design">Designed and sold by <span>Yanko Design</span></p>}
+                        {lang === "EN" && <p className="price">€ 2.00 <span>€18.01</span></p>}
+                        {lang === "EN" && <p className="vat">incl. VAT</p>}
+                        {lang === "FR" && <h2 className="h2ts">Lampe de poche rechargeable Blukar</h2>}
+                        {lang === "FR" && <p className="design">Conçu et vendu par <span>Yanko Design</span></p>}
+                        {lang === "FR" && <p className="price">€ 2,00 <span>€18,01</span></p>}
+                        {lang === "FR" && <p className="vat">Incl. la TVA</p>}
+                        {lang === "EN" && <p className="color"><span>Color</span>{color}</p>}
+                        {lang === "FR" && <p className="color"><span>Couleur</span>
+                            {color === 'Black' ? "Noir" : ''}
+                            {color === 'Blue' ? "Bleu" : ''}
+                            {color === 'Brown' ? "Marron" : ''}
+                            {color === 'Red' ? "Rouge" : ''}
+                            {color === 'Green' ? "Vert" : ''}
+                            {color === 'Orange' ? "Orange" : ''}
+                            {color === 'Gray' ? "Gri" : ''}
+                        </p>}
                         <div className="colors">
                             <div className="black" onClick={() => colorOnclick('Black')}>
                                 {color === 'Black' && <img
@@ -156,54 +214,109 @@ const Light = ({date, date2, setSmall, small, setShowReviews, phone}) => {
                         <a className="btnts" href="">
                             <img src="https://i.pinimg.com/originals/57/80/8c/57808c79cf14cd363f7ec7a83e5d9018.png"
                                  alt=""/>
-                            <p>Add to cart</p></a>
-                        <div className="features221">
+                            {lang === "EN" && <p>Buy this Item</p>}
+                            {lang === "FR" && <p>Acheter</p>}
+                        </a>
+                        {lang === "EN" && <div className="features221">
                             <h2>
                                 About this item
                             </h2>
                             <ul className="firstUl">
-                                <li>【Super Bright flashlight】With stable performance and low power consumption, it can
-                                    provide a uniform high-brightness beam and a wider range of illumination to meet your
+                                <li>Super Bright flashlight - With stable performance and low power consumption, it can
+                                    provide a uniform high-brightness beam and a wider range of illumination to meet
+                                    your
                                     daily needs.
                                 </li>
-                                <li>【4 Lighting Modes & Zoomable】One button control of 4 lighting modes:
-                                    High/Low/Strobe/SOS. The zoomable design of the flashlight adjusts the focus as needed,
-                                    giving you the freedom to choose a spotlight or floodlight for long distances or larger
+                                <li>4 Lighting Modes & Zoomable - One button control of 4 lighting modes:
+                                    High/Low/Strobe/SOS. The zoomable design of the flashlight adjusts the focus as
+                                    needed,
+                                    giving you the freedom to choose a spotlight or floodlight for long distances or
+                                    larger
                                     illuminated areas.
                                 </li>
-                                <li>【USB Rechargeable】Built-in 1800mAh can work up to 16 hours in normal use. You can charge
+                                <li>USB Rechargeable - Built-in 1800mAh can work up to 16 hours in normal use. You can
+                                    charge
                                     this flashlight directly via the included USB cable.
                                 </li>
-                                <li>【Durable and Portable】The flashlight shell is made of high quality aluminum alloy with
-                                    excellent hardness, wear resistance and drop resistance. The pocket is designed for easy
+                                <li>Durable and Portable - The flashlight shell is made of high quality aluminum alloy
+                                    with
+                                    excellent hardness, wear resistance and drop resistance. The pocket is designed for
+                                    easy
                                     portability and can fit in your handbag, backpack or survival kit.
                                 </li>
-                                <li>【Multiple Uses】The kit includes: 1*Rechargeable Flashlight, 1*USB Cable. The lightweight
+                                <li>Multiple Uses - The kit includes: 1*Rechargeable Flashlight, 1*USB Cable. The
+                                    lightweight
                                     and practical LED flashlight can be widely used for daily lighting, power outages,
-                                    emergencies, etc. It can also be used for outdoor sports such as dog walking, camping,
+                                    emergencies, etc. It can also be used for outdoor sports such as dog walking,
+                                    camping,
                                     hiking, fishing, running.
                                 </li>
                             </ul>
-                        </div>
+                        </div>}
+                        {lang === "FR" && <div className="features221">
+                            <h2>
+                                À propos de cet article
+                            </h2>
+                            <ul className="firstUl">
+                                <li>Lampe de poche super brillante - Avec des performances stables et une faible
+                                    consommation d'énergie, elle peut fournir un faisceau uniforme à haute luminosité et une
+                                    plus large gamme d'éclairage pour répondre à vos besoins quotidiens.
+                                </li>
+                                <li>4 modes d'éclairage et zoom - Contrôle à un bouton de 4 modes d'éclairage :
+                                    Haut/Bas/Stroboscope/SOS. La conception zoomable de la lampe de poche ajuste la mise au
+                                    point selon les besoins, vous donnant la liberté de choisir un projecteur ou un
+                                    éclairage de zone pour les longues distances ou les zones plus grandes éclairées.
+                                </li>
+                                <li>Rechargeable via USB - Batterie intégrée de 1800mAh pouvant fonctionner jusqu'à 16
+                                    heures en utilisation normale. Vous pouvez charger cette lampe de poche directement via
+                                    le câble USB inclus.
+                                </li>
+                                <li>Durable et portable - Le boîtier de la lampe de poche est en alliage d'aluminium de
+                                    haute qualité avec une excellente dureté, une résistance à l'usure et aux chocs. La
+                                    poche est conçue pour une portabilité facile et peut être rangée dans votre sac à main,
+                                    votre sac à dos ou votre trousse de survie.
+                                </li>
+                                <li>Utilisations multiples - Le kit comprend : 1*lampe de poche rechargeable, 1*câble USB.
+                                    La lampe de poche LED légère et pratique peut être largement utilisée pour l'éclairage
+                                    quotidien, les pannes de courant, les urgences, etc. Elle peut également être utilisée
+                                    pour les activités de plein air telles que la promenade des chiens, le camping, la
+                                    randonnée, la pêche, la course à pied.
+                                </li>
+                            </ul>
+                        </div>}
                         <div className="delivery">
                             <img src="https://i.pinimg.com/originals/72/13/a1/7213a16165e9ba30d33be8c953faae28.png"
                                  alt="FranceFlag"/>
                             <div>
-                                <p className="devTitle">Delivery</p>
-                                <p className="devP">Express by {date} <br/>
-                                    Standard {date2}</p>
+                                {lang === "EN" && <div>
+                                    <p className="devTitle">Delivery</p>
+                                    <p className="devP">Express by {date}<br/>
+                                        Standard {date2}</p>
+                                </div>}
+                                {lang === "FR" && <div>
+                                    <p className="devTitle">Livraison</p>
+                                    <p className="devP">Express d'ici le {date}<br/>
+                                        Standard d'ici le {date2}</p>
+                                </div>}
                             </div>
                         </div>
                         <div className="delivery">
                             <img src="https://i.pinimg.com/originals/35/96/f5/3596f54bbd8a9bbe7a0219847da373c0.png"
                                  alt="return"/>
                             <div>
-                                <p className="devTitle">Returns are free and easy</p>
-                                <p className="devP">Exchange or money back guarantee for all orders.</p>
+                                {lang === "EN" && <div>
+                                    <p className="devTitle">Returns are free and easy</p>
+                                    <p className="devP">Exchange or money back guarantee for all orders.</p>
+                                </div>}
+                                {lang === "FR" && <div>
+                                    <p className="devTitle">Les retours sont gratuits et faciles</p>
+                                    <p className="devP">Échange ou remboursement garanti pour toutes les commandes.</p>
+                                </div>}
                             </div>
                         </div>
                         <div className="starContainer">
-                            <p>Reviews</p>
+                            {lang === "EN" && <p>Reviews</p>}
+                            {lang === "FR" && <p>Commentaires</p>}
                             <div className="stars">
                                 <img src="https://i.pinimg.com/originals/7d/d0/45/7dd045a8dc0e884b0a49f53abf22d2d0.png"
                                      alt=""/>
@@ -284,7 +397,8 @@ const Light = ({date, date2, setSmall, small, setShowReviews, phone}) => {
                                     </div>
                                 </div>
                             </div>
-                            <p id="readReviews" onClick={() => setShowReviews(true)}>+ Read all 93 reviews</p>
+                            {lang === "EN" && <p id="readReviews" onClick={() => setShowReviews(true)}>+ Read all 93 reviews</p>}
+                            {lang === "FR" && <p id="readReviews" onClick={() => setShowReviews(true)}>+ Lire les 93 Commentaires</p>}
                         </div>
                     </div>
                     <div className="backContainer">

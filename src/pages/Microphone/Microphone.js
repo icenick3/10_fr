@@ -13,9 +13,8 @@ import {
 import ReviewsMicro from "../../conponents/ReviewsMicro/Reviews";
 import CarouselBoxTShirt from "../../conponents/CarouselBoxTShirt/CarouselBoxTShirt";
 
-const Microphone = ({date2, date, small, setSmall ,setShowReviews, phone}) => {
+const Microphone = ({date2, date, small, setSmall, setShowReviews, phone, lang}) => {
     const [color, setColor] = useState('Rose gold')
-
 
 
     const colorOnclick = (color) => {
@@ -31,13 +30,12 @@ const Microphone = ({date2, date, small, setSmall ,setShowReviews, phone}) => {
             setTimeout(() => {
                 mainRef.current.id = "";
                 setSmall(true)
-                if (!phone){
-                    window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
+                if (!phone) {
+                    window.document.body.scrollIntoView({behavior: 'auto', block: 'start'});
                 } else {
 
                 }
             }, 450)
-
 
 
         }
@@ -45,23 +43,32 @@ const Microphone = ({date2, date, small, setSmall ,setShowReviews, phone}) => {
 
 
     return small ? (
-        <div className="smallPageZippo" onClick={()=> setSmall(false)}>
+        <div className="smallPageZippo" onClick={() => setSmall(false)}>
             <div className="imgBlock">
-                <img className="imgTs3" src="https://i.pinimg.com/originals/50/63/2c/50632cf3b63c0eaceab2b09df710ff38.jpg" alt=""/>
+                <img className="imgTs3"
+                     src="https://i.pinimg.com/originals/50/63/2c/50632cf3b63c0eaceab2b09df710ff38.jpg" alt=""/>
             </div>
             <div className="informationBlock">
-                <h2 className="h2ts">Ankuka Karaoke Wireless Microphone</h2>
-                <p className="design">Designed and sold by <span>Ankuka Store</span></p>
-                <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>
+                {lang === "EN" && <h2 className="h2ts">Ankuka Karaoke Wireless Microphone</h2>}
+                {lang === "EN" && <p className="design">Designed and sold by <span>Ankuka Store</span></p>}
+                {lang === "EN" && <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>}
+                {lang === "FR" && <h2 className="h2ts">Microphone sans fil Ankuka Karaoke</h2>}
+                {lang === "FR" && <p className="design">Conçu et vendu par <span>Ankuka Store</span></p>}
+                {lang === "FR" &&
+                    <p className="price">€ 2,00 <span>€18,01</span> <span id="vat">Incl. la TVA</span></p>}
                 <div className="buttons22">
-                    <a className="btnts1" onClick={()=> setSmall(false)}>
+                    <a className="btnts1" onClick={() => setSmall(false)}>
                         <img src="https://i.pinimg.com/originals/9e/63/21/9e6321883f018a4613fa5d8960a161d2.png"
                              alt=""/>
-                        <p>More Details</p></a>
-                    <a className="btnts2" href="" onClick={(e)=> e.stopPropagation()}>
+                        {lang === "EN" && <p>More Details</p>}
+                        {lang === "FR" && <p>Plus de détails</p>}
+                    </a>
+                    <a className="btnts2" href="" onClick={(e) => e.stopPropagation()}>
                         <img src="https://i.pinimg.com/originals/57/80/8c/57808c79cf14cd363f7ec7a83e5d9018.png"
                              alt=""/>
-                        <p>Add to cart</p></a>
+                        {lang === "EN" && <p>Buy this Item</p>}
+                        {lang === "FR" && <p>Acheter</p>}
+                    </a>
                 </div>
             </div>
         </div>
@@ -73,11 +80,21 @@ const Microphone = ({date2, date, small, setSmall ,setShowReviews, phone}) => {
             <div className="Micro">
                 <div className="imgContainer">
                     <div className="mobileHeader">
-                        <h2 className="h2ts">Ankuka Karaoke Wireless Microphone, Bluetooth Dancing LED Lights Handheld
-                            Portable Speaker Karaoke Machine, Home KTV Player with Record Function, Compatible with
-                            Android & iOS Devices</h2>
-                        <p className="design">Designed and sold by <span>Ankuka Store</span></p>
-                        <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>
+                        {lang === "EN" &&
+                            <h2 className="h2ts">Ankuka Karaoke Wireless Microphone, Bluetooth Dancing LED Lights
+                                Handheld
+                                Portable Speaker Karaoke Machine, Home KTV Player with Record Function, Compatible with
+                                Android & iOS Devices</h2>}
+                        {lang === "EN" && <p className="design">Designed and sold by <span>Ankuka Store</span></p>}
+                        {lang === "EN" &&
+                            <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>}
+                        {lang === "FR" &&
+                            <h2 className="h2ts">Microphone sans fil Ankuka Karaoke, haut-parleur portable avec lumières
+                                LED dansantes, machine de karaoké, lecteur KTV domestique avec fonction
+                                d'enregistrement, compatible avec les appareils Android et iOS.</h2>}
+                        {lang === "FR" && <p className="design">Conçu et vendu par <span>Ankuka Store</span></p>}
+                        {lang === "FR" &&
+                            <p className="price">€ 2,00 <span>€18,01</span> <span id="vat">Incl. la TVA</span></p>}
                     </div>
                     <div className="imgCarContainerZippo">
                         {color === 'Rose gold' && <CarouselBoxTShirt element={microRose}/>}
@@ -88,7 +105,7 @@ const Microphone = ({date2, date, small, setSmall ,setShowReviews, phone}) => {
                         {color === 'Light Green' && <CarouselBoxTShirt element={microLightGreen}/>}
                         {color === 'Purple' && <CarouselBoxTShirt element={microPurple}/>}
                     </div>
-                    <div className="features">
+                    {lang === "EN" && <div className="features">
                         <h2>
                             About this item
                         </h2>
@@ -116,11 +133,48 @@ const Microphone = ({date2, date, small, setSmall ,setShowReviews, phone}) => {
                                 problem, please contact us immediately, and we'll sort it out for you.
                             </li>
                         </ul>
-                    </div>
+                    </div>}
+                    {lang === "FR" && <div className="features">
+                        <h2>
+                            À propos de cet article
+                        </h2>
+                        <ul className="firstUl">
+                            <li>4-EN-1 MICROPHONE BLUETOOTH KARAOKE : Ce microphone sans fil portable pour enfants peut être utilisé
+                                comme microphone, haut-parleur Bluetooth, haut-parleur et enregistreur. Utilisez ce micro karaoké
+                                à main pour chanter ou enregistrer votre magnifique voix à tout moment, n'importe où.
+                            </li>
+                            <li>QUALITÉ AUDIO SONORE : Équipé d'un processeur audio professionnel et d'un système d'accord, d'un
+                                filtre anti-pop à trois couches, créant un environnement sonore KTV époustouflant et une
+                                magnifique réverbération d'écho. C'est aussi un microphone haut-parleur avec 4 sons magiques :
+                                voix d'enfant, voix féminine, voix masculine, voix d'homme âgé. Trop amusant !
+                            </li>
+                            <li>LONGUE DURÉE D'UTILISATION : Durée de lecture longue et pouvant aller jusqu'à 8 heures après une
+                                charge complète. Il s'agit d'un brillant microphone Bluetooth pour enfants, fêtes, soirées
+                                en famille et occasions spéciales de festivals. * Veuillez utiliser un adaptateur secteur DC 5V-1A pour la charge.
+                            </li>
+                            <li>CONNEXION FACILE ET LARGE COMPATIBILITÉ : Connexions Bluetooth pratiques. Ce microphone de chant
+                                peut se connecter facilement à tous les appareils Bluetooth tels que Andriod/smartphone/PC, et
+                                les applications YouTube, Smule, etc. Il est super facile à utiliser pour les enfants ou les adultes.
+                            </li>
+                            <li>CADEAU DE NOËL IDÉAL : Ce microphone Bluetooth sans fil violet affiche des lumières LED dansantes
+                                qui s'illuminent en fonction de votre voix et du volume de la musique, vous faisant vous sentir
+                                au centre du club disco. Non seulement les enfants, mais aussi les adultes l'adoreront et s'amuseront beaucoup ! Si vous rencontrez le moindre problème, veuillez nous contacter immédiatement et nous nous en occuperons pour vous.
+                            </li>
+                        </ul>
+                    </div>}
                 </div>
                 <div className="descriptionTShirt">
                     <div className="informContainer">
-                        <p className="color11"><span>Color</span>{color}</p>
+                        {lang === "EN" && <p className="color11"><span>Color</span>{color}</p>}
+                        {lang === "FR" && <p className="color11"><span>Couleur</span>
+                            {color === 'Rose gold' ? "Or rose" : ''}
+                            {color === 'Blue' ? "Bleu" : ''}
+                            {color === 'Silver' ? "Argenté" : ''}
+                            {color === 'Red' ? "Rouge" : ''}
+                            {color === 'Gold' ? "Or" : ''}
+                            {color === 'Light Green' ? "Vert clair" : ''}
+                            {color === 'Purple' ? "Violet" : ''}
+                        </p>}
                         <div className="colors122">
                             <div className="roseGold" onClick={() => colorOnclick('Rose gold')}>
                                 {color === 'Rose gold' && <img
@@ -159,16 +213,38 @@ const Microphone = ({date2, date, small, setSmall ,setShowReviews, phone}) => {
                                 }                            </div>
 
                         </div>
-                        <h2 className="h2ts">Ankuka Karaoke Wireless Microphone, Bluetooth Dancing LED Lights Handheld
-                            Portable Speaker Karaoke Machine, Home KTV Player with Record Function, Compatible with
-                            Android & iOS Devices</h2>
-                        <p className="design">Designed and sold by <span>Ankuka Store</span></p>
-                        <p className="price">€ 2.00 <span>€32,90</span></p>
-                        <p className="vat">incl. VAT</p>
-                        <p className="color"><span>Brand: </span>Ankuka</p>
-                        <p className="color"><span>Connectivity technology: </span>Bluetooth, USB</p>
-                        <p className="color"><span>Connector type	:</span>USB</p>
-                        <p className="color22"><span>Color</span>{color}</p>
+                        {lang === "EN" && <div>
+                            <h2 className="h2ts">Ankuka Karaoke Wireless Microphone, Bluetooth Dancing LED Lights Handheld
+                                Portable Speaker Karaoke Machine, Home KTV Player with Record Function, Compatible with
+                                Android & iOS Devices</h2>
+                            <p className="design">Designed and sold by <span>Ankuka Store</span></p>
+                            <p className="price">€ 2.00 <span>€32,90</span></p>
+                            <p className="vat">incl. VAT</p>
+                            <p className="color"><span>Brand: </span>Ankuka</p>
+                            <p className="color"><span>Connectivity technology: </span>Bluetooth, USB</p>
+                            <p className="color"><span>Connector type	:</span>USB</p>
+                        </div>}
+                        {lang === "FR" && <div>
+                            <h2 className="h2ts">Microphone sans fil Ankuka Karaoke, haut-parleur portable avec lumières LED dansantes
+                                machine de karaoké, lecteur KTV domestique avec fonction d'enregistrement, compatible avec
+                                les appareils Android et iOS</h2>
+                            <p className="design">Conçu et vendu par <span>Ankuka Store</span></p>
+                            <p className="price">2,00 € <span>32,90 €</span></p>
+                            <p className="vat">TTC</p>
+                            <p className="color"><span>Marque : </span>Ankuka</p>
+                            <p className="color"><span>Technologie de connectivité : </span>Bluetooth, USB</p>
+                            <p className="color"><span>Type de connecteur :</span> USB</p>
+                        </div>}
+                        {lang === "EN" && <p className="color22"><span>Color</span>{color}</p>}
+                        {lang === "FR" && <p className="color22"><span>Couleur</span>
+                            {color === 'Rose gold' ? "Or rose" : ''}
+                            {color === 'Blue' ? "Bleu" : ''}
+                            {color === 'Silver' ? "Argenté" : ''}
+                            {color === 'Red' ? "Rouge" : ''}
+                            {color === 'Gold' ? "Or" : ''}
+                            {color === 'Light Green' ? "Vert clair" : ''}
+                            {color === 'Purple' ? "Violet" : ''}
+                        </p>}
                         <div className="colors">
                             <div className="roseGold" onClick={() => colorOnclick('Rose gold')}>
                                 {color === 'Rose gold' && <img
@@ -210,8 +286,10 @@ const Microphone = ({date2, date, small, setSmall ,setShowReviews, phone}) => {
                         <a className="btnts" href="">
                             <img src="https://i.pinimg.com/originals/57/80/8c/57808c79cf14cd363f7ec7a83e5d9018.png"
                                  alt=""/>
-                            <p>Add to cart</p></a>
-                        <div className="features221">
+                            {lang === "EN" && <p>Buy this Item</p>}
+                            {lang === "FR" && <p>Acheter</p>}
+                        </a>
+                        {lang === "EN" && <div className="features221">
                             <h2>
                                 About this item
                             </h2>
@@ -248,26 +326,68 @@ const Microphone = ({date2, date, small, setSmall ,setShowReviews, phone}) => {
                                     problem, please contact us immediately, and we'll sort it out for you.
                                 </li>
                             </ul>
-                        </div>
+                        </div>}
+                        {lang === "FR" && <div className="features221">
+                            <h2>
+                                À propos de cet article
+                            </h2>
+                            <ul className="firstUl">
+                                <li>4-EN-1 MICROPHONE BLUETOOTH KARAOKE : Ce microphone sans fil portable pour enfants peut être utilisé
+                                    comme microphone, haut-parleur Bluetooth, haut-parleur et enregistreur. Utilisez ce micro karaoké
+                                    à main pour chanter ou enregistrer votre magnifique voix à tout moment, n'importe où.
+                                </li>
+                                <li>QUALITÉ AUDIO SONORE : Équipé d'un processeur audio professionnel et d'un système d'accord, d'un
+                                    filtre anti-pop à trois couches, créant un environnement sonore KTV époustouflant et une
+                                    magnifique réverbération d'écho. C'est aussi un microphone haut-parleur avec 4 sons magiques :
+                                    voix d'enfant, voix féminine, voix masculine, voix d'homme âgé. Trop amusant !
+                                </li>
+                                <li>LONGUE DURÉE D'UTILISATION : Durée de lecture longue et pouvant aller jusqu'à 8 heures après une
+                                    charge complète. Il s'agit d'un brillant microphone Bluetooth pour enfants, fêtes, soirées
+                                    en famille et occasions spéciales de festivals. * Veuillez utiliser un adaptateur secteur DC 5V-1A pour la charge.
+                                </li>
+                                <li>CONNEXION FACILE ET LARGE COMPATIBILITÉ : Connexions Bluetooth pratiques. Ce microphone de chant
+                                    peut se connecter facilement à tous les appareils Bluetooth tels que Andriod/smartphone/PC, et
+                                    les applications YouTube, Smule, etc. Il est super facile à utiliser pour les enfants ou les adultes.
+                                </li>
+                                <li>CADEAU DE NOËL IDÉAL : Ce microphone Bluetooth sans fil violet affiche des lumières LED dansantes
+                                    qui s'illuminent en fonction de votre voix et du volume de la musique, vous faisant vous sentir
+                                    au centre du club disco. Non seulement les enfants, mais aussi les adultes l'adoreront et s'amuseront beaucoup ! Si vous rencontrez le moindre problème, veuillez nous contacter immédiatement et nous nous en occuperons pour vous.
+                                </li>
+                            </ul>
+                        </div>}
                         <div className="delivery">
                             <img src="https://i.pinimg.com/originals/72/13/a1/7213a16165e9ba30d33be8c953faae28.png"
                                  alt="FranceFlag"/>
                             <div>
-                                <p className="devTitle">Delivery</p>
-                                <p className="devP">Express {date}<br/>
-                                    Standard {date2}</p>
+                                {lang === "EN" && <div>
+                                    <p className="devTitle">Delivery</p>
+                                    <p className="devP">Express by {date}<br/>
+                                        Standard {date2}</p>
+                                </div>}
+                                {lang === "FR" && <div>
+                                    <p className="devTitle">Livraison</p>
+                                    <p className="devP">Express d'ici le {date}<br/>
+                                        Standard d'ici le {date2}</p>
+                                </div>}
                             </div>
                         </div>
                         <div className="delivery">
                             <img src="https://i.pinimg.com/originals/35/96/f5/3596f54bbd8a9bbe7a0219847da373c0.png"
                                  alt="return"/>
                             <div>
-                                <p className="devTitle">Returns are free and easy</p>
-                                <p className="devP">Exchange or money back guarantee for all orders.</p>
+                                {lang === "EN" && <div>
+                                    <p className="devTitle">Returns are free and easy</p>
+                                    <p className="devP">Exchange or money back guarantee for all orders.</p>
+                                </div>}
+                                {lang === "FR" && <div>
+                                    <p className="devTitle">Les retours sont gratuits et faciles</p>
+                                    <p className="devP">Échange ou remboursement garanti pour toutes les commandes.</p>
+                                </div>}
                             </div>
                         </div>
                         <div className="starContainer">
-                            <p>Reviews</p>
+                            {lang === "EN" && <p>Reviews</p>}
+                            {lang === "FR" && <p>Commentaires</p>}
                             <div className="stars">
                                 <img src="https://i.pinimg.com/originals/7d/d0/45/7dd045a8dc0e884b0a49f53abf22d2d0.png"
                                      alt=""/>
@@ -348,7 +468,10 @@ const Microphone = ({date2, date, small, setSmall ,setShowReviews, phone}) => {
                                     </div>
                                 </div>
                             </div>
-                            <p id="readReviews" onClick={() => setShowReviews(true)}>+ Read all 52 reviews</p>
+                            {lang === "EN" &&
+                                <p id="readReviews" onClick={() => setShowReviews(true)}>+ Read all 52 reviews</p>}
+                            {lang === "FR" &&
+                                <p id="readReviews" onClick={() => setShowReviews(true)}>+ Lire les 52 Commentaires</p>}
                         </div>
                     </div>
                     <div className="backContainer">

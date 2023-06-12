@@ -28,7 +28,7 @@ import {
 } from "../../conponents/ImageMbappe/ImageMbappe";
 import ProductCarousel from "../../conponents/ProductCarousel/ProductCarousel";
 
-const TShirt = ({date, date2, setSmall, small, setShowReviews, setShowGuide, phone}) => {
+const TShirt = ({date, date2, setSmall, small, setShowReviews, setShowGuide, phone, lang}) => {
 
 
     const [color, setColor] = useState('Purple')
@@ -112,18 +112,25 @@ const TShirt = ({date, date2, setSmall, small, setShowReviews, setShowGuide, pho
                 <img className="imgTs" src="https://i.pinimg.com/originals/3b/95/d1/3b95d115ce669fb16ea0815816356d5a.jpg" alt=""/>
             </div>
             <div className="informationBlock">
-                <h2 className="h2ts">Russian War Ship Classic T-Shirt</h2>
-                <p className="design">Designed and sold by <span>GoyetteKaylee</span></p>
-                <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>
+                {lang === "EN" && <h2 className="h2ts">Russian War Ship Classic T-Shirt</h2>}
+                {lang === "EN" && <p className="design">Designed and sold by <span>GoyetteKaylee</span></p>}
+                {lang === "EN" && <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>}
+                {lang === "FR" && <h2 className="h2ts">T-shirt classique du navire de guerre russe</h2>}
+                {lang === "FR" && <p className="design">Conçu et vendu par <span>GoyetteKaylee</span></p>}
+                {lang === "FR" && <p className="price">€ 2,00 <span>€18,01</span> <span id="vat">Incl. la TVA</span></p>}
                 <div className="buttons22">
                     <a className="btnts1" onClick={() => setSmall(false)}>
                         <img src="https://i.pinimg.com/originals/9e/63/21/9e6321883f018a4613fa5d8960a161d2.png"
                              alt=""/>
-                        <p>More Details</p></a>
+                        {lang === "EN" && <p>More Details</p>}
+                        {lang === "FR" && <p>Plus de détails</p>}
+                    </a>
                     <a className="btnts2" href="" onClick={(e) => e.stopPropagation()}>
                         <img src="https://i.pinimg.com/originals/57/80/8c/57808c79cf14cd363f7ec7a83e5d9018.png"
                              alt=""/>
-                        <p>Add to cart</p></a>
+                        {lang === "EN" && <p>Buy this Item</p>}
+                        {lang === "FR" && <p>Acheter</p>}
+                    </a>
                 </div>
             </div>
         </div>
@@ -134,15 +141,17 @@ const TShirt = ({date, date2, setSmall, small, setShowReviews, setShowGuide, pho
                   onClick={() => takeID()}/>
             <div className="TShirt">
                 <div className="mobileHeader">
-                    <h2 className="h2ts">Russian War Ship Classic T-Shirt</h2>
-                    <p className="design">Designed and sold by <span>GoyetteKaylee</span></p>
-                    <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>
+                    {lang === "EN" && <h2 className="h2ts">Russian War Ship Classic T-Shirt</h2>}
+                    {lang === "EN" && <p className="design">Designed and sold by <span>GoyetteKaylee</span></p>}
+                    {lang === "EN" && <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>}
+                    {lang === "FR" && <h2 className="h2ts">T-shirt classique du navire de guerre russe</h2>}
+                    {lang === "FR" && <p className="design">Conçu et vendu par <span>GoyetteKaylee</span></p>}
+                    {lang === "FR" && <p className="price">€ 2,00 <span>€18,01</span> <span id="vat">Incl. la TVA</span></p>}
                 </div>
                 <div className="imgContainer">
                     <div className="imageContTS">
 
-                        {color === 'Heather Grey' && side === 'Front' &&
-                            <CarouselBoxTShirt element={HeatherGreyFront}/>}
+                        {color === 'Heather Grey' && side === 'Front' && <CarouselBoxTShirt element={HeatherGreyFront}/>}
                         {color === 'Heather Grey' && side === 'Back' && <CarouselBoxTShirt element={HeatherGreyBack}/>}
                         {color === 'Black' && side === 'Front' && <CarouselBoxTShirt element={blackFront}/>}
                         {color === 'Black' && side === 'Back' && <CarouselBoxTShirt element={blackBack}/>}
@@ -167,7 +176,7 @@ const TShirt = ({date, date2, setSmall, small, setShowReviews, setShowGuide, pho
                         {color === 'Dark Red' && side === 'Front' && <CarouselBoxTShirt element={frontDarkRedImages}/>}
                         {color === 'Dark Red' && side === 'Back' && <CarouselBoxTShirt element={backDarkRedImages}/>}
                     </div>
-                    <div className="features">
+                    {lang === "EN" && <div className="features">
                         <h2>Features</h2>
                         <ul>
                             <li>The standard, traditional t-shirt for everyday wear</li>
@@ -180,21 +189,50 @@ const TShirt = ({date, date2, setSmall, small, setShowReviews, setShowGuide, pho
                             </li>
                             <li>Double-needle hems and neck band for durability</li>
                         </ul>
-                    </div>
+                    </div>}
+                    {lang === "FR" && <div className="features">
+                        <h2>Caractéristiques</h2>
+                        <ul>
+                            <li>Le t-shirt standard et traditionnel pour un usage quotidien</li>
+                            <li>Coupe classique, généreuse et ample</li>
+                            <li>Le modèle masculin mesure 6'0" / 183 cm et porte la taille Medium</li>
+                            <li>Le modèle féminin mesure 5'8" / 173 cm et porte la taille Small</li>
+                            <li>Tissu lourd de 5,3 oz / 180 g/m², les couleurs unies sont en 100% coton pré-rétréci, le gris chiné est en 90% coton/10% polyester, le gris denim chiné est en 50% coton/50% polyester</li>
+                            <li>Ourlets doubles et bande de cou pour une durabilité accrue</li>
+                        </ul>
+                    </div>}
                 </div>
                 <div className="descriptionTShirt">
                     <div className="informContainer">
-                        <h2 className="h2ts">Russian War Ship Classic T-Shirt</h2>
-                        <p className="design">Designed and sold by <span>GoyetteKaylee</span></p>
-                        <p className="price">€ 2.00 <span>€18.01</span></p>
-                        <p className="vat">incl. VAT</p>
-                        <p className="color"><span>Color</span>{color}</p>
+                        {lang === "EN" && <h2 className="h2ts">Russian War Ship Classic T-Shirt</h2>}
+                        {lang === "EN" && <p className="design">Designed and sold by <span>GoyetteKaylee</span></p>}
+                        {lang === "EN" && <p className="price">€ 2.00 <span>€18.01</span></p>}
+                        {lang === "EN" && <p className="vat">incl. VAT</p>}
+                        {lang === "FR" && <h2 className="h2ts">T-shirt classique du navire de guerre russe</h2>}
+                        {lang === "FR" && <p className="design">Conçu et vendu par <span>GoyetteKaylee</span></p>}
+                        {lang === "FR" && <p className="price">€ 2,00 <span>€18,01</span></p>}
+                        {lang === "FR" && <p className="vat">Incl. la TVA</p>}
+                        {lang === "EN" && <p className="color"><span>Color</span>{color}</p>}
+                        {lang === "FR" && <p className="color"><span>Couleur</span>
+                            {color === 'Heather Grey' ? "Gris chiné" : ''}
+                            {color === 'Black' ? "Noir" : ''}
+                            {color === 'Blue' ? "Bleu" : ''}
+                            {color === 'Creme' ? "Crème" : ''}
+                            {color === 'Red' ? "Rouge" : ''}
+                            {color === 'Kiwi' ? "Kiwi" : ''}
+                            {color === 'Green' ? "Vert" : ''}
+                            {color === 'Light Pink' ? "Rose clair" : ''}
+                            {color === 'Purple' ? "Violet" : ''}
+                            {color === 'Gold' ? "Or" : ''}
+                            {color === 'Dark Red' ? "Rouge foncé" : ''}
+                        </p>}
                         <div className="colors">
-                            <div className="grey" onClick={() => colorOnclick('Heather Grey')}>
+                             <div className="grey" onClick={() => colorOnclick('Heather Grey')}>
                                 {color === 'Heather Grey' && <img
                                     src="https://i.pinimg.com/originals/35/f8/85/35f8858073049cb7c5be9b064e19b9d8.png"
                                     alt=""/>}
                             </div>
+
                             <div className="black" onClick={() => colorOnclick('Black')}>
                                 {color === 'Black' && <img
                                     src="https://i.pinimg.com/originals/35/f8/85/35f8858073049cb7c5be9b064e19b9d8.png"
@@ -246,7 +284,8 @@ const TShirt = ({date, date2, setSmall, small, setShowReviews, setShowGuide, pho
                                     alt=""/>
                                 }                            </div>
                         </div>
-                        <p className="size">Size</p>
+                        {lang === "EN" && <p className="size">Size</p>}
+                        {lang === "FR" && <p className="size">Taille</p>}
                         <div className="sizes">
                             <div ref={sizeRefs[0]} className="S" onClick={() => sizeOnclick("S")}>S</div>
                             <div ref={sizeRefs[1]} className="M" onClick={() => sizeOnclick("M")}>M</div>
@@ -259,19 +298,25 @@ const TShirt = ({date, date2, setSmall, small, setShowReviews, setShowGuide, pho
                         <div className="guide" onClick={() => setShowGuide(true)}>
                             <img src="https://i.pinimg.com/originals/1a/d2/ab/1ad2ab029e9f76112f2dbb683e5c35eb.png"
                                  alt=""/>
-                            <p>View size guide</p>
+                            {lang === "EN" && <p>View size guide</p>}
+                            {lang === "FR" && <p>Voir le guide des tailles</p>}
                         </div>
 
-                        <p className="printLoc">Print Location</p>
+                        {lang === "EN" && <p className="printLoc">Print Location</p>}
+                        {lang === "FR" && <p className="printLoc">Emplacement de l'impression</p>}
                         <div className="location">
-                            <div ref={frontRef} className="selected" onClick={() => sideOnclick("Front")}>Front</div>
-                            <div ref={backRef} className="back" onClick={() => sideOnclick("Back")}>Back</div>
+                            {lang === "EN" && <div ref={frontRef} className="selected" onClick={() => sideOnclick("Front")}>Front</div>}
+                            {lang === "FR" && <div ref={frontRef} className="selected" onClick={() => sideOnclick("Front")}>Devant</div>}
+                            {lang === "EN" && <div ref={backRef} className="back" onClick={() => sideOnclick("Back")}>Back</div>}
+                            {lang === "FR" && <div ref={backRef} className="back" onClick={() => sideOnclick("Back")}>Derrière</div>}
                         </div>
                         <a className="btnts" href="">
                             <img src="https://i.pinimg.com/originals/57/80/8c/57808c79cf14cd363f7ec7a83e5d9018.png"
                                  alt=""/>
-                            <p>Add to cart</p></a>
-                        <div className="features221">
+                            {lang === "EN" && <p>Buy this Item</p>}
+                            {lang === "FR" && <p>Acheter</p>}
+                        </a>
+                        {lang === "EN" && <div className="features221">
                             <h2>Features</h2>
                             <ul>
                                 <li>The standard, traditional t-shirt for everyday wear</li>
@@ -284,26 +329,47 @@ const TShirt = ({date, date2, setSmall, small, setShowReviews, setShowGuide, pho
                                 </li>
                                 <li>Double-needle hems and neck band for durability</li>
                             </ul>
-                        </div>
+                        </div>}
+                        {lang === "FR" && <div className="features221">
+                            <h2>Caractéristiques</h2>
+                            <ul>
+                                <li>Le t-shirt standard et traditionnel pour un usage quotidien</li>
+                                <li>Coupe classique, généreuse et ample</li>
+                                <li>Le modèle masculin mesure 6'0" / 183 cm et porte la taille Medium</li>
+                                <li>Le modèle féminin mesure 5'8" / 173 cm et porte la taille Small</li>
+                                <li>Tissu lourd de 5,3 oz / 180 g/m², les couleurs unies sont en 100% coton pré-rétréci, le gris chiné est en 90% coton/10% polyester, le gris denim chiné est en 50% coton/50% polyester</li>
+                                <li>Ourlets doubles et bande de cou pour une durabilité accrue</li>
+                            </ul>
+                        </div>}
                         <div className="delivery">
                             <img src="https://i.pinimg.com/originals/72/13/a1/7213a16165e9ba30d33be8c953faae28.png"
                                  alt="FranceFlag"/>
-                            <div>
+                            {lang === "EN" && <div>
                                 <p className="devTitle">Delivery</p>
-                                <p className="devP">Express by {date} <br/>
+                                <p className="devP">Express by {date}<br/>
                                     Standard {date2}</p>
-                            </div>
+                            </div>}
+                            {lang === "FR" && <div>
+                                <p className="devTitle">Livraison</p>
+                                <p className="devP">Express d'ici le {date}<br/>
+                                    Standard d'ici le {date2}</p>
+                            </div>}
                         </div>
                         <div className="delivery">
                             <img src="https://i.pinimg.com/originals/35/96/f5/3596f54bbd8a9bbe7a0219847da373c0.png"
                                  alt="return"/>
-                            <div>
+                            {lang === "EN" && <div>
                                 <p className="devTitle">Returns are free and easy</p>
                                 <p className="devP">Exchange or money back guarantee for all orders.</p>
-                            </div>
+                            </div>}
+                            {lang === "FR" && <div>
+                                <p className="devTitle">Les retours sont gratuits et faciles</p>
+                                <p className="devP">Échange ou remboursement garanti pour toutes les commandes.</p>
+                            </div>}
                         </div>
                         <div className="starContainer">
-                            <p>Reviews</p>
+                            {lang === "EN" && <p>Reviews</p>}
+                            {lang === "FR" && <p>Commentaires</p>}
                             <div className="stars">
                                 <img src="https://i.pinimg.com/originals/7d/d0/45/7dd045a8dc0e884b0a49f53abf22d2d0.png"
                                      alt=""/>
@@ -384,7 +450,8 @@ const TShirt = ({date, date2, setSmall, small, setShowReviews, setShowGuide, pho
                                     </div>
                                 </div>
                             </div>
-                            <p id="readReviews" onClick={() => setShowReviews(true)}>+ Read all 122 reviews</p>
+                            {lang === "EN" && <p id="readReviews" onClick={() => setShowReviews(true)}>+ Read all 122 reviews</p>}
+                            {lang === "FR" && <p id="readReviews" onClick={() => setShowReviews(true)}>+ Lire les 122 Commentaires</p>}
                         </div>
                     </div>
                     <div className="backContainer">

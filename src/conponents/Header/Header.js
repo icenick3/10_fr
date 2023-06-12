@@ -1,7 +1,8 @@
 import React from 'react';
 import './Header.css'
 
-const Header = ({setActive}) => {
+const Header = ({setActive, setLang}) => {
+
     return (
         <header>
             <img className="menu" src="https://i.pinimg.com/originals/ee/7d/ec/ee7decc1f8bd6182bf9e990b2b1707af.png" alt="" onClick={()=> setActive(true)}/>
@@ -10,7 +11,10 @@ const Header = ({setActive}) => {
                 <h1>Art</h1>
                 <h1>Emporium</h1>
             </div>
-            <p>EN</p>
+            <select onChange={(e)=>setLang(e.target.value)}>
+                <option value="EN">EN</option>
+                <option value="FR">FR</option>
+            </select>
         </header>
     );
 };

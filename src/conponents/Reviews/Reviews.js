@@ -2,10 +2,10 @@ import React from 'react';
 import './Reviews.css'
 import {Stars5, Stars2, Stars4, Stars1, Stars3} from "../Stars/Stars";
 
-const Reviews = ({setShowReviews, showReviews}) => {
+const Reviews = ({setShowReviews, showReviews, lang}) => {
     return (
         <div className={showReviews ? "reviewsTS show" : "reviewsTS"} onClick={()=> setShowReviews(false)}>
-            <div className={showReviews ? "reviewsContainerTS show" : "reviewsContainerTS"} onClick={(e)=> e.stopPropagation()}>
+            {lang === "EN" && <div className={showReviews ? "reviewsContainerTS show" : "reviewsContainerTS"} onClick={(e)=> e.stopPropagation()}>
                 <img className="closeGuide" src="https://i.pinimg.com/originals/52/e3/86/52e38681b082f94f2917624bb56edf42.png" alt="" onClick={()=> setShowReviews(false)}/>
                 <h2>Reviews</h2>
                 <div className="comentar">
@@ -153,6 +153,19 @@ const Reviews = ({setShowReviews, showReviews}) => {
                     <p className="nameOfUser">by Joanne C. on May 5, 2023</p>
                     <p className="longComment">Love it.</p>
                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <div className="comentar">
                     <Stars1/>
                     <h3 className="shortComment">I ordered 3 shirts and</h3>
@@ -207,6 +220,9 @@ const Reviews = ({setShowReviews, showReviews}) => {
                     <p className="nameOfUser">by Ronald on Apr 26, 2023</p>
                     <p className="longComment">Great</p>
                 </div>
+
+
+
                 <div className="comentar">
                     <Stars5/>
                     <h3 className="shortComment">Thank you very much for</h3>
@@ -267,6 +283,10 @@ const Reviews = ({setShowReviews, showReviews}) => {
                     <p className="nameOfUser">by Megan M. on Apr 19, 2023</p>
                     <p className="longComment">Shirt itself is cute. But the material was stiff, boxy, and uncomfortable. I wish it was offered in a range of material styles. I was going to exchange for a larger size; however, customer service was rather unhelpful and couldn’t provide me with any information needed. The exchange process is overly complicated, so I ended up just keeping the shirt even though it doesn’t fit. It breaks my heart that the website and “customer services” are not user-friendly.</p>
                 </div>
+
+
+
+
                 <div className="comentar">
                     <Stars5/>
                     <h3 className="shortComment">Fits and looks great.</h3>
@@ -333,6 +353,31 @@ const Reviews = ({setShowReviews, showReviews}) => {
                     <p className="nameOfUser">by Paul S. on Apr 2, 2023</p>
                     <p className="longComment">.</p>
                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <div className="comentar">
                     <Stars5/>
                     <h3 className="shortComment">All alright… It fits perfectly,</h3>
@@ -411,6 +456,9 @@ const Reviews = ({setShowReviews, showReviews}) => {
                     <p className="nameOfUser">by Joseph E. on Mar 13, 2023</p>
                     <p className="longComment">Great shirt, just a bit short</p>
                 </div>
+
+
+
                 <div className="comentar">
                     <Stars5/>
                     <h3 className="shortComment">I like that you can</h3>
@@ -575,6 +623,8 @@ const Reviews = ({setShowReviews, showReviews}) => {
                     <p className="nameOfUser">by Shanice on Feb 4, 2023</p>
                     <p className="longComment">The shirt was beautifully made; the print was just like the image online. The shirt did have a strong smell upon arrival but that's fixable.</p>
                 </div>
+
+
                 <div className="comentar">
                     <Stars5/>
                     <h3 className="shortComment">Great quality print!</h3>
@@ -738,7 +788,562 @@ const Reviews = ({setShowReviews, showReviews}) => {
                     <p className="nameOfUser">by Aline S. on Jan 24, 2023</p>
                     <p className="longComment">Cool print, good material - absolutely satisfied! Thank you!</p>
                 </div>
-            </div>
+            </div>}
+            {lang === "FR" && <div className={showReviews ? "reviewsContainerTS show" : "reviewsContainerTS"} onClick={(e)=> e.stopPropagation()}>
+                <img className="closeGuide" src="https://i.pinimg.com/originals/52/e3/86/52e38681b082f94f2917624bb56edf42.png" alt="" onClick={()=> setShowReviews(false)}/>
+                <h2>Commentaires</h2>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">J'ai adoré le design</h3>
+                    <p className="nameOfUser">par Kristin D. le 1 juin 2023</p>
+                    <p className="longComment">J'ai adoré le design</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Trans Chairs rocks</h3>
+                    <p className="nameOfUser">par Debra le 30 mai 2023</p>
+                    <p className="longComment">J'adore l'art et le t-shirt, et il se lave très bien. Est arrivé plus rapidement que prévu. Merci !</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Top qualité, livraison rapide</h3>
+                    <p className="nameOfUser">par Ralph C. le 27 mai 2023</p>
+                    <p className="longComment">Top qualité, livraison rapide. Le meilleur.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Prix avantageux et qualité incroyable</h3>
+                    <p className="nameOfUser">par Thomas F. le 26 mai 2023</p>
+                    <p className="longComment">J'adore mon t-shirt, vraiment super !</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Conforme à la description. État parfait</h3>
+                    <p className="nameOfUser">par Sandra B. le 26 mai 2023</p>
+                    <p className="longComment">Conforme à la description. État parfait et livraison rapide. Je recommande !</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Super t-shirt, taille parfaite.</h3>
+                    <p className="nameOfUser">par Daniel S. le 25 mai 2023</p>
+                    <p className="longComment">Super t-shirt, taille parfaite. Je vais certainement en commander d'autres.</p>
+                </div>
+                <div className="comentar">
+                    <Stars2/>
+                    <h3 className="shortComment">Pas la qualité que j'attendais</h3>
+                    <p className="nameOfUser">par Philippe S. le 22 mai 2023</p>
+                    <p className="longComment">Pas la qualité que j'attendais !</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Beau t-shirt</h3>
+                    <p className="nameOfUser">par Meredith le 21 mai 2023</p>
+                    <p className="longComment">Super t-shirt ! Graphismes clairs et nets, bien conçu (comme sur la photo du vendeur) et matériau doux et bien cousu. Frais de port raisonnables et expédition rapide. Très satisfait.</p>
+                </div>
+                <div className="comentar">
+                    <Stars3/>
+                    <h3 className="shortComment">Beau design sur le t-shirt.</h3>
+                    <p className="nameOfUser">par Valerie le 20
+
+                        mai 2023</p>
+                    <p className="longComment">Beau design sur le t-shirt.</p>
+                </div>
+                <div className="comentar">
+                    <Stars3/>
+                    <h3 className="shortComment">Rétrécissement</h3>
+                    <p className="nameOfUser">par Eileen le 19 mai 2023</p>
+                    <p className="longComment">Le t-shirt a beaucoup rétréci. L'impression était géniale, mais c'est maintenant un crop top.</p>
+                </div>
+                <div className="comentar">
+                    <Stars1/>
+                    <h3 className="shortComment">Jamais reçu le colis et aucune réponse ! Terrible</h3>
+                    <p className="nameOfUser">par Fleur le 19 mai 2023</p>
+                    <p className="longComment">Je n'ai jamais reçu mon t-shirt. J'ai écrit plusieurs fois au service client et je n'ai jamais reçu de réponse. Je vais maintenant suivre une voie légale.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">🫶</h3>
+                    <p className="nameOfUser">par Sonja le 18 mai 2023</p>
+                    <p className="longComment">🫶</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Toujours une bonne qualité et de superbes designs</h3>
+                    <p className="nameOfUser">par Glenn W. le 17 mai 2023</p>
+                    <p className="longComment">Toujours une bonne qualité et de superbes designs !</p>
+                </div>
+                <div className="comentar">
+                    <Stars2/>
+                    <h3 className="shortComment">Mauvaise qualité de l'impression sur le t-shirt</h3>
+                    <p className="nameOfUser">par JOHN c. le 17 mai 2023</p>
+                    <p className="longComment">Mauvaise qualité de l'impression sur le t-shirt. Pas le même que celui annoncé.</p>
+                </div>
+                <div className="comentar">
+                    <Stars1/>
+                    <h3 className="shortComment">Le motif se décolle déjà après quelques lavages</h3>
+                    <p className="nameOfUser">par John G. le 15 mai 2023</p>
+                    <p className="longComment">Le motif se décolle déjà après 4 lavages, sans sèche-linge.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Super t-shirt, je l'adore</h3>
+                    <p className="nameOfUser">par Claudia le 13 mai 2023</p>
+                    <p className="longComment">Super t-shirt, je l'adore ✨️</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Un article intéressant pour tout fan de GuP</h3>
+                    <p className="nameOfUser">par Thomas le 13 mai 2023</p>
+                    <p className="longComment">Un article intéressant pour tout fan de GuP. Bon à avoir. Article conforme à la description, reçu en bon temps.</p>
+                </div>
+                <div
+
+                    className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Super look, j'adore l'artwork, taille généreuse</h3>
+                    <p className="nameOfUser">par Cherie S. le 12 mai 2023</p>
+                    <p className="longComment">Super look, j'adore l'artwork, taille généreuse.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Haute qualité !</h3>
+                    <p className="nameOfUser">par Vanessa R. le 11 mai 2023</p>
+                    <p className="longComment">Je l'adore simplement ! Modèle et cuir de haute qualité, confortable et beau design. Je mets mes chaussures et je dors presque avec :) Le cuir de 2 couleurs m'a donné l'effet recherché et il s'accorde avec toutes mes tenues.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">T-shirt</h3>
+                    <p className="nameOfUser">par Stephen le 10 mai 2023</p>
+                    <p className="longComment">Bonne illustration. Matériau de qualité pour les vêtements. Coupe correcte.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Tous les produits que j'ai achetés chez Redbubble sont d'excellente qualité</h3>
+                    <p className="nameOfUser">par Donna P. le 9 mai 2023</p>
+                    <p className="longComment">Tous les produits que j'ai achetés chez Redbubble sont d'excellente qualité. Je reçois des compliments pour tous les t-shirts que j'ai achetés chez Redbubble. J'ai recommandé et recommande votre entreprise à tout le monde. C'est très agréable de parcourir les différents designs et thèmes, puis enfin de choisir un nouveau design pour un t-shirt, une tasse, un sac fourre-tout, etc. J'adore ce site web !</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Convient bien, j'adore le logo</h3>
+                    <p className="nameOfUser">par Paul O. le 8 mai 2023</p>
+                    <p className="longComment">Convient bien, j'adore le logo. Et oui, j'ai travaillé sur The Midnight Special.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">La qualité n'est pas meilleure que la moyenne</h3>
+                    <p className="nameOfUser">par Steve le 7 mai 2023</p>
+                    <p className="longComment">La qualité n'est pas meilleure que la moyenne. L'impression est similaire. Beaucoup trop cher.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">J'adore</h3>
+                    <p className="nameOfUser">par Joanne C. le 5 mai 2023</p>
+                    <p className="longComment">J'adore.</p>
+                </div>
+                <div className="comentar">
+                    <Stars1/>
+                    <h3 className="shortComment">J'ai commandé 3 chemises et</h3>
+                    <p className="nameOfUser">par David A. le 5 mai 2023</p>
+                    <p className="longComment">J'ai commandé 3 chemises et après un lavage, les 3 étaient inutilisables. L'une d'entre elles avait également 2 petits trous. Ils ont remboursé intégralement, mais j'aurais préféré les chemises. J'en avais commandé 4 autres auparavant et celles-ci étaient bien et de bonne qualité. Donc la qualité n'est pas du tout cohérente.</p>
+                </div>
+                <div className="comentar">
+                    <Stars4/>
+                    <h3 className="shortComment">Qualité raisonnablement bonne, taille légèrement</h3>
+                    <p className="nameOfUser">par Anu le 3 mai 2023</p>
+                    <p className="longComment">Qualité raisonnablement bonne, la taille est légèrement trop grande même après avoir mesuré avant de commander. Arrivé à temps.</p>
+                </div>
+                <div className="comentar">
+                    <Stars3/>
+                    <h3 className="shortComment">La qualité de l'impression était assez médiocre</h3>
+                    <p className="nameOfUser">par Richard le 3 mai 2023</p>
+                    <p className="longComment">La qualité du tissu de la chemise était excellente ; cependant, la qualité de l'impression était assez médiocre et l'image n'était pas claire. Je ne porte pas la chemise en public car elle n'a pas l'air professionnelle.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">T-shirt Oasis</h3>
+                    <p className="nameOfUser">par Sarah le 2 mai 2023</p>
+                    <p className="longComment">Fabuleux t-shirt ! Très unique et j'ai reçu beaucoup de compliments quand je l'ai porté. Je le recommande vivement.</p>
+                </div>
+                <div className="comentar">
+                    <Stars4/>
+                    <h3 className="shortComment">Très bon produit</h3>
+                    <p className="nameOfUser">par James A. le 2 mai 2023</p>
+                    <p className="longComment">Très bon produit.</p>
+                </div>
+                <div className="comentar">
+                    <Stars3/>
+                    <h3 className="shortComment">C'est correct, mais la qualité</h3>
+                    <p className="nameOfUser">par Katarzyna K. le 2 mai 2023</p>
+                    <p className="longComment">C'est correct, mais la qualité du tissu n'est pas satisfaisante.</p>
+                </div>
+                <div className="comentar">
+                    <Stars1/>
+                    <h3 className="shortComment">Mauvaise qualité du tissu. Je ne les ai pas</h3>
+                    <p className="nameOfUser">par Χρόνης le 2 mai 2023</p>
+                    <p className="longComment">Mauvaise qualité du tissu. Je ne les ai pas utilisés. Dommage l'argent que je vous ai donné.</p>
+                </div>
+                <div className="comentar">
+                    <Stars3/>
+                    <h3 className="shortComment">L'impression comportait une erreur</h3>
+                    <p className="nameOfUser">par Matthew M. le 1 mai 2023</p>
+                    <p className="longComment">L'impression comportait une erreur, donc je ne peux pas dire que ce fut une bonne expérience, mais la politique de retour était simple et je suis satisfait du t-shirt de remplacement que j'ai reçu.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Super</h3>
+                    <p className="nameOfUser">par Ronald le 26 avril 2023</p>
+                    <p className="longComment">Super</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Merci beaucoup pour</h3>
+                    <p className="nameOfUser">par Rodney i. le 26 avril 2023</p>
+                    <p className="longComment">Merci beaucoup pour le t-shirt, il va très bien</p>
+                </div>
+                <div className="comentar">
+                    <Stars4/>
+                    <h3 className="shortComment">Ok, mais ne durera pas longtemps après plusieurs lavages</h3>
+                    <p className="nameOfUser">par Pamela W. le 26 avril 2023</p>
+                    <p className="longComment">La chemise va bien comme indiqué dans le tableau des tailles. L'image imprimée avait l'air vraiment géniale, mais après quelques lavages, elle commence déjà à s'estomper et à se déchirer. C'est un peu décevant.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Exactement ce que je voulais 👍</h3>
+                    <p className="nameOfUser">par Bruce S. le 25 avril 2023</p>
+                    <p className="longComment">Exactement ce que je voulais 👍</p>
+                </div>
+                <div className="comentar">
+                    <Stars4/>
+                    <h3 className="shortComment">Belle chemise</h3>
+                    <p className="nameOfUser">par John le 25 avril 2023</p>
+                    <p className="longComment">Les couleurs sont belles. La taille est bonne.</p>
+                </div>
+                <div className="comentar">
+                    <Stars1/>
+                    <h3 className="shortComment">Bien</h3>
+                    <p className="nameOfUser">par Damon B. le 25 avril 2023</p>
+                    <p className="longComment">Bien</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Mon mari l'a adoré et</h3>
+                    <p className="nameOfUser">par Leanne S. le 24 avril 2023</p>
+                    <p className="longComment">Mon mari l'a adoré et il lui allait très bien. Une qualité impressionnante aussi.</p>
+                </div>
+                <div className="comentar">
+                    <Stars1/>
+                    <h3 className="shortComment">Tissu très bon marché, pas</h3>
+                    <p className="nameOfUser">par Tammy le 24 avril 2023</p>
+                    <p className="longComment">Tissu très bon marché, ne vaut pas le prix</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Bon prix, bonne qualité et</h3>
+                    <p className="nameOfUser">par Hans le 22 avril 2023</p>
+                    <p className="longComment">Bon prix, bonne qualité et superbes designs</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Bonne qualité, superbes graphismes, bien</h3>
+                    <p className="nameOfUser">par Desley le 21 avril 2023</p>
+                    <p className="longComment">Bonne qualité, superbes
+
+                        graphismes, bien fabriqué et confortable, un peu grand mais moi aussi, donc ça va quand même.</p>
+                </div>
+                <div className="comentar">
+                    <Stars3/>
+                    <h3 className="shortComment">Mignon, mais ce n'était pas pour moi</h3>
+                    <p className="nameOfUser">par Megan M. le 19 avril 2023</p>
+                    <p className="longComment">La chemise elle-même est mignonne. Mais le tissu était raide, carré et inconfortable. J'aurais aimé qu'il soit proposé dans une gamme de styles de tissus. J'allais l'échanger pour une taille plus grande; cependant, le service client était plutôt inutile et n'a pas pu me fournir les informations nécessaires. Le processus d'échange est trop compliqué, donc j'ai fini par garder la chemise même si elle ne me va pas. Cela me brise le cœur que le site web et le "service client" ne soient pas conviviaux.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Convient et a l'air super.</h3>
+                    <p className="nameOfUser">par Kenneth le 15 avril 2023</p>
+                    <p className="longComment">Convient et a l'air super.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Tellement mignon</h3>
+                    <p className="nameOfUser">par Yesenia S. le 12 avril 2023</p>
+                    <p className="longComment">C'est mon nouveau t-shirt préféré. Je l'adore, l'adore, l'adore. Il est parfait et ressemble exactement à l'image 💕</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Superbe design et matériau de qualité.</h3>
+                    <p className="nameOfUser">par Andrea D. le 10 avril 2023</p>
+                    <p className="longComment">Superbe design et matériau de qualité.</p>
+                </div>
+                <div className="comentar">
+                    <Stars1/>
+                    <h3 className="shortComment">N/A</h3>
+                    <p className="nameOfUser">par Rachel P. le 10 avril 2023</p>
+                    <p className="longComment">N/A</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Super achat</h3>
+                    <p className="nameOfUser">par Teri le 8 avril 2023</p>
+                    <p className="longComment">J'adore mes nouveaux t-shirts de bowling. Ils sont géniaux. J'ai recommandé Redbubble à tous mes amis parce qu'ils aiment aussi mes t-shirts.</p>
+                </div>
+                <div className="comentar">
+                    <Stars1/>
+                    <h3 className="shortComment">Les t-shirts ne correspondent pas à la taille,</h3>
+                    <p className="nameOfUser">par Keith le 4 avril 2023</p>
+                    <p className="longComment">Les t-shirts ne correspondent pas à la taille, les t-shirts larges sont vraiment courts. Matériau irritant et inconfortable.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Bonne qualité, très bien réalisé, j'adore mes t-shirts 💕</h3>
+                    <p className="nameOfUser">par Carolyn M. le 3 avril 2023</p>
+                    <p className="longComment">Bonne qualité, très bien réalisé, j'adore mes t-shirts 💕</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Parfait</h3>
+                    <p className="nameOfUser">par Michel-André le 2 avril 2023</p>
+                    <p className="longComment">Parfait</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Mon fils a adoré ses t-shirts.</h3>
+                    <p className="nameOfUser">par Riria le 2 avril 2023</p>
+                    <p className="longComment">Mon fils a adoré ses t-shirts. Merci.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Chaque fois... vos t-shirts sont merveilleux !! Merci beaucoup</h3>
+                    <p className="nameOfUser">par Sandrine p. le 2 avril 2023</p>
+                    <p className="longComment">Chaque fois... vos t-shirts sont merveilleux !! Merci beaucoup</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">.</h3>
+                    <p className="nameOfUser">par Paul S. le 2 avril 2023</p>
+                    <p className="longComment">.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Tout va bien... Il convient parfaitement,</h3>
+                    <p className="nameOfUser">par Daniela T. le 1er avril 2023</p>
+                    <p className="longComment">Tout va bien... Il convient parfaitement, la qualité est vraiment excellente</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">T-shirt Up Helly Aa</h3>
+                    <p className="nameOfUser">par George M. le 30 mars 2023</p>
+                    <p className="longComment">Je cherchais un t-shirt en tant que souvenir portable du festival du feu Up Helly Aa aux Shetland. Le t-shirt que j'ai acheté sur Redbubble était le meilleur que j'ai trouvé. Il convient comme prévu, était à un bon prix et l'œuvre d'art était brillante. Très satisfait de l'achat.</p>
+                </div>
+                <div className="comentar">
+                    <Stars1/>
+                    <h3 className="shortComment">De mauvaise qualité</h3>
+                    <p className="nameOfUser">par Nino le 30 mars 2023</p>
+                    <p className="longComment">De mauvaise qualité</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Super t-shirt</h3>
+                    <p className="nameOfUser">par Jan F. le 28 mars 2023</p>
+                    <p className="longComment">Le tissu ainsi que l'impression semblent être de bonne qualité. La taille convient également.</p>
+                </div>
+                <div className="comentar">
+                    <Stars4/>
+                    <h3 className="shortComment">Exactement comme décrit. Parfait</h3>
+                    <p className="nameOfUser">par Angel le 27 mars 2023</p>
+                    <p className="longComment">Exactement comme décrit. Coupe parfaite et tissu doux. Le design est incroyable.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">J'adore</h3>
+                    <p className="nameOfUser">par Mari C. le 26 mars 2023</p>
+                    <p className="longComment">J'adore</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">👌🏽</h3>
+                    <p className="nameOfUser">par Nikolas le 26 mars 2023</p>
+                    <p className="longComment">👌🏽</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Comme décrit. État parfait et</h3>
+                    <p className="nameOfUser">par Sandra B. le 26 mai 2023</p>
+                    <p className="longComment">Comme décrit. État parfait et livraison rapide. Recommande !</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Super t-shirt, convient parfaitement. Je vais</h3>
+                    <p className="nameOfUser">par Daniel S. le 25 mai 2023</p>
+                    <p className="longComment">Super t-shirt, convient parfaitement. Je vais certainement en commander plus.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">La qualité du t-shirt n'était pas celle</h3>
+                    <p className="nameOfUser">par Rebecca B. le 15 mars 2023</p>
+                    <p className="longComment">La qualité du t-shirt n'était pas celle à laquelle nous nous attendions. La couleur était bonne mais l'impression n'était pas très visible car le t-shirt était trop foncé pour voir l'impression.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Excellents t-shirts !!</h3>
+                    <p className="nameOfUser">par Derek le 14 mars 2023</p>
+                    <p className="longComment">Excellents t-shirts !!</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Toujours satisfait du service</h3>
+                    <p className="nameOfUser">par James M. le 13 mars 2023</p>
+                    <p className="longComment">Toujours satisfait du service et les designs de t-shirts sont super et la livraison est rapide.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Super t-shirt, juste un peu</h3>
+                    <p className="nameOfUser">par Joseph E. le 13 mars 2023</p>
+                    <p className="longComment">Super t-shirt, juste un peu court</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">J'aime le fait que vous</h3>
+                    <p className="nameOfUser">par Stephen le 11 mars 2023</p>
+                    <p className="longComment">J'aime le fait que vous pouvez choisir l'image à l'avant ou à l'arrière. Je préfère à l'arrière. Bonnes chemises. Je vais commander à nouveau.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Qualité terrible</h3>
+                    <p className="nameOfUser">par Julia Z. le 8 mars 2023</p>
+                    <p className="longComment">Design vraiment mignon, mais malheureusement l'impression est de très mauvaise qualité. Après l'avoir lavé (en suivant les instructions, bien sûr), l'impression s'est effritée et décolorée. J'ai donc un t-shirt avec seulement la moitié de l'impression restante. Très déçu !</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Ces 3 t-shirts sont un</h3>
+                    <p className="nameOfUser">par Judy C. le 6 mars 2023</p>
+                    <p className="longComment">Ces 3 t-shirts sont un excellent ajout à ma garde-robe. Les designs sont uniques et le tissu est confortable à porter. J'ai reçu des compliments chaque fois que je les porte. Hautement recommandé !</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Expédition rapide et bonne qualité</h3>
+                    <p className="nameOfUser">par Michael T. le 3 mars 2023</p>
+                    <p className="longComment">Expédition rapide et t-shirts de bonne qualité. Je suis satisfait de mon achat. Je vais acheter à nouveau.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">J'adore le design et l'ajustement</h3>
+                    <p className="nameOfUser">par Samantha R. le 28 février 2023</p>
+                    <p className="longComment">J'adore le design et l'ajustement du t-shirt. Le tissu est doux et confortable. Je vais certainement en commander d'autres à l'avenir.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Excellent service client et livraison rapide</h3>
+                    <p className="nameOfUser">par Kevin W. le 27 février 2023</p>
+                    <p className="longComment">Excellent service client et livraison rapide. Le t-shirt ressemble exactement à ce qui était annoncé. Très satisfait de mon achat.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Le t-shirt est arrivé à temps</h3>
+                    <p className="nameOfUser">par Jennifer L. le 25 février 2023</p>
+                    <p className="longComment">Le t-shirt est arrivé à temps et la qualité de l
+
+                        'impression est excellente. Il va bien et est confortable à porter. Je suis content de mon achat.</p>
+                </div>
+                <div className="comentar">
+                    <Stars4/>
+                    <h3 className="shortComment">Bonne qualité, mais un peu petit</h3>
+                    <p className="nameOfUser">par Emily S. le 20 février 2023</p>
+                    <p className="longComment">Le t-shirt est fait d'un matériau de bonne qualité, mais il taille un peu petit. Je recommande de commander une taille au-dessus pour un ajustement plus confortable.</p>
+                </div>
+                <div className="comentar">
+                    <Stars4/>
+                    <h3 className="shortComment">Beau design, mais se froisse facilement</h3>
+                    <p className="nameOfUser">par Jason B. le 18 février 2023</p>
+                    <p className="longComment">Le design du t-shirt est beau, mais il se froisse facilement. Je dois le repasser à chaque fois avant de le porter. Ce serait mieux si le tissu était moins sujet aux froissements.</p>
+                </div>
+                <div className="comentar">
+                    <Stars3/>
+                    <h3 className="shortComment">Qualité moyenne, pas valable le prix</h3>
+                    <p className="nameOfUser">par Lisa M. le 15 février 2023</p>
+                    <p className="longComment">Je m'attendais à une meilleure qualité pour le prix. Le t-shirt est moyen et l'impression n'est pas aussi vibrante que je le pensais. Déçu de l'achat.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Qualité impressionnante</h3>
+                    <p className="nameOfUser">par Michelle G. le 14 février 2023</p>
+                    <p className="longComment">Qualité impressionnante</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">La qualité est bonne, tout</h3>
+                    <p className="nameOfUser">par JOHN P. le 14 février 2023</p>
+                    <p className="longComment">La qualité est bonne, tout comme l'impression.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Super designs !</h3>
+                    <p className="nameOfUser">par Edward T. le 13 février 2023</p>
+                    <p className="longComment">Super designs !</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Un produit de très bonne qualité</h3>
+                    <p className="nameOfUser">par Stefano le 12 février 2023</p>
+                    <p className="longComment">J'ai été agréablement surpris par la grande qualité de l'impression. Le design est clair et le coton du t-shirt est de bonne qualité. Je suis totalement satisfait.</p>
+                </div>
+                <div className="comentar">
+                    <Stars3/>
+                    <h3 className="shortComment">Le motif est exactement comme sur la photo, mais la qualité du tissu n'est pas bonne</h3>
+                    <p className="nameOfUser">par Kate le 12 février 2023</p>
+                    <p className="longComment">Le motif sur les t-shirts est exactement comme sur la photo, mais la qualité du tissu n'est pas bonne. Il est rigide et irritant, et beaucoup trop épais.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Bonne coupe, j'adore. </h3>
+                    <p className="nameOfUser">par Julie T. le 10 février 2023</p>
+                    <p className="longComment">Bonne coupe, j'adore. Livraison rapide. Je recommande vivement ce vendeur.</p>
+                </div>
+                <div className="comentar">
+                    <Stars2/>
+                    <h3 className="shortComment">3 t-shirts. 2 super. 1 en désordre total.</h3>
+                    <p className="nameOfUser">par Kelley M. le 10 février 2023</p>
+                    <p className="longComment">J'ai commandé 3 t-shirts avec des décors de groupe. 2 étaient super, mais le t-shirt violet avec le décor noir est un désordre total. On ne peut pas distinguer le décor, c'est juste une tache noire. Je suis très déçu de ce t-shirt.</p>
+                </div>
+                <div className="comentar">
+                    <Stars1/>
+                    <h3 className="shortComment">👍</h3>
+                    <p className="nameOfUser">par Kevin H. le 9 février 2023</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Super</h3>
+                    <p className="nameOfUser">par Elie P. le 9 février 2023</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Beau</h3>
+                    <p className="nameOfUser">par C k. le 8 février 2023</p>
+                    <p className="longComment">Joli t-shirt de bonne qualité, et je l'ai reçu plus tôt que prévu. Dommage que les Bills n'aient pas atteint le Super Bowl. Peut-être l'année prochaine.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">tout est OK !</h3>
+                    <p className="nameOfUser">par Stéphane le 8 février 2023</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Le t-shirt a l'air, s'adapte et</h3>
+                    <p className="nameOfUser">par Gracie O. le 7 février 2023</p>
+                    <p className="longComment">Le t-shirt a l'air, s'adapte et se sent bien ! La couleur et le motif ont tenu même après avoir été lavés.</p>
+                </div>
+                <div className="comentar">
+                    <Stars4/>
+                    <h3 className="shortComment">Chouette, mais livraison longue</h3>
+                    <p className="nameOfUser">par Raphael D. le 6 février 2023</p>
+                    <p className="longComment">Il a fallu 6 semaines pour la livraison :-)</p>
+                </div>
+                <div className="comentar">
+                    <Stars2/>
+                    <h3 className="shortComment">Des trous dans le t-shirt</h3>
+                    <p className="nameOfUser">par Christopher C. le 6 février 2023</p>
+                    <p className="longComment">J'ai commandé deux t-shirts. L'un d'eux était en bon état, mais l'autre avait deux trous dedans.</p>
+                </div>
+            </div>}
         </div>
     );
 };

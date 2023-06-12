@@ -2,10 +2,10 @@ import React from 'react';
 import './Reviews.css'
 import {Stars5, Stars2, Stars4, Stars1, Stars3} from "../Stars/Stars";
 
-const ReviewsZippo = ({setShowReviews, showReviews}) => {
+const ReviewsZippo = ({setShowReviews, showReviews, lang}) => {
     return (
         <div className={showReviews ? "reviewsTS show" : "reviewsTS"} onClick={()=> setShowReviews(false)}>
-            <div className={showReviews ? "reviewsContainerTS show" : "reviewsContainerTS"} onClick={(e)=> e.stopPropagation()}>
+            {lang === "EN" && <div className={showReviews ? "reviewsContainerTS show" : "reviewsContainerTS"} onClick={(e)=> e.stopPropagation()}>
                 <img className="closeGuide" src="https://i.pinimg.com/originals/52/e3/86/52e38681b082f94f2917624bb56edf42.png" alt="" onClick={()=> setShowReviews(false)}/>
                 <h2>Reviews</h2>
                 <div className="comentar">
@@ -85,6 +85,10 @@ const ReviewsZippo = ({setShowReviews, showReviews}) => {
                     <p className="nameOfUser">by Michael B. on May 8, 2023</p>
                     <p className="longComment">I've had my Zippo lighter for months now, and it has never failed me. It's my go-to lighter for any occasion. Highly reliable!</p>
                 </div>
+
+
+
+
                 <div className="comentar">
                     <Stars3/>
                     <h3 className="shortComment">A budget-friendly choice</h3>
@@ -163,6 +167,21 @@ const ReviewsZippo = ({setShowReviews, showReviews}) => {
                     <p className="nameOfUser">by Jennifer M. on Apr 15, 2023</p>
                     <p className="longComment">As a smoker, having a reliable lighter is crucial. This Zippo lighter never disappoints, providing a consistent flame every time.</p>
                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                 <div className="comentar">
                     <Stars5/>
@@ -254,6 +273,26 @@ const ReviewsZippo = ({setShowReviews, showReviews}) => {
                     <p className="longComment">The quality of this Zippo lighter is unmatched. It's built to last and performs flawlessly every time.</p>
                 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <div className="comentar">
                     <Stars5/>
                     <h3 className="shortComment">Great for outdoor enthusiasts</h3>
@@ -344,6 +383,9 @@ const ReviewsZippo = ({setShowReviews, showReviews}) => {
                     <p className="nameOfUser">by Ethan M. on Jan 18, 2022</p>
                     <p className="longComment">The Zippo lighter offers affordability, but its performance and longevity may not match higher-end options.</p>
                 </div>
+
+
+
                 <div className="comentar">
                     <Stars5/>
                     <h3 className="shortComment">Durable and long-lasting</h3>
@@ -716,6 +758,12 @@ const ReviewsZippo = ({setShowReviews, showReviews}) => {
                     <p className="nameOfUser">by Emily S. on Feb 28, 2022</p>
                     <p className="longComment">In case of power outages or emergencies, my Zippo lighter is a dependable tool for lighting candles or lanterns.</p>
                 </div>
+
+
+
+
+
+
                 <div className="comentar">
                     <Stars5/>
                     <h3 className="shortComment">A symbol of resilience</h3>
@@ -1411,7 +1459,485 @@ const ReviewsZippo = ({setShowReviews, showReviews}) => {
                     <p className="nameOfUser">by Chloe G. on Mar 21, 2022</p>
                     <p className="longComment">Musicians rely on their Zippo lighters for lighting stage props, candles, or creating a dramatic effect during performances.</p>
                 </div>
-            </div>
+            </div>}
+            {lang === "FR" && <div className={showReviews ? "reviewsContainerTS show" : "reviewsContainerTS"} onClick={(e)=> e.stopPropagation()}>
+                <img className="closeGuide" src="https://i.pinimg.com/originals/52/e3/86/52e38681b082f94f2917624bb56edf42.png" alt="" onClick={()=> setShowReviews(false)}/>
+                <h2>Commentaires</h2>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Adoré le design</h3>
+                    <p className="nameOfUser">par Kristin D. le 1 juin 2023</p>
+                    <p className="longComment">J'ai adoré le design.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Trans Chairs rocks</h3>
+                    <p className="nameOfUser">par Debra le 30 mai 2023</p>
+                    <p className="longComment">J'adore l'art et le t-shirt, et il se lave très bien. En prime, il est arrivé plus vite que prévu. Merci !</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Grande qualité, fortement recommandé</h3>
+                    <p className="nameOfUser">par John S. le 28 mai 2023</p>
+                    <p className="longComment">Je suis extrêmement satisfait de mon briquet Zippo. La qualité de fabrication est excellente et il fonctionne parfaitement. Fortement recommandé !</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Artisanat impressionnant</h3>
+                    <p className="nameOfUser">par Sarah J. le 25 mai 2023</p>
+                    <p className="longComment">Les détails de ce briquet Zippo sont incroyables. Il est solide en main et s'allume facilement. Très impressionnant !</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Élégant et fiable</h3>
+                    <p className="nameOfUser">par Mark W. le 20 mai 2023</p>
+                    <p className="longComment">J'adore le design épuré de ce briquet Zippo. Il s'allume toujours sans faillir et la flamme est constante. Un compagnon fiable !</p>
+                </div>
+                <div className="comentar">
+                    <Stars3/>
+                    <h3 className="shortComment">Un briquet correct pour une utilisation quotidienne</h3>
+                    <p className="nameOfUser">par Olivia J. le 18 février 2022</p>
+                    <p className="longComment">Le briquet Zippo est une option correcte pour une utilisation quotidienne, offrant une flamme fiable pour différents besoins d'allumage.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Le meilleur briquet que j'ai jamais possédé</h3>
+                    <p className="nameOfUser">par Emily G. le 15 mai 2023</p>
+                    <p className="longComment">J'ai possédé de nombreux briquets par le passé, mais ce Zippo est de loin le meilleur. Il est robuste, rechargeable et a un charme classique. Je l'adore absolument !</p>
+                </div>
+                <div className="comentar">
+                    <Stars4/>
+                    <h3 className="shortComment">Un compagnon fiable pour les voyages</h3>
+                    <p className="nameOfUser">par Emma S. le 15 mars 2022</p>
+                    <p className="longComment">Pendant les voyages, mon briquet Zippo ne me déçoit jamais en offrant une flamme fiable pour allumer des cigarettes ou des feux de camp en chemin.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Parfait pour les aventures en plein air</h3>
+                    <p className="nameOfUser">par Robert L. le 12 mai 2023</p>
+                    <p className="longComment">J'emmène mon briquet Zippo avec moi lors de mes séjours en camping, et il ne me déçoit jamais. Il est coupe-vent et fiable, ce qui en fait un outil indispensable pour tout amateur de plein air.</p>
+                </div>
+                <div className="comentar">
+                    <Stars2/>
+                    <h3 className="shortComment">Un briquet moyen pour une utilisation occasionnelle</h3>
+                    <p className="nameOfUser">par Olivia M. le 23 janvier 2022</p>
+                    <p className="longComment">Le briquet Zippo fonctionne de manière adéquate pour une utilisation occasionnelle, mais il peut ne pas répondre aux attentes des utilisateurs fréquents.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Un artisanat exquis</h3>
+                    <p className="nameOfUser">par Jessica M. le 10 mai 2023</p>
+                    <p className="longComment">Les détails de ce briquet Zippo sont remarquables. C'est comme posséder une œuvre d'art. Je suis ravi de mon achat !</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Très fiable</h3>
+                    <p className="nameOfUser">par Michael B. le 8 mai 2023</p>
+                    <p className="longComment">J'ai mon briquet Zippo depuis des mois maintenant, et il ne m'a jamais déçu. C'est mon briquet de prédilection pour toutes les occasions. Très fiable !</p>
+                </div>
+                <div className="comentar">
+                    <Stars3/>
+                    <h3 className="shortComment">Un choix abordable</h3>
+                    <p className="nameOfUser">par Chloe P. le 15 février 2022</p>
+                    <p className="longComment">Pour ceux qui ont un budget limité, le briquet Zippo offre une qualité et des performances correctes à un prix abordable.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Excellent choix de cadeau</h3>
+                    <p className="nameOfUser">par Laura K. le 5 mai 2023</p>
+                    <p className="longComment">J'ai acheté ce briquet Zippo comme cadeau pour mon mari, et il l'adore absolument. La gravure ajoute une touche personnelle, en faisant un présent mémorable.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Élégant et raffiné</h3>
+                    <p className="nameOfUser">par Christopher R. le 2 mai 2023</p>
+                    <p className="longComment">Le design de ce briquet Zippo est élégant et raffiné. C'est un accessoire parfait qui ajoute une touche de sophistication à mon quotidien.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars4/>
+                    <h3 className="shortComment">Un accessoire stylé pour les amateurs de rock</h3>
+                    <p className="nameOfUser">par Samuel G. le 12 mars 2022</p>
+                    <p className="longComment">Les amateurs de rock et de musique adorent le design edgy des briquets Zippo, ajoutant une touche cool à leurs expériences de concert.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Expédition rapide, excellent produit</h3>
+                    <p className="nameOfUser">par Jennifer H. le 30 avril 2023</p>
+                    <p className="longComment">J'ai reçu mon briquet Zippo plus tôt que prévu, et c'est exactement ce que je voulais. La qualité est excellente, et je suis très satisfait de mon achat.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Durable et fiable</h3>
+                    <p className="nameOfUser">par David M. le 28 avril 2023</p>
+                    <p className="longComment">J'utilise mon briquet Zippo depuis des années, et il fonctionne toujours parfaitement. Il a survécu aux chutes et aux conditions difficiles, prouvant sa durabilité et sa fiabilité.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Design classique</h3>
+                    <p className="nameOfUser">par Amanda L. le 25 avril 2023</p>
+                    <p className="longComment">Le design classique de ce briquet Zippo est intemporel. C'est une véritable icône qui ne se démode jamais. Je suis fier d'en posséder un !</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars4/>
+                    <h3 className="shortComment">Un symbole de nostalgie
+
+                    </h3>
+                    <p className="nameOfUser">par Mia T. le 10 mars 2022</p>
+                    <p className="longComment">Mon briquet Zippo évoque des souvenirs nostalgiques du passé, me rappelant des moments précieux et des êtres chers.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Facile à utiliser</h3>
+                    <p className="nameOfUser">par Richard K. le 22 avril 2023</p>
+                    <p className="longComment">Utiliser ce briquet Zippo est un jeu d'enfant. La molette de silex allume la flamme sans effort, et le remplissage est simple. Grande commodité !</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Fiable par tous les temps</h3>
+                    <p className="nameOfUser">par Michelle P. le 20 avril 2023</p>
+                    <p className="longComment">J'ai testé mon briquet Zippo dans différentes conditions météorologiques, du vent à la pluie, et il ne me déçoit jamais. Un compagnon fiable pour les aventures en plein air !</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Objet de collection unique</h3>
+                    <p className="nameOfUser">par Thomas S. le 18 avril 2023</p>
+                    <p className="longComment">Je collectionne les briquets Zippo, et celui-ci se démarque dans ma collection. Le design est unique, et c'est un excellent sujet de conversation.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Parfait pour les fumeurs</h3>
+                    <p className="nameOfUser">par Jennifer M. le 15 avril 2023</p>
+                    <p className="longComment">En tant que fumeur, avoir un briquet fiable est essentiel. Ce briquet Zippo ne déçoit jamais, offrant une flamme constante à chaque fois.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Compact et portable</h3>
+                    <p className="nameOfUser">par Andrew B. le 12 avril 2023</p>
+                    <p className="longComment">La taille compacte de ce briquet Zippo le rend facile à transporter dans ma poche. Il est toujours à portée de main quand j'en ai besoin.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Excellent service client</h3>
+                    <p className="nameOfUser">par Lisa C. le 10 avril 2023</p>
+                    <p className="longComment">J'ai eu un problème avec mon briquet Zippo, mais l'équipe du service client a été incroyablement serviable et l'a résolu rapidement. Félicitations pour leur excellent soutien !</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars1/>
+                    <h3 className="shortComment">Un briquet décevant avec de mauvaises performances</h3>
+                    <p className="nameOfUser">par Olivia L. le 29 décembre 2021</p>
+                    <p className="longComment">Le briquet Zippo a été une déception, avec des problèmes fréquents tels que des difficultés à l'allumer et une flamme inconsistante.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Flamme durable</h3>
+                    <p className="nameOfUser">par Daniel R. le 8 avril 2023</p>
+                    <p className="longComment">La flamme de ce briquet Zippo dure longtemps, me permettant d'allumer sans précipitation. C'est parfait pour les moments de détente.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Construction solide</h3>
+                    <p className="nameOfUser">par Sarah M. le 5 avril 2023</p>
+                    <p className="longComment">J'ai fait tomber mon briquet Zippo plusieurs fois par accident, mais il reste en excellent état. La construction solide peut supporter des manipulations brusques.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars4/>
+                    <h3 className="shortComment">Une flamme fiable pour les repas en plein air</h3>
+                    <p className="nameOfUser">par Benjamin S. le 7 mars 2022</p>
+                    <p className="longComment">Lorsque je profite d'un repas en plein air, mon briquet Zippo offre une flamme stable pour allumer des bougies ou un gril portable.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Attrait intemporel</h3>
+                    <p className="nameOfUser">par Brian H. le 3 avril 2023</p>
+                    <p className="longComment">Le design classique de ce briquet Zippo lui confère un attrait intemporel. C'est un morceau d'histoire qui ne se démode jamais.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars2/>
+                    <h3 className="shortComment">Une option basique avec une durabilité limitée</h3>
+                    <p className="nameOfUser">par Chloe
+
+                        B. le 20 janvier 2022</p>
+                    <p className="longComment">Le briquet Zippo est un choix basique, mais il peut ne pas résister à une utilisation intensive ou à une manipulation brutale.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Superbe ajout à ma collection</h3>
+                    <p className="nameOfUser">par Elizabeth D. le 30 mars 2023</p>
+                    <p className="longComment">En tant que collectionneur, ajouter ce briquet Zippo à ma collection était une évidence. C'est un must pour tout passionné.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Cadeau parfait pour les fumeurs</h3>
+                    <p className="nameOfUser">par Kevin P. le 28 mars 2023</p>
+                    <p className="longComment">Si vous recherchez un cadeau pour un fumeur, vous ne pouvez pas vous tromper avec un briquet Zippo. Il est pratique, élégant et d'excellente qualité.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars3/>
+                    <h3 className="shortComment">Un symbole de simplicité</h3>
+                    <p className="nameOfUser">par Ethan S. le 12 février 2022</p>
+                    <p className="longComment">La simplicité du design du briquet Zippo attire ceux qui apprécient l'esthétique minimaliste.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Facile à entretenir</h3>
+                    <p className="nameOfUser">par Laura B. le 25 mars 2023</p>
+                    <p className="longComment">Entretenir ce briquet Zippo est un jeu d'enfant. Avec les bons soins et un remplissage occasionnel, il durera toute une vie.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Parfait pour les sorties camping</h3>
+                    <p className="nameOfUser">par Matthew T. le 22 mars 2023</p>
+                    <p className="longComment">J'emporte mon briquet Zippo avec moi chaque fois que je vais en camping. Il est fiable, facile à utiliser et indispensable pour allumer les feux de camp.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Qualité inégalée</h3>
+                    <p className="nameOfUser">par Jessica L. le 20 mars 2023</p>
+                    <p className="longComment">La qualité de ce briquet Zippo est inégalée. Il est conçu pour durer et fonctionne à la perfection à chaque fois.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Idéal pour les amateurs de plein air</h3>
+                    <p className="nameOfUser">par Benjamin S. le 18 mars 2023</p>
+                    <p className="longComment">Si vous aimez les activités de plein air comme le camping ou la randonnée, posséder un briquet Zippo est essentiel. Il est fiable et peut résister à des conditions difficiles.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars4/>
+                    <h3 className="shortComment">Un accessoire élégant pour les poètes</h3>
+                    <p className="nameOfUser">par Sophia G. le 5 mars 2022</p>
+                    <p className="longComment">Les poètes apprécient les vibrations artistiques et poétiques que les briquets Zippo apportent à leurs séances d'écriture et moments créatifs.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Design impressionnant</h3>
+                    <p className="nameOfUser">par Samantha H. le 15 mars 2023</p>
+                    <p className="longComment">Le design de ce briquet Zippo est impressionnant. Les détails complexes en font une véritable œuvre d'art.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Rapide et facile à utiliser</h3>
+                    <p className="nameOfUser">par Andrew C. le 12 mars 2023</p>
+                    <p className="longComment">Utiliser ce briquet Zippo est rapide et sans tracas. Il est prêt à s'allumer en quelques secondes, ce qui en fait un choix pratique.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Artisanat de première qualité</h3>
+                    <p className="nameOfUser">par Melissa R. le 10 mars 2023</p>
+                    <p className="longComment">L'artisanat de ce briquet Zippo est exceptionnel. Chaque détail est exécuté avec minutie, créant une belle pièce.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Parfait pour une utilisation quotidienne</h3>
+                    <p className="nameOfUser">par Ryan W. le 8 mars 2023</p>
+                    <p className="longComment">J'utilise mon briquet Zippo tous les jours et il ne me déçoit jamais. Il est fiable, facile à transporter et un accessoire indispensable pour tout fumeur.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Service client exceptionnel</h3>
+                    <p className="nameOfUser">par Megan L. le 5 mars 2023</p>
+                    <p className="longComment">J'avais une question concernant mon briquet Zippo et l'équipe du service client a été exceptionnelle. Ils ont fourni une assistance rapide et utile.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars3/>
+                    <h3 className="shortComment">Une flamme fiable pour une utilisation occasionnelle</h3>
+                    <p className="nameOfUser">par
+
+                        Emma G. le 10 février 2022</p>
+                    <p className="longComment">Pour des occasions occasionnelles, le briquet Zippo offre une flamme satisfaisante pour allumer des cigarettes ou de petits feux.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Solide et fiable</h3>
+                    <p className="nameOfUser">par Robert G. le 2 mars 2023</p>
+                    <p className="longComment">Ce briquet Zippo est solide en main et fonctionne de manière fiable à chaque fois. C'est un outil fiable pour allumer des bougies, des réchauds, et plus encore.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Une icône classique</h3>
+                    <p className="nameOfUser">par Stephanie M. le 28 février 2023</p>
+                    <p className="longComment">Posséder un briquet Zippo, c'est comme posséder un morceau d'histoire. C'est une icône classique qui ne se démode jamais.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Parfait pour les collectionneurs</h3>
+                    <p className="nameOfUser">par William T. le 25 février 2023</p>
+                    <p className="longComment">Si vous êtes collectionneur, ajouter un briquet Zippo à votre collection est indispensable. La gamme de designs et d'éditions limitées le rend passionnant à collectionner.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars1/>
+                    <h3 className="shortComment">Un gaspillage d'argent</h3>
+                    <p className="nameOfUser">par Chloe R. le 27 décembre 2021</p>
+                    <p className="longComment">L'achat du briquet Zippo s'est révélé être un gaspillage d'argent, car il n'a pas réussi à répondre aux exigences de base d'un briquet fiable.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Idéal pour offrir en cadeau</h3>
+                    <p className="nameOfUser">par Jennifer R. le 22 février 2023</p>
+                    <p className="longComment">Que ce soit pour un anniversaire, un anniversaire ou toute autre occasion, un briquet Zippo est un excellent choix de cadeau. Il est pratique et a une valeur sentimentale.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars2/>
+                    <h3 className="shortComment">Un briquet économique avec des performances moyennes</h3>
+                    <p className="nameOfUser">par Ethan M. le 18 janvier 2022</p>
+                    <p className="longComment">Le briquet Zippo offre un bon rapport qualité-prix, mais ses performances et sa durabilité peuvent ne pas être à la hauteur des options haut de gamme.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Une marque de confiance depuis des générations</h3>
+                    <p className="nameOfUser">par Ryan P. le 2 décembre 2022</p>
+                    <p className="longComment">Zippo est une marque de confiance depuis des générations. Mon grand-père en avait un, mon père en a un, et maintenant j'en ai un. C'est une tradition.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Un accessoire pour toutes les occasions</h3>
+                    <p className="nameOfUser">par Grace L. le 30 novembre 2022</p>
+                    <p className="longComment">Que ce soit pour une occasion formelle ou une sortie décontractée, mon briquet Zippo ajoute une touche de style et de sophistication à toutes les occasions.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Une ingénierie de précision à son meilleur</h3>
+                    <p className="nameOfUser">par Samuel C. le 28 novembre 2022</p>
+                    <p className="longComment">L'ingénierie précise de mon briquet Zippo garantit une ouverture et une fermeture en douceur à chaque fois, sans accrocs.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Un symbole d'identité personnelle</h3>
+                    <p className="nameOfUser">par Madison B. le 25 novembre 2022</p>
+                    <p className="longComment">Mon briquet Zippo est plus qu'un simple outil, c'est un symbole de mon identité personnelle et le reflet de mon individualité.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Une tradition à transmettre</h3>
+                    <p className="nameOfUser">par Jacob S. le 22 novembre 2022</p>
+                    <p className="longComment">J'ai reçu mon briquet Zippo en cadeau de mon père, qui l'a reçu de son père. C'est une tradition que je compte transmettre aux générations futures.</p>
+                </div>
+                <div className="comentar">
+                    <Stars4/>
+                    <h3 className="shortComment">Un symbole d'aventure</h3>
+                    <p className="nameOfUser">par Daniel P. le 2 mars 2022</p>
+                    <p className="longComment">Mon briquet Zippo symbolise l'esprit d'aventure et d'exploration, éveillant mon désir de découvrir de nouveaux endroits et de vivre de nouvelles expériences.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Une durabilité inégalée</h3>
+                    <p className="nameOfUser">par Hailey K. le 20 novembre 2022</p>
+                    <p className="longComment">Mon briquet Zippo a été échappé, exposé à des conditions difficiles, et pourtant il fonctionne toujours parfaitement. Sa durabilité est inégalée.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Un symbole d'indépendance</h3>
+                    <p className="nameOfUser">par Christopher D. le 18 novembre 2022</p>
+                    <p className="longComment">Le briquet Zippo représente l'indépendance et l'autonomie. C'est un rappel que j'ai le pouvoir de créer du feu au bout de mes doigts.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Un outil fiable pour les fumeurs</h3>
+                    <p className="nameOfUser">par Olivia W. le 15 novembre 2022</p>
+                    <p className="longComment">En tant que fumeuse, mon briquet Zippo ne m'a jamais laissé tomber. Il fournit toujours une flamme puissante pour allumer mes cigarettes.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Une œuvre d'art</h3>
+                    <p className="nameOfUser">par Andrew R. le 12 novembre 2022</p>
+                    <p className="longComment">Le design et l'artisanat de mon briquet Zippo en font une véritable œuvre d'art. C'est quelque chose dont je suis fier de posséder.</p>
+                </div>
+                <div className="comentar">
+                    <Stars1/>
+                    <h3 className="shortComment">Peu fiable et frustrant à utiliser</h3>
+                    <p className="nameOfUser">par Emma R. le 22 décembre 2021</p>
+                    <p className="longComment">L'utilisation du briquet Zippo a été une source de frustration, avec ses performances peu fiables et son besoin constant d'entretien.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Un morceau d'histoire</h3>
+                    <p className="nameOfUser">par Victoria M. le 10 novembre 2022</p>
+                    <p className="longComment">Les briquets Zippo existent depuis des décennies, et en posséder un, c'est comme posséder un morceau d'histoire.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Un symbole d'aventure</h3>
+                    <p className="nameOfUser">par Daniel H. le 8 novembre 2022</p>
+                    <p className="longComment">Pour moi, mon briquet Zippo est un symbole d'aventure et d'exploration. C'est un outil qui m'accompagne dans mes escapades en plein air.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Le cadeau parfait</h3>
+                    <p className="nameOfUser">par Sophia L. le 5 novembre 2022</p>
+                    <p className="longComment">J'ai offert des briquets Zippo à des amis et à ma famille, et c'est toujours un cadeau bien accueilli. C'est un cadeau polyvalent adapté à toutes les occasions.</p>
+                </div>
+                <div className="comentar">
+                    <Stars2/>
+                    <h3 className="shortComment">Un briquet d'entrée de gamme avec une qualité moyenne</h3>
+                    <p className="nameOfUser">par Mia B. le 10 janvier 2022</p>
+                    <p className="longComment">Le briquet Zippo sert d'option d'entrée de gamme décente, offrant des fonctionnalités de base sans une qualité exceptionnelle.</p>
+                </div>
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Un symbole intemporel d'élégance</h3>
+                    <p className="nameOfUser">par Samuel B. le 2 novembre 2022</p>
+                    <p className="longComment">Le design intemporel et l'élégance du briquet Zippo en font un accessoire précieux pour ceux qui apprécient le savoir-faire raffiné.</p>
+                </div>
+
+                <div className="comentar">
+                    <Stars5/>
+                    <h3 className="shortComment">Un morceau de luxe quotidien</h3>
+                    <p className="nameOfUser">par Emma K. le 30 octobre 2022</p>
+                    <p className="longComment">Mon briquet Zippo ajoute une touche de luxe quotidien à ma vie. C'est un petit plaisir qui me procure de la joie.</p>
+                </div>
+                <div className="comentar">
+                    <Stars4/>
+                    <h3 className="shortComment">Un outil fiable pour les urgences à domicile</h3>
+                    <p className="nameOfUser">par Emily S. le 28 février 2022</p>
+                    <p className="longComment">En cas de panne de courant ou d'urgence, mon briquet Zippo est un outil fiable pour allumer des bougies ou des lanternes.</p>
+                </div>
+            </div>}
         </div>
     );
 };

@@ -6,7 +6,7 @@ import CarouselBoxTShirt from "../../conponents/CarouselBoxTShirt/CarouselBoxTSh
 import CarouselBoxCork from "../../conponents/CarouselBoxCork/CarouselBoxTShirt";
 
 
-const Cork = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => {
+const Cork = ({date, date2, small, setSmall, setShowReviews, phone, lang, href}) => {
 
     const mainRef = useRef()
 
@@ -17,7 +17,7 @@ const Cork = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => {
                 mainRef.current.id = "";
                 setSmall(true)
                 if (!phone) {
-                    window.document.body.scrollIntoView({behavior: 'auto', block: 'start'});
+                    // window.document.body.scrollIntoView({behavior: 'auto', block: 'start'});
                 } else {
 
                 }
@@ -35,23 +35,17 @@ const Cork = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => {
             <div className="informationBlock">
                 {lang === "EN" && <h2 className="h2ts">Oster Electric Wine Opener and Foil Cutter </h2>}
                 {lang === "EN" && <p className="design">Designed and sold by <span>Oster</span></p>}
-                {lang === "EN" && <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>}
+                {lang === "EN" && <p className="price">€ 2.00 <span>€ 12.00</span> <span id="vat">incl. VAT</span></p>}
                 {lang === "FR" && <h2 className="h2ts">Oster Ouvre-bouteille électrique et coupe-capsule</h2>}
                 {lang === "FR" && <p className="design">Conçu et vendu par <span>Oster</span></p>}
                 {lang === "FR" &&
-                    <p className="price">€ 2,00 <span>€18,01</span> <span id="vat">Incl. la TVA</span></p>}
+                    <p className="price">€ 2,00 <span>€ 12,00</span> <span id="vat">Incl. la TVA</span></p>}
                 <div className="buttons22">
                     <a className="btnts1" onClick={() => setSmall(false)}>
                         <img src="https://i.pinimg.com/originals/9e/63/21/9e6321883f018a4613fa5d8960a161d2.png"
                              alt=""/>
                         {lang === "EN" && <p>More Details</p>}
                         {lang === "FR" && <p>Plus de détails</p>}
-                    </a>
-                    <a className="btnts2" href="" onClick={(e) => e.stopPropagation()}>
-                        <img src="https://i.pinimg.com/originals/57/80/8c/57808c79cf14cd363f7ec7a83e5d9018.png"
-                             alt=""/>
-                        {lang === "EN" && <p>Buy this Item</p>}
-                        {lang === "FR" && <p>Acheter</p>}
                     </a>
                 </div>
             </div>
@@ -67,11 +61,11 @@ const Cork = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => {
                         {lang === "EN" && <h2 className="h2ts">Oster Electric Wine Opener and Foil Cutter </h2>}
                         {lang === "EN" && <p className="design">Designed and sold by <span>Oster</span></p>}
                         {lang === "EN" &&
-                            <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>}
+                            <p className="price">€ 2.00 <span>€ 12.00</span> <span id="vat">incl. VAT</span></p>}
                         {lang === "FR" && <h2 className="h2ts">Oster Ouvre-bouteille électrique et coupe-capsule</h2>}
                         {lang === "FR" && <p className="design">Conçu et vendu par <span>Oster</span></p>}
                         {lang === "FR" &&
-                            <p className="price">€ 2,00 <span>€18,01</span> <span id="vat">Incl. la TVA</span></p>}
+                            <p className="price">€ 2,00 <span>€ 12,00</span> <span id="vat">Incl. la TVA</span></p>}
                     </div>
                     <div className="imgCarouselCork">
                         <CarouselBoxCork element={cork}/>
@@ -128,7 +122,7 @@ const Cork = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => {
                                 Charging
                                 Base, Silver</h2>
                             <p className="design">Designed and sold by <span>Oster</span></p>
-                            <p className="price">€ 2.00 <span>€32,90</span></p>
+                            <p className="price">€ 2.00 <span>€ 12,00</span></p>
                             <p className="vat">incl. VAT</p>
                             <p className="color"><span>Brand: </span>Oster</p>
                             <p className="color"><span>Finish Type: </span>Brushed</p>
@@ -142,7 +136,7 @@ const Cork = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => {
                             <h2 className="h2ts">Ouvre-bouteille électrique Oster et kit de décapsuleur avec
                                 tire-bouchon et base de charge, argent</h2>
                             <p className="design">Conçu et vendu par <span>Oster</span></p>
-                            <p className="price">2,00 € <span>32,90 €</span></p>
+                            <p className="price">€ 2,00<span>€ 12,00</span></p>
                             <p className="vat">Incl. la TVA</p>
                             <p className="color"><span>Marque : </span>Oster</p>
                             <p className="color"><span>Type de finition : </span>Brossé</p>
@@ -152,7 +146,7 @@ const Cork = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => {
                             <p className="color"><span>Dimensions de l'article L x l x H :</span> 5,51 x 14,96 x 5,32
                                 pouces</p>
                         </div>}
-                        <a className="btnts" href="">
+                        <a className="btnts cork228" href={href}>
                             <img src="https://i.pinimg.com/originals/57/80/8c/57808c79cf14cd363f7ec7a83e5d9018.png"
                                  alt=""/>
                             {lang === "EN" && <p>Buy this Item</p>}

@@ -13,7 +13,7 @@ import {
 import ReviewsMicro from "../../conponents/ReviewsMicro/Reviews";
 import CarouselBoxTShirt from "../../conponents/CarouselBoxTShirt/CarouselBoxTShirt";
 
-const Microphone = ({date2, date, small, setSmall, setShowReviews, phone, lang}) => {
+const Microphone = ({date2, date, small, setSmall, setShowReviews, phone, lang, href}) => {
     const [color, setColor] = useState('Rose gold')
 
 
@@ -31,7 +31,7 @@ const Microphone = ({date2, date, small, setSmall, setShowReviews, phone, lang})
                 mainRef.current.id = "";
                 setSmall(true)
                 if (!phone) {
-                    window.document.body.scrollIntoView({behavior: 'auto', block: 'start'});
+                    // window.document.body.scrollIntoView({behavior: 'auto', block: 'start'});
                 } else {
 
                 }
@@ -51,23 +51,17 @@ const Microphone = ({date2, date, small, setSmall, setShowReviews, phone, lang})
             <div className="informationBlock">
                 {lang === "EN" && <h2 className="h2ts">Ankuka Karaoke Wireless Microphone</h2>}
                 {lang === "EN" && <p className="design">Designed and sold by <span>Ankuka Store</span></p>}
-                {lang === "EN" && <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>}
+                {lang === "EN" && <p className="price">€ 2.00 <span>€ 14.00</span> <span id="vat">incl. VAT</span></p>}
                 {lang === "FR" && <h2 className="h2ts">Microphone sans fil Ankuka Karaoke</h2>}
                 {lang === "FR" && <p className="design">Conçu et vendu par <span>Ankuka Store</span></p>}
                 {lang === "FR" &&
-                    <p className="price">€ 2,00 <span>€18,01</span> <span id="vat">Incl. la TVA</span></p>}
+                    <p className="price">€ 2,00 <span>€ 14,00</span> <span id="vat">Incl. la TVA</span></p>}
                 <div className="buttons22">
                     <a className="btnts1" onClick={() => setSmall(false)}>
                         <img src="https://i.pinimg.com/originals/9e/63/21/9e6321883f018a4613fa5d8960a161d2.png"
                              alt=""/>
                         {lang === "EN" && <p>More Details</p>}
                         {lang === "FR" && <p>Plus de détails</p>}
-                    </a>
-                    <a className="btnts2" href="" onClick={(e) => e.stopPropagation()}>
-                        <img src="https://i.pinimg.com/originals/57/80/8c/57808c79cf14cd363f7ec7a83e5d9018.png"
-                             alt=""/>
-                        {lang === "EN" && <p>Buy this Item</p>}
-                        {lang === "FR" && <p>Acheter</p>}
                     </a>
                 </div>
             </div>
@@ -87,14 +81,14 @@ const Microphone = ({date2, date, small, setSmall, setShowReviews, phone, lang})
                                 Android & iOS Devices</h2>}
                         {lang === "EN" && <p className="design">Designed and sold by <span>Ankuka Store</span></p>}
                         {lang === "EN" &&
-                            <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>}
+                            <p className="price">€ 2.00 <span>€ 14.00</span> <span id="vat">incl. VAT</span></p>}
                         {lang === "FR" &&
                             <h2 className="h2ts">Microphone sans fil Ankuka Karaoke, haut-parleur portable avec lumières
                                 LED dansantes, machine de karaoké, lecteur KTV domestique avec fonction
                                 d'enregistrement, compatible avec les appareils Android et iOS.</h2>}
                         {lang === "FR" && <p className="design">Conçu et vendu par <span>Ankuka Store</span></p>}
                         {lang === "FR" &&
-                            <p className="price">€ 2,00 <span>€18,01</span> <span id="vat">Incl. la TVA</span></p>}
+                            <p className="price">€ 2,00 <span>€ 14,00</span> <span id="vat">Incl. la TVA</span></p>}
                     </div>
                     <div className="imgCarContainerZippo">
                         {color === 'Rose gold' && <CarouselBoxTShirt element={microRose}/>}
@@ -218,7 +212,7 @@ const Microphone = ({date2, date, small, setSmall, setShowReviews, phone, lang})
                                 Portable Speaker Karaoke Machine, Home KTV Player with Record Function, Compatible with
                                 Android & iOS Devices</h2>
                             <p className="design">Designed and sold by <span>Ankuka Store</span></p>
-                            <p className="price">€ 2.00 <span>€32,90</span></p>
+                            <p className="price">€ 2.00 <span>€ 14,00</span></p>
                             <p className="vat">incl. VAT</p>
                             <p className="color"><span>Brand: </span>Ankuka</p>
                             <p className="color"><span>Connectivity technology: </span>Bluetooth, USB</p>
@@ -229,8 +223,8 @@ const Microphone = ({date2, date, small, setSmall, setShowReviews, phone, lang})
                                 machine de karaoké, lecteur KTV domestique avec fonction d'enregistrement, compatible avec
                                 les appareils Android et iOS</h2>
                             <p className="design">Conçu et vendu par <span>Ankuka Store</span></p>
-                            <p className="price">2,00 € <span>32,90 €</span></p>
-                            <p className="vat">TTC</p>
+                            <p className="price">2,00 € <span>€ 14,00</span></p>
+                            <p className="vat">Incl. la TVA</p>
                             <p className="color"><span>Marque : </span>Ankuka</p>
                             <p className="color"><span>Technologie de connectivité : </span>Bluetooth, USB</p>
                             <p className="color"><span>Type de connecteur :</span> USB</p>
@@ -283,7 +277,7 @@ const Microphone = ({date2, date, small, setSmall, setShowReviews, phone, lang})
                                 }                            </div>
 
                         </div>
-                        <a className="btnts" href="">
+                        <a className="btnts micro228" href={href}>
                             <img src="https://i.pinimg.com/originals/57/80/8c/57808c79cf14cd363f7ec7a83e5d9018.png"
                                  alt=""/>
                             {lang === "EN" && <p>Buy this Item</p>}

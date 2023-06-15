@@ -6,7 +6,7 @@ import {mill} from "../../conponents/ImageMbappe/ImageMbappe";
 import ReviewsMill from "../../conponents/ReviewsMill/Reviews";
 import CarouselBoxTShirt from "../../conponents/CarouselBoxTShirt/CarouselBoxTShirt";
 
-const Mill = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => {
+const Mill = ({date, date2, small, setSmall, setShowReviews, phone, lang, href}) => {
 
     const mainRef = useRef()
 
@@ -17,7 +17,7 @@ const Mill = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => {
                 mainRef.current.id = "";
                 setSmall(true)
                 if (!phone) {
-                    window.document.body.scrollIntoView({behavior: 'auto', block: 'start'});
+                    // window.document.body.scrollIntoView({behavior: 'auto', block: 'start'});
                 } else {
 
                 }
@@ -34,23 +34,17 @@ const Mill = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => {
             <div className="informationBlock">
                 {lang === "EN" && <h2 className="h2ts">COOL KNIGHT Herb Grinder Electric Spice Grinder</h2>}
                 {lang === "EN" && <p className="design">Designed and sold by <span>Coolknight</span></p>}
-                {lang === "EN" && <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>}
+                {lang === "EN" && <p className="price">€ 2.00 <span>€ 19.00</span> <span id="vat">incl. VAT</span></p>}
                 {lang === "FR" && <h2 className="h2ts">COOL KNIGHT Broyeur d'herbes électrique Moulin à épices</h2>}
                 {lang === "FR" && <p className="design">Conçu et vendu par <span>Coolknight</span></p>}
                 {lang === "FR" &&
-                    <p className="price">€ 2,00 <span>€18,01</span> <span id="vat">Incl. la TVA</span></p>}
+                    <p className="price">€ 2,00 <span>€ 19,00</span> <span id="vat">Incl. la TVA</span></p>}
                 <div className="buttons22">
                     <a className="btnts1" onClick={() => setSmall(false)}>
                         <img src="https://i.pinimg.com/originals/9e/63/21/9e6321883f018a4613fa5d8960a161d2.png"
                              alt=""/>
                         {lang === "EN" && <p>More Details</p>}
                         {lang === "FR" && <p>Plus de détails</p>}
-                    </a>
-                    <a className="btnts2" href="" onClick={(e) => e.stopPropagation()}>
-                        <img src="https://i.pinimg.com/originals/57/80/8c/57808c79cf14cd363f7ec7a83e5d9018.png"
-                             alt=""/>
-                        {lang === "EN" && <p>Buy this Item</p>}
-                        {lang === "FR" && <p>Acheter</p>}
                     </a>
                 </div>
             </div>
@@ -67,14 +61,14 @@ const Mill = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => {
                             Rotating Speed /Electric]--Electric Grinder for Spices and Herbs (Wood grain 2)</h2>}
                         {lang === "EN" && <p className="design">Designed and sold by <span>Coolknight</span></p>}
                         {lang === "EN" &&
-                            <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>}
+                            <p className="price">€ 2.00 <span>€ 19.00</span> <span id="vat">incl. VAT</span></p>}
                         {lang === "FR" &&
                             <h2 className="h2ts">COOL KNIGHT Broyeur d'herbes électrique Moulin à épices [Grande
                                 capacité/Grande vitesse de rotation/Électrique] - Broyeur électrique pour épices et
                                 herbes (Aspect bois 2)</h2>}
                         {lang === "FR" && <p className="design">Conçu et vendu par <span>Coolknight</span></p>}
                         {lang === "FR" &&
-                            <p className="price">€ 2,00 <span>€18,01</span> <span id="vat">Incl. la TVA</span></p>}
+                            <p className="price">€ 2,00 <span>€ 19,00</span> <span id="vat">Incl. la TVA</span></p>}
                     </div>
                     <div className="imgCarouselMill">
                         <CarouselBoxTShirt element={mill}/>
@@ -165,7 +159,7 @@ const Mill = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => {
                                 Rotating Speed /Electric]--Electric Grinder for Spices and Herbs (Wood grain 2)
                             </h2>
                             <p className="design">Designed and sold by <span>Coolknight</span></p>
-                            <p className="price">€ 2.00 <span>€32,90</span></p>
+                            <p className="price">€ 2.00 <span>€ 19,00</span></p>
                             <p className="vat">incl. VAT</p>
                             <p className="color"><span>Brand: </span>Coolknight</p>
                             <p className="color"><span>Operation mode: </span>Automatic</p>
@@ -178,7 +172,7 @@ const Mill = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => {
                                 vitesse de rotation / Électrique] - Broyeur électrique pour épices et herbes (Grain de bois 2)
                             </h2>
                             <p className="design">Conçu et vendu par <span>Coolknight</span></p>
-                            <p className="price">2,00 € <span>32,90 €</span></p>
+                            <p className="price">€ 2,00<span>€ 19,00</span></p>
                             <p className="vat">Incl. la TVA</p>
                             <p className="color"><span>Marque :</span> Coolknight</p>
                             <p className="color"><span>Mode de fonctionnement :</span> Automatique</p>
@@ -186,7 +180,7 @@ const Mill = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => {
                             <p className="color"><span>Matériau :</span> Acier inoxydable, bois, cuivre</p>
                             <p className="color"><span>Couleur :</span> Grain de bois 2</p>
                         </div>}
-                        <a className="btnts" href="">
+                        <a className="btnts mill228" href={href}>
                             <img src="https://i.pinimg.com/originals/57/80/8c/57808c79cf14cd363f7ec7a83e5d9018.png"
                                  alt=""/>
                             {lang === "EN" && <p>Buy this Item</p>}

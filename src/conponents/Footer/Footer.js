@@ -18,15 +18,15 @@ const Footer = ({setReturn, setShiping, setAbout, setContactUs, setFaq, lang}) =
         <div id="blackFooter">
             {lang === "EN" && <div id="mainBlackFooter">
                 <div id="FEFooter">
-                    <h2>About ArtEmporium</h2>
+                    <h2>About Mallurs</h2>
                     <br/>
                     <p>
-                        ArtEmporium , your ultimate smart living store. Discover cutting-edge technology and
+                        Mallurs , your ultimate smart living store. Discover cutting-edge technology and
                         innovative solutions to elevate your lifestyle. From smart home devices to sustainable living
                         essentials, we bring you the future of living, today.
                     </p>
                     <br/>
-                    <p>support@art.emporium</p>
+                    <p>support@mallurs</p>
                     <br/>
                     <p>7 Rue du Passeur d'Étoiles, 95800 Cergy, France</p>
                     <br/>
@@ -56,10 +56,10 @@ const Footer = ({setReturn, setShiping, setAbout, setContactUs, setFaq, lang}) =
 
                 <div id="mainBlackFooter">
                     <div id="FEFooter">
-                        <h2>À propos d'ArtEmporium</h2>
+                        <h2>À propos d'Mallurs</h2>
                         <br/>
                         <p>
-                            ArtEmporium, votre magasin intelligent ultime. Découvrez des technologies de pointe et des solutions innovantes pour améliorer votre style de vie. Des appareils domotiques aux produits essentiels pour une vie durable, nous vous apportons le futur de la vie, aujourd'hui.
+                            Mallurs, votre magasin intelligent ultime. Découvrez des technologies de pointe et des solutions innovantes pour améliorer votre style de vie. Des appareils domotiques aux produits essentiels pour une vie durable, nous vous apportons le futur de la vie, aujourd'hui.
                         </p>
                         <br/>
                         <p>support@art.emporium</p>

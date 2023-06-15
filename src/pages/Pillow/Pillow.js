@@ -6,7 +6,7 @@ import {pillow} from "../../conponents/ImageMbappe/ImageMbappe";
 import ReviewsPillow from "../../conponents/ReviewsPillow/Reviews";
 import CarouselBoxTShirt from "../../conponents/CarouselBoxTShirt/CarouselBoxTShirt";
 
-const Pillow = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => {
+const Pillow = ({date, date2, small, setSmall, setShowReviews, phone, lang, href}) => {
 
     const mainRef = useRef()
 
@@ -17,7 +17,7 @@ const Pillow = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => 
                 mainRef.current.id = "";
                 setSmall(true)
                 if (!phone) {
-                    window.document.body.scrollIntoView({behavior: 'auto', block: 'start'});
+                    // window.document.body.scrollIntoView({behavior: 'auto', block: 'start'});
                 } else {
 
                 }
@@ -36,23 +36,17 @@ const Pillow = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => 
             <div className="informationBlock">
                 {lang === "EN" && <h2 className="h2ts">Froster Heated Croissant – Giant Pillow</h2>}
                 {lang === "EN" && <p className="design">Designed and sold by <span>Froster Store</span></p>}
-                {lang === "EN" && <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>}
+                {lang === "EN" && <p className="price">€ 2.00 <span>€ 7.99</span> <span id="vat">incl. VAT</span></p>}
                 {lang === "FR" && <h2 className="h2ts">Croissant chauffé Froster - Oreiller géant</h2>}
                 {lang === "FR" && <p className="design">Conçu et vendu par <span>Froster Store</span></p>}
                 {lang === "FR" &&
-                    <p className="price">€ 2,00 <span>€18,01</span> <span id="vat">Incl. la TVA</span></p>}
+                    <p className="price">€ 2,00 <span>€ 7,99</span> <span id="vat">Incl. la TVA</span></p>}
                 <div className="buttons22" onClick={() => setSmall(false)}>
                     <a className="btnts1">
                         <img src="https://i.pinimg.com/originals/9e/63/21/9e6321883f018a4613fa5d8960a161d2.png"
                              alt=""/>
                         {lang === "EN" && <p>More Details</p>}
                         {lang === "FR" && <p>Plus de détails</p>}
-                    </a>
-                    <a className="btnts2" href="" onClick={(e) => e.stopPropagation()}>
-                        <img src="https://i.pinimg.com/originals/57/80/8c/57808c79cf14cd363f7ec7a83e5d9018.png"
-                             alt=""/>
-                        {lang === "EN" && <p>Buy this Item</p>}
-                        {lang === "FR" && <p>Acheter</p>}
                     </a>
                 </div>
             </div>
@@ -68,11 +62,11 @@ const Pillow = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => 
                         {lang === "EN" && <h2 className="h2ts">Froster Heated Croissant – Giant Pillow</h2>}
                         {lang === "EN" && <p className="design">Designed and sold by <span>Froster Store</span></p>}
                         {lang === "EN" &&
-                            <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>}
+                            <p className="price">€ 2.00 <span>€ 7.99</span> <span id="vat">incl. VAT</span></p>}
                         {lang === "FR" && <h2 className="h2ts">Croissant chauffé Froster - Oreiller géant</h2>}
                         {lang === "FR" && <p className="design">Conçu et vendu par <span>Froster Store</span></p>}
                         {lang === "FR" &&
-                            <p className="price">€ 2,00 <span>€18,01</span> <span id="vat">Incl. la TVA</span></p>}
+                            <p className="price">€ 2,00 <span>€ 7,99</span> <span id="vat">Incl. la TVA</span></p>}
                     </div>
                     <div className="imgCarouselPillow">
                         <CarouselBoxTShirt element={pillow}/>
@@ -128,7 +122,7 @@ const Pillow = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => 
                             <h2 className="h2ts">Froster Heated Croissant – Giant Pillow, with Cherry Stone Heat Bag, Travel
                                 Neck Pillow, Huggable Cushion</h2>
                             <p className="design">Designed and sold by <span>Froster Store</span></p>
-                            <p className="price">€ 2.00 <span>€32,90</span></p>
+                            <p className="price">€ 2.00 <span> € 7,99</span></p>
                             <p className="vat">incl. VAT</p>
                             <p className="color"><span>Brand: </span>Froster</p>
                             <p className="color"><span>Special feature: </span>Zipped pocket for a heat pad</p>
@@ -144,7 +138,7 @@ const Pillow = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => 
                             <div>
                                 <h2 className="h2ts">Froster Heated Croissant - Oreiller géant, avec bouillotte aux noyaux de cerise, oreiller de voyage pour le cou, coussin câlinable</h2>
                                 <p className="design">Conçu et vendu par <span>Froster Store</span></p>
-                                <p className="price">2,00 € <span>32,90 €</span></p>
+                                <p className="price">€ 2,00<span>€ 7,99</span></p>
                                 <p className="vat">Incl. la TVA</p>
                                 <p className="color"><span>Marque :</span> Froster</p>
                                 <p className="color"><span>Fonction spéciale :</span> Poche zippée pour une bouillotte</p>
@@ -156,7 +150,7 @@ const Pillow = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => 
                                 <p className="color"><span>Style :</span> Classique</p>
                             </div>
                         }
-                        <a className="btnts" href="">
+                        <a className="btnts pillow228" href={href}>
                             <img src="https://i.pinimg.com/originals/57/80/8c/57808c79cf14cd363f7ec7a83e5d9018.png"
                                  alt=""/>
                             {lang === "EN" && <p>Buy this Item</p>}

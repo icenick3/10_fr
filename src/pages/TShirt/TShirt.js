@@ -28,7 +28,7 @@ import {
 } from "../../conponents/ImageMbappe/ImageMbappe";
 import ProductCarousel from "../../conponents/ProductCarousel/ProductCarousel";
 
-const TShirt = ({date, date2, setSmall, small, setShowReviews, setShowGuide, phone, lang}) => {
+const TShirt = ({date, date2, setSmall, small, setShowReviews, setShowGuide, phone, lang, href, setForm}) => {
 
 
     const [color, setColor] = useState('Purple')
@@ -93,7 +93,7 @@ const TShirt = ({date, date2, setSmall, small, setShowReviews, setShowGuide, pho
                 mainRef.current.id = "";
                 setSmall(true)
                 if (!phone){
-                    window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
+                    // window.document.body.scrollIntoView({ behavior: 'auto', block: 'start' });
                 } else {
 
                 }
@@ -114,22 +114,16 @@ const TShirt = ({date, date2, setSmall, small, setShowReviews, setShowGuide, pho
             <div className="informationBlock">
                 {lang === "EN" && <h2 className="h2ts">Russian War Ship Classic T-Shirt</h2>}
                 {lang === "EN" && <p className="design">Designed and sold by <span>GoyetteKaylee</span></p>}
-                {lang === "EN" && <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>}
+                {lang === "EN" && <p className="price">€ 2.00 <span>€ 15.99</span> <span id="vat">incl. VAT</span></p>}
                 {lang === "FR" && <h2 className="h2ts">T-shirt classique du navire de guerre russe</h2>}
                 {lang === "FR" && <p className="design">Conçu et vendu par <span>GoyetteKaylee</span></p>}
-                {lang === "FR" && <p className="price">€ 2,00 <span>€18,01</span> <span id="vat">Incl. la TVA</span></p>}
+                {lang === "FR" && <p className="price">€ 2,00 <span>€ 15,99</span> <span id="vat">Incl. la TVA</span></p>}
                 <div className="buttons22">
                     <a className="btnts1" onClick={() => setSmall(false)}>
                         <img src="https://i.pinimg.com/originals/9e/63/21/9e6321883f018a4613fa5d8960a161d2.png"
                              alt=""/>
                         {lang === "EN" && <p>More Details</p>}
                         {lang === "FR" && <p>Plus de détails</p>}
-                    </a>
-                    <a className="btnts2" href="" onClick={(e) => e.stopPropagation()}>
-                        <img src="https://i.pinimg.com/originals/57/80/8c/57808c79cf14cd363f7ec7a83e5d9018.png"
-                             alt=""/>
-                        {lang === "EN" && <p>Buy this Item</p>}
-                        {lang === "FR" && <p>Acheter</p>}
                     </a>
                 </div>
             </div>
@@ -143,10 +137,10 @@ const TShirt = ({date, date2, setSmall, small, setShowReviews, setShowGuide, pho
                 <div className="mobileHeader">
                     {lang === "EN" && <h2 className="h2ts">Russian War Ship Classic T-Shirt</h2>}
                     {lang === "EN" && <p className="design">Designed and sold by <span>GoyetteKaylee</span></p>}
-                    {lang === "EN" && <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>}
+                    {lang === "EN" && <p className="price">€ 2.00 <span>€ 15.99</span> <span id="vat">incl. VAT</span></p>}
                     {lang === "FR" && <h2 className="h2ts">T-shirt classique du navire de guerre russe</h2>}
                     {lang === "FR" && <p className="design">Conçu et vendu par <span>GoyetteKaylee</span></p>}
-                    {lang === "FR" && <p className="price">€ 2,00 <span>€18,01</span> <span id="vat">Incl. la TVA</span></p>}
+                    {lang === "FR" && <p className="price">€ 2,00 <span>€ 15,99</span> <span id="vat">Incl. la TVA</span></p>}
                 </div>
                 <div className="imgContainer">
                     <div className="imageContTS">
@@ -206,11 +200,11 @@ const TShirt = ({date, date2, setSmall, small, setShowReviews, setShowGuide, pho
                     <div className="informContainer">
                         {lang === "EN" && <h2 className="h2ts">Russian War Ship Classic T-Shirt</h2>}
                         {lang === "EN" && <p className="design">Designed and sold by <span>GoyetteKaylee</span></p>}
-                        {lang === "EN" && <p className="price">€ 2.00 <span>€18.01</span></p>}
+                        {lang === "EN" && <p className="price">€ 2.00 <span>€ 15.99</span></p>}
                         {lang === "EN" && <p className="vat">incl. VAT</p>}
                         {lang === "FR" && <h2 className="h2ts">T-shirt classique du navire de guerre russe</h2>}
                         {lang === "FR" && <p className="design">Conçu et vendu par <span>GoyetteKaylee</span></p>}
-                        {lang === "FR" && <p className="price">€ 2,00 <span>€18,01</span></p>}
+                        {lang === "FR" && <p className="price">€ 2,00 <span>€ 15,99</span></p>}
                         {lang === "FR" && <p className="vat">Incl. la TVA</p>}
                         {lang === "EN" && <p className="color"><span>Color</span>{color}</p>}
                         {lang === "FR" && <p className="color"><span>Couleur</span>
@@ -310,7 +304,7 @@ const TShirt = ({date, date2, setSmall, small, setShowReviews, setShowGuide, pho
                             {lang === "EN" && <div ref={backRef} className="back" onClick={() => sideOnclick("Back")}>Back</div>}
                             {lang === "FR" && <div ref={backRef} className="back" onClick={() => sideOnclick("Back")}>Derrière</div>}
                         </div>
-                        <a className="btnts" href="">
+                        <a className="btnts tshirt228" href={href}>
                             <img src="https://i.pinimg.com/originals/57/80/8c/57808c79cf14cd363f7ec7a83e5d9018.png"
                                  alt=""/>
                             {lang === "EN" && <p>Buy this Item</p>}

@@ -10,7 +10,7 @@ import {
 
 import CarouselBoxZippo from "../../conponents/CarouselBoxZippo/CarouselBoxTShirt";
 
-const Zippo = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => {
+const Zippo = ({date, date2, small, setSmall, setShowReviews, phone, lang, href, setForm}) => {
 
     const [color, setColor] = useState('Street Chrome')
 
@@ -30,7 +30,7 @@ const Zippo = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => {
                 mainRef.current.id = "";
                 setSmall(true)
                 if (!phone) {
-                    window.document.body.scrollIntoView({behavior: 'auto', block: 'start'});
+                    // window.document.body.scrollIntoView({behavior: 'auto', block: 'start'});
                 } else {
 
                 }
@@ -50,22 +50,16 @@ const Zippo = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => {
             <div className="informationBlock">
                 {lang === "EN" && <h2 className="h2ts">Vintage Street Chrome™</h2>}
                 {lang === "EN" && <p className="design">Designed and sold by <span>Luka Pirnat</span></p>}
-                {lang === "EN" && <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>}
+                {lang === "EN" && <p className="price">€ 2.00 <span>€ 18.01</span> <span id="vat">incl. VAT</span></p>}
                 {lang === "FR" && <h2 className="h2ts">Chrome de Rue Vintage™</h2>}
                 {lang === "FR" && <p className="design">Conçu et vendu par <span>Luka Pirnat</span></p>}
-                {lang === "FR" && <p className="price">€ 2,00 <span>€18,01</span> <span id="vat">Incl. la TVA</span></p>}
+                {lang === "FR" && <p className="price">€ 2,00 <span>€ 18,01</span> <span id="vat">Incl. la TVA</span></p>}
                 <div className="buttons22">
                     <a className="btnts1" onClick={() => setSmall(false)}>
                         <img src="https://i.pinimg.com/originals/9e/63/21/9e6321883f018a4613fa5d8960a161d2.png"
                              alt=""/>
                         {lang === "EN" && <p>More Details</p>}
                         {lang === "FR" && <p>Plus de détails</p>}
-                    </a>
-                    <a className="btnts2" href="" onClick={(e) => e.stopPropagation()}>
-                        <img src="https://i.pinimg.com/originals/57/80/8c/57808c79cf14cd363f7ec7a83e5d9018.png"
-                             alt=""/>
-                        {lang === "EN" && <p>Buy this Item</p>}
-                        {lang === "FR" && <p>Acheter</p>}
                     </a>
                 </div>
             </div>
@@ -84,7 +78,7 @@ const Zippo = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => {
                         {color === 'Blue Flame' && <h2 className="h2ts">Retro Zippo Design™</h2>}
                         {color === 'Golden Flowers' && <h2 className="h2ts">Vintage Floral Design™</h2>}
                         <p className="design">Designed and sold by <span>Luka Pirnat</span></p>
-                        <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>
+                        <p className="price">€ 2.00 <span>€ 18.01</span> <span id="vat">incl. VAT</span></p>
                     </div>}
                     {lang === "FR" && <div className="mobileHeader">
                         {color === 'Street Chrome' && <h2 className="h2ts">Chrome de Rue Vintage™</h2>}
@@ -93,7 +87,7 @@ const Zippo = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => {
                         {color === 'Blue Flame' && <h2 className="h2ts">Conception rétro Zippo™</h2>}
                         {color === 'Golden Flowers' && <h2 className="h2ts">Design floral rétro™</h2>}
                         <p className="design">Conçu et vendu par <span>Luka Pirnat</span></p>
-                        <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">Incl. la TVA</span></p>
+                        <p className="price">€ 2.00 <span>€ 18.01</span> <span id="vat">Incl. la TVA</span></p>
                     </div>}
                     <div className="imgCarContainerZippo">
                         <div className="imageCont">
@@ -411,7 +405,7 @@ const Zippo = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => {
                         </div>}
                         {lang === "EN" && <p className="design">Designed and sold by <span>Luka Pirnat</span></p>}
                         {lang === "FR" && <p className="design">Conçu et vendu par <span>Luka Pirnat</span></p>}
-                        <p className="price">€ 2.00 <span>€32,90</span></p>
+                        <p className="price">€ 2.00 <span>€ 18,01</span></p>
                         {lang === "EN" && <p className="vat">incl. VAT</p>}
                         {lang === "FR" && <p className="vat">Incl. la TVA</p>}
                         {lang === "EN" && <p className="color"><span>Color</span>{color}</p>}
@@ -450,7 +444,7 @@ const Zippo = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => {
                                 }                            </div>
 
                         </div>
-                        <a className="btnts" href="">
+                        <a className="btnts zippo228" href={href}>
                             <img src="https://i.pinimg.com/originals/57/80/8c/57808c79cf14cd363f7ec7a83e5d9018.png"
                                  alt=""/>
                             {lang === "EN" && <p>Buy this Item</p>}

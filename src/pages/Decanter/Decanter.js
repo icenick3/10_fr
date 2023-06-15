@@ -4,7 +4,7 @@ import {decanter} from "../../conponents/ImageMbappe/ImageMbappe";
 import ReviewsDecanter from "../../conponents/ReviewsDecanter/Reviews";
 import CarouselBoxTShirt from "../../conponents/CarouselBoxTShirt/CarouselBoxTShirt";
 
-const Decanter = ({date, date2, small, setSmall, setShowReviews, phone, lang}) => {
+const Decanter = ({date, date2, small, setSmall, setShowReviews, phone, lang, href}) => {
 
     const mainRef = useRef()
 
@@ -15,7 +15,7 @@ const Decanter = ({date, date2, small, setSmall, setShowReviews, phone, lang}) =
                 mainRef.current.id = "";
                 setSmall(true)
                 if (!phone) {
-                    window.document.body.scrollIntoView({behavior: 'auto', block: 'start'});
+                    // window.document.body.scrollIntoView({behavior: 'auto', block: 'start'});
                 } else {
 
                 }
@@ -34,23 +34,16 @@ const Decanter = ({date, date2, small, setSmall, setShowReviews, phone, lang}) =
             <div className="informationBlock">
                 {lang === "EN" && <h2 className="h2ts">Le Creuset Vitesse 750ml Glass Decanter</h2>}
                 {lang === "EN" && <p className="design">Designed and sold by <span>John Lewis</span></p>}
-                {lang === "EN" && <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>}
+                {lang === "EN" && <p className="price">€ 2.00 <span>€ 17.99</span> <span id="vat">incl. VAT</span></p>}
                 {lang === "FR" && <h2 className="h2ts">Carafe en verre Le Creuset Vitesse de 750 ml</h2>}
                 {lang === "FR" && <p className="design">Conçu et vendu par <span>John Lewis</span></p>}
-                {lang === "FR" &&
-                    <p className="price">€ 2,00 <span>€18,01</span> <span id="vat">Incl. la TVA</span></p>}
+                {lang === "FR" && <p className="price">€ 2,00 <span>€ 17,99</span> <span id="vat">Incl. la TVA</span></p>}
                 <div className="buttons22">
                     <a className="btnts1" onClick={() => setSmall(false)}>
                         <img src="https://i.pinimg.com/originals/9e/63/21/9e6321883f018a4613fa5d8960a161d2.png"
                              alt=""/>
                         {lang === "EN" && <p>More Details</p>}
                         {lang === "FR" && <p>Plus de détails</p>}
-                    </a>
-                    <a className="btnts2" href="" onClick={(e) => e.stopPropagation()}>
-                        <img src="https://i.pinimg.com/originals/57/80/8c/57808c79cf14cd363f7ec7a83e5d9018.png"
-                             alt=""/>
-                        {lang === "EN" && <p>Buy this Item</p>}
-                        {lang === "FR" && <p>Acheter</p>}
                     </a>
                 </div>
             </div>
@@ -66,11 +59,11 @@ const Decanter = ({date, date2, small, setSmall, setShowReviews, phone, lang}) =
                         {lang === "EN" && <h2 className="h2ts">Le Creuset Vitesse 750ml Glass Decanter</h2>}
                         {lang === "EN" && <p className="design">Designed and sold by <span>John Lewis</span></p>}
                         {lang === "EN" &&
-                            <p className="price">€ 2.00 <span>€18.01</span> <span id="vat">incl. VAT</span></p>}
+                            <p className="price">€ 2.00 <span>€ 17.99</span> <span id="vat">incl. VAT</span></p>}
                         {lang === "FR" && <h2 className="h2ts">Carafe en verre Le Creuset Vitesse de 750 ml</h2>}
                         {lang === "FR" && <p className="design">Conçu et vendu par <span>John Lewis</span></p>}
                         {lang === "FR" &&
-                            <p className="price">€ 2,00 <span>€18,01</span> <span id="vat">Incl. la TVA</span></p>}
+                            <p className="price">€ 2,00 <span>€ 17,99</span> <span id="vat">Incl. la TVA</span></p>}
                     </div>
                     <div className="imgCarousel">
                         <CarouselBoxTShirt element={decanter}/>
@@ -133,7 +126,7 @@ const Decanter = ({date, date2, small, setSmall, setShowReviews, phone, lang}) =
                             <h2 className="h2ts">Le Creuset Vitesse 750ml Glass Decanter, Aerator and Cleaning Balls
                                 Set</h2>
                             <p className="design">Designed and sold by <span>John Lewis</span></p>
-                            <p className="price">€ 2.00 <span>€32,90</span></p>
+                            <p className="price">€ 2.00 <span>€ 17,99</span></p>
                             <p className="vat">incl. VAT</p>
                             <p className="color"><span>Brand: </span>Le Creuset</p>
                             <p className="color"><span>Capacity: </span>Decanter: 750ml</p>
@@ -146,7 +139,7 @@ const Decanter = ({date, date2, small, setSmall, setShowReviews, phone, lang}) =
                         {lang === "FR" && <div>
                             <h2 className="h2ts">Ensemble carafe en verre Le Creuset Vitesse 750ml, aérateur et billes de nettoyage</h2>
                             <p className="design">Conçu et vendu par <span>John Lewis</span></p>
-                            <p className="price">2,00 € <span>32,90 €</span></p>
+                            <p className="price">€ 2,00<span>€ 17,99</span></p>
                             <p className="vat">Incl. la TVA</p>
                             <p className="color"><span>Marque : </span>Le Creuset</p>
                             <p className="color"><span>Capacité : </span>Carafe : 750 ml</p>
@@ -156,7 +149,7 @@ const Decanter = ({date, date2, small, setSmall, setShowReviews, phone, lang}) =
                             <p className="color"><span>Matériau :</span>Carafe en verre, aérateur en plastique, billes en acier inoxydable</p>
 
                         </div>}
-                        <a className="btnts" href="">
+                        <a className="btnts decanter228" href={href}>
                             <img src="https://i.pinimg.com/originals/57/80/8c/57808c79cf14cd363f7ec7a83e5d9018.png"
                                  alt=""/>
                             {lang === "EN" && <p>Buy this Item</p>}

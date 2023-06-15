@@ -855,7 +855,7 @@
 @media screen and (max-device-width: 500px) {
   .smallPage {
     width: 95%;
-    height: 80vh;
+    height: fit-content;
     margin: 20px auto;
     display: block;
     position: relative;
@@ -879,8 +879,7 @@
 @media screen and (max-device-width: 500px) {
   .smallPage .imgBlock {
     width: 100%;
-    align-items: start;
-    height: 50vh;
+    height: 320px;
   }
 }
 .smallPage .imgBlock img {
@@ -889,7 +888,7 @@
 }
 @media screen and (max-device-width: 500px) {
   .smallPage .imgBlock img {
-    width: 70%;
+    width: 50%;
     padding: 20px;
     display: block;
   }
@@ -900,8 +899,8 @@
 }
 @media screen and (max-device-width: 500px) {
   .smallPage .imgBlock .imgTs {
-    width: 100%;
-    padding: 20px;
+    width: 70%;
+    padding: 0px;
     display: block;
   }
 }
@@ -926,7 +925,7 @@
   .smallPage .imgBlockFlag {
     width: 100%;
     align-items: center;
-    height: 50vh;
+    height: 320px;
   }
 }
 .smallPage .imgBlockFlag img {
@@ -946,7 +945,7 @@
 }
 @media screen and (max-device-width: 500px) {
   .smallPage .imgBlockFlag .imgTs {
-    width: 100%;
+    width: 90%;
     padding: 20px;
     display: block;
   }
@@ -970,9 +969,9 @@
 }
 @media screen and (max-device-width: 500px) {
   .smallPage .imgBlockMbappe {
-    align-items: start;
+    align-items: center;
     width: 100%;
-    height: 50vh;
+    height: 320px;
   }
 }
 .smallPage .imgBlockMbappe img {
@@ -981,7 +980,7 @@
 }
 @media screen and (max-device-width: 500px) {
   .smallPage .imgBlockMbappe img {
-    width: 60%;
+    width: 50%;
     padding: 20px;
     display: block;
   }
@@ -992,10 +991,11 @@
 }
 @media screen and (max-device-width: 500px) {
   .smallPage .informationBlock {
-    position: absolute;
-    bottom: 0px;
+    position: relative;
+    bottom: 0;
     left: 0;
     padding: 10px;
+    height: 220px;
   }
 }
 .smallPage .informationBlock .h2ts {
@@ -1041,9 +1041,9 @@
   text-decoration: none;
   color: white;
   background: black;
-  width: 45%;
+  width: 100%;
   margin: 15px auto 15px auto;
-  padding: 10px 0;
+  padding: 15px 0;
   justify-content: center;
   align-items: center;
   border-radius: 40px;
@@ -1055,7 +1055,7 @@
   margin: 0 10px 0 0;
 }
 .smallPage .buttons22 .btnts1 p {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
 }
 .smallPage .buttons22 .btnts2 {
@@ -1093,8 +1093,8 @@
   text-decoration: none;
   color: white;
   background: black;
-  width: 45%;
-  padding: 10px 0;
+  width: 100%;
+  padding: 15px 0;
   margin: 15px auto 15px auto;
   justify-content: center;
   align-items: center;
@@ -1107,7 +1107,7 @@
   margin: 0 10px 0 0;
 }
 .buttonsMbappe .btnts1 p {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
 }
 .buttonsMbappe .btnts2 {
@@ -1143,7 +1143,7 @@
 @media screen and (max-device-width: 500px) {
   .smallPageZippo {
     width: 95%;
-    height: 80vh;
+    height: fit-content;
     margin: 20px auto;
     display: block;
     position: relative;
@@ -1167,8 +1167,8 @@
 @media screen and (max-device-width: 500px) {
   .smallPageZippo .imgBlock {
     width: 100%;
-    align-items: start;
-    height: 50vh;
+    align-items: center;
+    height: 320px;
   }
 }
 .smallPageZippo .imgBlock img {
@@ -1227,7 +1227,7 @@
   .smallPageZippo .imgBlockPillow {
     width: 100%;
     align-items: center;
-    height: 50vh;
+    height: 320px;
   }
 }
 .smallPageZippo .imgBlockPillow img {
@@ -1282,10 +1282,11 @@
 }
 @media screen and (max-device-width: 500px) {
   .smallPageZippo .informationBlock {
-    position: absolute;
+    position: relative;
     bottom: 0px;
     left: 0;
     padding: 10px;
+    height: 220px;
   }
 }
 .smallPageZippo .informationBlock .h2ts {
@@ -1331,9 +1332,9 @@
   text-decoration: none;
   color: white;
   background: black;
-  width: 45%;
+  width: 100%;
   margin: 15px auto 15px auto;
-  padding: 10px 0px;
+  padding: 15px 0px;
   justify-content: center;
   align-items: center;
   border-radius: 40px;
@@ -1345,7 +1346,7 @@
   margin: 0 10px 0 0;
 }
 .smallPageZippo .buttons22 .btnts1 p {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
 }
 .smallPageZippo .buttons22 .btnts2 {

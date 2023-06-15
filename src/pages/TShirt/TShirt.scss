@@ -949,7 +949,7 @@
   transition: transform 0.3s ease;
   @media screen and (max-device-width: 500px) {
     width: 95%;
-    height: 80vh;
+    height: fit-content;
     margin: 20px auto;
     display: block;
     position: relative;
@@ -970,8 +970,7 @@
     justify-content: center;
     @media screen and (max-device-width: 500px) {
       width: 100%;
-      align-items: start;
-      height: 50vh;
+      height: 320px;
 
     }
 
@@ -979,7 +978,7 @@
       width: 100%;
       padding: 10px;
       @media screen and (max-device-width: 500px) {
-        width: 70%;
+        width: 50%;
         padding: 20px;
         display: block;
       }
@@ -989,8 +988,8 @@
       width: 100%;
       padding: 10px;
       @media screen and (max-device-width: 500px) {
-        width: 100%;
-        padding: 20px;
+        width: 70%;
+        padding: 0px;
         display: block;
       }
     }
@@ -1014,7 +1013,7 @@
     @media screen and (max-device-width: 500px) {
       width: 100%;
       align-items: center;
-      height: 50vh;
+      height: 320px;
 
     }
 
@@ -1032,7 +1031,7 @@
       width: 100%;
       padding: 10px;
       @media screen and (max-device-width: 500px) {
-        width: 100%;
+        width: 90%;
         padding: 20px;
         display: block;
       }
@@ -1055,16 +1054,16 @@
     align-items: center;
     justify-content: center;
     @media screen and (max-device-width: 500px) {
-      align-items: start;
+      align-items: center;
       width: 100%;
-      height: 50vh;
+      height: 320px;
     }
 
     img {
       width: 75%;
       padding: 10px;
       @media screen and (max-device-width: 500px) {
-        width: 60%;
+        width: 50%;
         padding: 20px;
         display: block;
       }
@@ -1075,10 +1074,11 @@
     padding: 10px 0 10px 10px;
     width: 100%;
     @media screen and (max-device-width: 500px) {
-      position: absolute;
-      bottom: 0px;
+      position: relative;
+      bottom: 0;
       left: 0;
       padding: 10px;
+      height: 220px;
     }
 
     .h2ts {
@@ -1133,9 +1133,9 @@
       text-decoration: none;
       color: white;
       background: black;
-      width: 45%;
+      width: 100%;
       margin: 15px auto 15px auto;
-      padding: 10px 0;
+      padding: 15px 0;
       justify-content: center;
       align-items: center;
       border-radius: 40px;
@@ -1148,7 +1148,7 @@
       }
 
       p {
-        font-size: 14px;
+        font-size: 18px;
         font-weight: 600;
       }
     }
@@ -1192,8 +1192,8 @@
     text-decoration: none;
     color: white;
     background: black;
-    width: 45%;
-    padding: 10px 0;
+    width: 100%;
+    padding: 15px 0;
     margin: 15px auto 15px auto;
     justify-content: center;
     align-items: center;
@@ -1207,7 +1207,7 @@
     }
 
     p {
-      font-size: 14px;
+      font-size: 18px;
       font-weight: 600;
     }
   }
@@ -1247,7 +1247,7 @@
   transition: transform 0.3s ease;
   @media screen and (max-device-width: 500px) {
     width: 95%;
-    height: 80vh;
+    height: fit-content;
     margin: 20px auto;
     display: block;
     position: relative;
@@ -1268,8 +1268,8 @@
     justify-content: center;
     @media screen and (max-device-width: 500px) {
       width: 100%;
-      align-items: start;
-      height: 50vh;
+      align-items: center;
+      height:320px;
 
     }
 
@@ -1325,7 +1325,7 @@
     @media screen and (max-device-width: 500px) {
       width: 100%;
       align-items: center;
-      height: 50vh;
+      height: 320px;
 
     }
 
@@ -1377,10 +1377,11 @@
     padding: 10px 0 10px 10px;
     width: 100%;
     @media screen and (max-device-width: 500px) {
-      position: absolute;
+      position: relative;
       bottom: 0px;
       left: 0;
       padding: 10px;
+      height: 220px;
     }
 
     .h2ts {
@@ -1434,9 +1435,9 @@
       text-decoration: none;
       color: white;
       background: black;
-      width: 45%;
+      width: 100%;
       margin: 15px auto 15px auto;
-      padding: 10px 0px;
+      padding: 15px 0px;
       justify-content: center;
       align-items: center;
       border-radius: 40px;
@@ -1449,7 +1450,7 @@
       }
 
       p {
-        font-size: 14px;
+        font-size: 18px;
         font-weight: 600;
       }
     }

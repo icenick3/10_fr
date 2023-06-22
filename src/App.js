@@ -1,32 +1,12 @@
 import React, {useEffect, useRef, useState} from 'react';
 import Header from "./conponents/Header/Header";
-import TShirt from "./pages/TShirt/TShirt";
-import Footer from "./conponents/Footer/Footer";
-import './App.css'
-import Zippo from "./pages/Zippo/Zippo";
 import PreFooter from "./conponents/PreFooter/PreFooter";
-import Mbappe from "./pages/Mbappe/Mbappe";
-import Light from "./pages/Light/Light";
-import Decanter from "./pages/Decanter/Decanter";
-import Pillow from "./pages/Pillow/Pillow";
-import Cork from "./pages/Cork/Cork";
-import Mill from "./pages/Mill/Mill";
-import Flag from "./pages/Flag/Flag";
-import Microphone from "./pages/Microphone/Microphone";
+import './App.css'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Reviews from "./conponents/Reviews/Reviews";
-import ReviewsZippo from "./conponents/ReviewsZippo/Reviews";
 import SizeGuide from "./conponents/SizeGuide/SizeGuide";
-import ReviewsMbappe from "./conponents/ReviewsMbappe/Reviews";
-import ReviewsLight from "./conponents/ReviewsLight/Reviews";
-import ReviewsDecanter from "./conponents/ReviewsDecanter/Reviews";
-import ReviewsPillow from "./conponents/ReviewsPillow/Reviews";
-import ReviewsCork from "./conponents/ReviewsCork/Reviews";
 import ReviewsMill from "./conponents/ReviewsMill/Reviews";
-import ReviewsFlag from "./conponents/ReviewsFlag/Reviews";
-import ReviewsMicro from "./conponents/ReviewsMicro/Reviews";
 import SideMenu from "./conponents/SideMenu/SideMenu";
 import RunningText from "./conponents/RunningText/RunningText";
 import AboutUsPopup from "./conponents/AboutUsPopup/AboutUsPopup";
@@ -35,6 +15,26 @@ import ContactUs from "./conponents/ContactUs/ContactUs";
 import ReturnPolicy from "./conponents/ReturnPolicy/ReturnPolicy";
 import Shiping from "./conponents/Shiping/Shiping";
 import Form from "./conponents/form/Form";
+import Pampers from "./pages/Pampers/Pampers";
+import ReviewsPampers from "./conponents/ReviewsPampers/Reviews";
+import Towel from "./pages/Towel/Towel";
+import ReviewsTowel from "./conponents/ReviewsTowel/Reviews";
+import Bodyk from "./pages/Bodyk/Bodyk";
+import ReviewsBodyk from "./conponents/ReviewsBodyk/Reviews";
+import Ergo from "./pages/Ergo/Ergo";
+import ReviewsErgo from "./conponents/ReviewsErgo/Reviews";
+import Camera from "./pages/Camera/Camera";
+import ReviewsCamera from "./conponents/ReviewsCamera/Reviews";
+import Cup from "./pages/Cup/Cup";
+import ReviewsCup from "./conponents/ReviewsCup/Reviews";
+import Diaper from "./pages/Diaper/Diaper";
+import ReviewsDiaper from "./conponents/ReviewsDiaper/Reviews";
+import BodykGirl from "./pages/BodykGirl/Bodyk";
+import Medical from "./pages/Medical/Medical";
+import ReviewsMedical from "./conponents/ReviewsMedical/Reviews";
+import Peepow from "./pages/Peepow/Peepow";
+import ReviewsPeepow from "./conponents/ReviewsPeepow/Reviews";
+import FooterNew from "./conponents/FooterNew/FooterNew";
 
 
 const App = () => {
@@ -42,7 +42,6 @@ const App = () => {
     const urlParams = new URLSearchParams(window.location.search);
     const product = urlParams.get('product');
     const [language, setLanguage] = useState('FR')
-
 
 
     const [form, setForm] = useState(false)
@@ -62,7 +61,6 @@ const App = () => {
     const [smallFlag, setSmallFlag] = useState(true)
     const [smallFlag2, setSmallFlag2] = useState(true)
     const [smallMicro, setSmallMicro] = useState(true)
-
 
 
     const [activeSideMenu, setActiveSideMenu] = useState(false)
@@ -86,7 +84,7 @@ const App = () => {
     const [showReviewsMicro, setShowReviewsMicro] = useState(false)
 
 
-
+    const [clickHeader, setClickHeader] = useState(false)
 
 
     const [isScreenWidthAbove500, setIsScreenWidthAbove500] = useState(false);
@@ -110,9 +108,6 @@ const App = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     useEffect(() => {
-        if (curRef.current) {
-            // curRef.current.scrollIntoView({behavior: 'auto', block: 'end'});
-        }
         setSmallCork(true)
         setSmallTS(true)
         setSmallZippo(true)
@@ -124,26 +119,28 @@ const App = () => {
         setSmallMicro(true)
         setSmallPillow(true)
 
-    }, [currentSlide])
+    }, [clickHeader, currentSlide])
 
 
     const CustomPrevArrow = (props) => {
-        const { className, style, onClick } = props;
+        const {className, style, onClick} = props;
         return (
             <div
                 className={className}
-                style={{ ...style, display: 'block' }}
+                id="cusPrev"
+                style={{...style, display: 'block'}}
                 onClick={onClick}
             />
         );
     };
 
     const CustomNextArrow = (props) => {
-        const { className, style, onClick } = props;
+        const {className, style, onClick} = props;
         return (
             <div
                 className={className}
-                style={{ ...style, display: 'block' }}
+                id="cusNext"
+                style={{...style, display: 'block'}}
                 onClick={onClick}
             />
         );
@@ -155,9 +152,9 @@ const App = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        prevArrow: <CustomPrevArrow />, // Компонент для попередньої стрілки
-        nextArrow: <CustomNextArrow />, // Компонент для наступної стрілки
-        arrows: true,
+        prevArrow: <CustomPrevArrow/>,
+        nextArrow: <CustomNextArrow/>, // Компонент для наступної стрілки
+        arrows: (smallFlag && smallTS && smallZippo && smallDecanter && smallPillow && smallMill && smallCork && smallMicro && smallLight && smallMbappe) ? true : false,
         afterChange: (current) => setCurrentSlide(current)
     };
 
@@ -187,122 +184,213 @@ const App = () => {
     return (
         <div className="App">
             <div ref={curRef}></div>
-            <Header setActive={setActiveSideMenu} setLang={setLanguage}/>
+            <Header setClick={setClickHeader} setActive={setActiveSideMenu} setLang={setLanguage} click={clickHeader}/>
             <RunningText lang={language} phone={isScreenWidthAbove500}/>
             {isScreenWidthAbove500 && <div className={smallTS && smallZippo ? "flexxx" : ""}>
                 {((smallZippo) || (!smallZippo && smallTS2)) &&
-                    <TShirt setForm={setForm} href={href1} lang={language} date={formattedDate} date2={formattedDate2} small={smallTS} setSmall={setSmallTS}
-                            showReviews={showReviewsTs} setShowReviews={setShowReviewsTs}
-                            setShowGuide={setShowGuide} phone={isScreenWidthAbove500}/>}
-                <Zippo setForm={setForm} href={href2} lang={language} date={formattedDate} date2={formattedDate2} small={smallZippo} setSmall={setSmallZippo}
-                       showReviews={showReviewsZippo} setShowReviews={setShowReviewsZippo} phone={isScreenWidthAbove500}/>
+                    <Towel setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2} small={smallTS}
+                           setSmall={setSmallTS}
+                           showReviews={showReviewsTs} setShowReviews={setShowReviewsTs}
+                           setShowGuide={setShowGuide} phone={isScreenWidthAbove500}/>}
+                <Bodyk setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2} small={smallZippo}
+                       setSmall={setSmallZippo}
+                       showReviews={showReviewsZippo} setShowReviews={setShowReviewsZippo}
+                       phone={isScreenWidthAbove500}/>
                 {((!smallZippo && smallTS2) && (smallZippo && smallTS)) &&
-                    <TShirt setForm={setForm} href={href1} lang={language} date={formattedDate} date2={formattedDate2} small={smallTS2} setSmall={setSmallTS2}
-                            showReviews={showReviewsTs} setShowReviews={setShowReviewsTs}
-                            setShowGuide={setShowGuide} phone={isScreenWidthAbove500}/>}
+                    <Towel setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}
+                           small={smallTS2} setSmall={setSmallTS2}
+                           showReviews={showReviewsTs} setShowReviews={setShowReviewsTs}
+                           setShowGuide={setShowGuide} phone={isScreenWidthAbove500}/>}
             </div>}
             {isScreenWidthAbove500 && <div className={smallMbappe && smallLight ? "flexxx" : ""}>
                 {((smallLight) || (!smallLight && smallMbappe2)) &&
-                    <Mbappe setForm={setForm} href={href3} lang={language} date={formattedDate} date2={formattedDate2} small={smallMbappe} setSmall={setSmallMbappe} setShowReviews={setShowReviewsMbappe} phone={isScreenWidthAbove500}/>}
-                <Light setForm={setForm} href={href4} lang={language} date={formattedDate} date2={formattedDate2} small={smallLight} setSmall={setSmallLight} setShowReviews={setShowReviewsLight} phone={isScreenWidthAbove500}/>
+                    <Camera setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}
+                            small={smallMbappe} setSmall={setSmallMbappe} setShowReviews={setShowReviewsMbappe}
+                            phone={isScreenWidthAbove500}/>}
+                <Medical setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}
+                         small={smallLight} setSmall={setSmallLight} setShowReviews={setShowReviewsLight}
+                         phone={isScreenWidthAbove500}/>
                 {((!smallLight && smallMbappe2) && (smallLight && smallMbappe)) &&
-                    <Mbappe setForm={setForm} href={href3} lang={language} date={formattedDate} date2={formattedDate2} small={smallMbappe2} setSmall={setSmallMbappe2} setShowReviews={setShowReviewsMbappe} phone={isScreenWidthAbove500}/>}
+                    <Camera setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}
+                            small={smallMbappe2} setSmall={setSmallMbappe2} setShowReviews={setShowReviewsMbappe}
+                            phone={isScreenWidthAbove500}/>}
             </div>}
             {isScreenWidthAbove500 && <div className={smallDecanter && smallPillow ? "flexxx" : ""}>
-                {((smallPillow) || (!smallPillow && smallDecanter2)) && <Decanter setForm={setForm} href={href5} lang={language} date={formattedDate} date2={formattedDate2} small={smallDecanter}
-                                          setSmall={setSmallDecanter} setShowReviews={setShowReviewsDecanter} phone={isScreenWidthAbove500}/>}
-                <Pillow setForm={setForm} href={href6} lang={language} date={formattedDate} date2={formattedDate2} small={smallPillow} setSmall={setSmallPillow} setShowReviews={setShowReviewsPillow} phone={isScreenWidthAbove500}/>
-                {((!smallPillow && smallDecanter2) && (smallPillow && smallDecanter)) && <Decanter setForm={setForm} href={href5} lang={language} date={formattedDate} date2={formattedDate2} small={smallDecanter}
-                                           setSmall={setSmallDecanter} setShowReviews={setShowReviewsDecanter} phone={isScreenWidthAbove500}/>}
+                {((smallPillow) || (!smallPillow && smallDecanter2)) &&
+                    <Pampers setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}
+                             small={smallDecanter}
+                             setSmall={setSmallDecanter} setShowReviews={setShowReviewsDecanter}
+                             phone={isScreenWidthAbove500}/>}
+                <Cup setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2} small={smallPillow}
+                     setSmall={setSmallPillow} setShowReviews={setShowReviewsPillow} phone={isScreenWidthAbove500}/>
+                {((!smallPillow && smallDecanter2) && (smallPillow && smallDecanter)) &&
+                    <Pampers setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}
+                             small={smallDecanter}
+                             setSmall={setSmallDecanter} setShowReviews={setShowReviewsDecanter}
+                             phone={isScreenWidthAbove500}/>}
 
             </div>}
             {isScreenWidthAbove500 && <div className={smallCork && smallMill ? "flexxx" : ""}>
                 {((smallMill) || (!smallMill && smallCork2)) &&
-                    <Cork setForm={setForm} href={href7} lang={language} date={formattedDate} date2={formattedDate2} small={smallCork} setSmall={setSmallCork} setShowReviews={setShowReviewsCork} phone={isScreenWidthAbove500}/>}
-                <Mill setForm={setForm} href={href8} lang={language} date={formattedDate} date2={formattedDate2} small={smallMill} setSmall={setSmallMill} setShowReviews={setShowReviewsMill} phone={isScreenWidthAbove500}/>
+                    <Diaper setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}
+                            small={smallCork} setSmall={setSmallCork} setShowReviews={setShowReviewsCork}
+                            phone={isScreenWidthAbove500}/>}
+                <BodykGirl setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}
+                           small={smallMill} setSmall={setSmallMill} setShowReviews={setShowReviewsMill}
+                           phone={isScreenWidthAbove500}/>
                 {((!smallMill && smallCork2) && (smallMill && smallCork)) &&
-                    <Cork setForm={setForm} href={href7} lang={language} date={formattedDate} date2={formattedDate2} small={smallCork} setSmall={setSmallCork} setShowReviews={setShowReviewsCork} phone={isScreenWidthAbove500}/>}
+                    <Diaper setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}
+                            small={smallCork} setSmall={setSmallCork} setShowReviews={setShowReviewsCork}
+                            phone={isScreenWidthAbove500}/>}
             </div>}
             {isScreenWidthAbove500 && <div className={smallFlag && smallMicro ? "flexxx" : ""}>
                 {((smallMicro) || (!smallMicro && smallFlag2)) &&
-                    <Flag setForm={setForm} href={href9} lang={language} date={formattedDate} date2={formattedDate2} small={smallFlag} setSmall={setSmallFlag} setShowReviews={setShowReviewsFlag} phone={isScreenWidthAbove500}/>}
-                <Microphone setForm={setForm} href={href10} lang={language} date={formattedDate} date2={formattedDate2} small={smallMicro} setSmall={setSmallMicro} setShowReviews={setShowReviewsMicro} phone={isScreenWidthAbove500}/>
+                    <Peepow setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}
+                            small={smallFlag} setSmall={setSmallFlag} setShowReviews={setShowReviewsFlag}
+                            phone={isScreenWidthAbove500}/>}
+                <Ergo setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2} small={smallMicro}
+                      setSmall={setSmallMicro} setShowReviews={setShowReviewsMicro} phone={isScreenWidthAbove500}/>
                 {((!smallMicro && smallFlag2) && (smallMicro && smallFlag)) &&
-                    <Flag setForm={setForm} href={href9} lang={language} date={formattedDate} date2={formattedDate2} small={smallFlag} setSmall={setSmallFlag} setShowReviews={setShowReviewsFlag} phone={isScreenWidthAbove500}/>}
+                    <Peepow setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}
+                            small={smallFlag} setSmall={setSmallFlag} setShowReviews={setShowReviewsFlag}
+                            phone={isScreenWidthAbove500}/>}
             </div>}
-            {!isScreenWidthAbove500 && <Slider {...settings} initialSlide={product}>
-                <div>
-                    <div className="my-div">
-                        <TShirt setForm={setForm} href={href1} lang={language} date={formattedDate} date2={formattedDate2} small={smallTS} setSmall={setSmallTS}
-                                showReviews={showReviewsTs} setShowReviews={setShowReviewsTs}
-                                setShowGuide={setShowGuide}/>
-                    </div>
+            {/*{!isScreenWidthAbove500 && <Slider {...settings} initialSlide={product}>*/}
+            {/*    <div>*/}
+            {/*        <div className="my-div">*/}
+            {/*            <Towel setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}*/}
+            {/*                   small={smallTS} setSmall={setSmallTS}*/}
+            {/*                   showReviews={showReviewsTs} setShowReviews={setShowReviewsTs}*/}
+            {/*                   setShowGuide={setShowGuide}/>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*    <div>*/}
+            {/*        <div className="my-div">*/}
+            {/*            <Bodyk setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}*/}
+            {/*                   small={smallZippo} setSmall={setSmallZippo}*/}
+            {/*                   showReviews={showReviewsZippo} setShowReviews={setShowReviewsZippo}/>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*    <div>*/}
+            {/*        <div className="my-div">*/}
+            {/*            <Camera setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}*/}
+            {/*                    small={smallMbappe}*/}
+            {/*                    setSmall={setSmallMbappe} setShowReviews={setShowReviewsMbappe}/>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*    <div>*/}
+            {/*        <div className="my-div">*/}
+            {/*            <Medical setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}*/}
+            {/*                     small={smallLight} setSmall={setSmallLight} setShowReviews={setShowReviewsLight}/>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*    <div>*/}
+            {/*        <div className="my-div">*/}
+            {/*            <Pampers setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}*/}
+            {/*                     small={smallDecanter}*/}
+            {/*                     setSmall={setSmallDecanter} setShowReviews={setShowReviewsDecanter}/>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*    <div>*/}
+            {/*        <div className="my-div">*/}
+            {/*            <Cup setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}*/}
+            {/*                 small={smallPillow}*/}
+            {/*                 setSmall={setSmallPillow} setShowReviews={setShowReviewsPillow}/>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*    <div>*/}
+            {/*        <div className="my-div">*/}
+            {/*            <Diaper setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}*/}
+            {/*                    small={smallCork} setSmall={setSmallCork} setShowReviews={setShowReviewsCork}/>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*    <div>*/}
+            {/*        <div className="my-div">*/}
+            {/*            <BodykGirl setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}*/}
+            {/*                       small={smallMill} setSmall={setSmallMill} setShowReviews={setShowReviewsMill}/>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*    <div>*/}
+            {/*        <div className="my-div">*/}
+            {/*            <Peepow setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}*/}
+            {/*                    small={smallFlag} setSmall={setSmallFlag} setShowReviews={setShowReviewsFlag}/>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*    <div>*/}
+            {/*        <div className="my-div">*/}
+            {/*            <Ergo setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}*/}
+            {/*                  small={smallMicro}*/}
+            {/*                  setSmall={setSmallMicro} setShowReviews={setShowReviewsMicro}/></div>*/}
+            {/*    </div>*/}
+            {/*</Slider>}*/}
+            <div>
+                <div className="flex1">
+                    {((smallFlag && smallTS && smallZippo && smallDecanter && smallPillow && smallMill && smallCork && smallMicro && smallLight && smallMbappe) || !smallMicro) &&
+                        <Ergo href={href1} setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}
+                              small={smallMicro}
+                              setSmall={setSmallMicro} setShowReviews={setShowReviewsMicro}/>}
+                    {((smallFlag && smallTS && smallZippo && smallDecanter && smallPillow && smallMill && smallCork && smallMicro && smallLight && smallMbappe) || !smallZippo) &&
+                        <Bodyk href={href2}  setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}
+                               small={smallZippo} setSmall={setSmallZippo}
+                               showReviews={showReviewsZippo} setShowReviews={setShowReviewsZippo}/>}
                 </div>
-                <div>
-                    <div className="my-div">
-                        <Zippo setForm={setForm} href={href2} lang={language} date={formattedDate} date2={formattedDate2} small={smallZippo} setSmall={setSmallZippo}
-                               showReviews={showReviewsZippo} setShowReviews={setShowReviewsZippo}/>
-                    </div>
+                <div className="flex1">
+                    {((smallFlag && smallTS && smallZippo && smallDecanter && smallPillow && smallMill && smallCork && smallMicro && smallLight && smallMbappe) || !smallMbappe) &&
+                        <Camera href={href3}  setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}
+                                small={smallMbappe}
+                                setSmall={setSmallMbappe} setShowReviews={setShowReviewsMbappe}/>}
+                    {((smallFlag && smallTS && smallZippo && smallDecanter && smallPillow && smallMill && smallCork && smallMicro && smallLight && smallMbappe) || !smallLight) &&
+                        <Medical href={href4}  setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}
+                                 small={smallLight} setSmall={setSmallLight} setShowReviews={setShowReviewsLight}/>}
                 </div>
-                <div>
-                    <div className="my-div">
-                        <Mbappe setForm={setForm} href={href3} lang={language} date={formattedDate} date2={formattedDate2} small={smallMbappe}
-                                setSmall={setSmallMbappe} setShowReviews={setShowReviewsMbappe}/>
-                    </div>
+                <div className="flex1">
+                    {((smallFlag && smallTS && smallZippo && smallDecanter && smallPillow && smallMill && smallCork && smallMicro && smallLight && smallMbappe) || !smallDecanter) &&
+                        <Pampers href={href5}  setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}
+                                 small={smallDecanter}
+                                 setSmall={setSmallDecanter} setShowReviews={setShowReviewsDecanter}/>}
+                    {((smallFlag && smallTS && smallZippo && smallDecanter && smallPillow && smallMill && smallCork && smallMicro && smallLight && smallMbappe) || !smallPillow) &&
+                        <Cup href={href6}  setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}
+                             small={smallPillow}
+                             setSmall={setSmallPillow} setShowReviews={setShowReviewsPillow}/>}
                 </div>
-                <div>
-                    <div className="my-div">
-                        <Light setForm={setForm} href={href4} lang={language} date={formattedDate} date2={formattedDate2} small={smallLight} setSmall={setSmallLight} setShowReviews={setShowReviewsLight}/>
-                    </div>
+                <div className="flex1">
+                    {((smallFlag && smallTS && smallZippo && smallDecanter && smallPillow && smallMill && smallCork && smallMicro && smallLight && smallMbappe) || !smallCork) &&
+                        <Diaper href={href7}  setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}
+                                small={smallCork} setSmall={setSmallCork} setShowReviews={setShowReviewsCork}/>}
+                    {((smallFlag && smallTS && smallZippo && smallDecanter && smallPillow && smallMill && smallCork && smallMicro && smallLight && smallMbappe) || !smallMill) &&
+                        <BodykGirl href={href8}  setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}
+                                   small={smallMill} setSmall={setSmallMill} setShowReviews={setShowReviewsMill}/>}
                 </div>
-                <div>
-                    <div className="my-div">
-                        <Decanter setForm={setForm} href={href5} lang={language} date={formattedDate} date2={formattedDate2} small={smallDecanter}
-                                  setSmall={setSmallDecanter} setShowReviews={setShowReviewsDecanter}/>
-                    </div>
+                <div className="flex1">
+                    {((smallFlag && smallTS && smallZippo && smallDecanter && smallPillow && smallMill && smallCork && smallMicro && smallLight && smallMbappe) || !smallFlag) &&
+                        <Peepow href={href9}  setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}
+                                small={smallFlag} setSmall={setSmallFlag} setShowReviews={setShowReviewsFlag}/>}
+
+                    {((smallFlag && smallTS && smallZippo && smallDecanter && smallPillow && smallMill && smallCork && smallMicro && smallLight && smallMbappe) || !smallTS) &&
+                        <Towel href={href10}  setForm={setForm} lang={language} date={formattedDate} date2={formattedDate2}
+                               small={smallTS}
+                               setSmall={setSmallTS}
+                               showReviews={showReviewsTs} setShowReviews={setShowReviewsTs}
+                               setShowGuide={setShowGuide}/>}
+
                 </div>
-                <div>
-                    <div className="my-div">
-                        <Pillow setForm={setForm} href={href6} lang={language} date={formattedDate} date2={formattedDate2} small={smallPillow}
-                                setSmall={setSmallPillow} setShowReviews={setShowReviewsPillow}/>
-                    </div>
-                </div>
-                <div>
-                    <div className="my-div">
-                        <Cork setForm={setForm} href={href7} lang={language} date={formattedDate} date2={formattedDate2} small={smallCork} setSmall={setSmallCork} setShowReviews={setShowReviewsCork}/>
-                    </div>
-                </div>
-                <div>
-                    <div className="my-div">
-                        <Mill setForm={setForm} href={href8} lang={language} date={formattedDate} date2={formattedDate2} small={smallMill} setSmall={setSmallMill} setShowReviews={setShowReviewsMill}/>
-                    </div>
-                </div>
-                <div>
-                    <div className="my-div">
-                        <Flag setForm={setForm} href={href9} lang={language} date={formattedDate} date2={formattedDate2} small={smallFlag} setSmall={setSmallFlag} setShowReviews={setShowReviewsFlag}/>
-                    </div>
-                </div>
-                <div>
-                    <div className="my-div">
-                        <Microphone setForm={setForm} href={href10} lang={language} date={formattedDate} date2={formattedDate2} small={smallMicro}
-                                                        setSmall={setSmallMicro} setShowReviews={setShowReviewsMicro}/></div>
-                </div>
-            </Slider>}
+            </div>
             <br/>
             <br/>
             <br/>
             <SizeGuide showGuide={showGuide} setShowGuide={setShowGuide} lang={language}/>
-            <ReviewsZippo lang={language} showReviews={showReviewsZippo} setShowReviews={setShowReviewsZippo}/>
-            <Reviews showReviews={showReviewsTs} setShowReviews={setShowReviewsTs} lang={language}/>
-            <ReviewsMbappe lang={language} showReviews={showReviewsMbappe} setShowReviews={setShowReviewsMbappe}/>
-            <ReviewsLight lang={language} showReviews={showReviewsLight} setShowReviews={setShowReviewsLight}/>
-            <ReviewsDecanter lang={language} showReviews={showReviewsDecanter} setShowReviews={setShowReviewsDecanter}/>
-            <ReviewsPillow lang={language} showReviews={showReviewsPillow} setShowReviews={setShowReviewsPillow}/>
-            <ReviewsCork lang={language} showReviews={showReviewsCork} setShowReviews={setShowReviewsCork}/>
+            <ReviewsBodyk lang={language} showReviews={showReviewsZippo} setShowReviews={setShowReviewsZippo}/>
+            <ReviewsTowel showReviews={showReviewsTs} setShowReviews={setShowReviewsTs} lang={language}/>
+            <ReviewsCamera lang={language} showReviews={showReviewsMbappe} setShowReviews={setShowReviewsMbappe}/>
+            <ReviewsMedical lang={language} showReviews={showReviewsLight} setShowReviews={setShowReviewsLight}/>
+            <ReviewsPampers lang={language} showReviews={showReviewsDecanter} setShowReviews={setShowReviewsDecanter}/>
+            <ReviewsCup lang={language} showReviews={showReviewsPillow} setShowReviews={setShowReviewsPillow}/>
+            <ReviewsDiaper lang={language} showReviews={showReviewsCork} setShowReviews={setShowReviewsCork}/>
             <ReviewsMill lang={language} showReviews={showReviewsMill} setShowReviews={setShowReviewsMill}/>
-            <ReviewsFlag lang={language} showReviews={showReviewsFlag} setShowReviews={setShowReviewsFlag}/>
-            <ReviewsMicro lang={language} showReviews={showReviewsMicro} setShowReviews={setShowReviewsMicro}/>
-            <SideMenu lang={language} activeSideMenu={activeSideMenu} setActiveSideMenu={setActiveSideMenu} setReturn={setReturn}
+            <ReviewsPeepow lang={language} showReviews={showReviewsFlag} setShowReviews={setShowReviewsFlag}/>
+            <ReviewsErgo lang={language} showReviews={showReviewsMicro} setShowReviews={setShowReviewsMicro}/>
+            <SideMenu lang={language} activeSideMenu={activeSideMenu} setActiveSideMenu={setActiveSideMenu}
+                      setReturn={setReturn}
                       setShiping={setShiping} setAbout={setAbout} setContactUs={setContactUS} setFAQ={setFaq}/>
             <AboutUsPopup setAbout={setAbout} about={about} lang={language}/>
             <FAQ setFAQ={setFaq} faq={faq} lang={language}/>
@@ -310,7 +398,8 @@ const App = () => {
             <ReturnPolicy setReturn={setReturn} lang={language} returnPol={returnPolicy}/>
             <Shiping setShiping={setShiping} shiping={shiping} lang={language}/>
             <PreFooter lang={language}/>
-            <Footer lang={language} setReturn={setReturn} setShiping={setShiping} setAbout={setAbout} setContactUs={setContactUS} setFaq={setFaq}/>
+            <FooterNew lang={language} setReturn={setReturn} setShiping={setShiping} setAbout={setAbout}
+                       setContactUs={setContactUS} setFaq={setFaq}/>
             <Form form={form} setForm={setForm}/>
         </div>
     );

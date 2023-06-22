@@ -1,19 +1,22 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
 header {
   text-align: center;
-  padding: 5px;
   background: white;
   display: flex;
   align-items: center;
   border-bottom: 1px solid lightgray;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+  width: 100%;
+  height: 55px;
 }
 header .menu {
   width: 30px;
   height: 30px;
-  position: absolute;
-  left: 10px;
   cursor: pointer;
+  margin: 10px 15px 10px 10px;
 }
 @media screen and (min-device-width: 500px) {
   header .menu {
@@ -22,52 +25,67 @@ header .menu {
     height: 50px;
   }
 }
-header select {
-  appearance: none; /* Вимикаємо вбудований вигляд */
-  -webkit-appearance: none; /* Для підтримки веб-переглядачами на основі WebKit */
-  -moz-appearance: none; /* Для підтримки веб-переглядачами на основі Gecko */
-  background-image: none; /* Вимикаємо фонове зображення (зазвичай стрілку) */
-  color: #7422b1;
-  background: none;
-  border: none;
-  font-size: 20px;
-  position: absolute;
-  right: 20%;
-  width: 50px;
-  cursor: pointer;
-  padding: 5px 10px;
-  outline: none;
-  font-weight: 600;
-}
-@media screen and (max-device-width: 500px) {
-  header select {
-    right: 10px;
-    padding: 5px 0 5px 10px;
+@media screen and (max-device-width: 290px) {
+  header .menu {
+    width: 30px;
+    height: 30px;
   }
 }
-header .header {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  margin: 0 auto;
-  width: fit-content;
+header .logoTitle {
+  height: 18px;
 }
-header .header h1 {
-  font-family: "Gruppo", sans-serif;
-  color: #7422b1;
-  font-size: 20px;
-}
-@media screen and (min-device-width: 500px) {
-  header .header h1 {
-    font-size: 30px;
+@media screen and (max-device-width: 290px) {
+  header .logoTitle {
+    width: 30%;
+    height: fit-content;
   }
 }
-header .header img {
-  width: 50px;
+header .miniLogo {
+  width: 40px;
+  height: 25px;
+  display: block;
+  margin: 0 10px 0 auto;
 }
-@media screen and (min-device-width: 500px) {
-  header .header img {
-    width: 100px;
+@media screen and (max-device-width: 290px) {
+  header .miniLogo {
+    width: 20px;
+    height: fit-content;
+    margin: 0 5px 0 auto;
+  }
+}
+header .logoHeart {
+  height: 30px;
+  display: block;
+  margin: 0 10px 0 0;
+}
+@media screen and (max-device-width: 290px) {
+  header .logoHeart {
+    width: 20px;
+    height: fit-content;
+    margin: 0 5px 0 0;
+  }
+}
+header .logoUser {
+  height: 25px;
+  display: block;
+  margin: 0;
+}
+@media screen and (max-device-width: 290px) {
+  header .logoUser {
+    width: 20px;
+    height: fit-content;
+  }
+}
+header .logoCart {
+  height: 25px;
+  display: block;
+  margin: 0 10px 0 10px;
+}
+@media screen and (max-device-width: 290px) {
+  header .logoCart {
+    width: 20px;
+    height: fit-content;
+    margin: 0 5px 0 5px;
   }
 }
 

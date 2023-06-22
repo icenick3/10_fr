@@ -32,7 +32,7 @@ const Decanter = ({date, date2, small, setSmall, setShowReviews, phone, lang, hr
                      src="https://i.pinimg.com/originals/ae/73/23/ae73230589a162a2ca0d41ac47fbd788.png" alt=""/>
             </div>
             <div className="informationBlock">
-                {lang === "EN" && <h2 className="h2ts">Le Creuset Vitesse 750ml Glass Decanter</h2>}
+                {lang === "EN" && <h2 className="h2ts">Le Creuset Vitesse 750ml Glass Pampers</h2>}
                 {lang === "EN" && <p className="design">Designed and sold by <span>John Lewis</span></p>}
                 {lang === "EN" && <p className="price">€ 2.00 <span>€ 17.99</span> <span id="vat">incl. VAT</span></p>}
                 {lang === "FR" && <h2 className="h2ts">Carafe en verre Le Creuset Vitesse de 750 ml</h2>}
@@ -56,7 +56,7 @@ const Decanter = ({date, date2, small, setSmall, setShowReviews, phone, lang, hr
             <div className="Decanter">
                 <div className="imgContainer">
                     <div className="mobileHeader">
-                        {lang === "EN" && <h2 className="h2ts">Le Creuset Vitesse 750ml Glass Decanter</h2>}
+                        {lang === "EN" && <h2 className="h2ts">Le Creuset Vitesse 750ml Glass Pampers</h2>}
                         {lang === "EN" && <p className="design">Designed and sold by <span>John Lewis</span></p>}
                         {lang === "EN" &&
                             <p className="price">€ 2.00 <span>€ 17.99</span> <span id="vat">incl. VAT</span></p>}
@@ -123,13 +123,13 @@ const Decanter = ({date, date2, small, setSmall, setShowReviews, phone, lang, hr
                 <div className="descriptionTShirt">
                     <div className="informContainer">
                         {lang === "EN" && <div>
-                            <h2 className="h2ts">Le Creuset Vitesse 750ml Glass Decanter, Aerator and Cleaning Balls
+                            <h2 className="h2ts">Le Creuset Vitesse 750ml Glass Pampers, Aerator and Cleaning Balls
                                 Set</h2>
                             <p className="design">Designed and sold by <span>John Lewis</span></p>
                             <p className="price">€ 2.00 <span>€ 17,99</span></p>
                             <p className="vat">incl. VAT</p>
                             <p className="color"><span>Brand: </span>Le Creuset</p>
-                            <p className="color"><span>Capacity: </span>Decanter: 750ml</p>
+                            <p className="color"><span>Capacity: </span>Pampers: 750ml</p>
                             <p className="color"><span>Country of origin: </span>Romania</p>
                             <p className="color"><span>Dimensions: </span>H25.5 x Dia.6.5cm</p>
                             <p className="color"><span>Dishwasher safe: </span>No - Hand wash only</p>

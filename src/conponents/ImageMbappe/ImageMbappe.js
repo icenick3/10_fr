@@ -387,9 +387,109 @@ const microRed = [
     "https://i.pinimg.com/originals/54/09/68/5409689a36e9ba61108dbf6f704d4a23.jpg",
 ]
 
+const pampers= [
+    "https://i.pinimg.com/originals/eb/d0/d7/ebd0d787c5ce68dd9c4c22f86c7fad58.jpg",
+    "https://i.pinimg.com/originals/47/79/88/47798844cc47cce9aa3171618bc71bbd.jpg",
+    "https://i.pinimg.com/originals/8a/3f/d3/8a3fd3d1e8ee46f0991bd27accc18513.jpg",
+    "https://i.pinimg.com/originals/d5/99/26/d59926b9ae7279fdf21570ad71796d2a.jpg",
+    "https://i.pinimg.com/originals/11/08/5e/11085e837b776a22835fabf8d679ea84.jpg",
+    "https://i.pinimg.com/originals/63/be/58/63be58ab453e20e0fe010ea39acba1ca.jpg",
+]
+const towel= [
+    "https://i.pinimg.com/originals/d3/f9/c2/d3f9c2f2fb67fbb8abfe5d12a0ec3adf.jpg",
+    "https://i.pinimg.com/originals/0a/32/d8/0a32d868dbfa08bdad7fa3c3a34f4e62.jpg",
+    "https://i.pinimg.com/originals/aa/19/ef/aa19efd49782f295eb1fcfa714474945.jpg",
+    "https://i.pinimg.com/originals/f7/0e/ef/f70eef92c6e8717c7635771ada6549cf.jpg",
+]
+const bodic = [
+    "https://i.pinimg.com/originals/8b/ff/8e/8bff8ea4bcd7985da9b8cd5b27d64ee3.jpg",
+    "https://i.pinimg.com/originals/25/a6/a4/25a6a4545442d9fa1fd206db19a1d96a.jpg",
+    "https://i.pinimg.com/originals/ae/16/c5/ae16c5ffd12de4b844a0acf9ee851ba8.jpg",
+    "https://i.pinimg.com/originals/67/c0/51/67c05160181dd353b758f75a9c6ac257.jpg",
+    "https://i.pinimg.com/originals/05/69/d9/0569d9609216af858bf12a6eb53fec40.jpg",
+    "https://i.pinimg.com/originals/5b/b4/48/5bb448aad81e8edf4c74533bef15af66.jpg",
+    "https://i.pinimg.com/originals/5c/83/70/5c8370ca06c866940adb3b5700ab947b.jpg",
+    "https://i.pinimg.com/originals/4f/89/f9/4f89f99b6e6a301d2b5c1463cb2902f2.jpg",
+]
+const bodicGirl = [
+    "https://i.pinimg.com/originals/f4/ce/af/f4ceafdd040609e2e128c380192d862c.jpg",
+    "https://i.pinimg.com/originals/b8/f7/2b/b8f72b1a12129a23ad36f97e7ac3a749.jpg",
+    "https://i.pinimg.com/originals/1f/34/c7/1f34c79a4d79ef090f21ca0a59be4ae2.jpg",
+    "https://i.pinimg.com/originals/8a/65/59/8a655918b235169f59066faf1aa0168e.jpg",
+    "https://i.pinimg.com/originals/fd/67/9f/fd679f6701087947199f56a5153f0891.jpg",
+    "https://i.pinimg.com/originals/10/24/7a/10247aa90f5dbad71d2aae9d05d29a2b.jpg",
+
+]
+const ergoBaby = [
+    "https://i.pinimg.com/originals/dc/52/8f/dc528fa302ec646919d9f3442136e7a1.jpg",
+    "https://i.pinimg.com/originals/1a/e8/f1/1ae8f18bd7cd806be00dbe165e79f964.webp",
+    "https://i.pinimg.com/originals/f8/ee/29/f8ee29d10b1d4249d3711fdc2f87a20b.jpg",
+    "https://i.pinimg.com/originals/0f/10/22/0f102231c378ee2ebdc7f0b26f8691c2.jpg",
+    "https://i.pinimg.com/originals/9e/27/e5/9e27e590f0f7c002dace43a11e9ef1a8.jpg",
+    "https://i.pinimg.com/originals/45/5b/03/455b030fa61441d4ae7011809748a863.jpg",
+]
+
+const cameraImage = [
+    "https://i.pinimg.com/originals/96/5d/83/965d83d194055d1ee62e870fbed2ea7c.jpg",
+    "https://i.pinimg.com/originals/55/db/05/55db052c808729c8cf72e40b11c33ddc.jpg",
+    "https://i.pinimg.com/originals/dd/14/92/dd1492ed3e87a7bda302474507301517.jpg",
+    "https://i.pinimg.com/originals/c3/e3/5a/c3e35aa9b51b6bf88f08e9e7d4ca9fe3.jpg",
+    "https://i.pinimg.com/originals/64/18/1c/64181c0eb0036f8919fbd5fda451dfa5.jpg",
+    "https://i.pinimg.com/originals/71/80/94/718094c768d7d4f9ccb2cef00e195b0c.jpg",
+]
+
+const cup = [
+
+    "https://i.pinimg.com/originals/b4/5e/db/b45edb1b1828415294fe0ee7c443f4ad.jpg",
+    "https://i.pinimg.com/originals/96/bf/9c/96bf9c742331fed54b13db4a71ee537c.jpg",
+    "https://i.pinimg.com/originals/b4/5e/db/b45edb1b1828415294fe0ee7c443f4ad.jpg",
+    "https://i.pinimg.com/originals/96/bf/9c/96bf9c742331fed54b13db4a71ee537c.jpg",
+]
+
+const medBlue = [
+
+    "https://i.pinimg.com/originals/db/de/2f/dbde2fde3576b885b8c488583d6098e5.jpg",
+    "https://i.pinimg.com/originals/26/46/ce/2646ce09a86251a820e8761371902d1c.jpg",
+    "https://i.pinimg.com/originals/f0/ef/34/f0ef3417c102ec91754380acc42c47a2.jpg",
+    "https://i.pinimg.com/originals/c7/f9/9c/c7f99c45777ca40c0ec1b7a40629ed85.jpg",
+    "https://i.pinimg.com/originals/0c/89/86/0c8986bf3e6b9d52c220fbe334994a49.jpg",
+    "https://i.pinimg.com/originals/c9/6d/7c/c96d7cc9058c053a9d580227d391edb4.jpg",
+    "https://i.pinimg.com/originals/cb/a8/db/cba8dba3a8c0ba16420bfdc5b64ffeb9.jpg",
+]
+
+const pee = [
+
+    "https://i.pinimg.com/originals/5b/97/84/5b97842367cc772ca047a1e3d86c4d66.jpg",
+    "https://i.pinimg.com/originals/09/9b/1f/099b1ff7f9de4abb556f19b123bf34cc.jpg",
+    "https://i.pinimg.com/originals/e2/c1/a4/e2c1a46e2c52b756f3d75400d6ec1a1d.jpg",
+    "https://i.pinimg.com/originals/94/6e/c1/946ec1b2853810d4ecd9c8cd8d1c4391.jpg",
+    "https://i.pinimg.com/originals/28/8b/15/288b15a5e24c3f91559c4aea699460ad.jpg",
+    "https://i.pinimg.com/originals/0b/a5/e8/0ba5e8eb47dd4810b676c4e53f342442.jpg",
+    "https://i.pinimg.com/originals/3f/5b/8b/3f5b8b1f1fedc939b061fae36da92d46.jpg",
+]
+
+const medPink = [
+
+    "https://i.pinimg.com/originals/b7/38/90/b73890a4ddd4ee46970daa7788480c49.jpg",
+    "https://i.pinimg.com/originals/6f/be/98/6fbe985d24bd024134fbcf2ef5ed77e7.jpg",
+    "https://i.pinimg.com/originals/b0/8e/76/b08e76c3f0885300f31ec60862b43003.jpg",
+    "https://i.pinimg.com/originals/01/24/d5/0124d5a28fa182f4ffe0c115e9c47809.jpg",
+    "https://i.pinimg.com/originals/1a/0b/33/1a0b33e2299e99ee254a8a3340632f01.jpg",
+    "https://i.pinimg.com/originals/67/a0/65/67a0658802345967f0d9d594cc68d842.jpg",
+    "https://i.pinimg.com/originals/dc/b4/e9/dcb4e9d5f0e7bfc2401160031d1b79a7.jpg",
+]
 
 export {
     Mbappephoto,
+    medBlue,
+    bodicGirl,
+    medPink,
+    cup,
+    ergoBaby,
+    pampers,
+    cameraImage,
+    bodic,
+    towel,
     microBlue,
     microSilver,
     microPurple,
@@ -400,6 +500,7 @@ export {
     zippoBlackCrackle,
     zippoBrushedBrass,
     zippoGoldenFlowers,
+    pee,
     zippoBlueFlame,
     HeatherGreyFront,
     HeatherGreyBack,

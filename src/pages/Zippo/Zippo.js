@@ -10,7 +10,7 @@ import {
 
 import CarouselBoxZippo from "../../conponents/CarouselBoxZippo/CarouselBoxTShirt";
 
-const Zippo = ({date, date2, small, setSmall, setShowReviews, phone, lang, href, setForm}) => {
+const Zippo = ({date, date2, small, setSmall, setShowReviews, phone, lang, href}) => {
 
     const [color, setColor] = useState('Street Chrome')
 

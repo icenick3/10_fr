@@ -121,6 +121,9 @@ const App = () => {
 
     }, [clickHeader, currentSlide])
 
+    useEffect(()=>{
+        window.document.body.scrollIntoView({behavior: 'auto', block: 'start'});
+    },[smallFlag , smallTS , smallZippo , smallDecanter , smallPillow , smallMill , smallCork , smallMicro , smallLight , smallMbappe])
 
     const CustomPrevArrow = (props) => {
         const {className, style, onClick} = props;
@@ -386,7 +389,7 @@ const App = () => {
             <ReviewsPampers lang={language} showReviews={showReviewsDecanter} setShowReviews={setShowReviewsDecanter}/>
             <ReviewsCup lang={language} showReviews={showReviewsPillow} setShowReviews={setShowReviewsPillow}/>
             <ReviewsDiaper lang={language} showReviews={showReviewsCork} setShowReviews={setShowReviewsCork}/>
-            <ReviewsMill lang={language} showReviews={showReviewsMill} setShowReviews={setShowReviewsMill}/>
+            <ReviewsBodyk lang={language} showReviews={showReviewsMill} setShowReviews={setShowReviewsMill}/>
             <ReviewsPeepow lang={language} showReviews={showReviewsFlag} setShowReviews={setShowReviewsFlag}/>
             <ReviewsErgo lang={language} showReviews={showReviewsMicro} setShowReviews={setShowReviewsMicro}/>
             <SideMenu lang={language} activeSideMenu={activeSideMenu} setActiveSideMenu={setActiveSideMenu}

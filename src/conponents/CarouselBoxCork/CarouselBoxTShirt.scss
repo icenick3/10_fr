@@ -1,0 +1,72 @@
+
+.carouselTS11{
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  #currentImgTS{
+    display: block;
+    margin: 0 auto;
+  }
+#leftArrowTSContainer{
+  width: 25%;
+  position: absolute;
+  z-index: 111;
+  height: 1000px;
+
+  &:hover {
+    cursor: pointer;
+    background: lightgray;
+    opacity: 0.3;
+  }
+}
+  #leftArrowTS{
+    position: absolute;
+    top: calc(50% - 25px);
+    left: 10px;
+    z-index: 222;
+    width: 70px;
+    height: 50px;
+    padding: 0;
+    opacity: 0.9;
+
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  #rightArrowTS{
+    position: absolute;
+    top: calc(50% - 25px);
+    z-index: 222;
+    padding: 0;
+    width: 70px;
+    height: 50px;
+    right: 10px;
+    opacity: 0.9;
+
+
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+#rightArrowTSContainer{
+  width: 25%;
+  position: absolute;
+  z-index: 111;
+  right: 0;
+  top: 0;
+  height: 1000px;
+
+  &:hover {
+    cursor: pointer;
+    background: lightgray;
+    opacity: 0.3;
+  }
+
+}
+
+}
+

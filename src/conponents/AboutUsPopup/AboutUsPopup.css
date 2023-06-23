@@ -1,0 +1,70 @@
+@charset "UTF-8";
+.returnPolicy2 {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  pointer-events: none;
+  transition: 0.5s;
+  z-index: 99999999999;
+  overflow: scroll;
+  scrollbar-width: none; /* Для Firefox */
+  -ms-overflow-style: none; /* Для IE та Edge */
+}
+.returnPolicy2::-webkit-scrollbar {
+  display: none;
+}
+.returnPolicy2 h1 {
+  padding: 0 0 20px 0;
+  font-size: 32px;
+}
+@media screen and (max-device-width: 500px) {
+  .returnPolicy2 h1 {
+    font-size: 22px;
+  }
+}
+.returnPolicy2 h2 {
+  padding: 20px 0 20px 0;
+  font-size: 28px;
+}
+@media screen and (max-device-width: 500px) {
+  .returnPolicy2 h2 {
+    font-size: 18px;
+  }
+}
+.returnPolicy2 p {
+  font-size: 22px;
+}
+@media screen and (max-device-width: 500px) {
+  .returnPolicy2 p {
+    font-size: 16px;
+  }
+}
+
+.returnBlock2 {
+  background: white;
+  width: 60%;
+  margin: 2vh auto;
+  padding: 30px;
+  border-radius: 20px;
+  transition: 0.4s all;
+}
+@media screen and (max-device-width: 500px) {
+  .returnBlock2 {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    padding: 0 30px 20px 30px;
+  }
+}
+
+.show404 {
+  display: block;
+  pointer-events: all;
+}
+
+/*# sourceMappingURL=AboutUsPopup.css.map */

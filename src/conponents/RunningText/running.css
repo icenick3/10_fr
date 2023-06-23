@@ -1,0 +1,64 @@
+.b-marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  font-size: 14px;
+  margin: 55px 0 10px 0;
+}
+@media screen and (min-device-width: 500px) {
+  .b-marquee {
+    font-size: 26px;
+  }
+}
+
+.b-marquee__text {
+  -webkit-animation: animMarquee 10s linear infinite;
+  animation: animMarquee 10s linear infinite;
+}
+
+/* text right to left*/
+.b-marquee--rtl .b-marquee__text {
+  width: 100%;
+  animation: animMarqueeRtl 20s linear infinite;
+}
+@media screen and (min-device-width: 500px) {
+  .b-marquee--rtl .b-marquee__text {
+    animation: animMarqueeRtl2 15s linear infinite;
+  }
+}
+
+@keyframes animMarqueeRtl {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-285%);
+    transition-timing-function: ease-in-out;
+  }
+}
+@keyframes animMarqueeRtl2 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-30%);
+    transition-timing-function: ease-in-out;
+  }
+}
+.newRun {
+  margin: 55px 0 0 0;
+  color: white;
+  background: #333;
+  padding: 10px;
+  font-size: 14px;
+}
+.newRun p span {
+  color: #e32638;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=running.css.map */

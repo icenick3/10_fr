@@ -1,0 +1,597 @@
+.Flag {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.Flag .imgContainer {
+  width: 49%;
+  background: white;
+  border-radius: 5px;
+}
+.Flag .imgContainer .imgCarousel {
+  width: 100%;
+}
+.Flag .imgContainer .imgCarousel #currentImgLight {
+  width: 80%;
+  padding: 40px;
+}
+.Flag .imgContainer .features33 {
+  padding: 20px;
+  background: white;
+}
+.Flag .imgContainer .features33 p {
+  color: #19124f;
+  font-weight: 600;
+  font-size: 20px;
+}
+.Flag .imgContainer .features33 ul {
+  padding: 20px 0 0 40px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.Flag .imgContainer .features33 ul li {
+  padding: 5px 0;
+}
+.Flag .descriptionTShirt {
+  width: 50%;
+  background: white;
+  border-radius: 5px;
+}
+.Flag .descriptionTShirt .informContainer {
+  width: 98%;
+  margin: 5% 0% 5% auto;
+  background: white;
+  border-radius: 5px;
+  padding: 20px;
+}
+.Flag .descriptionTShirt .informContainer .h2ts {
+  font-size: 24px;
+  font-weight: 600;
+}
+.Flag .descriptionTShirt .informContainer .design {
+  font-size: 14px;
+  padding: 5px 0;
+  color: #757195;
+}
+.Flag .descriptionTShirt .informContainer .design span {
+  font-weight: 600;
+}
+.Flag .descriptionTShirt .informContainer .price {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1240AB;
+  padding: 5px 0;
+}
+.Flag .descriptionTShirt .informContainer .price span {
+  color: #757195;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+.Flag .descriptionTShirt .informContainer .vat {
+  font-size: 14px;
+  color: #757195;
+}
+.Flag .descriptionTShirt .informContainer .color {
+  font-size: 16px;
+  color: black;
+  padding: 10px 0;
+}
+.Flag .descriptionTShirt .informContainer .color span {
+  padding: 0 10px 0 0;
+  color: #19124f;
+  font-weight: 600;
+}
+.Flag .descriptionTShirt .informContainer .colors {
+  display: flex;
+  margin: 0 0 10px 0;
+}
+.Flag .descriptionTShirt .informContainer .colors .black {
+  width: 30px;
+  height: 30px;
+  background: black;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Flag .descriptionTShirt .informContainer .colors .black img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Flag .descriptionTShirt .informContainer .colors .black:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Flag .descriptionTShirt .informContainer .colors .grey {
+  width: 30px;
+  height: 30px;
+  background: #acadb0;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Flag .descriptionTShirt .informContainer .colors .grey img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Flag .descriptionTShirt .informContainer .colors .grey:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Flag .descriptionTShirt .informContainer .colors .blue {
+  width: 30px;
+  height: 30px;
+  background: #8186aa;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Flag .descriptionTShirt .informContainer .colors .blue img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Flag .descriptionTShirt .informContainer .colors .blue:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Flag .descriptionTShirt .informContainer .colors .creme {
+  width: 30px;
+  height: 30px;
+  background: #e5d6c5;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Flag .descriptionTShirt .informContainer .colors .creme img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Flag .descriptionTShirt .informContainer .colors .creme:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Flag .descriptionTShirt .informContainer .colors .red {
+  width: 30px;
+  height: 30px;
+  background: #dd2121;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Flag .descriptionTShirt .informContainer .colors .red img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Flag .descriptionTShirt .informContainer .colors .red:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Flag .descriptionTShirt .informContainer .colors .kiwi {
+  width: 30px;
+  height: 30px;
+  background: #a1c740;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Flag .descriptionTShirt .informContainer .colors .kiwi img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Flag .descriptionTShirt .informContainer .colors .kiwi:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Flag .descriptionTShirt .informContainer .colors .green {
+  width: 30px;
+  height: 30px;
+  background: #026541;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Flag .descriptionTShirt .informContainer .colors .green img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Flag .descriptionTShirt .informContainer .colors .green:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Flag .descriptionTShirt .informContainer .colors .pink {
+  width: 30px;
+  height: 30px;
+  background: #ffc7ca;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Flag .descriptionTShirt .informContainer .colors .pink img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Flag .descriptionTShirt .informContainer .colors .pink:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Flag .descriptionTShirt .informContainer .colors .purple {
+  width: 30px;
+  height: 30px;
+  background: #541e68;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Flag .descriptionTShirt .informContainer .colors .purple img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Flag .descriptionTShirt .informContainer .colors .purple:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Flag .descriptionTShirt .informContainer .colors .gold {
+  width: 30px;
+  height: 30px;
+  background: #f89f2b;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Flag .descriptionTShirt .informContainer .colors .gold img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Flag .descriptionTShirt .informContainer .colors .gold:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Flag .descriptionTShirt .informContainer .colors .darkRed {
+  width: 30px;
+  height: 30px;
+  background: #5a1f32;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.Flag .descriptionTShirt .informContainer .colors .darkRed img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Flag .descriptionTShirt .informContainer .colors .darkRed:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.Flag .descriptionTShirt .informContainer .size {
+  font-size: 16px;
+  color: #19124f;
+  font-weight: 600;
+}
+.Flag .descriptionTShirt .informContainer .sizes {
+  display: flex;
+  font-size: 16px;
+  color: #19124f;
+  font-weight: 600;
+  border-radius: 20px;
+  margin: 10px auto;
+  justify-content: center;
+}
+.Flag .descriptionTShirt .informContainer .sizes:hover {
+  cursor: pointer;
+}
+.Flag .descriptionTShirt .informContainer .sizes div {
+  padding: 10px 25px;
+  text-align: center;
+}
+.Flag .descriptionTShirt .informContainer .sizes .S {
+  border-radius: 10px 0 0 10px;
+  border: solid 2px #D6DADF;
+}
+.Flag .descriptionTShirt .informContainer .sizes .S:hover {
+  background: #f2f2f6;
+}
+.Flag .descriptionTShirt .informContainer .sizes .M {
+  border: solid 2px #D6DADF;
+  border-left: none;
+}
+.Flag .descriptionTShirt .informContainer .sizes .M:hover {
+  background: #f2f2f6;
+}
+.Flag .descriptionTShirt .informContainer .sizes .XXXL {
+  border-radius: 0 10px 10px 0;
+  border: solid 2px #D6DADF;
+  border-left: none;
+}
+.Flag .descriptionTShirt .informContainer .sizes .XXXL:hover {
+  background: #f2f2f6;
+}
+.Flag .descriptionTShirt .informContainer .guide {
+  display: flex;
+  color: #ff596f;
+  font-weight: 600;
+  font-size: 14px;
+  align-items: center;
+  margin: 0 0 10px 5%;
+  border-radius: 100px;
+  width: fit-content;
+  padding: 5px 10px;
+}
+.Flag .descriptionTShirt .informContainer .guide:hover {
+  cursor: pointer;
+  background: #f2f2f6;
+}
+.Flag .descriptionTShirt .informContainer .guide img {
+  height: 20px;
+  width: 20px;
+  margin: 0 10px 0 0;
+}
+.Flag .descriptionTShirt .informContainer .printLoc {
+  font-size: 16px;
+  color: #19124f;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+.Flag .descriptionTShirt .informContainer .location {
+  display: flex;
+  font-size: 18px;
+  color: #19124f;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+}
+.Flag .descriptionTShirt .informContainer .location div {
+  padding: 10px 20px;
+}
+.Flag .descriptionTShirt .informContainer .location .front {
+  border-radius: 5px 0 0 5px;
+  border: solid 2px #D6DADF;
+}
+.Flag .descriptionTShirt .informContainer .location .front:hover {
+  cursor: pointer;
+  background: #f2f2f6;
+}
+.Flag .descriptionTShirt .informContainer .location .back {
+  border-radius: 0 5px 5px 0;
+  border: solid 2px #D6DADF;
+  border-left: none;
+}
+.Flag .descriptionTShirt .informContainer .location .back:hover {
+  cursor: pointer;
+  background: #f2f2f6;
+}
+.Flag .descriptionTShirt .informContainer .btnts {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  background: #ff596f;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+}
+.Flag .descriptionTShirt .informContainer .btnts img {
+  width: 25px;
+  height: 25px;
+  margin: 0 10px 0 0;
+}
+.Flag .descriptionTShirt .informContainer .btnts p {
+  font-size: 16px;
+  font-weight: 600;
+}
+.Flag .descriptionTShirt .delivery {
+  display: flex;
+  margin: 30px auto;
+}
+.Flag .descriptionTShirt .delivery img {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px 0 0;
+}
+.Flag .descriptionTShirt .delivery .devTitle {
+  font-size: 16px;
+  color: #19124f;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+.Flag .descriptionTShirt .delivery .devP {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.Flag .descriptionTShirt .starContainer p {
+  font-size: 16px;
+  color: #19124f;
+  font-weight: 600;
+  padding: 0 0 10px 0;
+}
+.Flag .descriptionTShirt .starContainer .stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Flag .descriptionTShirt .starContainer .stars img {
+  width: 25px;
+  height: 25px;
+}
+.Flag .descriptionTShirt .starContainer .stars .bar {
+  width: 60%;
+  background: #f2f2f6;
+  border-radius: 20px;
+  height: 7px;
+  margin: 5px 20px;
+}
+.Flag .descriptionTShirt .starContainer .stars .bar .progressBar1 {
+  background: #1240ab;
+  width: 82%;
+  height: 7px;
+  border-radius: 20px;
+}
+.Flag .descriptionTShirt .starContainer .stars .bar .progressBar2 {
+  background: #1240ab;
+  width: 5%;
+  height: 7px;
+  border-radius: 20px;
+}
+.Flag .descriptionTShirt .starContainer .stars .bar .progressBar3 {
+  background: #1240ab;
+  width: 8%;
+  height: 7px;
+  border-radius: 20px;
+}
+.Flag .descriptionTShirt .starContainer .stars .bar .progressBar4 {
+  background: #1240ab;
+  width: 4%;
+  height: 7px;
+  border-radius: 20px;
+}
+.Flag .descriptionTShirt .starContainer .stars .bar .progressBar5 {
+  background: #1240ab;
+  width: 6%;
+  height: 7px;
+  border-radius: 20px;
+}
+
+.photosContainer {
+  width: 60%;
+  margin: 0 auto;
+}
+.photosContainer .photos {
+  width: 100%;
+  display: flex;
+  max-width: 100%;
+  justify-content: center;
+}
+.photosContainer .photos img {
+  display: block;
+  width: 20%;
+  margin: 10px 2px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  transition: transform 0.3s ease;
+}
+.photosContainer .photos img:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.selected {
+  color: white;
+  background: #07002f;
+  border: solid 2px #07002f;
+  border-radius: 5px 0 0 5px;
+}
+.selected:hover {
+  color: white;
+  background: #07002f;
+}
+
+.selected2 {
+  color: white;
+  background: #07002f;
+  border: solid 2px #07002f;
+  border-radius: 0 5px 5px 0;
+}
+.selected2:hover {
+  color: white;
+  background: #07002f;
+}
+
+#selected {
+  color: white;
+  background: #07002f;
+  border-color: #07002f;
+}
+#selected:hover {
+  color: white;
+  background: #07002f;
+}
+
+#readReviews {
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  padding: 15px 0;
+  width: fit-content;
+}
+#readReviews:hover {
+  cursor: pointer;
+}
+
+.mbappe {
+  padding: 0 0 30px 0;
+}
+
+.barFlag {
+  width: 60%;
+  background: #f2f2f6;
+  border-radius: 20px;
+  height: 7px;
+  margin: 5px 20px;
+}
+.barFlag .progressBar1 {
+  background: #1240ab;
+  width: 82%;
+  height: 7px;
+  border-radius: 20px;
+}
+.barFlag .progressBar2 {
+  background: #1240ab;
+  width: 5%;
+  height: 7px;
+  border-radius: 20px;
+}
+.barFlag .progressBar3 {
+  background: #1240ab;
+  width: 8%;
+  height: 7px;
+  border-radius: 20px;
+}
+.barFlag .progressBar4 {
+  background: #1240ab;
+  width: 4%;
+  height: 7px;
+  border-radius: 20px;
+}
+.barFlag .progressBar5 {
+  background: #1240ab;
+  width: 6%;
+  height: 7px;
+  border-radius: 20px;
+}
+
+/*# sourceMappingURL=Flag.css.map */

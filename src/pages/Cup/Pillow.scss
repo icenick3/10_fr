@@ -1,0 +1,694 @@
+.Pillow {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  .imgContainer {
+    width: 49%;
+    background: white;
+    border-radius: 5px;
+    #currentImgLight{
+      width: 80%;
+      padding: 20px;
+    }
+
+    .imgCarousel{
+      width: 100%;
+      .imgCarContainer{
+        width: 50%;
+        margin: 30px auto;
+        height: 400px;
+      }
+    }
+
+    .features33 {
+      padding: 20px;
+      background: white;
+
+      p {
+        color: #19124f;
+        font-weight: 600;
+        font-size: 20px;
+      }
+
+      ul {
+        padding: 20px 0 0 40px;
+        font-size: 16px;
+        font-weight: 400;
+
+        li {
+          padding: 5px 0;
+        }
+      }
+    }
+  }
+
+  .descriptionTShirt {
+    width: 50%;
+    background: white;
+    border-radius: 5px;
+    .informContainer {
+      width: 98%;
+      margin: 5% 0% 5% auto;
+      background: white;
+      border-radius: 5px;
+      padding: 20px;
+
+      .h2ts {
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      .design {
+        font-size: 14px;
+        padding: 5px 0;
+        color: #757195;;
+
+        span {
+          font-weight: 600;
+        }
+      }
+
+      .price {
+        font-size: 24px;
+        font-weight: 600;
+        color: #1240AB;
+        padding: 5px 0;
+
+        span {
+          color: #757195;
+          font-size: 14px;
+          font-weight: 400;
+          text-decoration: line-through;
+        }
+
+      }
+
+      .vat {
+        font-size: 14px;
+        color: #757195;;
+      }
+
+      .color {
+        font-size: 16px;
+        color: black;
+        padding: 10px 0;
+
+        span {
+          padding: 0 10px 0 0;
+          color: #19124f;
+          font-weight: 600;
+        }
+      }
+
+      .colors {
+        display: flex;
+        margin: 0 0 10px 0;
+
+        .black {
+          width: 30px;
+          height: 30px;
+          background: black;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .grey {
+          width: 30px;
+          height: 30px;
+          background: #acadb0;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .blue {
+          width: 30px;
+          height: 30px;
+          background: #8186aa;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .creme {
+          width: 30px;
+          height: 30px;
+          background: #e5d6c5;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .red {
+          width: 30px;
+          height: 30px;
+          background: #dd2121;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .kiwi {
+          width: 30px;
+          height: 30px;
+          background: #a1c740;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .green {
+          width: 30px;
+          height: 30px;
+          background: #026541;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .pink {
+          width: 30px;
+          height: 30px;
+          background: #ffc7ca;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .purple {
+          width: 30px;
+          height: 30px;
+          background: #541e68;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .gold {
+          width: 30px;
+          height: 30px;
+          background: #f89f2b;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+
+        .darkRed {
+          width: 30px;
+          height: 30px;
+          background: #5a1f32;
+          border-radius: 100%;
+          margin: 0 0 0 10px;
+          position: relative;
+          img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 0 3px white;
+          }
+        }
+      }
+
+      .size {
+        font-size: 16px;
+        color: #19124f;
+        font-weight: 600;
+      }
+
+      .sizes {
+        display: flex;
+        font-size: 16px;
+        color: #19124f;
+        font-weight: 600;
+        border-radius: 20px;
+        margin: 10px auto;
+        justify-content: center;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        div {
+          padding: 10px 25px;
+          text-align: center;
+
+
+        }
+
+        .S {
+          border-radius: 10px 0 0 10px;
+          border: solid 2px #D6DADF;
+          &:hover {
+            background: #f2f2f6;
+          }
+        }
+
+        .M {
+          border: solid 2px #D6DADF;
+          border-left: none;
+          &:hover {
+            background: #f2f2f6;
+          }
+        }
+
+        .XXXL {
+          border-radius: 0 10px 10px 0;
+          border: solid 2px #D6DADF;
+          border-left: none;
+          &:hover {
+            background: #f2f2f6;
+          }
+        }
+      }
+
+      .guide {
+        display: flex;
+        color: #ff596f;
+        font-weight: 600;
+        font-size: 14px;
+        align-items: center;
+        margin: 0 0 10px 5%;
+        border-radius: 100px;
+        width: fit-content;
+        padding: 5px 10px;
+
+        &:hover {
+          cursor: pointer;
+          background: #f2f2f6;
+        }
+
+        img {
+          height: 20px;
+          width: 20px;
+          margin: 0 10px 0 0;
+        }
+      }
+
+      .printLoc {
+        font-size: 16px;
+        color: #19124f;
+        font-weight: 600;
+        margin: 0 0 10px 0;
+      }
+
+      .location {
+        display: flex;
+        font-size: 18px;
+        color: #19124f;
+        font-weight: 600;
+        margin: 0 0 30px 0;
+
+        div {
+          padding: 10px 20px;
+
+
+
+        }
+
+        .front {
+          border-radius: 5px 0 0 5px;
+          border: solid 2px #D6DADF;
+          &:hover {
+            cursor: pointer;
+            background: #f2f2f6;
+          }
+        }
+
+        .back {
+          border-radius: 0 5px 5px 0;
+          border: solid 2px #D6DADF;
+          border-left: none;
+          &:hover {
+            cursor: pointer;
+            background: #f2f2f6;
+          }
+        }
+      }
+
+      .btnts {
+        display: flex;
+        text-decoration: none;
+        color: white;
+        background: #ff596f;
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px 20px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+
+        img {
+          width: 25px;
+          height: 25px;
+          margin: 0 10px 0 0;
+        }
+
+        p {
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .delivery {
+      display: flex;
+      margin: 30px auto;
+
+      img {
+        width: 20px;
+        height: 20px;
+        margin: 0 10px 0 0;
+      }
+
+      .devTitle {
+        font-size: 16px;
+        color: #19124f;
+        font-weight: 600;
+        margin: 0 0 10px 0;
+      }
+
+      .devP {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+      }
+    }
+
+    .starContainer {
+      p {
+        font-size: 16px;
+        color: #19124f;
+        font-weight: 600;
+        padding: 0 0 10px 0;
+      }
+
+      .stars {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 25px;
+          height: 25px;
+        }
+
+        .bar {
+          width: 60%;
+          background: #f2f2f6;
+          border-radius: 20px;
+          height: 7px;
+          margin: 5px 20px;
+
+          .progressBar1 {
+            background: #1240ab;
+            width: 78%;
+            height: 7px;
+            border-radius: 20px;
+          }
+
+          .progressBar2 {
+            background: #1240ab;
+            width: 9%;
+            height: 7px;
+            border-radius: 20px;
+          }
+
+          .progressBar3 {
+            background: #1240ab;
+            width: 7%;
+            height: 7px;
+            border-radius: 20px;
+          }
+
+          .progressBar4 {
+            background: #1240ab;
+            width: 9%;
+            height: 7px;
+            border-radius: 20px;
+          }
+
+          .progressBar5 {
+            background: #1240ab;
+            width: 6%;
+            height: 7px;
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.photosContainer {
+  width: 60%;
+  margin: 0 auto;
+
+  .photos {
+    width: 100%;
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+
+    img {
+      display: block;
+      width: 20%;
+      margin: 10px 2px;
+      border-radius: 10px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.5);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.selected{
+  color: white;
+  background: #07002f;
+  border:  solid 2px#07002f;
+  border-radius: 5px 0 0 5px;
+  &:hover{
+    color: white;
+    background: #07002f;
+  }
+}
+
+.selected2{
+  color: white;
+  background: #07002f;
+  border:  solid 2px#07002f;
+  border-radius: 0 5px 5px 0;
+  &:hover{
+    color: white;
+    background: #07002f;
+  }
+}
+
+#selected{
+  color: white;
+  background: #07002f;
+  border-color: #07002f;
+  &:hover{
+    color: white;
+    background: #07002f;
+  }
+}
+
+#readReviews{
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  padding: 15px 0;
+  width: fit-content;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.mbappe{
+  padding: 0 0 30px 0;
+}
+
+.barPillow {
+  width: 60%;
+  background: #f2f2f6;
+  border-radius: 20px;
+  height: 7px;
+  margin: 5px 20px;
+
+  .progressBar1 {
+    background: #1240ab;
+    width: 78%;
+    height: 7px;
+    border-radius: 20px;
+  }
+
+  .progressBar2 {
+    background: #1240ab;
+    width: 9%;
+    height: 7px;
+    border-radius: 20px;
+  }
+
+  .progressBar3 {
+    background: #1240ab;
+    width: 7%;
+    height: 7px;
+    border-radius: 20px;
+  }
+
+  .progressBar4 {
+    background: #1240ab;
+    width: 9%;
+    height: 7px;
+    border-radius: 20px;
+  }
+
+  .progressBar5 {
+    background: #1240ab;
+    width: 6%;
+    height: 7px;
+    border-radius: 20px;
+  }
+}
+
+
+.pClass{
+  font-weight: 600;
+}
+
+#fUl{
+  padding-top: 0;
+}

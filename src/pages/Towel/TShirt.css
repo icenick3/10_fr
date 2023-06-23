@@ -1,0 +1,1732 @@
+.TShirt {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 323233;
+}
+@media screen and (max-device-width: 500px) {
+  .TShirt {
+    display: block;
+    width: 100%;
+  }
+}
+.TShirt .imgContainer {
+  width: 49%;
+  background: white;
+  border-radius: 5px;
+}
+@media screen and (max-device-width: 500px) {
+  .TShirt .imgContainer {
+    width: 100%;
+  }
+}
+.TShirt .imgContainer .imgCarouselPillow {
+  overflow: hidden;
+  height: 550px;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-device-width: 500px) {
+  .TShirt .imgContainer .imgCarouselPillow {
+    height: 300px;
+  }
+}
+.TShirt .imgContainer .imgCarouselPillow img {
+  width: 75%;
+}
+.TShirt .imgContainer .imgCarouselCork {
+  overflow: hidden;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-device-width: 500px) {
+  .TShirt .imgContainer .imgCarouselCork {
+    height: 300px;
+  }
+}
+.TShirt .imgContainer .imgCarouselCork img {
+  width: 90%;
+  display: block;
+  padding: 20px;
+  margin: 0 auto;
+}
+.TShirt .imgContainer .imgCarouselMill {
+  overflow: hidden;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-device-width: 500px) {
+  .TShirt .imgContainer .imgCarouselMill {
+    height: 300px;
+  }
+}
+.TShirt .imgContainer .imgCarouselMill img {
+  width: 80%;
+  display: block;
+  padding: 20px;
+  margin: 0 auto;
+}
+.TShirt .imgContainer .imageCont {
+  overflow: hidden;
+  height: 550px;
+}
+@media screen and (max-device-width: 500px) {
+  .TShirt .imgContainer .imageCont {
+    display: flex;
+    align-items: center;
+  }
+}
+.TShirt .imgContainer .imageCont img {
+  width: 100%;
+}
+.TShirt .imgContainer .imageContTS {
+  overflow: hidden;
+  height: 600px;
+  display: flex;
+}
+@media screen and (max-device-width: 500px) {
+  .TShirt .imgContainer .imageContTS {
+    align-items: center;
+    height: 400px;
+  }
+}
+.TShirt .imgContainer .imageContTS img {
+  width: 100%;
+}
+.TShirt .imgContainer .features {
+  padding: 20px;
+  background: white;
+}
+@media screen and (max-device-width: 500px) {
+  .TShirt .imgContainer .features {
+    display: none;
+  }
+}
+.TShirt .imgContainer .features h2 {
+  color: #19124f;
+  font-weight: 600;
+  font-size: 20px;
+}
+.TShirt .imgContainer .features ul {
+  padding: 20px 0 0 40px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.TShirt .imgContainer .features ul li {
+  padding: 5px 0;
+}
+.TShirt .descriptionTShirt {
+  width: 50%;
+  background: white;
+  border-radius: 5px;
+}
+@media screen and (max-device-width: 500px) {
+  .TShirt .descriptionTShirt {
+    display: block;
+    width: 100%;
+  }
+}
+.TShirt .descriptionTShirt .informContainer {
+  width: 98%;
+  margin: 5% 0% 5% auto;
+  background: white;
+  border-radius: 5px;
+  padding: 20px;
+}
+@media screen and (max-device-width: 500px) {
+  .TShirt .descriptionTShirt .informContainer {
+    margin: 0;
+  }
+}
+.TShirt .descriptionTShirt .informContainer .h2ts {
+  font-size: 24px;
+  font-weight: 600;
+}
+@media screen and (max-device-width: 500px) {
+  .TShirt .descriptionTShirt .informContainer .h2ts {
+    display: none;
+  }
+}
+.TShirt .descriptionTShirt .informContainer .design {
+  font-size: 14px;
+  padding: 5px 0;
+  color: #757195;
+}
+@media screen and (max-device-width: 500px) {
+  .TShirt .descriptionTShirt .informContainer .design {
+    display: none;
+  }
+}
+.TShirt .descriptionTShirt .informContainer .design span {
+  font-weight: 600;
+}
+.TShirt .descriptionTShirt .informContainer .price {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1240AB;
+  padding: 5px 0;
+}
+@media screen and (max-device-width: 500px) {
+  .TShirt .descriptionTShirt .informContainer .price {
+    display: none;
+  }
+}
+.TShirt .descriptionTShirt .informContainer .price span {
+  color: #757195;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+.TShirt .descriptionTShirt .informContainer .vat {
+  font-size: 14px;
+  color: #757195;
+}
+@media screen and (max-device-width: 500px) {
+  .TShirt .descriptionTShirt .informContainer .vat {
+    display: none;
+  }
+}
+.TShirt .descriptionTShirt .informContainer .color {
+  font-size: 16px;
+  color: black;
+  padding: 10px 0;
+}
+.TShirt .descriptionTShirt .informContainer .color span {
+  padding: 0 10px 0 0;
+  color: #19124f;
+  font-weight: 600;
+}
+.TShirt .descriptionTShirt .informContainer .colors {
+  display: flex;
+  margin: 0 0 10px 0;
+  flex-wrap: wrap;
+}
+.TShirt .descriptionTShirt .informContainer .colors .black {
+  width: 30px;
+  height: 30px;
+  background: black;
+  border-radius: 100%;
+  margin: 0 0 10px 10px;
+  position: relative;
+}
+.TShirt .descriptionTShirt .informContainer .colors .black img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.TShirt .descriptionTShirt .informContainer .colors .black:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.TShirt .descriptionTShirt .informContainer .colors .grey {
+  width: 30px;
+  height: 30px;
+  background: #acadb0;
+  border-radius: 100%;
+  margin: 0 0 10px 10px;
+  position: relative;
+}
+.TShirt .descriptionTShirt .informContainer .colors .grey img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.TShirt .descriptionTShirt .informContainer .colors .grey:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.TShirt .descriptionTShirt .informContainer .colors .blue {
+  width: 30px;
+  height: 30px;
+  background: #8186aa;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.TShirt .descriptionTShirt .informContainer .colors .blue img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.TShirt .descriptionTShirt .informContainer .colors .blue:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.TShirt .descriptionTShirt .informContainer .colors .creme {
+  width: 30px;
+  height: 30px;
+  background: #e5d6c5;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.TShirt .descriptionTShirt .informContainer .colors .creme img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.TShirt .descriptionTShirt .informContainer .colors .creme:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.TShirt .descriptionTShirt .informContainer .colors .red {
+  width: 30px;
+  height: 30px;
+  background: #dd2121;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.TShirt .descriptionTShirt .informContainer .colors .red img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.TShirt .descriptionTShirt .informContainer .colors .red:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.TShirt .descriptionTShirt .informContainer .colors .kiwi {
+  width: 30px;
+  height: 30px;
+  background: #a1c740;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.TShirt .descriptionTShirt .informContainer .colors .kiwi img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.TShirt .descriptionTShirt .informContainer .colors .kiwi:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.TShirt .descriptionTShirt .informContainer .colors .green {
+  width: 30px;
+  height: 30px;
+  background: #026541;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.TShirt .descriptionTShirt .informContainer .colors .green img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.TShirt .descriptionTShirt .informContainer .colors .green:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.TShirt .descriptionTShirt .informContainer .colors .pink {
+  width: 30px;
+  height: 30px;
+  background: #ffc7ca;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.TShirt .descriptionTShirt .informContainer .colors .pink img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.TShirt .descriptionTShirt .informContainer .colors .pink:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.TShirt .descriptionTShirt .informContainer .colors .purple {
+  width: 30px;
+  height: 30px;
+  background: #541e68;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.TShirt .descriptionTShirt .informContainer .colors .purple img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.TShirt .descriptionTShirt .informContainer .colors .purple:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.TShirt .descriptionTShirt .informContainer .colors .gold {
+  width: 30px;
+  height: 30px;
+  background: #f89f2b;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.TShirt .descriptionTShirt .informContainer .colors .gold img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.TShirt .descriptionTShirt .informContainer .colors .gold:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.TShirt .descriptionTShirt .informContainer .colors .darkRed {
+  width: 30px;
+  height: 30px;
+  background: #5a1f32;
+  border-radius: 100%;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.TShirt .descriptionTShirt .informContainer .colors .darkRed img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.TShirt .descriptionTShirt .informContainer .colors .darkRed:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px white;
+}
+.TShirt .descriptionTShirt .informContainer .size {
+  font-size: 16px;
+  color: #19124f;
+  font-weight: 600;
+}
+.TShirt .descriptionTShirt .informContainer .sizes {
+  display: flex;
+  font-size: 16px;
+  color: #19124f;
+  font-weight: 600;
+  border-radius: 20px;
+  margin: 10px auto;
+  justify-content: center;
+}
+@media screen and (max-device-width: 500px) {
+  .TShirt .descriptionTShirt .informContainer .sizes {
+    width: 100%;
+  }
+}
+.TShirt .descriptionTShirt .informContainer .sizes:hover {
+  cursor: pointer;
+}
+.TShirt .descriptionTShirt .informContainer .sizes div {
+  padding: 10px 25px;
+  text-align: center;
+}
+@media screen and (max-device-width: 500px) {
+  .TShirt .descriptionTShirt .informContainer .sizes div {
+    width: 18%;
+    padding: 10px 15px;
+  }
+}
+.TShirt .descriptionTShirt .informContainer .sizes .S {
+  border-radius: 10px 0 0 10px;
+  border: solid 2px #D6DADF;
+}
+.TShirt .descriptionTShirt .informContainer .sizes .S:hover {
+  background: #f2f2f6;
+}
+.TShirt .descriptionTShirt .informContainer .sizes .M {
+  border: solid 2px #D6DADF;
+  border-left: none;
+}
+.TShirt .descriptionTShirt .informContainer .sizes .M:hover {
+  background: #f2f2f6;
+}
+.TShirt .descriptionTShirt .informContainer .sizes .XXXL {
+  border-radius: 0 10px 10px 0;
+  border: solid 2px #D6DADF;
+  border-left: none;
+}
+.TShirt .descriptionTShirt .informContainer .sizes .XXXL:hover {
+  background: #f2f2f6;
+}
+.TShirt .descriptionTShirt .informContainer .guide {
+  display: flex;
+  color: #ff596f;
+  font-weight: 600;
+  font-size: 14px;
+  align-items: center;
+  margin: 0 0 10px 5%;
+  border-radius: 100px;
+  width: fit-content;
+  padding: 5px 10px;
+}
+.TShirt .descriptionTShirt .informContainer .guide:hover {
+  cursor: pointer;
+  background: #f2f2f6;
+}
+.TShirt .descriptionTShirt .informContainer .guide img {
+  height: 20px;
+  width: 20px;
+  margin: 0 10px 0 0;
+}
+.TShirt .descriptionTShirt .informContainer .printLoc {
+  font-size: 16px;
+  color: #19124f;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+.TShirt .descriptionTShirt .informContainer .location {
+  display: flex;
+  font-size: 18px;
+  color: #19124f;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+}
+.TShirt .descriptionTShirt .informContainer .location div {
+  padding: 10px 20px;
+}
+.TShirt .descriptionTShirt .informContainer .location .front {
+  border-radius: 5px 0 0 5px;
+  border: solid 2px #D6DADF;
+}
+.TShirt .descriptionTShirt .informContainer .location .front:hover {
+  cursor: pointer;
+  background: #f2f2f6;
+}
+.TShirt .descriptionTShirt .informContainer .location .back {
+  border-radius: 0 5px 5px 0;
+  border: solid 2px #D6DADF;
+  border-left: none;
+}
+.TShirt .descriptionTShirt .informContainer .location .back:hover {
+  cursor: pointer;
+  background: #f2f2f6;
+}
+.TShirt .descriptionTShirt .informContainer .btnts {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  background: black;
+  width: 100%;
+  margin: 15px auto;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+}
+.TShirt .descriptionTShirt .informContainer .btnts img {
+  width: 25px;
+  height: 25px;
+  margin: 0 10px 0 0;
+}
+.TShirt .descriptionTShirt .informContainer .btnts p {
+  font-size: 16px;
+  font-weight: 600;
+}
+.TShirt .descriptionTShirt .delivery {
+  display: flex;
+  margin: 30px auto;
+}
+.TShirt .descriptionTShirt .delivery img {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px 0 0;
+}
+.TShirt .descriptionTShirt .delivery .devTitle {
+  font-size: 16px;
+  color: #19124f;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+.TShirt .descriptionTShirt .delivery .devP {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.TShirt .descriptionTShirt .starContainer p {
+  font-size: 16px;
+  color: #19124f;
+  font-weight: 600;
+  padding: 0 0 10px 0;
+}
+.TShirt .descriptionTShirt .starContainer .stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.TShirt .descriptionTShirt .starContainer .stars img {
+  width: 25px;
+  height: 25px;
+}
+.TShirt .descriptionTShirt .starContainer .stars .bar {
+  width: 60%;
+  background: #f2f2f6;
+  border-radius: 20px;
+  height: 7px;
+  margin: 5px 20px;
+}
+.TShirt .descriptionTShirt .starContainer .stars .bar .progressBar1 {
+  background: #1240ab;
+  width: 86%;
+  height: 7px;
+  border-radius: 20px;
+}
+.TShirt .descriptionTShirt .starContainer .stars .bar .progressBar2 {
+  background: #1240ab;
+  width: 11%;
+  height: 7px;
+  border-radius: 20px;
+}
+.TShirt .descriptionTShirt .starContainer .stars .bar .progressBar3 {
+  background: #1240ab;
+  width: 9%;
+  height: 7px;
+  border-radius: 20px;
+}
+.TShirt .descriptionTShirt .starContainer .stars .bar .progressBar4 {
+  background: #1240ab;
+  width: 5%;
+  height: 7px;
+  border-radius: 20px;
+}
+.TShirt .descriptionTShirt .starContainer .stars .bar .progressBar5 {
+  background: #1240ab;
+  width: 8%;
+  height: 7px;
+  border-radius: 20px;
+}
+
+.photosContainer {
+  width: 60%;
+  margin: 0 auto;
+}
+.photosContainer .photos {
+  width: 100%;
+  display: flex;
+  max-width: 100%;
+  justify-content: center;
+}
+.photosContainer .photos img {
+  display: block;
+  width: 20%;
+  margin: 10px 2px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.photosContainer .photos img:hover {
+  cursor: pointer;
+}
+
+.selected {
+  color: white;
+  background: #07002f;
+  border: solid 2px #07002f;
+  border-radius: 5px 0 0 5px;
+}
+.selected:hover {
+  color: white;
+  background: #07002f;
+}
+
+.selected2 {
+  color: white;
+  background: #07002f;
+  border: solid 2px #07002f;
+  border-radius: 0 5px 5px 0;
+}
+.selected2:hover {
+  color: white;
+  background: #07002f;
+}
+
+#selected {
+  color: white;
+  background: #07002f;
+  border-color: #07002f;
+}
+#selected:hover {
+  color: white;
+  background: #07002f;
+}
+
+#readReviews {
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  padding: 15px 0;
+  width: fit-content;
+}
+#readReviews:hover {
+  cursor: pointer;
+}
+
+.TShirtContainer {
+  margin: 10px 0;
+  animation: scaleAnimation cubic-bezier(0.1, 0, 0.2, 1) 1s forwards;
+  transform-origin: top left;
+  position: relative;
+  z-index: 4499934;
+}
+@media screen and (max-device-width: 500px) {
+  .TShirtContainer {
+    transform-origin: top;
+    animation: none;
+    overflow: hidden;
+  }
+}
+
+#TShirtContainer {
+  animation: revertStart cubic-bezier(0.1, 0, 0.2, 1) 1s forwards;
+}
+@media screen and (max-device-width: 500px) {
+  #TShirtContainer {
+    animation: none;
+  }
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(0);
+    left: 20%;
+    top: 0;
+    height: 0;
+  }
+  99% {
+    transform: scale(1);
+    left: 0;
+    top: 0;
+    height: 100vh;
+  }
+  100% {
+    transform: scale(1);
+    left: 0;
+    top: 0;
+    height: fit-content;
+  }
+}
+@keyframes scaleAnimation228 {
+  0% {
+    transform: scale(1);
+    left: 0;
+    top: 0;
+    height: 0;
+  }
+  99% {
+    transform: scale(1);
+    left: 0;
+    top: 0;
+    height: 100vh;
+  }
+  100% {
+    transform: scale(1);
+    left: 0;
+    top: 0;
+    height: fit-content;
+  }
+}
+@keyframes revertStart {
+  0% {
+    transform: scale(1);
+    left: 0;
+    top: 0;
+    height: fit-content;
+  }
+  100% {
+    transform: scale(0);
+    left: 20%;
+    top: 0;
+    height: 0;
+  }
+}
+@keyframes revertStart228 {
+  0% {
+    transform: scale(1);
+    left: 0;
+    top: 0;
+    height: fit-content;
+  }
+  100% {
+    transform: scale(0);
+    left: 20%;
+    top: 0;
+    height: 0;
+  }
+}
+.features221 {
+  padding: 20px;
+  background: white;
+  display: none;
+}
+@media screen and (max-device-width: 500px) {
+  .features221 {
+    display: block;
+    padding: 20px 0 0 0;
+  }
+}
+.features221 p {
+  font-size: 16px;
+  padding: 10px;
+}
+.features221 h2 {
+  color: #19124f;
+  font-weight: 600;
+  font-size: 20px;
+}
+.features221 ul {
+  padding: 20px 0 0 40px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.features221 ul li {
+  padding: 5px 0;
+}
+.features221 .secondUl {
+  padding: 10px 20px;
+}
+.features221 .secondUl li {
+  padding: 5px 0;
+}
+
+.mobileHeader {
+  padding: 10px 20px;
+  display: none;
+}
+@media screen and (max-device-width: 500px) {
+  .mobileHeader {
+    display: block;
+  }
+}
+.mobileHeader .h2ts {
+  font-size: 20px;
+  font-weight: 600;
+}
+.mobileHeader .design {
+  font-size: 14px;
+  padding: 5px 0;
+  color: #757195;
+}
+.mobileHeader .design span {
+  font-weight: 600;
+}
+.mobileHeader .price {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1240AB;
+  padding: 5px 0;
+}
+.mobileHeader .price span {
+  color: #757195;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+.mobileHeader #vat {
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  padding: 0 0 0 10px;
+}
+
+.smallPage {
+  display: flex;
+  background: white;
+  width: 29%;
+  margin: 20px auto 20px 20%;
+  transition: transform 0.3s ease;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPage {
+    width: 95%;
+    height: fit-content;
+    margin: 20px auto;
+    display: block;
+    position: relative;
+  }
+}
+.smallPage:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPage:hover {
+    transform: scale(1);
+  }
+}
+.smallPage .imgBlock {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPage .imgBlock {
+    width: 100%;
+    height: 150px;
+  }
+}
+.smallPage .imgBlock img {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPage .imgBlock img {
+    width: 80%;
+    padding: 20px;
+    display: block;
+  }
+}
+.smallPage .imgBlock .imgTs {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPage .imgBlock .imgTs {
+    width: 80%;
+    padding: 0px;
+    display: block;
+  }
+}
+.smallPage .imgBlock .imgTs2 {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPage .imgBlock .imgTs2 {
+    width: 80%;
+    padding: 20px;
+    display: block;
+  }
+}
+.smallPage .imgBlockFlag {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPage .imgBlockFlag {
+    width: 100%;
+    align-items: center;
+    height: 150px;
+  }
+}
+.smallPage .imgBlockFlag img {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPage .imgBlockFlag img {
+    width: 70%;
+    padding: 20px;
+    display: block;
+  }
+}
+.smallPage .imgBlockFlag .imgTs {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPage .imgBlockFlag .imgTs {
+    width: 70%;
+    padding: 20px;
+    display: block;
+  }
+}
+.smallPage .imgBlockFlag .imgTs2 {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPage .imgBlockFlag .imgTs2 {
+    width: 70%;
+    padding: 20px;
+    display: block;
+  }
+}
+.smallPage .imgBlockMbappe {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPage .imgBlockMbappe {
+    align-items: center;
+    width: 100%;
+    height: 150px;
+  }
+}
+.smallPage .imgBlockMbappe img {
+  width: 75%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPage .imgBlockMbappe img {
+    width: 80%;
+    padding: 20px;
+    display: block;
+  }
+}
+.smallPage .informationBlock {
+  padding: 10px 0 10px 10px;
+  width: 100%;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPage .informationBlock {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    height: 220px;
+  }
+}
+.smallPage .informationBlock .h2ts {
+  font-size: 20px;
+  font-weight: 600;
+}
+.smallPage .informationBlock .design {
+  font-size: 14px;
+  padding: 5px 0;
+  color: #757195;
+}
+.smallPage .informationBlock .design span {
+  font-weight: 600;
+}
+.smallPage .informationBlock .price {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ff596f;
+  padding: 5px 0;
+}
+.smallPage .informationBlock .price span {
+  color: #757195;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+.smallPage .informationBlock #vat {
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  padding: 0 0 0 10px;
+}
+.smallPage .buttons22 {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
+.smallPage .buttons22 .btnts1 {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  background: black;
+  width: 100%;
+  margin: 15px auto 15px auto;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.smallPage .buttons22 .btnts1 img {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px 0 0;
+  display: none;
+}
+.smallPage .buttons22 .btnts1 p {
+  font-size: 12px;
+  font-weight: 600;
+}
+.smallPage .buttons22 .btnts2 {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  background: #ff596f;
+  width: 45%;
+  margin: 15px auto 15px 10px;
+  padding: 10px 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+}
+.smallPage .buttons22 .btnts2 img {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px 0 0;
+}
+.smallPage .buttons22 .btnts2 p {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.buttonsMbappe {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
+.buttonsMbappe .btnts1 {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  background: black;
+  width: 100%;
+  padding: 5px;
+  margin: 15px auto 15px auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.buttonsMbappe .btnts1 img {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px 0 0;
+  display: none;
+}
+.buttonsMbappe .btnts1 p {
+  font-size: 12px;
+  font-weight: 600;
+}
+.buttonsMbappe .btnts2 {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  background: #ff596f;
+  width: 45%;
+  margin: 15px auto 15px 10px;
+  padding: 10px 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+}
+.buttonsMbappe .btnts2 img {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px 0 0;
+}
+.buttonsMbappe .btnts2 p {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.smallPageZippo {
+  display: flex;
+  background: white;
+  width: 29%;
+  margin: 20px 20% 20px auto;
+  transition: transform 0.3s ease;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageZippo {
+    width: 95%;
+    height: fit-content;
+    margin: 20px auto;
+    display: block;
+    position: relative;
+  }
+}
+.smallPageZippo:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageZippo:hover {
+    transform: scale(1);
+  }
+}
+.smallPageZippo .imgBlock {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageZippo .imgBlock {
+    width: 100%;
+    align-items: center;
+    height: 150px;
+  }
+}
+.smallPageZippo .imgBlock img {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageZippo .imgBlock img {
+    width: 80%;
+    padding: 20px;
+    display: block;
+  }
+}
+.smallPageZippo .imgBlock .imgTs {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageZippo .imgBlock .imgTs {
+    width: 60%;
+    padding: 20px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+.smallPageZippo .imgBlock .imgTs3 {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageZippo .imgBlock .imgTs3 {
+    width: 80%;
+    padding: 20px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+.smallPageZippo .imgBlock .imgTs2 {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageZippo .imgBlock .imgTs2 {
+    width: 70%;
+    padding: 20px;
+    display: block;
+  }
+}
+.smallPageZippo .imgBlockPillow {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageZippo .imgBlockPillow {
+    width: 100%;
+    align-items: center;
+    height: 150px;
+  }
+}
+.smallPageZippo .imgBlockPillow img {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageZippo .imgBlockPillow img {
+    width: 80%;
+    padding: 20px;
+    display: block;
+  }
+}
+.smallPageZippo .imgBlockPillow .imgTs {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageZippo .imgBlockPillow .imgTs {
+    width: 80%;
+    padding: 20px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+.smallPageZippo .imgBlockPillow .imgTs3 {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageZippo .imgBlockPillow .imgTs3 {
+    width: 90%;
+    padding: 20px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+.smallPageZippo .imgBlockPillow .imgTs2 {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageZippo .imgBlockPillow .imgTs2 {
+    width: 80%;
+    padding: 20px;
+    display: block;
+  }
+}
+.smallPageZippo .informationBlock {
+  padding: 10px 0 10px 10px;
+  width: 100%;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageZippo .informationBlock {
+    position: relative;
+    bottom: 0px;
+    left: 0;
+    padding: 10px;
+    height: fit-content;
+  }
+}
+.smallPageZippo .informationBlock .h2ts {
+  font-size: 14px;
+  font-weight: 600;
+}
+.smallPageZippo .informationBlock .price {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ff596f;
+  padding: 5px 0;
+}
+.smallPageZippo .informationBlock .price span {
+  color: #757195;
+  font-size: 12px;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+.smallPageZippo .informationBlock #vat {
+  text-decoration: none;
+  font-size: 10px;
+  color: black;
+  padding: 0 0 0 10px;
+}
+.smallPageZippo .buttons22 {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
+.smallPageZippo .buttons22 .btnts1 {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  background: black;
+  width: 100%;
+  margin: 15px auto 15px auto;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.smallPageZippo .buttons22 .btnts1 img {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px 0 0;
+  display: none;
+}
+.smallPageZippo .buttons22 .btnts1 p {
+  font-size: 12px;
+  font-weight: 600;
+}
+.smallPageZippo .buttons22 .btnts2 {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  background: #ff596f;
+  width: 45%;
+  margin: 15px auto 15px 10px;
+  padding: 10px 0px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+}
+.smallPageZippo .buttons22 .btnts2 img {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px 0 0;
+}
+.smallPageZippo .buttons22 .btnts2 p {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#backToSmall {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 100px;
+  top: 50px;
+  cursor: pointer;
+}
+@media screen and (max-device-width: 500px) {
+  #backToSmall {
+    display: none;
+  }
+}
+
+.backContainer {
+  background: #262626;
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+.backContainer .backToSmall22 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 100px;
+  top: 50px;
+  display: none;
+  cursor: pointer;
+}
+@media screen and (max-device-width: 500px) {
+  .backContainer .backToSmall22 {
+    display: block;
+    position: static;
+  }
+}
+
+.imageContTS {
+  width: 100%;
+}
+
+.smallPageNew {
+  display: flex;
+  background: white;
+  width: 29%;
+  margin: 20px 20% 20px auto;
+  transition: transform 0.3s ease;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageNew {
+    width: 95%;
+    height: fit-content;
+    margin: 2px;
+    display: block;
+    position: relative;
+  }
+}
+.smallPageNew:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageNew:hover {
+    transform: scale(1);
+  }
+}
+.smallPageNew .imgBlock {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageNew .imgBlock {
+    width: 100%;
+    align-items: center;
+    height: 150px;
+  }
+}
+.smallPageNew .imgBlock img {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageNew .imgBlock img {
+    width: 85%;
+    padding: 10px;
+    display: block;
+  }
+}
+@media screen and (max-device-width: 290px) {
+  .smallPageNew .imgBlock img {
+    width: 100%;
+    padding: 10px;
+  }
+}
+.smallPageNew .imgBlock .imgTs {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageNew .imgBlock .imgTs {
+    width: 65%;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-device-width: 500px) and (max-device-width: 290px) {
+  .smallPageNew .imgBlock .imgTs {
+    width: 80%;
+    padding: 10px;
+  }
+}
+.smallPageNew .imgBlock .imgTs3 {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageNew .imgBlock .imgTs3 {
+    width: 85%;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-device-width: 290px) {
+  .smallPageNew .imgBlock .imgTs3 {
+    width: 100%;
+    padding: 0;
+  }
+}
+.smallPageNew .imgBlock .imgTs2 {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageNew .imgBlock .imgTs2 {
+    width: 80%;
+    padding: 10px;
+    display: block;
+  }
+}
+@media screen and (max-device-width: 290px) {
+  .smallPageNew .imgBlock .imgTs2 {
+    width: 100%;
+    padding: 10px;
+  }
+}
+.smallPageNew .imgBlockPillow {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageNew .imgBlockPillow {
+    width: 100%;
+    align-items: center;
+    height: 150px;
+  }
+}
+.smallPageNew .imgBlockPillow img {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageNew .imgBlockPillow img {
+    width: 80%;
+    padding: 20px;
+    display: block;
+  }
+}
+.smallPageNew .imgBlockPillow .imgTs {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageNew .imgBlockPillow .imgTs {
+    width: 80%;
+    padding: 20px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+.smallPageNew .imgBlockPillow .imgTs3 {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageNew .imgBlockPillow .imgTs3 {
+    width: 90%;
+    padding: 20px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+.smallPageNew .imgBlockPillow .imgTs2 {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageNew .imgBlockPillow .imgTs2 {
+    width: 85%;
+    padding: 10px;
+    display: block;
+  }
+}
+@media screen and (max-device-width: 290px) {
+  .smallPageNew .imgBlockPillow .imgTs2 {
+    width: 100%;
+    padding: 10px;
+  }
+}
+.smallPageNew .informationBlock {
+  padding: 10px 0 10px 10px;
+  width: 100%;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageNew .informationBlock {
+    position: relative;
+    bottom: 0px;
+    left: 0;
+    padding: 10px;
+    height: 140px;
+  }
+}
+@media screen and (max-device-width: 380px) {
+  .smallPageNew .informationBlock {
+    position: relative;
+    bottom: 0px;
+    left: 0;
+    padding: 10px;
+    height: 160px;
+  }
+}
+.smallPageNew .informationBlock .h2ts {
+  font-size: 14px;
+  font-weight: 600;
+}
+@media screen and (max-device-width: 290px) {
+  .smallPageNew .informationBlock .h2ts {
+    font-size: 11px;
+  }
+}
+.smallPageNew .informationBlock .price {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ff596f;
+  padding: 5px 0;
+}
+@media screen and (max-device-width: 290px) {
+  .smallPageNew .informationBlock .price {
+    font-size: 10px;
+  }
+}
+.smallPageNew .informationBlock .price span {
+  color: #757195;
+  font-size: 12px;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+.smallPageNew .informationBlock #vat {
+  text-decoration: none;
+  font-size: 10px;
+  color: black;
+  padding: 0 0 0 10px;
+}
+@media screen and (max-device-width: 290px) {
+  .smallPageNew .informationBlock #vat {
+    display: none;
+  }
+}
+.smallPageNew .informationBlock2 {
+  padding: 10px 0 10px 10px;
+  width: 100%;
+}
+@media screen and (max-device-width: 500px) {
+  .smallPageNew .informationBlock2 {
+    position: relative;
+    bottom: 0px;
+    left: 0;
+    padding: 10px;
+    height: 120px;
+  }
+}
+@media screen and (max-device-width: 380px) {
+  .smallPageNew .informationBlock2 {
+    position: relative;
+    bottom: 0px;
+    left: 0;
+    padding: 10px;
+    height: 135px;
+  }
+}
+.smallPageNew .informationBlock2 .h2ts {
+  font-size: 14px;
+  font-weight: 600;
+}
+@media screen and (max-device-width: 290px) {
+  .smallPageNew .informationBlock2 .h2ts {
+    font-size: 11px;
+  }
+}
+.smallPageNew .informationBlock2 .price {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ff596f;
+  padding: 5px 0;
+}
+@media screen and (max-device-width: 290px) {
+  .smallPageNew .informationBlock2 .price {
+    font-size: 10px;
+  }
+}
+.smallPageNew .informationBlock2 .price span {
+  color: #757195;
+  font-size: 12px;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+.smallPageNew .informationBlock2 #vat {
+  text-decoration: none;
+  font-size: 10px;
+  color: black;
+  padding: 0 0 0 10px;
+}
+@media screen and (max-device-width: 290px) {
+  .smallPageNew .informationBlock2 #vat {
+    display: none;
+  }
+}
+.smallPageNew .btnts1 {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  background: black;
+  width: 80%;
+  margin: 10px auto 0px auto;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  left: 10%;
+}
+.smallPageNew .btnts1 img {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px 0 0;
+  display: none;
+}
+.smallPageNew .btnts1 p {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=TShirt.css.map */
